@@ -82,7 +82,96 @@ def corner_slice():
             "nominal_thread": "M3x0.5; major/minor cylindrical representation",
             "length_including_head_mm": CORNER_SCREW_LENGTH, "frame_grip_mm": 5.2,
             "engagement_mm": 4.8, "tap_depth_mm": THREAD_DEPTH, "bottom_margin_mm": .7,
+            "thread_major_radius_mm": THREAD_MAJOR, "thread_minor_radius_mm": THREAD_MINOR,
             "material_assumption": "Machined 6061-T6 frame/corner; certification and strength unqualified",
             "tightening_torque_Nm": None, "physical_ready": False,
         })
+    return shapes, joints
+
+
+def case_rotation(axis):
+    return App.Rotation(App.Vector(1, 1, 1), {"X": 120, "Y": 240, "Z": 0}[axis])
+
+
+def case_point(point, axis):
+    x, y, z = point
+    return {"X": [z, x, y], "Y": [y, z, x], "Z": [x, y, z]}[axis]
+
+
+def cage_frame(axis, sign):
+    z = FRAME_INNER if sign > 0 else -FRAME_OUTER
+    stock = Part.makeBox(136, 125.2, 5.2, App.Vector(-68, -62.6, z))
+    shape = stock.cut(Part.makeCylinder(60.5, 7.2, App.Vector(0, 0, z-1)))
+    if sign < 0:
+        for angle in (45, 135, 225, 315):
+            x, y = 63*math.cos(math.radians(angle)), 63*math.sin(math.radians(angle))
+            shape = shape.fuse(Part.makeCylinder(3.5, 5.2, App.Vector(x, y, z)))
+            shape = shape.cut(Part.makeCylinder(1.7, 7.2, App.Vector(x, y, z-1)))
+            shape = shape.cut(Part.makeCone(3, 1.5, 1.7, App.Vector(x, y, -68)))
+            shape = shape.cut(Part.makeCylinder(2.025, 1.0501, App.Vector(x, y, -63.85)))
+    else:
+        web = Part.makeBox(160, 12, 5.2, App.Vector(-80, -6, z))
+        web.rotate(App.Vector(), App.Vector(0, 0, 1), 45)
+        shape = shape.fuse(web.common(stock))
+        for coordinate in (-9.7581, 36.2039):
+            shape = shape.cut(Part.makeCylinder(1.7, 7.2, App.Vector(coordinate, coordinate, z-1)))
+            shape = shape.cut(Part.makeCone(3, 1.5, 1.7, App.Vector(coordinate, coordinate, 68), App.Vector(0, 0, -1)))
+    for sx in (-1, 1):
+        for sy in (-1, 1):
+            p = App.Vector(sx*CORNER_FIXING, sy*CORNER_FIXING, sign*68)
+            inward = App.Vector(0, 0, -sign)
+            shape = shape.cut(Part.makeCylinder(1.7, 5.2002, p-inward*.0001, inward))
+            shape = shape.cut(Part.makeCone(3, 1.5, 1.7, p, inward))
+            r = App.Vector(sx*REGISTER, sy*REGISTER, sign*68)
+            shape = shape.cut(Part.makeCylinder(1.65, 5.2002, r-inward*.0001, inward))
+    shape = shape.removeSplitter()
+    shape.transformShape(App.Placement(App.Vector(), case_rotation(axis)).toMatrix())
+    return shape
+
+
+def signed_corner(signs):
+    matrix = App.Matrix()
+    permutation = (0, 1, 2) if math.prod(signs) > 0 else (1, 0, 2)
+    for i in range(3):
+        for j in range(3):
+            setattr(matrix, f"A{i+1}{j+1}", signs[i] if permutation[i] == j else 0)
+    shape = corner_positive()
+    shape.transformShape(matrix)
+    return shape
+
+
+def frame_cage():
+    shapes, joints = {}, []
+    for axis in "XYZ":
+        shapes["E_FRAME_MOTOR_"+axis] = cage_frame(axis, -1)
+        shapes["E_FRAME_BOARD_"+axis] = cage_frame(axis, 1)
+    for sx in (-1, 1):
+        for sy in (-1, 1):
+            for sz in (-1, 1):
+                signs = (sx, sy, sz)
+                label = "".join("P" if sign > 0 else "N" for sign in signs)
+                corner_id = "E_CORNER_"+label
+                shapes[corner_id] = signed_corner(signs)
+                for index, axis in enumerate("XYZ"):
+                    sign = signs[index]
+                    frame_id = "E_FRAME_"+("BOARD_" if sign > 0 else "MOTOR_")+axis
+                    screw_id = "E_FRAME_SCREW_"+label+"_"+axis
+                    values = [s*CORNER_FIXING for s in signs]
+                    values[index] = sign*68
+                    seat, inward = App.Vector(*values), axis_vector(index, -sign)
+                    shank = Part.makeCylinder(THREAD_MAJOR, 10, seat, inward)
+                    head = Part.makeCone(3, 1.5, 1.7, seat, inward)
+                    shapes[screw_id] = shank.fuse(head).removeSplitter()
+                    joints.append({
+                        "id": "EC_"+label+"_"+axis, "fastener": screw_id,
+                        "clamped_part": frame_id, "receiver": corner_id,
+                        "axis": list(inward), "seat_point_mm": values,
+                        "seat_kind": "nominal flat-head cone D6 / height1.7",
+                        "nominal_thread": "M3x0.5; major/minor cylindrical representation",
+                        "thread_major_radius_mm": THREAD_MAJOR, "thread_minor_radius_mm": THREAD_MINOR,
+                        "length_including_head_mm": 10, "frame_grip_mm": 5.2, "engagement_mm": 4.8,
+                        "tap_depth_mm": 5.5, "bottom_margin_mm": .7, "tightening_torque_Nm": None,
+                        "material_assumption": "Machined 6061-T6 frame/corner; material and strength unqualified",
+                        "physical_ready": False,
+                    })
     return shapes, joints

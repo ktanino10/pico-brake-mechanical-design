@@ -4,6 +4,7 @@ import argparse
 import itertools
 import json
 import math
+import re
 import tempfile
 
 import FreeCAD as App
@@ -12,7 +13,7 @@ import Part
 
 from build_cad import assert_shape, bounds, digest, normalized_native, normalized_step, readback, shape_centroid
 from enclosure_geometry import (CORNER_FIXING, CORNER_INNER, FRAME_INNER, FRAME_OUTER,
-                                THREAD_MAJOR, THREAD_MINOR, axis_vector, corner_slice, point_on_axis)
+                                THREAD_MAJOR, THREAD_MINOR, case_point, corner_slice, frame_cage)
 from geometry_contract import require_pose
 
 
@@ -28,8 +29,20 @@ def validate_joints(shapes, joints):
 
 
 def analytical_bounds(name):
-    if name == "E_CORNER_PPP":
-        return [CORNER_INNER]*3 + [69.0]*3
+    if re.fullmatch(r"E_CORNER_[PN]{3}", name):
+        signs = [1 if letter == "P" else -1 for letter in name[-3:]]
+        return [min(s*CORNER_INNER, s*69) for s in signs] + [max(s*CORNER_INNER, s*69) for s in signs]
+    if name.startswith(("E_FRAME_MOTOR_", "E_FRAME_BOARD_")):
+        z0, z1 = (62.8, 68) if "BOARD" in name else (-68, -62.8)
+        corners = [case_point(point, name[-1]) for point in itertools.product((-68, 68), (-62.6, 62.6), (z0, z1))]
+        return [min(p[i] for p in corners) for i in range(3)] + [max(p[i] for p in corners) for i in range(3)]
+    if name.startswith("E_FRAME_SCREW_"):
+        signs = [1 if letter == "P" else -1 for letter in name.split("_")[-2]]
+        axis = "XYZ".index(name[-1])
+        low = [s*CORNER_FIXING-3 for s in signs]
+        high = [s*CORNER_FIXING+3 for s in signs]
+        low[axis], high[axis] = sorted((signs[axis]*58, signs[axis]*68))
+        return low + high
     axis = "XYZ".index(name[-1])
     if "COUPON" in name:
         low, high = [50.0]*3, [62.6]*3
@@ -41,9 +54,13 @@ def analytical_bounds(name):
 
 
 def verify_collisions(shapes, joints):
-    thread_pairs = {frozenset((row["fastener"], row["receiver"])): (i, row) for i, row in enumerate(joints)}
+    thread_pairs = {frozenset((row["fastener"], row["receiver"])): row for row in joints}
+    boxes = {name: bounds(shape) for name, shape in shapes.items()}
     positive = []
     for first, second in itertools.combinations(shapes, 2):
+        a, b = boxes[first], boxes[second]
+        if any(a[i] > b[i+3]+1e-7 or b[i] > a[i+3]+1e-7 for i in range(3)):
+            continue
         common = shapes[first].common(shapes[second])
         volume = abs(common.Volume)
         if volume <= 1e-6:
@@ -51,11 +68,12 @@ def verify_collisions(shapes, joints):
         allowed = thread_pairs.get(frozenset((first, second)))
         if allowed is None:
             raise ValueError(f"Undeclared positive intersection: {first}/{second}: {volume}")
-        axis, row = allowed
-        mask = Part.makeCylinder(THREAD_MAJOR+1e-6, row["engagement_mm"]+2e-6,
-                                 point_on_axis(axis, FRAME_INNER+1e-6, CORNER_FIXING), axis_vector(axis, -1))
+        row = allowed
+        direction = App.Vector(*row["axis"])
+        start = App.Vector(*row["seat_point_mm"]) + direction*(row["frame_grip_mm"]-1e-6)
+        mask = Part.makeCylinder(row["thread_major_radius_mm"]+1e-6, row["engagement_mm"]+2e-6, start, direction)
         outside = abs(common.cut(mask).Volume)
-        maximum = math.pi*(THREAD_MAJOR**2-THREAD_MINOR**2)*row["engagement_mm"]
+        maximum = math.pi*(row["thread_major_radius_mm"]**2-row["thread_minor_radius_mm"]**2)*row["engagement_mm"]
         if outside > 1e-6 or volume > maximum+1e-5:
             raise ValueError("Intersection exceeds the declared local thread representation")
         positive.append({"a": first, "b": second, "volume_mm3": volume, "type": "bounded_major_minor_thread",
@@ -84,10 +102,11 @@ def verify_collisions(shapes, joints):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--scope", choices=("corner", "cage"), default="corner")
     args = parser.parse_args()
     if args.output.exists():
         raise ValueError("Use a new private slice output directory")
-    shapes, joints = corner_slice()
+    shapes, joints = corner_slice() if args.scope == "corner" else frame_cage()
     validate_joints(shapes, joints)
     expected = {}
     for name, shape in shapes.items():
@@ -105,7 +124,8 @@ def main():
     else:
         raise ValueError("Missing-mate negative control passed")
     args.output.mkdir(parents=True)
-    native, step = args.output/"corner-slice.FCStd", args.output/"corner-slice.step"
+    stem = "corner-slice" if args.scope == "corner" else "frame-cage"
+    native, step = args.output/(stem+".FCStd"), args.output/(stem+".step")
     with tempfile.TemporaryDirectory(prefix="independent-corner-") as directory:
         raw = Path(directory)
         doc = App.newDocument("IndependentCornerSlice")
@@ -128,7 +148,7 @@ def main():
     before = digest(native)
     doc = App.openDocument(str(native))
     try:
-        obj = doc.getObject("E_COUPON_X")
+        obj = doc.getObject("E_COUPON_X" if args.scope == "corner" else "E_FRAME_MOTOR_X")
         placement = obj.Placement
         placement.Base += App.Vector(.25, 0, 0)
         obj.Placement = placement
@@ -142,7 +162,7 @@ def main():
         App.closeDocument(doc.Name)
     if digest(native) != before:
         raise ValueError("Negative pose check modified saved output")
-    report = {"status": "PASS", "cad_slice_complete": True, "full_enclosure_complete": False,
+    report = {"status": "PASS", "scope": args.scope, "cad_slice_complete": True, "full_enclosure_complete": False,
               "parts": expected, "joints": joints, "geometry": collision, "readback": saved,
               "negative_controls": {"missing_mate_rejected": missing_rejected, "wrong_pose_rejected": pose_rejected},
               "source_geometry_read": False, "whole_fit": False, "build_ready": False, "physical_ready": False}
