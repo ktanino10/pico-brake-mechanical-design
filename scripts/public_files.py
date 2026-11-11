@@ -17,6 +17,17 @@ PUBLIC_FILES = (
     "scripts/public_policy.py", "scripts/catalog.py", "scripts/build_cad.py", "scripts/geometry_contract.py",
     "scripts/enclosure_geometry.py", "scripts/check_corner_slice.py",
     "scripts/enclosure_holders.py", "data/enclosure-nominal-conditions.json",
+    "scripts/enclosure_policy.py", "scripts/enclosure_assembly.py",
+    "scripts/enclosure_coverage.py",
+    "scripts/build_enclosure.py",
+    "enclosure.html", "enclosure.js", "enclosure.css", "enclosure-bootstrap.js", "enclosure-contract.js",
+    "data/enclosure-assembly.json", "data/enclosure-meshes.json", "data/enclosure-source-coverage.json",
+    "data/enclosure-parts.csv", "data/enclosure-joints.csv", "data/enclosure-provenance.json",
+    "data/enclosure-checksums.json", "downloads/enclosure-nominal.FCStd", "downloads/enclosure-nominal.step",
+    "downloads/enclosure-nominal.zip", "validation/enclosure-cad.json",
+    "docs/ENCLOSURE.md", "scripts/package_enclosure.py",
+    "tests/enclosure.test.mjs", "tests/test_enclosure.py", "tests/enclosure-browser.mjs",
+    "validation/enclosure-browser.json",
     "scripts/reexport_public.py", "scripts/public_files.py", "scripts/serve_public.py",
     "scripts/public_scan.py", "scripts/package_public.py", "scripts/verify_public_zip.py", "scripts/vendor.mjs",
     "tests/contract.test.mjs", "tests/browser.mjs", "tests/test_public.py",
@@ -32,4 +43,21 @@ ZIP_FILES = (
     "downloads/brake-reference-three.FCStd", "downloads/brake-reference-three.step",
     "scripts/reexport_public.py", "scripts/build_cad.py", "scripts/catalog.py", "scripts/geometry_contract.py",
     "scripts/public_policy.py", "validation/cad.json",
+)
+
+ENCLOSURE_DOWNLOADS = (
+    "downloads/enclosure-nominal.FCStd", "downloads/enclosure-nominal.step", "downloads/enclosure-nominal.zip",
+)
+
+ENCLOSURE_ZIP_FILES = (
+    "README.md", "NOTICE.md", "docs/ENCLOSURE.md", "docs/PUBLIC_SCOPE.md",
+    "downloads/enclosure-nominal.FCStd", "downloads/enclosure-nominal.step",
+    "data/enclosure-assembly.json", "data/enclosure-parts.csv", "data/enclosure-joints.csv",
+    "data/enclosure-source-coverage.json", "data/enclosure-provenance.json", "data/enclosure-nominal-conditions.json",
+    "validation/enclosure-cad.json",
+    "downloads/brake-single.FCStd", "data/assembly.json",
+    "scripts/build_enclosure.py", "scripts/enclosure_assembly.py", "scripts/enclosure_geometry.py",
+    "scripts/enclosure_holders.py", "scripts/enclosure_policy.py", "scripts/enclosure_coverage.py",
+    "scripts/check_corner_slice.py", "scripts/build_cad.py", "scripts/geometry_contract.py",
+    "scripts/catalog.py", "scripts/public_policy.py", "scripts/public_scan.py",
 )

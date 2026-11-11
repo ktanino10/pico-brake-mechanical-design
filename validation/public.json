@@ -2,13 +2,14 @@
   "schema": "public-brake-content-audit-v1",
   "status": "PASS",
   "scope": "Allowlisted bytes, archives and metadata. No claim of whole-machine or physical approval.",
-  "original_native_negative_control": "not-supplied",
+  "original_native_negative_control": "REJECTED",
   "negative_controls": {
     "WHEEL": "REJECTED",
     "LOAD_FRAME": "REJECTED",
     "SRC_Part__Feature12": "REJECTED",
     "CORNER_BOLT_0": "REJECTED",
-    "YOKE_99": "REJECTED"
+    "YOKE_99": "REJECTED",
+    "full-protected-native": "REJECTED"
   },
   "checks": {
     ".gitignore": {
@@ -21,13 +22,13 @@
       "bytes_scanned": 0
     },
     "README.md": {
-      "bytes_scanned": 8612
+      "bytes_scanned": 10561
     },
     "NOTICE.md": {
       "bytes_scanned": 1114
     },
     "index.html": {
-      "bytes_scanned": 11389
+      "bytes_scanned": 11513
     },
     "styles.css": {
       "bytes_scanned": 14336
@@ -42,7 +43,7 @@
       "bytes_scanned": 5690
     },
     "package.json": {
-      "bytes_scanned": 443
+      "bytes_scanned": 526
     },
     "package-lock.json": {
       "bytes_scanned": 2097
@@ -146,20 +147,112 @@
     "scripts/geometry_contract.py": {
       "bytes_scanned": 2153
     },
+    "scripts/enclosure_geometry.py": {
+      "bytes_scanned": 12828
+    },
+    "scripts/check_corner_slice.py": {
+      "bytes_scanned": 21597
+    },
+    "scripts/enclosure_holders.py": {
+      "bytes_scanned": 9616
+    },
+    "data/enclosure-nominal-conditions.json": {
+      "bytes_scanned": 3548
+    },
+    "scripts/enclosure_policy.py": {
+      "bytes_scanned": 1823
+    },
+    "scripts/enclosure_assembly.py": {
+      "bytes_scanned": 9242
+    },
+    "scripts/enclosure_coverage.py": {
+      "bytes_scanned": 8622
+    },
+    "scripts/build_enclosure.py": {
+      "bytes_scanned": 14577
+    },
+    "enclosure.html": {
+      "bytes_scanned": 10571
+    },
+    "enclosure.js": {
+      "bytes_scanned": 18192
+    },
+    "enclosure.css": {
+      "bytes_scanned": 1445
+    },
+    "enclosure-bootstrap.js": {
+      "bytes_scanned": 1237
+    },
+    "enclosure-contract.js": {
+      "bytes_scanned": 4200
+    },
+    "data/enclosure-assembly.json": {
+      "bytes_scanned": 614805
+    },
+    "data/enclosure-meshes.json": {
+      "bytes_scanned": 21584622
+    },
+    "data/enclosure-source-coverage.json": {
+      "bytes_scanned": 61031
+    },
+    "data/enclosure-parts.csv": {
+      "bytes_scanned": 158145
+    },
+    "data/enclosure-joints.csv": {
+      "bytes_scanned": 50603
+    },
+    "data/enclosure-provenance.json": {
+      "bytes_scanned": 54369
+    },
+    "data/enclosure-checksums.json": {
+      "bytes_scanned": 2709
+    },
+    "downloads/enclosure-nominal.FCStd": {
+      "native_shapes": 526,
+      "native_external_links": 0
+    },
+    "downloads/enclosure-nominal.step": {
+      "bytes_scanned": 10179815
+    },
+    "downloads/enclosure-nominal.zip": {
+      "zip_members": 27,
+      "uncompressed_bytes": 13997469
+    },
+    "validation/enclosure-cad.json": {
+      "bytes_scanned": 193722
+    },
+    "docs/ENCLOSURE.md": {
+      "bytes_scanned": 9547
+    },
+    "scripts/package_enclosure.py": {
+      "bytes_scanned": 4842
+    },
+    "tests/enclosure.test.mjs": {
+      "bytes_scanned": 3256
+    },
+    "tests/test_enclosure.py": {
+      "bytes_scanned": 3685
+    },
+    "tests/enclosure-browser.mjs": {
+      "bytes_scanned": 12949
+    },
+    "validation/enclosure-browser.json": {
+      "bytes_scanned": 4503
+    },
     "scripts/reexport_public.py": {
       "bytes_scanned": 3280
     },
     "scripts/public_files.py": {
-      "bytes_scanned": 2123
+      "bytes_scanned": 4084
     },
     "scripts/serve_public.py": {
-      "bytes_scanned": 3169
+      "bytes_scanned": 3294
     },
     "scripts/public_scan.py": {
-      "bytes_scanned": 8450
+      "bytes_scanned": 8513
     },
     "scripts/package_public.py": {
-      "bytes_scanned": 8764
+      "bytes_scanned": 9005
     },
     "scripts/verify_public_zip.py": {
       "bytes_scanned": 5434
@@ -180,11 +273,19 @@
       "bytes_scanned": 10890
     },
     "validation/browser.json": {
-      "bytes_scanned": 5235
+      "bytes_scanned": 3259
     },
     "validation/reexport.json": {
       "bytes_scanned": 4096
     }
+  },
+  "independent_enclosure": {
+    "status": "PASS",
+    "model_parts": 526,
+    "fasteners": 200,
+    "zip_members": 27,
+    "zip_sha256": "6041b839d8b495db05f1b33534d2067873b7b24d36bb7f6f0c06840eac86c25b",
+    "actual_hardware_compatibility": "unverified/blocked"
   },
   "files": [
     {
@@ -209,8 +310,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 8612,
-      "sha256": "b3ea89a9d7d4eb6b85785b1e4fc91f478371b87dc9f49bf26dcd2bcd830b9587"
+      "bytes": 10561,
+      "sha256": "bdf6de42f8a647d81b4178352afae4baf0de8d05753c4b028171fbe6befadbaa"
     },
     {
       "path": "app.js",
@@ -238,6 +339,46 @@
       "sha256": "aa8f56ae674787835c75756f9960582ab25e1d91fe5875aaa955b312a877c212"
     },
     {
+      "path": "data/enclosure-assembly.json",
+      "bytes": 614805,
+      "sha256": "ebc5b9f8be9121a9036d923b082b6b7ed8cbbf8e49d6ea5b9226150577743e06"
+    },
+    {
+      "path": "data/enclosure-checksums.json",
+      "bytes": 2709,
+      "sha256": "d6e9a5b745de4607c1de368201769189fb5b81853b4951ad8925e948e49cbd30"
+    },
+    {
+      "path": "data/enclosure-joints.csv",
+      "bytes": 50603,
+      "sha256": "4f68d69583467d334202a0c394dd4d7c636d45f71aa3e3ace2a8509b01681f0d"
+    },
+    {
+      "path": "data/enclosure-meshes.json",
+      "bytes": 21584622,
+      "sha256": "dea2c42b20d3ae6d8e341523c763768ff749d49cb049f87df974ff8d98ebc2f4"
+    },
+    {
+      "path": "data/enclosure-nominal-conditions.json",
+      "bytes": 3548,
+      "sha256": "566c16e6fa9b7882c2b531aad2d35b3a43f31e654c456bebd48716422dbc07bf"
+    },
+    {
+      "path": "data/enclosure-parts.csv",
+      "bytes": 158145,
+      "sha256": "c8cb9781536c7f4d1c6ccce49e0b2581a73269088bc7ef0026690d717f0f471a"
+    },
+    {
+      "path": "data/enclosure-provenance.json",
+      "bytes": 54369,
+      "sha256": "0ff1699847fceb1c264af36d0741b6337280e589565af80db4bddb75ec9f0edc"
+    },
+    {
+      "path": "data/enclosure-source-coverage.json",
+      "bytes": 61031,
+      "sha256": "711f3d8b0707207b3fa81e66095308d4da051f41b60fb7f932ce37e4d5d8034c"
+    },
+    {
       "path": "data/joints.csv",
       "bytes": 27345,
       "sha256": "7e939d4104079c17ae86cc166b355f1491c70466b8923a8d4fe258209030f584"
@@ -261,6 +402,11 @@
       "path": "data/provenance.json",
       "bytes": 153070,
       "sha256": "43598e100d349abbf5911e51bd9ff64d8a11abc96591db9583819e2b4d491f24"
+    },
+    {
+      "path": "docs/ENCLOSURE.md",
+      "bytes": 9547,
+      "sha256": "1480cf01b6add5086574e3ddcd83bba9693f3e0362602de6ada2745b52b36390"
     },
     {
       "path": "docs/OVERVIEW.md",
@@ -298,14 +444,54 @@
       "sha256": "5ee5f1b4a8e9808da39846ca58b3a7fa1cd704875d81b3fb53e0ea6247651f1f"
     },
     {
+      "path": "downloads/enclosure-nominal.FCStd",
+      "bytes": 1835350,
+      "sha256": "9eab212b65fedcfc896fca740cea3e2aaae4cf8a9850aea1022c367c8738ff22"
+    },
+    {
+      "path": "downloads/enclosure-nominal.step",
+      "bytes": 10179815,
+      "sha256": "40474a07c5764b65dd8299062747d158c69607a3f61fcd4b3ee177c9ea9af27c"
+    },
+    {
+      "path": "downloads/enclosure-nominal.zip",
+      "bytes": 4211237,
+      "sha256": "6041b839d8b495db05f1b33534d2067873b7b24d36bb7f6f0c06840eac86c25b"
+    },
+    {
       "path": "downloads/public-brake-cad.zip",
       "bytes": 3917597,
       "sha256": "a86dd1d61a238b717b6c025a080e32dd6045beabd3124a16d4a91b698f5bb55b"
     },
     {
+      "path": "enclosure-bootstrap.js",
+      "bytes": 1237,
+      "sha256": "1b87a3239ce24b40782a45bfce726cdb7077afe8288af7f162e2b1f930a87789"
+    },
+    {
+      "path": "enclosure-contract.js",
+      "bytes": 4200,
+      "sha256": "182de24d5f78946ad6270c9aaf660ffbae0e3ee6c8d690c672ab280e4e8e0934"
+    },
+    {
+      "path": "enclosure.css",
+      "bytes": 1445,
+      "sha256": "6f674422e5c85642d414cdb80a1aa73a37ed2d1cc36f8bb989fe79ab53a1146a"
+    },
+    {
+      "path": "enclosure.html",
+      "bytes": 10571,
+      "sha256": "ccf2493c9c1a0ceea7084f911f80ac010d7f9fe45b829bd81b333e2ed43d56ee"
+    },
+    {
+      "path": "enclosure.js",
+      "bytes": 18192,
+      "sha256": "a03c6539e30339ecb1a8040c2aaa89cf812e51058990396cd0a74cb89c4245b9"
+    },
+    {
       "path": "index.html",
-      "bytes": 11389,
-      "sha256": "99106ae5f78ba4837999f36d87e86a4e0f6facf33e394662900257a06422d05b"
+      "bytes": 11513,
+      "sha256": "e6f5e4a238a2f60780513549a3db1a7296eacf965a60d0c318c83a95fd5ce4dc"
     },
     {
       "path": "overview-bootstrap.js",
@@ -334,13 +520,18 @@
     },
     {
       "path": "package.json",
-      "bytes": 443,
-      "sha256": "790a94fde8b8ee105dcb8d50944eb3cd2f15119187c67d7b97eb2356fb9f2877"
+      "bytes": 526,
+      "sha256": "f3303a38fc49f3b5bc8d65cff359d175e95046b3b55041a6574dc7da55b2f0ac"
     },
     {
       "path": "scripts/build_cad.py",
       "bytes": 24864,
       "sha256": "6e8f699986df52418a23ccae5b2c2031efcbeda00ab1cba5b4221e79b237e717"
+    },
+    {
+      "path": "scripts/build_enclosure.py",
+      "bytes": 14577,
+      "sha256": "02128037a80071e9749d1b9889e6417be0f5166c8ebf61ee25cbfd040ed2c123"
     },
     {
       "path": "scripts/build_overview_layout.py",
@@ -353,19 +544,54 @@
       "sha256": "ba2fedbc1b8ac3779f786ee4d72b6dd2369e402e711a0dca4c52bb50c9543437"
     },
     {
+      "path": "scripts/check_corner_slice.py",
+      "bytes": 21597,
+      "sha256": "6044fafd1443f8e8f4113cdbb2a7527e4384c21ab1bb6f9de7c471bf4b89cb24"
+    },
+    {
+      "path": "scripts/enclosure_assembly.py",
+      "bytes": 9242,
+      "sha256": "7bb5f6a7494027a80ac726d8d9656f23e4f5f4f60a842642742166da7da7c29f"
+    },
+    {
+      "path": "scripts/enclosure_coverage.py",
+      "bytes": 8622,
+      "sha256": "3c1332ffb7ff06c86dcd95e394596769707a8d3ea75115509ce1f4f11e41416a"
+    },
+    {
+      "path": "scripts/enclosure_geometry.py",
+      "bytes": 12828,
+      "sha256": "57aface81abbd989b3d861006450a3646c83b62a17f7796ec271da83d442bc22"
+    },
+    {
+      "path": "scripts/enclosure_holders.py",
+      "bytes": 9616,
+      "sha256": "e60e1fbf53550f0a84fb71257bfd1853662dea32359c669df909db62a593cc05"
+    },
+    {
+      "path": "scripts/enclosure_policy.py",
+      "bytes": 1823,
+      "sha256": "bc13734950aded2f931908c2b6fa4d57021dc482700f5530d6995959ea0552dc"
+    },
+    {
       "path": "scripts/geometry_contract.py",
       "bytes": 2153,
       "sha256": "91b89a29405005fc9cb1af08a6932d8e33d50aa65b5bbbc62d760cdebbe49c72"
     },
     {
+      "path": "scripts/package_enclosure.py",
+      "bytes": 4842,
+      "sha256": "9871308344547cd6b4a5f7ae9077419a86e89355230e3b14393571bf84188f42"
+    },
+    {
       "path": "scripts/package_public.py",
-      "bytes": 8764,
-      "sha256": "690531538a29ac334bf87ad1e896bae9ee25091d8ace8c680fc68228c37bb1b3"
+      "bytes": 9005,
+      "sha256": "5b6b490a9091927b68e75cf3c02c1bcbb11a557ccb4b53681a7beac8d664ca05"
     },
     {
       "path": "scripts/public_files.py",
-      "bytes": 2123,
-      "sha256": "65765bf7cfd3456b179a28f790b3b21476a7218b6df7f077b9db6740a6743ac5"
+      "bytes": 4084,
+      "sha256": "5c40eab4e584cdd6a6c165e018c8b2b22a31a476f35102e8e729b5d003be8916"
     },
     {
       "path": "scripts/public_policy.py",
@@ -374,8 +600,8 @@
     },
     {
       "path": "scripts/public_scan.py",
-      "bytes": 8450,
-      "sha256": "524437209d2725c90b4ae7c152d27b22b3e256fcd9ed51a3e5b54a233d93deb5"
+      "bytes": 8513,
+      "sha256": "5187bed84c3b352ffdd60c9be600dce777a1fedad5dfecf3743d7e15fda48ae8"
     },
     {
       "path": "scripts/reexport_public.py",
@@ -384,8 +610,8 @@
     },
     {
       "path": "scripts/serve_public.py",
-      "bytes": 3169,
-      "sha256": "c5e4892a52389bb61dbae4e6d93a07ee0770521398f657fec2774a538e1ed3eb"
+      "bytes": 3294,
+      "sha256": "c0a516e3d7194a547f89a2b8a32457929781246f2f26a52fd9d492d02c1cd40d"
     },
     {
       "path": "scripts/vendor.mjs",
@@ -413,6 +639,16 @@
       "sha256": "892ea53d2b1b3f362152ab884f8cf0320f57824709c753a131b5be950fe5707d"
     },
     {
+      "path": "tests/enclosure-browser.mjs",
+      "bytes": 12949,
+      "sha256": "0dba87c97c6659c43846ce7f09c162529c0bb680ffbcab85490910f72c6e9bd7"
+    },
+    {
+      "path": "tests/enclosure.test.mjs",
+      "bytes": 3256,
+      "sha256": "98d3fb69e448cd62295ab4b621ed2051fe9aa21df1b9d2739249e156216f6321"
+    },
+    {
       "path": "tests/overview-browser.mjs",
       "bytes": 10409,
       "sha256": "1889c8eba11c3633db7d02bf9f1a30032588e9f40db06a3c6182f7e831574582"
@@ -423,14 +659,19 @@
       "sha256": "cbdaf42b2a1fd57057444ae18acca71c16d10301c042786f368ffd29f9e55a6f"
     },
     {
+      "path": "tests/test_enclosure.py",
+      "bytes": 3685,
+      "sha256": "0ffa984781a2298ba8320af7c361a4162b44c0620bcdb66d039f3d6dd87d2c15"
+    },
+    {
       "path": "tests/test_public.py",
       "bytes": 6839,
       "sha256": "f3f5f552de77e5c00615060d272b0f7e6ffda1a07f8f0a9652cce4e617e908b1"
     },
     {
       "path": "validation/browser.json",
-      "bytes": 5235,
-      "sha256": "3b215df64bdf0ce9db339259872133b3b5a63a5539f0bb74e3c8d6e002f73187"
+      "bytes": 3259,
+      "sha256": "7d1ed9b71fcfefa5c43b5b7b0bd0714863103495a218c0f4d5baaf0f247d585b"
     },
     {
       "path": "validation/cad.json",
@@ -438,9 +679,19 @@
       "sha256": "001c243b9c1c2bfe5d0a18dca65fe2db358b6f884695f1c4a44f79ddfdb3191c"
     },
     {
+      "path": "validation/enclosure-browser.json",
+      "bytes": 4503,
+      "sha256": "734c37e055c1ee6003fffde3832bfd2e5fc0780c3ca1ab459dcce4929ed584ef"
+    },
+    {
+      "path": "validation/enclosure-cad.json",
+      "bytes": 193722,
+      "sha256": "595eb46bda4a59984c48d05399e8a9b8679ac8208a37792f2116c5ca5b4db9de"
+    },
+    {
       "path": "validation/overview.json",
       "bytes": 2582,
-      "sha256": "c7a7294722e1d5d56345deff2ddf93065c3b026b52d301639226bef4533fcf5b"
+      "sha256": "0b54029afbd70d0b12cb681dd5e318d7f6fba17f0a07c0c23087b8431d59e32e"
     },
     {
       "path": "validation/reexport.json",

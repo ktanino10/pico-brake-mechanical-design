@@ -8,7 +8,7 @@ import json
 import mimetypes
 import shutil
 
-from public_files import WEB_FILES
+from public_files import ENCLOSURE_DOWNLOADS, WEB_FILES
 
 ROOT = Path(__file__).resolve().parents[1]
 PREFIX = "/pico-brake-mechanical-design/"
@@ -38,7 +38,8 @@ class PublicHandler(BaseHTTPRequestHandler):
             return
         if name.startswith("downloads/"):
             try:
-                release = json.loads((ROOT / "data/checksums.json").read_text())
+                manifest = "data/enclosure-checksums.json" if name in ENCLOSURE_DOWNLOADS else "data/checksums.json"
+                release = json.loads((ROOT / manifest).read_text())
             except (FileNotFoundError, json.JSONDecodeError):
                 self.send_error(503, "CAD validation manifest is unavailable")
                 return

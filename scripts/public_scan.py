@@ -11,6 +11,7 @@ import zlib
 import xml.etree.ElementTree as ET
 
 from public_policy import ALLOWED, REFERENCES, SOURCE_SHA256
+from enclosure_policy import ENCLOSURE_IDS
 
 MAX_MEMBER = 64 * 1024 * 1024
 MAX_ARCHIVE = 128 * 1024 * 1024
@@ -114,7 +115,7 @@ def inspect_native(members, name):
     public = set(ALLOWED) | set(REFERENCES)
     single = {"Z_" + part for part in public}
     three = {axis + "_" + part for axis in "XYZ" for part in public}
-    if features not in (single, three):
+    if features not in (single, three, set(ENCLOSURE_IDS)):
         raise PublicScanError(f"{name}: forbidden or incomplete native geometry")
     for obj in tree.findall(".//ObjectData/Object"):
         for prop in obj.findall("./Properties/Property"):

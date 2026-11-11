@@ -25,9 +25,13 @@ def validate_joints(shapes, joints):
         for key in ("fastener", "clamped_part", "receiver"):
             if joint[key] not in shapes:
                 raise ValueError("Missing physical joint counterpart: " + joint[key])
-        if (joint["fastener"] in seen or joint["id"] in seen_ids or
-                joint["engagement_mm"] <= 0 or joint["bottom_margin_mm"] <= 0):
+        end = joint.get("receiver_end", "blind")
+        if (joint["fastener"] in seen or joint["id"] in seen_ids or joint["engagement_mm"] <= 0 or
+                end not in ("blind", "through")):
             raise ValueError("Invalid fastener/joint definition")
+        if ((end == "blind" and (joint["bottom_margin_mm"] is None or joint["bottom_margin_mm"] <= 0)) or
+                (end == "through" and (joint["bottom_margin_mm"] is not None or joint["protrusion_mm"] < 0))):
+            raise ValueError("Invalid blind/through receiving end condition")
         if not 0 < joint["thread_minor_radius_mm"] < joint["thread_major_radius_mm"]:
             raise ValueError("Invalid declared thread radii")
         stack = joint.get("stack", [joint["clamped_part"], joint["receiver"]])
@@ -169,6 +173,19 @@ def verify_outer_surfaces(shapes):
             "contact_strength_or_impact_safety_qualified": False}
 
 
+def verify_thread_presence(shapes, joints):
+    results = []
+    for row in joints:
+        expected = math.pi*(row["thread_major_radius_mm"]**2-row["thread_minor_radius_mm"]**2)*row["engagement_mm"]
+        volume = abs(shapes[row["fastener"]].common(shapes[row["receiver"]]).Volume)
+        minimum = expected-max(1e-5, expected*1e-6)
+        if volume < minimum:
+            raise ValueError("Nominal thread representation missing: "+row["id"])
+        results.append({"joint": row["id"], "observed_mm3": volume,
+                        "nominal_annulus_mm3": expected, "minimum_required_mm3": minimum})
+    return results
+
+
 def verify_collisions(shapes, joints):
     thread_pairs = {frozenset((row["fastener"], row["receiver"])): row for row in joints}
     boxes = {name: bounds(shape) for name, shape in shapes.items()}
@@ -194,33 +211,29 @@ def verify_collisions(shapes, joints):
             raise ValueError("Intersection exceeds the declared local thread representation")
         positive.append({"a": first, "b": second, "volume_mm3": volume, "type": "bounded_major_minor_thread",
                          "outside_thread_mask_mm3": outside, "upper_volume_mm3": maximum})
-    thread_presence = []
-    for row in joints:
-        expected = math.pi*(row["thread_major_radius_mm"]**2-row["thread_minor_radius_mm"]**2)*row["engagement_mm"]
-        volume = abs(shapes[row["fastener"]].common(shapes[row["receiver"]]).Volume)
-        minimum = expected-max(1e-5, expected*1e-6)
-        if volume < minimum:
-            raise ValueError("Nominal thread representation missing: "+row["id"])
-        thread_presence.append({"joint": row["id"], "observed_mm3": volume,
-                                "nominal_annulus_mm3": expected, "minimum_required_mm3": minimum})
-    contacts = []
+    thread_presence = verify_thread_presence(shapes, joints)
+    contacts, contact_cache = [], {}
     for row in joints:
         stack = row.get("stack", [row["clamped_part"], row["receiver"]])
         pairs = [(first, second, "declared clamped stack bearing") for first, second in zip(stack, stack[1:])]
         pairs.append((row["fastener"], row["clamped_part"], "declared fastener head seat"))
         for first, second, role in pairs:
-            distance = shapes[first].distToShape(shapes[second])[0]
-            contact_area = 0.0
-            for left in shapes[first].Faces:
-                a = bounds(left)
-                for right in shapes[second].Faces:
-                    b = bounds(right)
-                    if any(a[i] > b[i+3]+1e-7 or b[i] > a[i+3]+1e-7 for i in range(3)):
-                        continue
-                    if left.distToShape(right)[0] < 1e-7:
-                        contact_area += left.common(right).Area
+            key = frozenset((first, second))
+            if key not in contact_cache:
+                distance = shapes[first].distToShape(shapes[second])[0]
+                contact_area = 0.0
+                for left in shapes[first].Faces:
+                    a = bounds(left)
+                    for right in shapes[second].Faces:
+                        b = bounds(right)
+                        if any(a[i] > b[i+3]+1e-7 or b[i] > a[i+3]+1e-7 for i in range(3)):
+                            continue
+                        if left.distToShape(right)[0] < 1e-7:
+                            contact_area += left.common(right).Area
+                contact_cache[key] = distance, contact_area
+            distance, contact_area = contact_cache[key]
             if distance > 1e-6 or contact_area <= 1:
-                raise ValueError("A required physical bearing/seat contact is absent")
+                raise ValueError(f"A required physical bearing/seat contact is absent: {first}/{second}")
             contacts.append({"a": first, "b": second, "role": role, "distance_mm": distance,
                              "common_surface_area_mm2": contact_area})
     return {"undeclared_positive_intersections": 0, "bounded_threads": positive,

@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="138 mmの独立設計筐体とPCB・MPU保持部を、ねじの相手と同じCADから確認する名目組立ビュー。実機適合は未資格です。">
+  <meta name="color-scheme" content="light">
+  <title>138 mmの筐体・基板保持 — 名目組立検査台</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./enclosure.css">
+  <script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script>
+  <script src="./enclosure-bootstrap.js" defer></script>
+</head>
+<body class="enclosure-page">
+  <a class="skip-link" href="#enclosure">組立検査台へ移動</a>
+  <div class="safety-strip"><strong>実機用の検討案・未資格</strong><span>製作・通電・回転の指示ではありません。元motorのCAD干渉は未解決です。</span></div>
+  <header class="page-header">
+    <div><p class="eyebrow">138 mm / INDEPENDENT ENCLOSURE + C08</p><h1>筐体・基板保持の組立検査台</h1><p class="intro">外側のコーナーから、基板を留めるねじの相手まで。同じCADの組付け位置で確認します。</p></div>
+    <a class="scope-link" href="./index.html">ブレーキ単体の詳細</a>
+  </header>
+  <main>
+    <section class="enclosure-views" aria-label="注目する部位">
+      <button type="button" data-focus="all" aria-pressed="true" disabled>組立全体</button>
+      <button type="button" data-focus="enclosure" aria-pressed="false" disabled>筐体の24接合</button>
+      <button type="button" data-focus="electronics" aria-pressed="false" disabled>基板の固定</button>
+      <span>表示を薄くする操作です。検査から部品を除外しません。</span>
+    </section>
+    <section class="inspection" id="enclosure" aria-label="名目筐体の組立検査台">
+      <div class="bench">
+        <div class="bench-heading"><strong>組付け位置 / mm</strong><span id="enclosure-count" class="bench-meta mono">138 × 138 × 138 / 読込待ち</span></div>
+        <div id="enclosure-viewport" class="viewport" aria-busy="true">
+          <div id="enclosure-loading" class="loading" role="status">名目CADと同じ部品・姿勢を読み込んでいます…</div>
+          <div id="enclosure-error" class="load-error" role="alert" hidden><h2>筐体を表示できません</h2><p id="enclosure-error-message"></p><p>HTTPで開き、data/ と vendor/ が揃っていること、WebGLが利用できることを確認してください。</p><button id="enclosure-retry" type="button">再読み込み</button></div>
+          <div id="enclosure-caption" class="view-caption" hidden><span class="caption-dot"></span><span id="enclosure-view-state">組付け位置（名目）</span></div>
+          <p class="model-warning">金色＝選択部品 / 青緑＝選んだ接合の相手 / 淡色＝参照形状</p>
+        </div>
+        <div class="legend"><span><i class="swatch steel"></i>筐体・ねじ</span><span><i class="swatch green"></i>固定支持</span><span><i class="swatch copper"></i>コイル</span><span><i class="swatch blue"></i>回転・可動側</span><span><i class="swatch reference"></i>未資格の参照形状</span></div>
+        <fieldset id="enclosure-controls" class="bench-controls" disabled><legend class="sr-only">3Dの操作</legend>
+          <div class="explode-control"><label for="enclosure-explode">分解表示</label><input id="enclosure-explode" type="range" min="0" max="100" step="1" value="0"><output id="enclosure-explode-value" for="enclosure-explode">0%</output></div>
+          <div class="control-actions"><label class="check"><input id="enclosure-section" type="checkbox">X = 0 で切る</label><button id="enclosure-fit" type="button">全体を表示</button><button id="enclosure-reset" type="button">リセット</button></div>
+        </fieldset>
+        <p class="interaction-help">ドラッグ／矢印キーで回転、ホイール／ピンチ／<kbd>＋</kbd><kbd>−</kbd>でズーム。<kbd>Home</kbd>で全体表示。自動回転・音声はありません。</p>
+        <p class="display-note">分解と断面は表示上の操作です。実組立順・挿入経路・工具アクセスを保証せず、CAD自体を変更しません。</p>
+      </div>
+      <aside class="inspector" aria-label="部品と名目締結の詳細">
+        <div class="inspector-heading"><h2>座面から相手まで</h2><span class="selection-marker" aria-hidden="true"></span></div>
+        <fieldset id="enclosure-parts-controls" disabled><legend class="sr-only">部品と接合を選択</legend>
+          <label class="part-select-label" for="enclosure-search">ID・名前で絞る<input id="enclosure-search" type="search" placeholder="例: PCB、CORNER、FRAME_BOLT"></label>
+          <label class="part-select-label" for="enclosure-part">部品<select id="enclosure-part"><option>読込待ち</option></select></label>
+          <label class="part-select-label" for="enclosure-joint">この部品の名目接合<select id="enclosure-joint"><option>読込待ち</option></select></label>
+        </fieldset>
+        <div class="selection-summary" aria-live="polite" aria-atomic="true"><div id="enclosure-part-id" class="part-id">—</div><h3 id="enclosure-part-title">部品を選択</h3><p id="enclosure-part-kind" class="part-kind"></p></div>
+        <div class="joint-card">
+          <p id="enclosure-fastener-id" class="part-id"></p><p id="enclosure-screw-size" class="screw-size"></p>
+          <dl class="joint-facts">
+            <dt>呼び長さとモデル全長</dt><dd id="enclosure-length"></dd>
+            <dt>グリップ / ねじのかかり</dt><dd id="enclosure-engagement" class="mono"></dd>
+            <dt>受け・止まり穴 / 通し穴</dt><dd id="enclosure-receiver"></dd>
+            <dt>ねじ軸と座面の座標</dt><dd id="enclosure-axis" class="mono"></dd>
+          </dl>
+          <p class="reference-caution">締付値は未設定・未資格です。C08金属案の数値を新しい筐体・基板接合へ転用しません。</p>
+        </div>
+        <div class="mate-section"><h3 id="enclosure-chain-title">ねじが挟む順序</h3><p class="mate-help">実在する部品IDを選んで、相手へ移動できます。</p><div id="enclosure-mates" class="mate-list"></div></div>
+        <p id="enclosure-selection-count" class="selection-count" role="status"></p>
+      </aside>
+    </section>
+    <section class="download-panel" aria-label="同じ部品構成のCADと表">
+      <div><h2>同じ部品構成を、CADで開く</h2><p class="intro">526 CAD要素（参照形状11を含む） / 200名目締結。購入数量ではありません。</p></div>
+      <div class="download-buttons"><a href="./downloads/enclosure-nominal.FCStd" download>FreeCAD <span>FCStd</span></a><a href="./downloads/enclosure-nominal.step" download>中間CAD <span>STEP</span></a><a href="./downloads/enclosure-nominal.zip" download>CAD・表・再生成 <span>ZIP</span></a></div>
+      <p class="download-description">外部リンクのない新Documentです。形状と位置を編集できるスナップショットで、完全なパラメトリック設計履歴ではありません。元Picoの形状・PCB回路・元ファイルは含みません。</p>
+      <div class="data-links"><a href="./data/enclosure-parts.csv" download>全部品のID・数量</a><a href="./data/enclosure-joints.csv" download>ねじ・座面・相手の表</a><a href="./data/enclosure-source-coverage.json" download>元83 leafの機能対応</a><a href="./data/enclosure-nominal-conditions.json" download>測定値と名目仮定</a><a href="./docs/ENCLOSURE.md">範囲と開き方</a></div>
+    </section>
+    <section class="scope-panel" aria-labelledby="enclosure-limit-title">
+      <div class="scope-copy"><p class="eyebrow">COVERAGE IS NOT HARDWARE QUALIFICATION</p><h2 id="enclosure-limit-title">部品が揃うことと、<br>実機が成立することは別です。</h2><p>暫定基準はPico版です。これは現在の用途に基づく作業仮定で、ユーザーが版を選んだという記録ではありません。以前の176 mm参考図は、この設計の寸法根拠ではありません。</p><p>6フレーム・8内部ノード・8外側カバー、全24端部接合、PCB・MPU保持部と相手ねじを独立作図しています。</p></div>
+      <div class="limits"><dl>
+        <div><dt>元motorの未解決項目</dt><dd>元motor CADの名目配置と <code>Z_HUB_RETAINING_RING</code> に <strong>29.606056754452105 mm³</strong> の正体積干渉。表示中のモーター受けは「要求interfaceの参考」であり、pilotを省いても元motorの適合解決にはなりません。現物は未確認・blockedです。</dd></div>
+        <div><dt>基板と取付寸法</dt><dd>PCBは機械資料の49 × 78.73 mmと4穴位置を参照。1.6 mm厚は名目値です。MPUの20.2 × 15.8 mm外形とD3.4穴は仮定で、元保持部の穴中心を基準にした参考です。部品高さ・端子・電池・ハーネスの保持は未確認です。</dd></div>
+        <div><dt>フレームとの接続</dt><dd>新しいmotor側フレームはC08のPCD126に合わせています。元枠のPCD135から半径で4.5 mm異なり、元部品との互換品ではありません。外側cornerの実面で138 mm外形を保ちます。</dd></div>
+        <div><dt>未達・未資格を保持</dt><dd>3軸最大約1.757 A &gt; 1.5 A。面圧感度・高温側磁気条件の未達、材料/B-H・摩擦・熱・疲労の未資格を解消した設計ではありません。回転・起立性能の完成も主張しません。</dd></div>
+      </dl><p class="state-flags mono">reference_motor_CAD_nominal_fit: failed<br>actual_hardware_compatibility: unverified/blocked<br>whole_fit: false / build_ready: false / physical_ready: false</p></div>
+    </section>
+  </main>
+  <footer><span>独立名目筐体 / world XYZ・mm / 全機未資格</span><a href="./index.html">変更していないブレーキ単体CAD</a><a href="./overview.html">以前の176 mm参考配置図</a><a href="./NOTICE.md">配布範囲と権利</a></footer>
+  <noscript><p class="noscript">3DにはJavaScriptが必要です。CAD・表・範囲説明は上のリンクから取得できます。</p></noscript>
+</body>
+</html>

@@ -7,7 +7,8 @@ import subprocess
 import tempfile
 import zipfile
 
-from public_files import PUBLIC_FILES, ZIP_FILES
+from public_files import ENCLOSURE_DOWNLOADS, PUBLIC_FILES, ZIP_FILES
+from package_enclosure import audit_enclosure
 from public_policy import ROOT, SOURCE_SHA256, validate_request
 from public_scan import PublicScanError, inspect_bytes, inspect_file
 
@@ -53,7 +54,7 @@ def create_package():
                 archive.writestr(info, data)
         inspect_file(candidate)
         candidate.replace(target)
-    download_names = [name for name in PUBLIC_FILES if name.startswith("downloads/")]
+    download_names = [name for name in PUBLIC_FILES if name.startswith("downloads/") and name not in ENCLOSURE_DOWNLOADS]
     hashes = [record(name) for name in download_names + ["data/assembly.json", "data/meshes.json"]]
     ready = downloads_ready()
     (ROOT / "data/checksums.json").write_text(json.dumps({
@@ -113,6 +114,7 @@ def audit(forbidden_native=None, require_all=True):
         for item in overview["inputs"]:
             if record(item["path"])["sha256"] != item["sha256"]:
                 raise PublicScanError("Reference overview changed after its browser check")
+    enclosure = audit_enclosure() if require_all else {"status":"not-required-for-preflight"}
     negative = {}
     for name in ["WHEEL", "LOAD_FRAME", "SRC_Part__Feature12", "CORNER_BOLT_0", "YOKE_99"]:
         try:
@@ -135,6 +137,7 @@ def audit(forbidden_native=None, require_all=True):
         "scope": "Allowlisted bytes, archives and metadata. No claim of whole-machine or physical approval.",
         "original_native_negative_control": negative.get("full-protected-native", "not-supplied"),
         "negative_controls": negative, "checks": details,
+        "independent_enclosure": enclosure,
         "files": [record(name) for name in sorted(details)],
         "self_excluded_from_hash_list": "validation/public.json",
         "remaining_files": missing,

@@ -3,21 +3,44 @@
 **実機用の検討案です。製作・通電・回転の指示ではありません。**
 `whole_fit = build_ready = physical_ready = false`。
 
-日本語の3D画面で、ねじのID・サイズ・役割・相手部材と、C08金属案の条件付き締付計算を確認できます。
+ブレーキ単体の日本語3D画面で、ねじのID・サイズ・役割・相手部材と、C08金属案の条件付き締付計算を確認できます。
 新規ブレーキ部145点と、独立して作図した参考円盤・支持リング・モーター包絡・入力軸4点を収録します。
 元Pico Assy全体、原wheel・frame・corner・motor、そのBoolean改変を再配布するものではありません。
+
+## 138 mmの筐体・基板保持
+
+**[筐体・基板保持の組立検査台](https://ktanino10.github.io/pico-brake-mechanical-design/enclosure.html)** では、
+参照したPico筐体の138 mm外形を基準に、独立設計した6フレーム・8内部corner・8外側cover、
+全24端部接合、PCB・MPU保持部とねじを、変更していない公開C08部と一緒に表示します。
+元83 leafの機能対応を記録し、526 CAD要素（11参照形状を含む）・200名目締結を同じnative/STEP/mesh/表へ揃えています。
+CAD要素数は購入数量ではありません。暫定Pico版は作業上の仮定で、ユーザーによる版選択とはしていません。
+
+**元motor CADと軸止め輪の29.606056754452105 mm³の干渉は未解決です。**
+表示中のmotor受けは要求interfaceの参考形状で、元motorの互換解決ではありません。
+実基板の厚さ・部品高さ・端子・電池・ハーネスの保持も未確認です。筐体CADの部品対応と全機・実機成立を分けます。
+以前の176 mm参考配置図の仮寸法を設計基準にしていません。
+
+[筐体FreeCAD](downloads/enclosure-nominal.FCStd) /
+[筐体STEP](downloads/enclosure-nominal.step) /
+[筐体CAD・表・再生成ZIP](downloads/enclosure-nominal.zip) /
+[全部品表](data/enclosure-parts.csv) / [接合表](data/enclosure-joints.csv) /
+[元83 leafの機能対応](data/enclosure-source-coverage.json) /
+[範囲・仮定・再生成方法](docs/ENCLOSURE.md)
+
+新しいZIPもHTML自体は含みません。ZIPからは上の**公開3D URL**を開いてください。
+旧ブレーキ単体・参考三軸のCAD/STEP/mesh/ZIPは変更せず、新筐体を別のファイルで提供します。
 
 ## 画面を開く
 
 公開用の閲覧入口は **[ブレーキ組立検査台](https://ktanino10.github.io/pico-brake-mechanical-design/)** です。
 GitHub Pagesの有効化・デプロイが完了すると、このURLで閲覧できます。
-URLの記載自体は本番配信済みの確認ではありません。公開前やURLを利用できない場合は、下記のローカル表示を使ってください。
+いずれのURLも記載自体は本番配信済みの確認ではありません。公開前やURLを利用できない場合は、下記のローカル表示を使ってください。
 
 [`index.html`](index.html) はビルド不要で、Pagesのリポジトリsubpathに対応しています。
 配信元を`main`ブランチの`/（root）`にする静的配信を想定し、
 リポジトリrootの空の`.nojekyll`でJekyllの変換を止めます。MarkdownやCAD・JSONなどのassetsはそのまま配信します。
 
-[筐体・基板・電池の全体像（参考配置）](https://ktanino10.github.io/pico-brake-mechanical-design/overview.html) では、独立した仮の筐体・2枚の基板・電池を
+[以前の筐体・基板・電池の全体像（176 mm参考配置）](https://ktanino10.github.io/pico-brake-mechanical-design/overview.html) では、独立した仮の筐体・2枚の基板・電池を
 3軸ブレーキと一緒に表示します。支柱やねじを選ぶと固定先が連動します。
 この追加参考形状は実基板への適合設計でも、既存FCStd／STEP／CAD・表ZIPに含まれる全機CADでもありません。
 仮寸法と出所は [配置データ](data/overview-layout.json)、範囲は [参考全体図の説明](docs/OVERVIEW.md) を参照してください。
@@ -29,6 +52,7 @@ python3 scripts/serve_public.py --port 8767
 ```
 
 `http://127.0.0.1:8767/pico-brake-mechanical-design/` を開きます。
+138 mm筐体は同じURLの末尾に `enclosure.html` を付けて開きます。
 このサーバーはloopback限定で、許可した公開ファイルだけを配信します。
 `.git`、ローカル作業ファイル、ディレクトリー一覧、symlinkは配信しません。
 `file://` でHTMLを直接開いた場合は、3Dデータの読み込み方法を示すエラーを表示します。
@@ -121,7 +145,9 @@ npm test
 python3 -B -m unittest discover -s tests -p 'test_*.py'
 npm run test:browser
 npm run test:overview
+npm run test:enclosure
 python3 -B scripts/package_public.py
+python3 -B scripts/package_enclosure.py
 ```
 
 ブラウザー検査には既存のChrome、またはPlaywrightのChromiumが必要です。

@@ -1,0 +1,87 @@
+{
+  "downloads_ready": true,
+  "files": [
+    {
+      "path": "data/enclosure-assembly.json",
+      "sha256": "ebc5b9f8be9121a9036d923b082b6b7ed8cbbf8e49d6ea5b9226150577743e06",
+      "bytes": 614805
+    },
+    {
+      "path": "data/enclosure-joints.csv",
+      "sha256": "4f68d69583467d334202a0c394dd4d7c636d45f71aa3e3ace2a8509b01681f0d",
+      "bytes": 50603
+    },
+    {
+      "path": "data/enclosure-meshes.json",
+      "sha256": "dea2c42b20d3ae6d8e341523c763768ff749d49cb049f87df974ff8d98ebc2f4",
+      "bytes": 21584622
+    },
+    {
+      "path": "data/enclosure-parts.csv",
+      "sha256": "c8cb9781536c7f4d1c6ccce49e0b2581a73269088bc7ef0026690d717f0f471a",
+      "bytes": 158145
+    },
+    {
+      "path": "data/enclosure-provenance.json",
+      "sha256": "0ff1699847fceb1c264af36d0741b6337280e589565af80db4bddb75ec9f0edc",
+      "bytes": 54369
+    },
+    {
+      "path": "data/enclosure-source-coverage.json",
+      "sha256": "711f3d8b0707207b3fa81e66095308d4da051f41b60fb7f932ce37e4d5d8034c",
+      "bytes": 61031
+    },
+    {
+      "path": "downloads/enclosure-nominal.FCStd",
+      "sha256": "9eab212b65fedcfc896fca740cea3e2aaae4cf8a9850aea1022c367c8738ff22",
+      "bytes": 1835350
+    },
+    {
+      "path": "downloads/enclosure-nominal.step",
+      "sha256": "40474a07c5764b65dd8299062747d158c69607a3f61fcd4b3ee177c9ea9af27c",
+      "bytes": 10179815
+    },
+    {
+      "path": "validation/enclosure-cad.json",
+      "sha256": "595eb46bda4a59984c48d05399e8a9b8679ac8208a37792f2116c5ca5b4db9de",
+      "bytes": 193722
+    },
+    {
+      "path": "downloads/enclosure-nominal.zip",
+      "sha256": "6041b839d8b495db05f1b33534d2067873b7b24d36bb7f6f0c06840eac86c25b",
+      "bytes": 4211237
+    }
+  ],
+  "whole_fit": false,
+  "build_ready": false,
+  "physical_ready": false,
+  "zip_members": [
+    "README.md",
+    "NOTICE.md",
+    "docs/ENCLOSURE.md",
+    "docs/PUBLIC_SCOPE.md",
+    "downloads/enclosure-nominal.FCStd",
+    "downloads/enclosure-nominal.step",
+    "data/enclosure-assembly.json",
+    "data/enclosure-parts.csv",
+    "data/enclosure-joints.csv",
+    "data/enclosure-source-coverage.json",
+    "data/enclosure-provenance.json",
+    "data/enclosure-nominal-conditions.json",
+    "validation/enclosure-cad.json",
+    "downloads/brake-single.FCStd",
+    "data/assembly.json",
+    "scripts/build_enclosure.py",
+    "scripts/enclosure_assembly.py",
+    "scripts/enclosure_geometry.py",
+    "scripts/enclosure_holders.py",
+    "scripts/enclosure_policy.py",
+    "scripts/enclosure_coverage.py",
+    "scripts/check_corner_slice.py",
+    "scripts/build_cad.py",
+    "scripts/geometry_contract.py",
+    "scripts/catalog.py",
+    "scripts/public_policy.py",
+    "scripts/public_scan.py"
+  ]
+}

@@ -1,0 +1,21 @@
+.enclosure-page .page-header { flex-wrap: wrap; }
+.enclosure-views { display: flex; flex-wrap: wrap; gap: 7px; align-items: center; margin-bottom: 16px; }
+.enclosure-views button { font-size: 12px; min-height: 42px; }
+.enclosure-views button[aria-pressed="true"] { color: white; background: #254a5a; border-color: #254a5a; }
+.enclosure-views span { color: var(--muted); font-size: 11px; margin-left: auto; }
+.enclosure-page .viewport { height: clamp(460px, 44vw, 660px); }
+.enclosure-page .bench-meta { font-size: 10px; }
+.enclosure-page .control-actions .check { margin-right: auto; }
+.enclosure-page input[type="search"] { width: 100%; margin-top: 4px; padding: 8px; border: 1px solid #bdcbd5; border-radius: 5px; background: white; min-height: 40px; }
+.enclosure-page .joint-facts dd { overflow-wrap: anywhere; }
+.enclosure-page .mate-button { min-height: 44px; }
+.enclosure-page .selection-summary h3 { font-size: 16px; }
+.enclosure-page .intro { font-size: 13px; }
+.enclosure-page .scope-panel code { overflow-wrap: anywhere; }
+@media (max-width: 780px) {
+  .enclosure-views { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+  .enclosure-views button { padding: 6px; font-size: 11px; }
+  .enclosure-views span { grid-column: 1/-1; margin: 3px 0 0; font-size: 10px; }
+  .enclosure-page .viewport { height: 110vw; min-height: 360px; max-height: 520px; }
+  .enclosure-page .bench-meta { max-width: 155px; font-size: 9px; }
+}

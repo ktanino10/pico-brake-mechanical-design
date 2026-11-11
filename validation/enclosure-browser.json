@@ -1,0 +1,129 @@
+{
+  "status": "PASS",
+  "scope": "526-part nominal enclosure; source motor CAD fit failed; actual hardware unverified/blocked",
+  "checks": [
+    "Desktop actually renders 526 world-coordinate CAD meshes, with 11 marked references and no automatic motion/audio",
+    "All 200 screws select their exact ordered physical stack and change the actual mesh highlight materials",
+    "Board under-head length, reference-board assumptions and unresolved motor-reference status stay visible",
+    "Part search, empty search and all eight cover-retainer identities work",
+    "0/50/100% explode stays within the viewport; clipping and reset preserve the unchanged CAD model",
+    "Real 3D raycasting selects the visible frame/corner screw and its receiver",
+    "Keyboard camera, reduced motion and accessible control names work in isolated Chrome",
+    "Native, STEP and curated ZIP really download through the page, with exact manifest hashes",
+    "The existing public brake entry links to the new nominal enclosure without replacing the old viewer",
+    "Mobile has no horizontal overflow and supports selection, full explosion, fit and reset",
+    "An intentionally missing model produces an explicit error and successful retry, not a blank canvas"
+  ],
+  "browser": "157.0.8103.39",
+  "initial_render": {
+    "selected": "E_FRAME_SCREW_PPP_X",
+    "joint": "EC_PPP_X",
+    "focus": "all",
+    "explode": 0,
+    "section": false,
+    "frames": 2,
+    "partCount": 526,
+    "referenceCount": 11,
+    "fastenerCount": 200,
+    "autoRotate": false,
+    "camera": [
+      252.7601527357915,
+      204.15243105583158,
+      262.4816970717834
+    ],
+    "drawCalls": 1052,
+    "triangles": 1585056,
+    "renderedMeshCount": 526,
+    "materialHighlights": [
+      "E_FRAME_BOARD_X",
+      "E_CORNER_PPP"
+    ],
+    "selectedMaterialColor": 12025900,
+    "highlighted": [
+      "E_FRAME_BOARD_X",
+      "E_CORNER_PPP"
+    ],
+    "meshSha256": "dea2c42b20d3ae6d8e341523c763768ff749d49cb049f87df974ff8d98ebc2f4",
+    "screwPickPoint": {
+      "id": "E_FRAME_SCREW_PPP_X",
+      "x": 570.370604020814,
+      "y": 611.9153792198206
+    },
+    "projectedBounds": [
+      -0.49198451073557103,
+      -0.9064458801937302,
+      0.48788611752216565,
+      0.707831669730123
+    ]
+  },
+  "downloads": [
+    {
+      "path": "downloads/enclosure-nominal.FCStd",
+      "sha256": "9eab212b65fedcfc896fca740cea3e2aaae4cf8a9850aea1022c367c8738ff22"
+    },
+    {
+      "path": "downloads/enclosure-nominal.step",
+      "sha256": "40474a07c5764b65dd8299062747d158c69607a3f61fcd4b3ee177c9ea9af27c"
+    },
+    {
+      "path": "downloads/enclosure-nominal.zip",
+      "sha256": "6041b839d8b495db05f1b33534d2067873b7b24d36bb7f6f0c06840eac86c25b"
+    }
+  ],
+  "console_errors": [],
+  "page_errors": [],
+  "console_warnings": [],
+  "network_failures": [],
+  "external_requests": [],
+  "negative_missing_model_http_404_expected": true,
+  "inputs": [
+    {
+      "path": "enclosure.html",
+      "sha256": "ccf2493c9c1a0ceea7084f911f80ac010d7f9fe45b829bd81b333e2ed43d56ee"
+    },
+    {
+      "path": "enclosure.js",
+      "sha256": "a03c6539e30339ecb1a8040c2aaa89cf812e51058990396cd0a74cb89c4245b9"
+    },
+    {
+      "path": "enclosure.css",
+      "sha256": "6f674422e5c85642d414cdb80a1aa73a37ed2d1cc36f8bb989fe79ab53a1146a"
+    },
+    {
+      "path": "enclosure-bootstrap.js",
+      "sha256": "1b87a3239ce24b40782a45bfce726cdb7077afe8288af7f162e2b1f930a87789"
+    },
+    {
+      "path": "enclosure-contract.js",
+      "sha256": "182de24d5f78946ad6270c9aaf660ffbae0e3ee6c8d690c672ab280e4e8e0934"
+    },
+    {
+      "path": "index.html",
+      "sha256": "e6f5e4a238a2f60780513549a3db1a7296eacf965a60d0c318c83a95fd5ce4dc"
+    },
+    {
+      "path": "styles.css",
+      "sha256": "2687558e8803e998a5a00d1334359eba0f5b3f7f05423620d7245e90d6a44d52"
+    },
+    {
+      "path": "contract.js",
+      "sha256": "2bba164af85cb02d24722d1db875cac3a29021b50acfd5cd5a5aad924854652b"
+    },
+    {
+      "path": "data/enclosure-assembly.json",
+      "sha256": "ebc5b9f8be9121a9036d923b082b6b7ed8cbbf8e49d6ea5b9226150577743e06"
+    },
+    {
+      "path": "data/enclosure-meshes.json",
+      "sha256": "dea2c42b20d3ae6d8e341523c763768ff749d49cb049f87df974ff8d98ebc2f4"
+    },
+    {
+      "path": "data/enclosure-checksums.json",
+      "sha256": "d6e9a5b745de4607c1de368201769189fb5b81853b4951ad8925e948e49cbd30"
+    },
+    {
+      "path": "vendor/manifest.json",
+      "sha256": "6495dd49aca9b4236b78d5fa0416da855d69333cd570ed0afd2cce7ac9256036"
+    }
+  ]
+}
