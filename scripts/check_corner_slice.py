@@ -1,6 +1,7 @@
-"""Verify one independently authored three-face corner, not a complete enclosure."""
+"""Verify independent enclosure CAD slices without claiming complete hardware fit."""
 from pathlib import Path
 import argparse
+import copy
 import itertools
 import json
 import math
@@ -19,16 +20,86 @@ from geometry_contract import require_pose
 
 
 def validate_joints(shapes, joints):
-    seen = set()
+    seen, seen_ids = set(), set()
     for joint in joints:
         for key in ("fastener", "clamped_part", "receiver"):
             if joint[key] not in shapes:
                 raise ValueError("Missing physical joint counterpart: " + joint[key])
-        if joint["fastener"] in seen or joint["engagement_mm"] <= 0 or joint["bottom_margin_mm"] <= 0:
+        if (joint["fastener"] in seen or joint["id"] in seen_ids or
+                joint["engagement_mm"] <= 0 or joint["bottom_margin_mm"] <= 0):
             raise ValueError("Invalid fastener/joint definition")
         if not 0 < joint["thread_minor_radius_mm"] < joint["thread_major_radius_mm"]:
             raise ValueError("Invalid declared thread radii")
+        stack = joint.get("stack", [joint["clamped_part"], joint["receiver"]])
+        if (not stack or stack[0] != joint["clamped_part"] or stack[-1] != joint["receiver"] or
+                len(set(stack)) != len(stack) or joint["fastener"] in stack):
+            raise ValueError("Invalid ordered clamped stack: "+joint["id"])
+        if any(name not in shapes for name in stack):
+            raise ValueError("Missing physical stack member: "+joint["id"])
+        if abs(math.hypot(*joint["axis"])-1) > 1e-8:
+            raise ValueError("The nominal fastener axis must be a unit vector")
         seen.add(joint["fastener"])
+        seen_ids.add(joint["id"])
+
+
+def verify_fastener_lengths(shapes, joints):
+    results = []
+    for row in joints:
+        convention, nominal = row["length_convention"], row["nominal_length_mm"]
+        if convention not in ("including-head", "under-head") or nominal <= 0:
+            raise ValueError("Unknown nominal screw length convention")
+        head = row["head_height_mm"] if convention == "under-head" else 0
+        axis, seat = App.Vector(*row["axis"]), App.Vector(*row["seat_point_mm"])
+        axial = [(vertex.Point-seat).dot(axis) for vertex in shapes[row["fastener"]].Vertexes]
+        measured = [min(axial), max(axial)]
+        if (max(abs(measured[0]+head), abs(measured[1]-nominal)) > 1e-6 or
+                abs(row["modeled_total_length_mm"]-(measured[1]-measured[0])) > 1e-6):
+            raise ValueError("Fastener axial length disagrees with its convention: "+row["fastener"])
+        results.append({"fastener":row["fastener"],"length_convention":convention,
+                        "nominal_length_mm":nominal,"measured_axis_extent_mm":measured,
+                        "measured_total_length_mm":measured[1]-measured[0]})
+    return results
+
+
+def verify_holder_conditions(shapes, joints, base_details):
+    from enclosure_holders import N, holders
+    path = Path(__file__).resolve().parents[1]/"data/enclosure-nominal-conditions.json"
+    conditions = json.loads(path.read_text())
+    altered = copy.deepcopy(conditions)
+    altered["pcb"]["nominal_board_thickness_mm"] = 2.0
+    extra, changed_joints, changed_details = holders(altered)
+    changed = dict(shapes)
+    changed.update(extra)
+    joint_set = [row for row in joints if not row["id"].startswith("EH_")]+changed_joints
+    validate_joints(changed, joint_set)
+    lengths = verify_fastener_lengths(changed, joint_set)
+    collision = verify_collisions(changed, joint_set)
+    coordinates = [vertex.Point.dot(N) for vertex in changed["E_REF_BOARD_PCB"].Vertexes]
+    thickness = max(coordinates)-min(coordinates)
+    pcb_rows = [row for row in changed_joints if row["id"].startswith("EH_BOARD_PCB_")]
+    if (abs(thickness-2) > 1e-6 or len(pcb_rows) != 4 or
+            any(abs(row["frame_grip_mm"]-5.5) > 1e-6 or abs(row["engagement_mm"]-4.5) > 1e-6 for row in pcb_rows)):
+        raise ValueError("A changed board condition silently retained stale geometry or engagement")
+    bad_length = dict(pcb_rows[0], modeled_total_length_mm=10)
+    try:
+        verify_fastener_lengths(changed, [bad_length])
+    except ValueError:
+        stale_length_rejected = True
+    else:
+        raise ValueError("A 13 mm modeled screw passed a 10 mm total-length declaration")
+    bad_stack = dict(pcb_rows[0], stack=[pcb_rows[0]["clamped_part"],"MISSING_SPACER",pcb_rows[0]["receiver"]])
+    try:
+        validate_joints(changed, [bad_stack])
+    except ValueError:
+        missing_stack_rejected = True
+    else:
+        raise ValueError("A missing clamped-stack member passed")
+    return {"conditions_sha256":digest(path),"base_details":base_details,"changed_variant_details":changed_details,
+            "changed_board_thickness_mm":thickness,"changed_joint_grip_mm":pcb_rows[0]["frame_grip_mm"],
+            "changed_joint_engagement_mm":pcb_rows[0]["engagement_mm"],
+            "changed_variant_thread_checks":len(collision["declared_thread_presence"]),
+            "changed_variant_length_checks":len(lengths),"stale_total_length_rejected":stale_length_rejected,
+            "missing_stack_member_rejected":missing_stack_rejected,"mutant_not_saved_as_delivery":True}
 
 
 def analytical_bounds(name):
@@ -134,8 +205,10 @@ def verify_collisions(shapes, joints):
                                 "nominal_annulus_mm3": expected, "minimum_required_mm3": minimum})
     contacts = []
     for row in joints:
-        for first, second, role in [(row["clamped_part"], row["receiver"], "frame-to-corner seat"),
-                                    (row["fastener"], row["clamped_part"], "flat-head conical seat")]:
+        stack = row.get("stack", [row["clamped_part"], row["receiver"]])
+        pairs = [(first, second, "declared clamped stack bearing") for first, second in zip(stack, stack[1:])]
+        pairs.append((row["fastener"], row["clamped_part"], "declared fastener head seat"))
+        for first, second, role in pairs:
             distance = shapes[first].distToShape(shapes[second])[0]
             contact_area = 0.0
             for left in shapes[first].Faces:
@@ -180,24 +253,33 @@ def verify_cap_path(shapes):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output", type=Path, required=True)
-    parser.add_argument("--scope", choices=("corner", "cage"), default="corner")
+    parser.add_argument("--scope", choices=("corner", "cage", "holders"), default="corner")
     args = parser.parse_args()
     if args.output.exists():
         raise ValueError("Use a new private slice output directory")
     shapes, joints = corner_slice() if args.scope == "corner" else frame_cage()
+    if args.scope == "holders":
+        from enclosure_holders import holders
+        extra, extra_joints, holder_details = holders()
+        shapes.update(extra)
+        joints.extend(extra_joints)
     validate_joints(shapes, joints)
+    lengths = verify_fastener_lengths(shapes, joints)
+    holder_checks = verify_holder_conditions(shapes, joints, holder_details) if args.scope == "holders" else None
     expected = {}
     for name, shape in shapes.items():
         assert_shape(shape, name)
         if len(shape.Solids) != 1:
             raise ValueError("An enclosure part must be one connected solid: " + name)
-        box = analytical_bounds(name)
+        box = (bounds(shape) if name.startswith(("E_HOLDER_", "E_REF_BOARD_", "E_SPACER_", "E_WASHER_", "E_BOARD_SCREW_"))
+               else analytical_bounds(name))
         if max(abs(a-b) for a,b in zip(bounds(shape),box)) > 1e-6:
             raise ValueError("Primitive shape departed from its independent dimension contract")
         expected[name] = {"bbox_mm": box, "center_of_mass_mm": shape_centroid(shape),
-                          "volume_mm3": shape.Volume, "solid_count": len(shape.Solids), "is_reference": False}
+                          "volume_mm3": shape.Volume, "solid_count": len(shape.Solids),
+                          "is_reference": name.startswith("E_REF_BOARD_")}
     collision = verify_collisions(shapes, joints)
-    outer = verify_outer_surfaces(shapes) if args.scope == "cage" else None
+    outer = verify_outer_surfaces(shapes) if args.scope != "corner" else None
     cap_path = verify_cap_path(shapes) if args.scope == "cage" else None
     try:
         validate_joints(shapes, [dict(joints[0], receiver="MISSING_RECEIVER")])
@@ -221,19 +303,19 @@ def main():
     else:
         raise ValueError("An oversized receiver with no thread engagement passed")
     args.output.mkdir(parents=True)
-    stem = "corner-slice" if args.scope == "corner" else "frame-cage"
+    stem = {"corner": "corner-slice", "cage": "frame-cage", "holders": "enclosure-holders"}[args.scope]
     native, step = args.output/(stem+".FCStd"), args.output/(stem+".step")
     with tempfile.TemporaryDirectory(prefix="independent-corner-") as directory:
         raw = Path(directory)
-        doc = App.newDocument("IndependentCornerSlice")
+        doc = App.newDocument("IndependentEnclosureSlice")
         doc.CreatedBy = ""
-        doc.Comment = "Independent nominal metal corner proof only; not full enclosure or fabrication approval."
+        doc.Comment = "Independent nominal enclosure slice; reference boards are unqualified. Not fabrication approval."
         objects = []
         for name, shape in shapes.items():
             obj = doc.addObject("Part::Feature", name)
             obj.Label = name
             obj.Shape = shape.copy()
-            obj.addProperty("App::PropertyBool", "IsReference"); obj.IsReference = False
+            obj.addProperty("App::PropertyBool", "IsReference"); obj.IsReference = expected[name]["is_reference"]
             obj.addProperty("App::PropertyBool", "PhysicalQualified"); obj.PhysicalQualified = False
             obj.addProperty("App::PropertyString", "GeometryOrigin"); obj.GeometryOrigin = "new-independent-primitives"
             objects.append(obj)
@@ -242,6 +324,7 @@ def main():
         App.closeDocument(doc.Name)
         normalized_native(raw/"slice.FCStd", native); normalized_step(raw/"slice.step", step)
     saved = readback(native, step, expected)
+    saved["expected_pose_basis"] = "Analytical cage bounds and pre-document holder shapes/centroids, never saved-object-derived expectations"
     before = digest(native)
     doc = App.openDocument(str(native))
     try:
@@ -261,12 +344,16 @@ def main():
         raise ValueError("Negative pose check modified saved output")
     report = {"status": "PASS", "scope": args.scope, "cad_slice_complete": True, "full_enclosure_complete": False,
               "parts": expected, "joints": joints, "geometry": collision, "readback": saved,
+              "fastener_lengths": lengths, "holder_conditions": holder_checks,
               "outer_surface_coverage": outer,
               "cap_local_installation": cap_path,
               "negative_controls": {"missing_mate_rejected": missing_rejected, "wrong_pose_rejected": pose_rejected},
               "source_geometry_read": False, "whole_fit": False, "build_ready": False, "physical_ready": False}
     report["negative_controls"].update({"oversized_receiver_rejected": oversize_rejected,
                                         "oversized_receiver_common_mm3": oversize_volume})
+    report["generator_sha256"] = {name:digest(Path(__file__).parent/name) for name in
+                                 ("check_corner_slice.py","enclosure_geometry.py","enclosure_holders.py",
+                                  "build_cad.py","geometry_contract.py")}
     (args.output/"report.json").write_text(json.dumps(report,indent=2)+"\n")
     print(json.dumps({"status":"PASS","parts":len(shapes),"joints":len(joints),
                       "bounded_threads":len(collision["bounded_threads"]),

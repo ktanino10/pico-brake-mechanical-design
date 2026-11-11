@@ -31,6 +31,13 @@ def above_diagonal(coordinate):
     return cutter
 
 
+def below_diagonal(coordinate):
+    cutter = Part.makeBox(100, 100, 100, App.Vector(-50, -50, 0))
+    cutter.transformShape(App.Placement(App.Vector(coordinate, coordinate, coordinate),
+                                       App.Rotation(App.Vector(0, 0, 1), -DIAGONAL)).toMatrix())
+    return cutter
+
+
 def axis_vector(axis, sign=1):
     values = [0, 0, 0]
     values[axis] = sign
@@ -46,6 +53,7 @@ def point_on_axis(axis, coordinate, transverse):
 def corner_positive():
     shape = Part.makeBox(12, 12, 12, App.Vector(CORNER_INNER, CORNER_INNER, CORNER_INNER))
     shape = shape.cut(above_diagonal(DIAGONAL_SEAT))
+    shape = shape.cut(below_diagonal(53.8))
     for axis in range(3):
         pin = Part.makeCylinder(1.5, 6.7, point_on_axis(axis, 62.3, REGISTER), axis_vector(axis))
         shape = shape.fuse(pin)
@@ -141,7 +149,8 @@ def corner_slice():
             "seat_point_mm": list(point_on_axis(axis, FRAME_OUTER, CORNER_FIXING)),
             "seat_kind": "nominal flat-head cone D6 / height1.7",
             "nominal_thread": "M3x0.5; major/minor cylindrical representation",
-            "length_including_head_mm": CORNER_SCREW_LENGTH, "frame_grip_mm": 5.2,
+            "nominal_length_mm": CORNER_SCREW_LENGTH, "length_convention": "including-head",
+            "modeled_total_length_mm": CORNER_SCREW_LENGTH, "frame_grip_mm": 5.2,
             "engagement_mm": 4.8, "tap_depth_mm": THREAD_DEPTH, "bottom_margin_mm": .7,
             "thread_major_radius_mm": THREAD_MAJOR, "thread_minor_radius_mm": THREAD_MINOR,
             "material_assumption": "Machined 6061-T6 frame/corner; certification and strength unqualified",
@@ -224,7 +233,8 @@ def frame_cage():
                     "seat_kind": "nominal flat-head cone D6 / height1.7 on actual outer corner cover",
                     "nominal_thread": "M3x0.5; major/minor cylindrical representation",
                     "thread_major_radius_mm": THREAD_MAJOR, "thread_minor_radius_mm": THREAD_MINOR,
-                    "length_including_head_mm": 14, "frame_grip_mm": CAP_GRIP,
+                    "nominal_length_mm": 14, "length_convention": "including-head",
+                    "modeled_total_length_mm": 14, "frame_grip_mm": CAP_GRIP,
                     "engagement_mm": 14-CAP_GRIP, "tap_depth_mm": 5.5,
                     "bottom_margin_mm": 5.5-(14-CAP_GRIP), "tightening_torque_Nm": None,
                     "material_assumption": "Machined nominal metal cover/corner; outer contact safety unqualified",
@@ -247,7 +257,8 @@ def frame_cage():
                         "seat_kind": "nominal flat-head cone D6 / height1.7",
                         "nominal_thread": "M3x0.5; major/minor cylindrical representation",
                         "thread_major_radius_mm": THREAD_MAJOR, "thread_minor_radius_mm": THREAD_MINOR,
-                        "length_including_head_mm": 10, "frame_grip_mm": 5.2, "engagement_mm": 4.8,
+                        "nominal_length_mm": 10, "length_convention": "including-head",
+                        "modeled_total_length_mm": 10, "frame_grip_mm": 5.2, "engagement_mm": 4.8,
                         "tap_depth_mm": 5.5, "bottom_margin_mm": .7, "tightening_torque_Nm": None,
                         "material_assumption": "Machined 6061-T6 frame/corner; material and strength unqualified",
                         "physical_ready": False,
