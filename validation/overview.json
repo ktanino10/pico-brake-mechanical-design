@@ -1,0 +1,67 @@
+{
+  "status": "PASS",
+  "scope": "Reference enclosure/PCB overview; no physical approval or whole-machine CAD claim",
+  "checks": [
+    "Desktop renders 72 independent references with 447 unchanged brake parts, without automatic motion/audio",
+    "All 72 selections agree with highlighted counterparts; every reference screw resolves its mates",
+    "Assembly-stage explanation and PCB → standoff → case → nut selection work",
+    "0/50/100% fits, enclosure transparency, brake visibility and reset work",
+    "A real 3D raycast selects the visible enclosure screw and its mating parts",
+    "Keyboard camera and reduced-motion behavior work",
+    "Hypothetical dimensions, CAD exclusion and unchanged electrical/physical limits are visible",
+    "Main brake page links to overview and all interactive controls have accessible names",
+    "Mobile has no horizontal overflow and supports stage, explode, fit and reset",
+    "Missing layout shows a clear error and retry recovers after restoration"
+  ],
+  "browser": "157.0.8103.39",
+  "console_errors": [],
+  "console_warnings": [],
+  "network_failures": [],
+  "external_requests": [],
+  "inputs": [
+    {
+      "path": "overview.html",
+      "sha256": "572f144bfbed953377e80bd806705da677cc9eec9bab79b2089122b4eeb15f3b"
+    },
+    {
+      "path": "overview.js",
+      "sha256": "550083a15372c54a401c9da82e317afba8ae31c4a9469b02e398320bb0f91f92"
+    },
+    {
+      "path": "overview.css",
+      "sha256": "010292856f179c726bdb664532b6ce0d9605e4c2e87585ea4c1cb1ecc26f6e38"
+    },
+    {
+      "path": "overview-bootstrap.js",
+      "sha256": "4b801201c931266a5f93e16af0b348e53db80bfe44d00cf52f35ca1fb54dfbe0"
+    },
+    {
+      "path": "data/overview-layout.json",
+      "sha256": "82d3d2f48ebd1fe3e615d8638f1225260a54988d3b1f6a3955bfb7efbb702f3a"
+    },
+    {
+      "path": "index.html",
+      "sha256": "99106ae5f78ba4837999f36d87e86a4e0f6facf33e394662900257a06422d05b"
+    },
+    {
+      "path": "styles.css",
+      "sha256": "2687558e8803e998a5a00d1334359eba0f5b3f7f05423620d7245e90d6a44d52"
+    },
+    {
+      "path": "contract.js",
+      "sha256": "2bba164af85cb02d24722d1db875cac3a29021b50acfd5cd5a5aad924854652b"
+    },
+    {
+      "path": "data/assembly.json",
+      "sha256": "8fac1425bad538abeb5d72476914b830abf35994b332522016e9c7baeaae8505"
+    },
+    {
+      "path": "data/meshes.json",
+      "sha256": "9e4f3075a8a36f0651a8301f3bd398db2946c2a16a5cd22e755190d99b9c5dd2"
+    },
+    {
+      "path": "vendor/manifest.json",
+      "sha256": "6495dd49aca9b4236b78d5fa0416da855d69333cd570ed0afd2cce7ac9256036"
+    }
+  ]
+}

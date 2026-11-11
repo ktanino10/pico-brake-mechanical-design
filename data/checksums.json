@@ -24,8 +24,8 @@
     },
     {
       "path": "downloads/public-brake-cad.zip",
-      "bytes": 3917035,
-      "sha256": "60b90d2ad3bf9e44c26cee20a56d67fa0f7d0d98f21aacabe1b3e07f9a2681d1"
+      "bytes": 3917597,
+      "sha256": "a86dd1d61a238b717b6c025a080e32dd6045beabd3124a16d4a91b698f5bb55b"
     },
     {
       "path": "data/assembly.json",
@@ -39,5 +39,5 @@
     }
   ],
   "downloads_ready": true,
-  "reason": "公開データの整合確認済み。実機・製作・物理検証の資格ではありません。"
+  "reason": "公開CADの整合確認済み。最終ZIPは文書リンクだけの変更として、実行済み再出力証拠へ明示的に再束縛しています。"
 }

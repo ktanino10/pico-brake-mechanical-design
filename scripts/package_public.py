@@ -107,6 +107,12 @@ def audit(forbidden_native=None, require_all=True):
         for item in browser["downloads"]:
             if record(item["path"])["sha256"] != item["sha256"]:
                 raise PublicScanError("A download changed after the browser check")
+        overview = json.loads((ROOT / "validation/overview.json").read_text())
+        if overview["status"] != "PASS" or not overview.get("inputs"):
+            raise PublicScanError("Reference overview browser validation is incomplete")
+        for item in overview["inputs"]:
+            if record(item["path"])["sha256"] != item["sha256"]:
+                raise PublicScanError("Reference overview changed after its browser check")
     negative = {}
     for name in ["WHEEL", "LOAD_FRAME", "SRC_Part__Feature12", "CORNER_BOLT_0", "YOKE_99"]:
         try:

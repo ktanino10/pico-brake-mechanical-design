@@ -17,6 +17,11 @@ URLの記載自体は本番配信済みの確認ではありません。公開�
 配信元を`main`ブランチの`/（root）`にする静的配信を想定し、
 リポジトリrootの空の`.nojekyll`でJekyllの変換を止めます。MarkdownやCAD・JSONなどのassetsはそのまま配信します。
 
+[筐体・基板・電池の全体像（参考配置）](https://ktanino10.github.io/pico-brake-mechanical-design/overview.html) では、独立した仮の筐体・2枚の基板・電池を
+3軸ブレーキと一緒に表示します。支柱やねじを選ぶと固定先が連動します。
+この追加参考形状は実基板への適合設計でも、既存FCStd／STEP／CAD・表ZIPに含まれる全機CADでもありません。
+仮寸法と出所は [配置データ](data/overview-layout.json)、範囲は [参考全体図の説明](docs/OVERVIEW.md) を参照してください。
+
 ローカルでリポジトリを取得した場合は、このフォルダーで次を実行します。
 
 ```sh
@@ -115,6 +120,7 @@ npm ci --ignore-scripts
 npm test
 python3 -B -m unittest discover -s tests -p 'test_*.py'
 npm run test:browser
+npm run test:overview
 python3 -B scripts/package_public.py
 ```
 

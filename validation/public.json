@@ -2,14 +2,13 @@
   "schema": "public-brake-content-audit-v1",
   "status": "PASS",
   "scope": "Allowlisted bytes, archives and metadata. No claim of whole-machine or physical approval.",
-  "original_native_negative_control": "REJECTED",
+  "original_native_negative_control": "not-supplied",
   "negative_controls": {
     "WHEEL": "REJECTED",
     "LOAD_FRAME": "REJECTED",
     "SRC_Part__Feature12": "REJECTED",
     "CORNER_BOLT_0": "REJECTED",
-    "YOKE_99": "REJECTED",
-    "full-protected-native": "REJECTED"
+    "YOKE_99": "REJECTED"
   },
   "checks": {
     ".gitignore": {
@@ -22,13 +21,13 @@
       "bytes_scanned": 0
     },
     "README.md": {
-      "bytes_scanned": 7994
+      "bytes_scanned": 8612
     },
     "NOTICE.md": {
       "bytes_scanned": 1114
     },
     "index.html": {
-      "bytes_scanned": 11269
+      "bytes_scanned": 11389
     },
     "styles.css": {
       "bytes_scanned": 14336
@@ -43,16 +42,46 @@
       "bytes_scanned": 5690
     },
     "package.json": {
-      "bytes_scanned": 363
+      "bytes_scanned": 443
     },
     "package-lock.json": {
       "bytes_scanned": 2097
     },
+    "overview.html": {
+      "bytes_scanned": 7865
+    },
+    "overview.js": {
+      "bytes_scanned": 24685
+    },
+    "overview.css": {
+      "bytes_scanned": 2562
+    },
+    "overview-bootstrap.js": {
+      "bytes_scanned": 1308
+    },
+    "data/overview-layout.json": {
+      "bytes_scanned": 62468
+    },
+    "docs/OVERVIEW.md": {
+      "bytes_scanned": 2253
+    },
+    "scripts/build_overview_layout.py": {
+      "bytes_scanned": 10384
+    },
+    "tests/overview.test.mjs": {
+      "bytes_scanned": 3813
+    },
+    "tests/overview-browser.mjs": {
+      "bytes_scanned": 10409
+    },
+    "validation/overview.json": {
+      "bytes_scanned": 2582
+    },
     "docs/PUBLIC_SCOPE.md": {
-      "bytes_scanned": 4326
+      "bytes_scanned": 4999
     },
     "docs/VALIDATION.md": {
-      "bytes_scanned": 5116
+      "bytes_scanned": 6188
     },
     "data/provenance.json": {
       "bytes_scanned": 153070
@@ -70,7 +99,7 @@
       "bytes_scanned": 27345
     },
     "data/checksums.json": {
-      "bytes_scanned": 1388
+      "bytes_scanned": 1442
     },
     "downloads/brake-single.FCStd": {
       "native_shapes": 149,
@@ -88,7 +117,7 @@
     },
     "downloads/public-brake-cad.zip": {
       "zip_members": 18,
-      "uncompressed_bytes": 13696132
+      "uncompressed_bytes": 13697423
     },
     "vendor/three.module.js": {
       "bytes_scanned": 662772
@@ -121,7 +150,7 @@
       "bytes_scanned": 3280
     },
     "scripts/public_files.py": {
-      "bytes_scanned": 1868
+      "bytes_scanned": 2123
     },
     "scripts/serve_public.py": {
       "bytes_scanned": 3169
@@ -130,7 +159,7 @@
       "bytes_scanned": 8450
     },
     "scripts/package_public.py": {
-      "bytes_scanned": 8328
+      "bytes_scanned": 8764
     },
     "scripts/verify_public_zip.py": {
       "bytes_scanned": 5434
@@ -151,10 +180,10 @@
       "bytes_scanned": 10890
     },
     "validation/browser.json": {
-      "bytes_scanned": 8587
+      "bytes_scanned": 5235
     },
     "validation/reexport.json": {
-      "bytes_scanned": 1656
+      "bytes_scanned": 4096
     }
   },
   "files": [
@@ -180,8 +209,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 7994,
-      "sha256": "b68a4f2007ed123a527bddc922769cfb9b3ecd7fd34a85d648a31cb494f74a4f"
+      "bytes": 8612,
+      "sha256": "b3ea89a9d7d4eb6b85785b1e4fc91f478371b87dc9f49bf26dcd2bcd830b9587"
     },
     {
       "path": "app.js",
@@ -205,8 +234,8 @@
     },
     {
       "path": "data/checksums.json",
-      "bytes": 1388,
-      "sha256": "6ac5c48127e45bb7409b4e2062152ee32e20dcd5b5f5dee7cca14408fc313d1a"
+      "bytes": 1442,
+      "sha256": "aa8f56ae674787835c75756f9960582ab25e1d91fe5875aaa955b312a877c212"
     },
     {
       "path": "data/joints.csv",
@@ -219,6 +248,11 @@
       "sha256": "9e4f3075a8a36f0651a8301f3bd398db2946c2a16a5cd22e755190d99b9c5dd2"
     },
     {
+      "path": "data/overview-layout.json",
+      "bytes": 62468,
+      "sha256": "82d3d2f48ebd1fe3e615d8638f1225260a54988d3b1f6a3955bfb7efbb702f3a"
+    },
+    {
       "path": "data/parts.csv",
       "bytes": 23414,
       "sha256": "0571af0d46752947c7e04ea0635e99f1f090d39c67deadb8bb9c7b2cb3c9fb2a"
@@ -229,14 +263,19 @@
       "sha256": "43598e100d349abbf5911e51bd9ff64d8a11abc96591db9583819e2b4d491f24"
     },
     {
+      "path": "docs/OVERVIEW.md",
+      "bytes": 2253,
+      "sha256": "317069d70ef616e21ebab1d71d9c1a3e9229c0ebf5c807e4d1c82d155c0d3b9e"
+    },
+    {
       "path": "docs/PUBLIC_SCOPE.md",
-      "bytes": 4326,
-      "sha256": "295c49ce06f97e64e7dadf42b0a596b66e14e85e66a560440fb132dcace39ee4"
+      "bytes": 4999,
+      "sha256": "34ae79d40bcf2d36dc1dcfd06e0479b24196d781c0337b30f14c88e57c365f30"
     },
     {
       "path": "docs/VALIDATION.md",
-      "bytes": 5116,
-      "sha256": "033bfd0686a2c451479f4abdfdabc20aa686c6605b543fd45139401704e8cf3b"
+      "bytes": 6188,
+      "sha256": "4d7c4421d7eb99b72aa5e1c3cdcf018a01bff8df39aa4d3baef233bf4b00645b"
     },
     {
       "path": "downloads/brake-reference-three.FCStd",
@@ -260,13 +299,33 @@
     },
     {
       "path": "downloads/public-brake-cad.zip",
-      "bytes": 3917035,
-      "sha256": "60b90d2ad3bf9e44c26cee20a56d67fa0f7d0d98f21aacabe1b3e07f9a2681d1"
+      "bytes": 3917597,
+      "sha256": "a86dd1d61a238b717b6c025a080e32dd6045beabd3124a16d4a91b698f5bb55b"
     },
     {
       "path": "index.html",
-      "bytes": 11269,
-      "sha256": "28324c75bbe297f88ffd4e265201e1c7425b2cef388e3b5d74a09765e42aed4f"
+      "bytes": 11389,
+      "sha256": "99106ae5f78ba4837999f36d87e86a4e0f6facf33e394662900257a06422d05b"
+    },
+    {
+      "path": "overview-bootstrap.js",
+      "bytes": 1308,
+      "sha256": "4b801201c931266a5f93e16af0b348e53db80bfe44d00cf52f35ca1fb54dfbe0"
+    },
+    {
+      "path": "overview.css",
+      "bytes": 2562,
+      "sha256": "010292856f179c726bdb664532b6ce0d9605e4c2e87585ea4c1cb1ecc26f6e38"
+    },
+    {
+      "path": "overview.html",
+      "bytes": 7865,
+      "sha256": "572f144bfbed953377e80bd806705da677cc9eec9bab79b2089122b4eeb15f3b"
+    },
+    {
+      "path": "overview.js",
+      "bytes": 24685,
+      "sha256": "550083a15372c54a401c9da82e317afba8ae31c4a9469b02e398320bb0f91f92"
     },
     {
       "path": "package-lock.json",
@@ -275,13 +334,18 @@
     },
     {
       "path": "package.json",
-      "bytes": 363,
-      "sha256": "7d99121741f002c69175b536c6792dd357de3d77ab582aa10e9f2f703f01a809"
+      "bytes": 443,
+      "sha256": "790a94fde8b8ee105dcb8d50944eb3cd2f15119187c67d7b97eb2356fb9f2877"
     },
     {
       "path": "scripts/build_cad.py",
       "bytes": 24864,
       "sha256": "6e8f699986df52418a23ccae5b2c2031efcbeda00ab1cba5b4221e79b237e717"
+    },
+    {
+      "path": "scripts/build_overview_layout.py",
+      "bytes": 10384,
+      "sha256": "ac265f07e23afc61173c9b9bd8e4e37684a0cc84859e2fb7949054f8b5981052"
     },
     {
       "path": "scripts/catalog.py",
@@ -295,13 +359,13 @@
     },
     {
       "path": "scripts/package_public.py",
-      "bytes": 8328,
-      "sha256": "17c4e42c6d39fc799521f92ba1c05907b693fff6ef294c96d9a3cc3c41e3a839"
+      "bytes": 8764,
+      "sha256": "690531538a29ac334bf87ad1e896bae9ee25091d8ace8c680fc68228c37bb1b3"
     },
     {
       "path": "scripts/public_files.py",
-      "bytes": 1868,
-      "sha256": "6483951dd1442a5ca040be7c197ea079bc4f960ce99b4d2fc1bdf407c78fe2ab"
+      "bytes": 2123,
+      "sha256": "65765bf7cfd3456b179a28f790b3b21476a7218b6df7f077b9db6740a6743ac5"
     },
     {
       "path": "scripts/public_policy.py",
@@ -349,14 +413,24 @@
       "sha256": "892ea53d2b1b3f362152ab884f8cf0320f57824709c753a131b5be950fe5707d"
     },
     {
+      "path": "tests/overview-browser.mjs",
+      "bytes": 10409,
+      "sha256": "1889c8eba11c3633db7d02bf9f1a30032588e9f40db06a3c6182f7e831574582"
+    },
+    {
+      "path": "tests/overview.test.mjs",
+      "bytes": 3813,
+      "sha256": "cbdaf42b2a1fd57057444ae18acca71c16d10301c042786f368ffd29f9e55a6f"
+    },
+    {
       "path": "tests/test_public.py",
       "bytes": 6839,
       "sha256": "f3f5f552de77e5c00615060d272b0f7e6ffda1a07f8f0a9652cce4e617e908b1"
     },
     {
       "path": "validation/browser.json",
-      "bytes": 8587,
-      "sha256": "09160af5d00ff85959e2886c03edec8b34da63be687c567c7e7047a22df70ebe"
+      "bytes": 5235,
+      "sha256": "3b215df64bdf0ce9db339259872133b3b5a63a5539f0bb74e3c8d6e002f73187"
     },
     {
       "path": "validation/cad.json",
@@ -364,9 +438,14 @@
       "sha256": "001c243b9c1c2bfe5d0a18dca65fe2db358b6f884695f1c4a44f79ddfdb3191c"
     },
     {
+      "path": "validation/overview.json",
+      "bytes": 2582,
+      "sha256": "c7a7294722e1d5d56345deff2ddf93065c3b026b52d301639226bef4533fcf5b"
+    },
+    {
       "path": "validation/reexport.json",
-      "bytes": 1656,
-      "sha256": "9c896af8d77267b65db49e18134165c36556d10a6fe3e95bf4aa986dbf5edd8b"
+      "bytes": 4096,
+      "sha256": "03f8ee233643618d75055ecd357f6068b2edc0519212019dde7460b6d739e0be"
     },
     {
       "path": "vendor/OrbitControls.js",

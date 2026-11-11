@@ -5,8 +5,9 @@
   "type": "module",
   "scripts": {
     "vendor": "node scripts/vendor.mjs",
-    "test": "node --test tests/contract.test.mjs",
-    "test:browser": "node tests/browser.mjs"
+    "test": "node --test tests/contract.test.mjs tests/overview.test.mjs",
+    "test:browser": "node tests/browser.mjs",
+    "test:overview": "node tests/overview-browser.mjs"
   },
   "dependencies": {
     "three": "0.186.1"

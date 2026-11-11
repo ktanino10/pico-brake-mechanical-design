@@ -3,6 +3,9 @@
 PUBLIC_FILES = (
     ".gitignore", ".gitattributes", ".nojekyll", "README.md", "NOTICE.md", "index.html", "styles.css",
     "app.js", "bootstrap.js", "contract.js", "package.json", "package-lock.json",
+    "overview.html", "overview.js", "overview.css", "overview-bootstrap.js",
+    "data/overview-layout.json", "docs/OVERVIEW.md", "scripts/build_overview_layout.py",
+    "tests/overview.test.mjs", "tests/overview-browser.mjs", "validation/overview.json",
     "docs/PUBLIC_SCOPE.md", "docs/VALIDATION.md",
     "data/provenance.json", "data/assembly.json", "data/meshes.json",
     "data/parts.csv", "data/joints.csv", "data/checksums.json",

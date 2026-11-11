@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="筐体・基板・電池と3軸ブレーキの参考組立レイアウト。実基板データや製作可能な全機CADではありません。">
+  <meta name="color-scheme" content="light">
+  <title>筐体・基板の全体像 — 参考組立レイアウト</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./overview.css">
+  <script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script>
+  <script src="./overview-bootstrap.js" defer></script>
+</head>
+<body class="overview-page">
+  <a class="skip-link" href="#overview">全体組立ビューへ移動</a>
+  <div class="safety-strip"><strong>参考レイアウト</strong><span>実基板・実筐体は未確定。製作・通電・回転の指示ではありません。</span></div>
+  <header class="page-header">
+    <div><p class="eyebrow">ENCLOSURE + ELECTRONICS / REFERENCE ONLY</p><h1>筐体・基板の全体像</h1><p class="intro">基板をどこへ置き、何で支えるか。ブレーキ部と一緒に見られる配置例です。</p></div>
+    <a class="back-link" href="./index.html">ブレーキの詳細・CADへ戻る</a>
+  </header>
+  <main>
+    <section class="overview-steps" aria-label="注目する組付け要素">
+      <button type="button" data-step="all" aria-pressed="true" disabled>全体を見る</button>
+      <button type="button" data-step="case" aria-pressed="false" disabled>筐体と支持部</button>
+      <button type="button" data-step="mount" aria-pressed="false" disabled>3軸ブレーキ</button>
+      <button type="button" data-step="pcb" aria-pressed="false" disabled>基板の固定</button>
+      <button type="button" data-step="battery" aria-pressed="false" disabled>電池と余白</button>
+    </section>
+    <section class="inspection" id="overview" aria-label="参考全体組立ビュー">
+      <div class="bench">
+        <div class="bench-heading"><strong id="stage-title">全体を見る</strong><span class="bench-meta mono">参考筐体 176 × 176 × 176 mm（突起除く）</span></div>
+        <div class="viewport" id="overview-viewport" aria-busy="true">
+          <div class="loading" id="overview-loading" role="status">公開ブレーキ部と参考配置を読み込んでいます…</div>
+          <div class="load-error" id="overview-error" role="alert" hidden><h2>全体図を表示できません</h2><p id="overview-error-message"></p><p>HTTPで開き、data/ と vendor/ が揃っていること、WebGLが利用できることを確認してください。</p><button type="button" id="overview-retry">再読み込み</button></div>
+          <div class="view-caption" id="overview-caption" hidden><span class="caption-dot"></span><span id="overview-view-state">組付け位置（仮）</span></div>
+          <p class="model-warning">筐体・基板・電池と追加ねじは独立した仮形状です</p>
+        </div>
+        <div class="legend"><span><i class="swatch reference"></i>参考筐体</span><span><i class="swatch green"></i>仮の基板</span><span><i class="swatch ov-battery"></i>電池の予約外形</span><span><i class="swatch steel"></i>既存のブレーキ部</span></div>
+        <fieldset class="bench-controls" id="overview-controls" disabled>
+          <legend class="sr-only">全体図の操作</legend>
+          <div class="explode-control"><label for="overview-explode">分解表示</label><input id="overview-explode" type="range" min="0" max="100" step="1" value="0"><output id="overview-explode-value" for="overview-explode">0%</output></div>
+          <div class="control-actions"><label class="check"><input id="case-transparent" type="checkbox" checked>筐体を透かす</label><label class="check"><input id="show-brakes" type="checkbox" checked>ブレーキ部を表示</label><button type="button" id="overview-fit">全体を表示</button><button type="button" id="overview-top">基板を上から</button><button type="button" id="overview-reset">リセット</button></div>
+        </fieldset>
+        <p class="interaction-help">ドラッグ／矢印キーで回転、ホイール／ピンチ／<kbd>＋</kbd><kbd>−</kbd>でズーム。<kbd>Home</kbd>で全体表示。自動回転・音声はありません。</p>
+        <p class="display-note">分解は表示上の移動です。実組立順・挿入経路・工具アクセス・干渉なしを保証しません。</p>
+      </div>
+      <aside class="inspector" aria-label="参考部品と固定先">
+        <div class="inspector-heading"><h2>何を、どこへ固定するか</h2><span class="selection-marker" aria-hidden="true"></span></div>
+        <p id="stage-description" class="overview-stage-note"></p>
+        <fieldset id="overview-part-controls" disabled><legend class="sr-only">参考部品の選択</legend>
+          <label for="overview-part-select">部品<select id="overview-part-select"><option>読込待ち</option></select></label>
+        </fieldset>
+        <div class="selection-summary" aria-live="polite" aria-atomic="true"><div class="part-id" id="overview-part-id">—</div><h3 id="overview-part-title">部品を選択</h3><p class="part-kind" id="overview-part-kind"></p></div>
+        <div class="overview-spec"><p class="eyebrow">ILLUSTRATIVE DIMENSIONS / NOT A DRAWING</p><p class="mono" id="overview-dimensions"></p><p id="overview-part-note"></p></div>
+        <p class="overview-caution">追加した参考ねじの締付値は未設定です。C08金属案の締付計算値を基板・参考筐体へ転用しません。</p>
+        <div class="mate-section"><h3>固定先・関係する部品</h3><p class="mate-help">選択部は金色、相手は青緑で強調。名前でも選択できます。</p><div id="overview-mates" class="mate-list"></div></div>
+        <p id="overview-count" class="selection-count" role="status"></p>
+      </aside>
+    </section>
+    <section class="overview-boundary" aria-labelledby="overview-boundary-title">
+      <div><p class="eyebrow">WHAT THIS OVERVIEW DOES NOT CLAIM</p><h2 id="overview-boundary-title">全体の配置例と、実物の設計を分けます。</h2><p>制御基板は52 × 40 mm、駆動基板は70 × 45 mm、電池は30 × 48 × 22 mmの仮外形です。実際の型番・穴・端子・絶縁・配線・放熱・保持方法は未確定です。</p></div>
+      <div><p>筐体は新規の単純な平板・支柱で構成し、原Picoの有料CADを流用していません。全体の適合・質量・重心・起立性能を示す図ではありません。</p><p><strong>既存FCStd／STEP／CAD・表ZIPに含まれるのはブレーキ部だけです。</strong> この画面の追加参考形状は全機CADとして配布するものではありません。</p><p>コイル3軸最大約1.757 A &gt; 1.5 A、面圧感度や高温側磁気条件の未達は解消していません。</p></div>
+      <p class="state-flags mono">whole_fit: false / build_ready: false / physical_ready: false / actual_board_data: false</p>
+      <div class="data-links"><a href="./index.html">ブレーキ詳細・既存CAD</a><a href="./data/overview-layout.json" download>仮の配置・寸法・出所 JSON</a><a href="./docs/OVERVIEW.md">この参考図の範囲</a></div>
+    </section>
+  </main>
+  <footer><span>参考全体図 / mm / 全寸法は仮値</span><a href="./NOTICE.md">配布範囲と権利</a><span>原全機形状・メーカー基板CADは不使用</span></footer>
+  <noscript><p class="noscript">全体図にはJavaScriptが必要です。配置データと説明は上のリンクから確認できます。</p></noscript>
+</body>
+</html>

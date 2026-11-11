@@ -1,0 +1,2597 @@
+{
+  "schema": "brake-reference-overview-v1",
+  "units": "mm",
+  "whole_fit": false,
+  "build_ready": false,
+  "physical_ready": false,
+  "actual_board_data": false,
+  "original_pico_geometry_used": false,
+  "base_mesh_sha256": "9e4f3075a8a36f0651a8301f3bd398db2946c2a16a5cd22e755190d99b9c5dd2",
+  "base_parts_per_axis": 149,
+  "reference_part_count": 72,
+  "enclosure_outer_mm": [
+    176,
+    176,
+    176
+  ],
+  "cad_scope": "Existing FCStd/STEP/ZIP contain the brake components only; new overview references are illustration-only.",
+  "all_reference_dimensions_are_examples": true,
+  "parts": [
+    {
+      "id": "REF_CASE_TOP",
+      "label": "上側パネル",
+      "kind": "plate",
+      "section": "case",
+      "position_mm": [
+        0,
+        0,
+        86.5
+      ],
+      "dimensions_mm": [
+        176,
+        176,
+        3
+      ],
+      "orientation": "Z",
+      "explode_mm": [
+        0,
+        0,
+        70
+      ],
+      "mates": [],
+      "is_reference": true,
+      "source_geometry": null,
+      "origin": "independently-authored-primitive",
+      "included_in_brake_cad": false,
+      "tightening_torque_Nm": null,
+      "holes": [
+        [
+          -81,
+          -81,
+          1.65
+        ],
+        [
+          -81,
+          81,
+          1.65
+        ],
+        [
+          81,
+          -81,
+          1.65
+        ],
+        [
+          81,
+          81,
+          1.65
+        ],
+        [
+          -22.0,
+          12.0,
+          1.65
+        ],
+        [
+          -22.0,
+          44.0,
+          1.65
+        ],
+        [
+          22.0,
+          12.0,
+          1.65
+        ],
+        [
+          22.0,
+          44.0,
+          1.65
+        ],
+        [
+          -31.0,
+          -47.5,
+          1.65
+        ],
+        [
+          -31.0,
+          -10.5,
+          1.65
+        ],
+        [
+          31.0,
+          -47.5,
+          1.65
+        ],
+        [
+          31.0,
+          -10.5,
+          1.65
+        ]
+      ],
+      "note": "独立した平板の参考筐体。原Picoの枠・cornerを写したものではありません。板厚3 mmは図示用の仮値です。"
+    },
+    {
+      "id": "REF_CASE_BOTTOM",
+      "label": "下側パネル",
+      "kind": "plate",
+      "section": "case",
+      "position_mm": [
+        0,
+        0,
+        -86.5
+      ],
+      "dimensions_mm": [
+        176,
+        176,
+        3
+      ],
+      "orientation": "Z",
+      "explode_mm": [
+        0,
+        0,
+        -55
+      ],
+      "mates": [],
+      "is_reference": true,
+      "source_geometry": null,
+      "origin": "independently-authored-primitive",
+      "included_in_brake_cad": false,
+      "tightening_torque_Nm": null,
+      "holes": [
+        [
+          -81,
+          -81,
+          1.65
+        ],
+        [
+          -81,
+          81,
+          1.65
+        ],
+        [
+          81,
+          -81,
+          1.65
+        ],
+        [
+          81,
+          81,
+          1.65
+        ],
+        [
+          44.5477272147525,
+          44.54772721475249,
+          1.65
+        ],
+        [
+          -44.54772721475249,
+          44.5477272147525,
+          1.65
+        ],
+        [
+          -44.547727214752506,
+          -44.54772721475249,
+          1.65
+        ],
+        [
+          44.547727214752484,
+          -44.547727214752506,
+          1.65
+        ]
+      ],
+      "note": "独立した平板の参考筐体。原Picoの枠・cornerを写したものではありません。板厚3 mmは図示用の仮値です。"
+    },
+    {
+      "id": "REF_CASE_LEFT",
+      "label": "X軸側パネル",
+      "kind": "plate",
+      "section": "case",
+      "position_mm": [
+        -86.5,
+        0,
+        0
+      ],
+      "dimensions_mm": [
+        170,
+        170,
+        3
+      ],
+      "orientation": "X",
+      "explode_mm": [
+        -55,
+        0,
+        0
+      ],
+      "mates": [],
+      "is_reference": true,
+      "source_geometry": null,
+      "origin": "independently-authored-primitive",
+      "included_in_brake_cad": false,
+      "tightening_torque_Nm": null,
+      "holes": [
+        [
+          44.5477272147525,
+          44.54772721475249,
+          1.65
+        ],
+        [
+          -44.54772721475249,
+          44.5477272147525,
+          1.65
+        ],
+        [
+          -44.547727214752506,
+          -44.54772721475249,
+          1.65
+        ],
+        [
+          44.547727214752484,
+          -44.547727214752506,
+          1.65
+        ]
+      ],
+      "note": "独立した平板の参考筐体。原Picoの枠・cornerを写したものではありません。板厚3 mmは図示用の仮値です。"
+    },
+    {
+      "id": "REF_CASE_RIGHT",
+      "label": "反対側パネル",
+      "kind": "plate",
+      "section": "case",
+      "position_mm": [
+        86.5,
+        0,
+        0
+      ],
+      "dimensions_mm": [
+        170,
+        170,
+        3
+      ],
+      "orientation": "X",
+      "explode_mm": [
+        55,
+        0,
+        0
+      ],
+      "mates": [],
+      "is_reference": true,
+      "source_geometry": null,
+      "origin": "independently-authored-primitive",
+      "included_in_brake_cad": false,
+      "tightening_torque_Nm": null,
+      "holes": [],
+      "note": "独立した平板の参考筐体。原Picoの枠・cornerを写したものではありません。板厚3 mmは図示用の仮値です。"
+    },
+    {
+      "id": "REF_CASE_FRONT",
+      "label": "Y軸側パネル",
+      "kind": "plate",
+      "section": "case",
+      "position_mm": [
+        0,
+        -86.5,
+        0
+      ],
+      "dimensions_mm": [
+        176,
+        170,
+        3
+      ],
+      "orientation": "Y",
+      "explode_mm": [
+        0,
+        -55,
+        0
+      ],
+      "mates": [],
+      "is_reference": true,
+      "source_geometry": null,
+      "origin": "independently-authored-primitive",
+      "included_in_brake_cad": false,
+      "tightening_torque_Nm": null,
+      "holes": [
+        [
+          44.5477272147525,
+          44.54772721475249,
+          1.65
+        ],
+        [
+          -44.54772721475249,
+          44.5477272147525,
+          1.65
+        ],
+        [
+          -44.547727214752506,
+          -44.54772721475249,
+          1.65
+        ],
+        [
+          44.547727214752484,
+          -44.547727214752506,
+          1.65
+        ]
+      ],
+      "note": "独立した平板の参考筐体。原Picoの枠・cornerを写したものではありません。板厚3 mmは図示用の仮値です。"
+    },
+    {
+      "id": "REF_CASE_BACK",
+      "label": "背面パネル",
+      "kind": "plate",
+      "section": "case",
+      "position_mm": [
+        0,
+        86.5,
+        0
+      ],
+      "dimensions_mm": [
+        176,
+        170,
+        3
+      ],
+      "orientation": "Y",
+      "explode_mm": [
+        0,
+        55,
+        0
+      ],
+      "mates": [],
+      "is_reference": true,
+      "source_geometry": null,
+      "origin": "independently-authored-primitive",
+      "included_in_brake_cad": false,
+      "tightening_torque_Nm": null,
+      "holes": [],
+      "note": "独立した平板の参考筐体。原Picoの枠・cornerを写したものではありません。板厚3 mmは図示用の仮値です。"
+    },
+    {
+      "id": "REF_CORNER_POST_0",
+      "label": "筐体の支柱 1",
+      "kind": "tube",
+      "section": "case",
+      "position_mm": [
+        -81,
+        -81,
+        0
+      ],
+      "dimensions_mm": [
+        7,
+        3.3,
+        170
+      ],
+      "orientation": "Z",
+      "explode_mm": [
+        0,
+        0,
+        0
+      ],
+      "mates": [
+        "REF_CASE_TOP",
+        "REF_CASE_BOTTOM"
+      ],
+      "is_reference": true,
+      "source_geometry": null,
+      "origin": "independently-authored-primitive",
+      "included_in_brake_cad": false,
+      "tightening_torque_Nm": null,
+      "note": "支柱・インサートの配置例です。材質、接合形式、荷重は未資格です。"
+    },
+    {
+      "id": "REF_CASE_SCREW_TOP_0",
+      "label": "上パネルの参考ねじ 1",
+      "kind": "screw",
+      "section": "case",
+      "position_mm": [
+        -81,
+        -81,
+        88
+      ],
+      "dimensions_mm": [
+        3,
+        12,
+        5.5,
+        3
+      ],
+      "orientation": "Z",
+      "explode_mm": [
+        0,
+        0,
+        85
+      ],
+      "mates": [
+        "REF_CASE_TOP",
+        "REF_CORNER_POST_0"
+      ],
+      "is_reference": true,
+      "source_geometry": null,
+      "origin": "independently-authored-primitive",
+      "included_in_brake_cad": false,
+      "tightening_torque_Nm": null,
+      "flip": true,
+      "note": "M3相当の簡略図です。長さ・ねじ込み・インサート・締付値は実部材に合わせた確認が必要です。"
+    },
+    {
+      "id": "REF_CASE_SCREW_BOTTOM_0",
+      "label": "下パネルの参考ねじ 1",
+      "kind": "screw",
+      "section": "case",
+      "position_mm": [
+        -81,
+        -81,
+        -88
+      ],
+      "dimensions_mm": [
+        3,
+        12,
+        5.5,
+        3
+      ],
+      "orientation": "Z",
+      "explode_mm": [
+        0,
+        0,
+        -70
+      ],
+      "mates": [
+        "REF_CASE_BOTTOM",
+        "REF_CORNER_POST_0"
+      ],
+      "is_reference": true,
+      "source_geometry": null,
+      "origin": "independently-authored-primitive",
+      "included_in_brake_cad": false,
+      "tightening_torque_Nm": null,
+      "flip": false,
+      "note": "M3相当の簡略図です。長さ・ねじ込み・インサート・締付値は実部材に合わせた確認が必要です。"
+    },
+    {
+      "id": "REF_CORNER_POST_1",
+      "label": "筐体の支柱 2",
+      "kind": "tube",
+      "section": "case",
+      "position_mm": [
+        -81,
+        81,
+        0
+      ],
+      "dimensions_mm": [
+        7,
+        3.3,
+        170
+      ],
+      "orientation": "Z",
+      "explode_mm": [
+        0,
+        0,
+        0
+      ],
+      "mates": [
+        "REF_CASE_TOP",
+        "REF_CASE_BOTTOM"
+      ],
+      "is_reference": true,
+      "source_geometry": null,
+      "origin": "independently-authored-primitive",
+      "included_in_brake_cad": false,
+      "tightening_torque_Nm": null,
+      "note": "支柱・インサートの配置例です。材質、接合形式、荷重は未資格です。"
+    },
+    {
+      "id": "REF_CASE_SCREW_TOP_1",
+      "label": "上パネルの参考ねじ 2",
+      "kind": "screw",
+      "section": "case",
+      "position_mm": [
+        -81,
+        81,
+        88
+      ],
+      "dimensions_mm": [
+        3,
+        12,
+        5.5,
+        3
+      ],
+      "orientation": "Z",
+      "explode_mm": [
+        0,
+        0,
+        85
+      ],
+      "mates": [
+        "REF_CASE_TOP",
+        "REF_CORNER_POST_1"
+      ],
+      "is_reference": true,
+      "source_geometry": null,
+      "origin": "independently-authored-primitive",
+      "included_in_brake_cad": false,
+      "tightening_torque_Nm": null,
+      "flip": true,
+      "note": "M3相当の簡略図です。長さ・ねじ込み・インサート・締付値は実部材に合わせた確認が必要です。"
+    },
+    {
+      "id": "REF_CASE_SCREW_BOTTOM_1",
+      "label": "下パネルの参考ねじ 2",
+      "kind": "screw",
+      "section": "case",
+      "position_mm": [
+        -81,
+        81,
+        -88
+      ],
+      "dimensions_mm": [
+        3,
+        12,
+        5.5,
+        3
+      ],
+      "orientation": "Z",
+      "explode_mm": [
+        0,
+        0,
+        -70
+      ],
+      "mates": [
+        "REF_CASE_BOTTOM",
+        "REF_CORNER_POST_1"
+      ],
+      "is_reference": true,
+      "source_geometry": null,
+      "origin": "independently-authored-primitive",
+      "included_in_brake_cad": false,
+      "tightening_torque_Nm": null,
+      "flip": false,
+      "note": "M3相当の簡略図です。長さ・ねじ込み・インサート・締付値は実部材に合わせた確認が必要です。"
+    },
+    {
+      "id": "REF_CORNER_POST_2",
+      "label": "筐体の支柱 3",
+      "kind": "tube",
+      "section": "case",
+      "position_mm": [
+        81,
+        -81,
+        0
+      ],
+      "dimensions_mm": [
+        7,
+        3.3,
+        170
+      ],
+      "orientation": "Z",
+      "explode_mm": [
+        0,
+        0,
+        0
+      ],
+      "mates": [
+        "REF_CASE_TOP",
+        "REF_CASE_BOTTOM"
+      ],
+      "is_reference": true,
+      "source_geometry": null,
+      "origin": "independently-authored-primitive",
+      "included_in_brake_cad": false,
+      "tightening_torque_Nm": null,
+      "note": "支柱・インサートの配置例です。材質、接合形式、荷重は未資格です。"
+    },
+    {
+      "id": "REF_CASE_SCREW_TOP_2",
+      "label": "上パネルの参考ねじ 3",
+      "kind": "screw",
+      "section": "case",
+      "position_mm": [
+        81,
+        -81,
+        88
+      ],
+      "dimensions_mm": [
+        3,
+        12,
+        5.5,
+        3
+      ],
+      "orientation": "Z",
+      "explode_mm": [
+        0,
+        0,
+        85
+      ],
+      "mates": [
+        "REF_CASE_TOP",
+        "REF_CORNER_POST_2"
+      ],
+      "is_reference": true,
+      "source_geometry": null,
+      "origin": "independently-authored-primitive",
+      "included_in_brake_cad": false,
+      "tightening_torque_Nm": null,
+      "flip": true,
+      "note": "M3相当の簡略図です。長さ・ねじ込み・インサート・締付値は実部材に合わせた確認が必要です。"
+    },
+    {
+      "id": "REF_CASE_SCREW_BOTTOM_2",
+      "label": "下パネルの参考ねじ 3",
+      "kind": "screw",
+      "section": "case",
+      "position_mm": [
+        81,
+        -81,
+        -88
+      ],
+      "dimensions_mm": [
+        3,
+        12,
+        5.5,
+        3
+      ],
+      "orientation": "Z",
+      "explode_mm": [
+        0,
+        0,
+        -70
+      ],
+      "mates": [
+        "REF_CASE_BOTTOM",
+        "REF_CORNER_POST_2"
+      ],
+      "is_reference": true,
+      "source_geometry": null,
+      "origin": "independently-authored-primitive",
+      "included_in_brake_cad": false,
+      "tightening_torque_Nm": null,
+      "flip": false,
+      "note": "M3相当の簡略図です。長さ・ねじ込み・インサート・締付値は実部材に合わせた確認が必要です。"
+    },
+    {
+      "id": "REF_CORNER_POST_3",
+      "label": "筐体の支柱 4",
+      "kind": "tube",
+      "section": "case",
+      "position_mm": [
+        81,
+        81,
+        0
+      ],
+      "dimensions_mm": [
+        7,
+        3.3,
+        170
+      ],
+      "orientation": "Z",
+      "explode_mm": [
+        0,
+        0,
+        0
+      ],
+      "mates": [
+        "REF_CASE_TOP",
+        "REF_CASE_BOTTOM"
+      ],
+      "is_reference": true,
+      "source_geometry": null,
+      "origin": "independently-authored-primitive",
+      "included_in_brake_cad": false,
+      "tightening_torque_Nm": null,
+      "note": "支柱・インサートの配置例です。材質、接合形式、荷重は未資格です。"
+    },
+    {
+      "id": "REF_CASE_SCREW_TOP_3",
+      "label": "上パネルの参考ねじ 4",
+      "kind": "screw",
+      "section": "case",
+      "position_mm": [
+        81,
+        81,
+        88
+      ],
+      "dimensions_mm": [
+        3,
+        12,
+        5.5,
+        3
+      ],
+      "orientation": "Z",
+      "explode_mm": [
+        0,
+        0,
+        85
+      ],
+      "mates": [
+        "REF_CASE_TOP",
+        "REF_CORNER_POST_3"
+      ],
+      "is_reference": true,
+      "source_geometry": null,
+      "origin": "independently-authored-primitive",
+      "included_in_brake_cad": false,
+      "tightening_torque_Nm": null,
+      "flip": true,
+      "note": "M3相当の簡略図です。長さ・ねじ込み・インサート・締付値は実部材に合わせた確認が必要です。"
+    },
+    {
+      "id": "REF_CASE_SCREW_BOTTOM_3",
+      "label": "下パネルの参考ねじ 4",
+      "kind": "screw",
+      "section": "case",
+      "position_mm": [
+        81,
+        81,
+        -88
+      ],
+      "dimensions_mm": [
+        3,
+        12,
+        5.5,
+        3
+      ],
+      "orientation": "Z",
+      "explode_mm": [
+        0,
+        0,
+        -70
+      ],
+      "mates": [
+        "REF_CASE_BOTTOM",
+        "REF_CORNER_POST_3"
+      ],
+      "is_reference": true,
+      "source_geometry": null,
+      "origin": "independently-authored-primitive",
+      "included_in_brake_cad": false,
+      "tightening_torque_Nm": null,
+      "flip": false,
+      "note": "M3相当の簡略図です。長さ・ねじ込み・インサート・締付値は実部材に合わせた確認が必要です。"
+    },
+    {
+      "id": "REF_MODULE_POST_Z_0",
+      "label": "Z軸と筐体の参考支柱 1",
+      "kind": "tube",
+      "section": "mount",
+      "position_mm": [
+        44.5477272147525,
+        44.54772721475249,
+        -76.5
+      ],
+      "dimensions_mm": [
+        7,
+        3.3,
+        17
+      ],
+      "orientation": "Z",
+      "explode_mm": [
+        0,
+        0,
+        -16
+      ],
+      "mates": [
+        "BASE_Z",
+        "REF_CASE_BOTTOM"
+      ],
+      "is_reference": true,
+      "source_geometry": null,
+      "origin": "independently-authored-primitive",
+      "included_in_brake_cad": false,
+      "tightening_torque_Nm": null,
+      "note": "公開ブレーキの参考支持リングと、今回の参考筐体をつなぐ位置の例です。全機適合や反力保持の証明ではありません。"
+    },
+    {
+      "id": "REF_MODULE_SCREW_Z_0",
+      "label": "Z軸側の参考取付ねじ 1",
+      "kind": "screw",
+      "section": "mount",
+      "position_mm": [
+        44.5477272147525,
+        44.54772721475249,
+        -88
+      ],
+      "dimensions_mm": [
+        3,
+        10,
+        5.5,
+        3
+      ],
+      "orientation": "Z",
+      "explode_mm": [
+        0,
+        0,
+        -65
+      ],
+      "mates": [
+        "REF_CASE_BOTTOM",
+        "REF_MODULE_POST_Z_0"
+      ],
+      "is_reference": true,
+      "source_geometry": null,
+      "origin": "independently-authored-primitive",
+      "included_in_brake_cad": false,
+      "tightening_torque_Nm": null,
+      "note": "筐体側の接続位置を示す簡略ねじ。既存C08の締付計算値をこの参考接合へ適用しません。"
+    },
+    {
+      "id": "REF_MODULE_POST_Z_1",
+      "label": "Z軸と筐体の参考支柱 2",
+      "kind": "tube",
+      "section": "mount",
+      "position_mm": [
+        -44.54772721475249,
+        44.5477272147525,
+        -76.5
+      ],
+      "dimensions_mm": [
+        7,
+        3.3,
+        17
+      ],
+      "orientation": "Z",
+      "explode_mm": [
+        0,
+        0,
+        -16
+      ],
+      "mates": [
+        "BASE_Z",
+        "REF_CASE_BOTTOM"
+      ],
+      "is_reference": true,
+      "source_geometry": null,
+      "origin": "independently-authored-primitive",
+      "included_in_brake_cad": false,
+      "tightening_torque_Nm": null,
+      "note": "公開ブレーキの参考支持リングと、今回の参考筐体をつなぐ位置の例です。全機適合や反力保持の証明ではありません。"
+    },
+    {
+      "id": "REF_MODULE_SCREW_Z_1",
+      "label": "Z軸側の参考取付ねじ 2",
+      "kind": "screw",
+      "section": "mount",
+      "position_mm": [
+        -44.54772721475249,
+        44.5477272147525,
+        -88
+      ],
+      "dimensions_mm": [
+        3,
+        10,
+        5.5,
+        3
+      ],
+      "orientation": "Z",
+      "explode_mm": [
+        0,
+        0,
+        -65
+      ],
+      "mates": [
+        "REF_CASE_BOTTOM",
+        "REF_MODULE_POST_Z_1"
+      ],
+      "is_reference": true,
+      "source_geometry": null,
+      "origin": "independently-authored-primitive",
+      "included_in_brake_cad": false,
+      "tightening_torque_Nm": null,
+      "note": "筐体側の接続位置を示す簡略ねじ。既存C08の締付計算値をこの参考接合へ適用しません。"
+    },
+    {
+      "id": "REF_MODULE_POST_Z_2",
+      "label": "Z軸と筐体の参考支柱 3",
+      "kind": "tube",
+      "section": "mount",
+      "position_mm": [
+        -44.547727214752506,
+        -44.54772721475249,
+        -76.5
+      ],
+      "dimensions_mm": [
+        7,
+        3.3,
+        17
+      ],
+      "orientation": "Z",
+      "explode_mm": [
+        0,
+        0,
+        -16
+      ],
+      "mates": [
+        "BASE_Z",
+        "REF_CASE_BOTTOM"
+      ],
+      "is_reference": true,
+      "source_geometry": null,
+      "origin": "independently-authored-primitive",
+      "included_in_brake_cad": false,
+      "tightening_torque_Nm": null,
+      "note": "公開ブレーキの参考支持リングと、今回の参考筐体をつなぐ位置の例です。全機適合や反力保持の証明ではありません。"
+    },
+    {
+      "id": "REF_MODULE_SCREW_Z_2",
+      "label": "Z軸側の参考取付ねじ 3",
+      "kind": "screw",
+      "section": "mount",
+      "position_mm": [
+        -44.547727214752506,
+        -44.54772721475249,
+        -88
+      ],
+      "dimensions_mm": [
+        3,
+        10,
+        5.5,
+        3
+      ],
+      "orientation": "Z",
+      "explode_mm": [
+        0,
+        0,
+        -65
+      ],
+      "mates": [
+        "REF_CASE_BOTTOM",
+        "REF_MODULE_POST_Z_2"
+      ],
+      "is_reference": true,
+      "source_geometry": null,
+      "origin": "independently-authored-primitive",
+      "included_in_brake_cad": false,
+      "tightening_torque_Nm": null,
+      "note": "筐体側の接続位置を示す簡略ねじ。既存C08の締付計算値をこの参考接合へ適用しません。"
+    },
+    {
+      "id": "REF_MODULE_POST_Z_3",
+      "label": "Z軸と筐体の参考支柱 4",
+      "kind": "tube",
+      "section": "mount",
+      "position_mm": [
+        44.547727214752484,
+        -44.547727214752506,
+        -76.5
+      ],
+      "dimensions_mm": [
+        7,
+        3.3,
+        17
+      ],
+      "orientation": "Z",
+      "explode_mm": [
+        0,
+        0,
+        -16
+      ],
+      "mates": [
+        "BASE_Z",
+        "REF_CASE_BOTTOM"
+      ],
+      "is_reference": true,
+      "source_geometry": null,
+      "origin": "independently-authored-primitive",
+      "included_in_brake_cad": false,
+      "tightening_torque_Nm": null,
+      "note": "公開ブレーキの参考支持リングと、今回の参考筐体をつなぐ位置の例です。全機適合や反力保持の証明ではありません。"
+    },
+    {
+      "id": "REF_MODULE_SCREW_Z_3",
+      "label": "Z軸側の参考取付ねじ 4",
+      "kind": "screw",
+      "section": "mount",
+      "position_mm": [
+        44.547727214752484,
+        -44.547727214752506,
+        -88
+      ],
+      "dimensions_mm": [
+        3,
+        10,
+        5.5,
+        3
+      ],
+      "orientation": "Z",
+      "explode_mm": [
+        0,
+        0,
+        -65
+      ],
+      "mates": [
+        "REF_CASE_BOTTOM",
+        "REF_MODULE_POST_Z_3"
+      ],
+      "is_reference": true,
+      "source_geometry": null,
+      "origin": "independently-authored-primitive",
+      "included_in_brake_cad": false,
+      "tightening_torque_Nm": null,
+      "note": "筐体側の接続位置を示す簡略ねじ。既存C08の締付計算値をこの参考接合へ適用しません。"
+    },
+    {
+      "id": "REF_MODULE_POST_X_0",
+      "label": "X軸と筐体の参考支柱 1",
+      "kind": "tube",
+      "section": "mount",
+      "position_mm": [
+        -76.5,
+        -44.54772721475249,
+        44.5477272147525
+      ],
+      "dimensions_mm": [
+        7,
+        3.3,
+        17
+      ],
+      "orientation": "X",
+      "explode_mm": [
+        -16,
+        0,
+        0
+      ],
+      "mates": [
+        "BASE_X",
+        "REF_CASE_LEFT"
+      ],
+      "is_reference": true,
+      "source_geometry": null,
+      "origin": "independently-authored-primitive",
+      "included_in_brake_cad": false,
+      "tightening_torque_Nm": null,
+      "note": "公開ブレーキの参考支持リングと、今回の参考筐体をつなぐ位置の例です。全機適合や反力保持の証明ではありません。"
+    },
+    {
+      "id": "REF_MODULE_SCREW_X_0",
+      "label": "X軸側の参考取付ねじ 1",
+      "kind": "screw",
+      "section": "mount",
+      "position_mm": [
+        -88,
+        -44.54772721475249,
+        44.5477272147525
+      ],
+      "dimensions_mm": [
+        3,
+        10,
+        5.5,
+        3
+      ],
+      "orientation": "X",
+      "explode_mm": [
+        -65,
+        0,
+        0
+      ],
+      "mates": [
+        "REF_CASE_LEFT",
+        "REF_MODULE_POST_X_0"
+      ],
+      "is_reference": true,
+      "source_geometry": null,
+      "origin": "independently-authored-primitive",
+      "included_in_brake_cad": false,
+      "tightening_torque_Nm": null,
+      "note": "筐体側の接続位置を示す簡略ねじ。既存C08の締付計算値をこの参考接合へ適用しません。"
+    },
+    {
+      "id": "REF_MODULE_POST_X_1",
+      "label": "X軸と筐体の参考支柱 2",
+      "kind": "tube",
+      "section": "mount",
+      "position_mm": [
+        -76.5,
+        -44.5477272147525,
+        -44.54772721475249
+      ],
+      "dimensions_mm": [
+        7,
+        3.3,
+        17
+      ],
+      "orientation": "X",
+      "explode_mm": [
+        -16,
+        0,
+        0
+      ],
+      "mates": [
+        "BASE_X",
+        "REF_CASE_LEFT"
+      ],
+      "is_reference": true,
+      "source_geometry": null,
+      "origin": "independently-authored-primitive",
+      "included_in_brake_cad": false,
+      "tightening_torque_Nm": null,
+      "note": "公開ブレーキの参考支持リングと、今回の参考筐体をつなぐ位置の例です。全機適合や反力保持の証明ではありません。"
+    },
+    {
+      "id": "REF_MODULE_SCREW_X_1",
+      "label": "X軸側の参考取付ねじ 2",
+      "kind": "screw",
+      "section": "mount",
+      "position_mm": [
+        -88,
+        -44.5477272147525,
+        -44.54772721475249
+      ],
+      "dimensions_mm": [
+        3,
+        10,
+        5.5,
+        3
+      ],
+      "orientation": "X",
+      "explode_mm": [
+        -65,
+        0,
+        0
+      ],
+      "mates": [
+        "REF_CASE_LEFT",
+        "REF_MODULE_POST_X_1"
+      ],
+      "is_reference": true,
+      "source_geometry": null,
+      "origin": "independently-authored-primitive",
+      "included_in_brake_cad": false,
+      "tightening_torque_Nm": null,
+      "note": "筐体側の接続位置を示す簡略ねじ。既存C08の締付計算値をこの参考接合へ適用しません。"
+    },
+    {
+      "id": "REF_MODULE_POST_X_2",
+      "label": "X軸と筐体の参考支柱 3",
+      "kind": "tube",
+      "section": "mount",
+      "position_mm": [
+        -76.5,
+        44.54772721475249,
+        -44.547727214752506
+      ],
+      "dimensions_mm": [
+        7,
+        3.3,
+        17
+      ],
+      "orientation": "X",
+      "explode_mm": [
+        -16,
+        0,
+        0
+      ],
+      "mates": [
+        "BASE_X",
+        "REF_CASE_LEFT"
+      ],
+      "is_reference": true,
+      "source_geometry": null,
+      "origin": "independently-authored-primitive",
+      "included_in_brake_cad": false,
+      "tightening_torque_Nm": null,
+      "note": "公開ブレーキの参考支持リングと、今回の参考筐体をつなぐ位置の例です。全機適合や反力保持の証明ではありません。"
+    },
+    {
+      "id": "REF_MODULE_SCREW_X_2",
+      "label": "X軸側の参考取付ねじ 3",
+      "kind": "screw",
+      "section": "mount",
+      "position_mm": [
+        -88,
+        44.54772721475249,
+        -44.547727214752506
+      ],
+      "dimensions_mm": [
+        3,
+        10,
+        5.5,
+        3
+      ],
+      "orientation": "X",
+      "explode_mm": [
+        -65,
+        0,
+        0
+      ],
+      "mates": [
+        "REF_CASE_LEFT",
+        "REF_MODULE_POST_X_2"
+      ],
+      "is_reference": true,
+      "source_geometry": null,
+      "origin": "independently-authored-primitive",
+      "included_in_brake_cad": false,
+      "tightening_torque_Nm": null,
+      "note": "筐体側の接続位置を示す簡略ねじ。既存C08の締付計算値をこの参考接合へ適用しません。"
+    },
+    {
+      "id": "REF_MODULE_POST_X_3",
+      "label": "X軸と筐体の参考支柱 4",
+      "kind": "tube",
+      "section": "mount",
+      "position_mm": [
+        -76.5,
+        44.547727214752506,
+        44.547727214752484
+      ],
+      "dimensions_mm": [
+        7,
+        3.3,
+        17
+      ],
+      "orientation": "X",
+      "explode_mm": [
+        -16,
+        0,
+        0
+      ],
+      "mates": [
+        "BASE_X",
+        "REF_CASE_LEFT"
+      ],
+      "is_reference": true,
+      "source_geometry": null,
+      "origin": "independently-authored-primitive",
+      "included_in_brake_cad": false,
+      "tightening_torque_Nm": null,
+      "note": "公開ブレーキの参考支持リングと、今回の参考筐体をつなぐ位置の例です。全機適合や反力保持の証明ではありません。"
+    },
+    {
+      "id": "REF_MODULE_SCREW_X_3",
+      "label": "X軸側の参考取付ねじ 4",
+      "kind": "screw",
+      "section": "mount",
+      "position_mm": [
+        -88,
+        44.547727214752506,
+        44.547727214752484
+      ],
+      "dimensions_mm": [
+        3,
+        10,
+        5.5,
+        3
+      ],
+      "orientation": "X",
+      "explode_mm": [
+        -65,
+        0,
+        0
+      ],
+      "mates": [
+        "REF_CASE_LEFT",
+        "REF_MODULE_POST_X_3"
+      ],
+      "is_reference": true,
+      "source_geometry": null,
+      "origin": "independently-authored-primitive",
+      "included_in_brake_cad": false,
+      "tightening_torque_Nm": null,
+      "note": "筐体側の接続位置を示す簡略ねじ。既存C08の締付計算値をこの参考接合へ適用しません。"
+    },
+    {
+      "id": "REF_MODULE_POST_Y_0",
+      "label": "Y軸と筐体の参考支柱 1",
+      "kind": "tube",
+      "section": "mount",
+      "position_mm": [
+        44.5477272147525,
+        -76.5,
+        -44.54772721475249
+      ],
+      "dimensions_mm": [
+        7,
+        3.3,
+        17
+      ],
+      "orientation": "Y",
+      "explode_mm": [
+        0,
+        -16,
+        0
+      ],
+      "mates": [
+        "BASE_Y",
+        "REF_CASE_FRONT"
+      ],
+      "is_reference": true,
+      "source_geometry": null,
+      "origin": "independently-authored-primitive",
+      "included_in_brake_cad": false,
+      "tightening_torque_Nm": null,
+      "note": "公開ブレーキの参考支持リングと、今回の参考筐体をつなぐ位置の例です。全機適合や反力保持の証明ではありません。"
+    },
+    {
+      "id": "REF_MODULE_SCREW_Y_0",
+      "label": "Y軸側の参考取付ねじ 1",
+      "kind": "screw",
+      "section": "mount",
+      "position_mm": [
+        44.5477272147525,
+        -88,
+        -44.54772721475249
+      ],
+      "dimensions_mm": [
+        3,
+        10,
+        5.5,
+        3
+      ],
+      "orientation": "Y",
+      "explode_mm": [
+        0,
+        -65,
+        0
+      ],
+      "mates": [
+        "REF_CASE_FRONT",
+        "REF_MODULE_POST_Y_0"
+      ],
+      "is_reference": true,
+      "source_geometry": null,
+      "origin": "independently-authored-primitive",
+      "included_in_brake_cad": false,
+      "tightening_torque_Nm": null,
+      "note": "筐体側の接続位置を示す簡略ねじ。既存C08の締付計算値をこの参考接合へ適用しません。"
+    },
+    {
+      "id": "REF_MODULE_POST_Y_1",
+      "label": "Y軸と筐体の参考支柱 2",
+      "kind": "tube",
+      "section": "mount",
+      "position_mm": [
+        -44.54772721475249,
+        -76.5,
+        -44.5477272147525
+      ],
+      "dimensions_mm": [
+        7,
+        3.3,
+        17
+      ],
+      "orientation": "Y",
+      "explode_mm": [
+        0,
+        -16,
+        0
+      ],
+      "mates": [
+        "BASE_Y",
+        "REF_CASE_FRONT"
+      ],
+      "is_reference": true,
+      "source_geometry": null,
+      "origin": "independently-authored-primitive",
+      "included_in_brake_cad": false,
+      "tightening_torque_Nm": null,
+      "note": "公開ブレーキの参考支持リングと、今回の参考筐体をつなぐ位置の例です。全機適合や反力保持の証明ではありません。"
+    },
+    {
+      "id": "REF_MODULE_SCREW_Y_1",
+      "label": "Y軸側の参考取付ねじ 2",
+      "kind": "screw",
+      "section": "mount",
+      "position_mm": [
+        -44.54772721475249,
+        -88,
+        -44.5477272147525
+      ],
+      "dimensions_mm": [
+        3,
+        10,
+        5.5,
+        3
+      ],
+      "orientation": "Y",
+      "explode_mm": [
+        0,
+        -65,
+        0
+      ],
+      "mates": [
+        "REF_CASE_FRONT",
+        "REF_MODULE_POST_Y_1"
+      ],
+      "is_reference": true,
+      "source_geometry": null,
+      "origin": "independently-authored-primitive",
+      "included_in_brake_cad": false,
+      "tightening_torque_Nm": null,
+      "note": "筐体側の接続位置を示す簡略ねじ。既存C08の締付計算値をこの参考接合へ適用しません。"
+    },
+    {
+      "id": "REF_MODULE_POST_Y_2",
+      "label": "Y軸と筐体の参考支柱 3",
+      "kind": "tube",
+      "section": "mount",
+      "position_mm": [
+        -44.547727214752506,
+        -76.5,
+        44.54772721475249
+      ],
+      "dimensions_mm": [
+        7,
+        3.3,
+        17
+      ],
+      "orientation": "Y",
+      "explode_mm": [
+        0,
+        -16,
+        0
+      ],
+      "mates": [
+        "BASE_Y",
+        "REF_CASE_FRONT"
+      ],
+      "is_reference": true,
+      "source_geometry": null,
+      "origin": "independently-authored-primitive",
+      "included_in_brake_cad": false,
+      "tightening_torque_Nm": null,
+      "note": "公開ブレーキの参考支持リングと、今回の参考筐体をつなぐ位置の例です。全機適合や反力保持の証明ではありません。"
+    },
+    {
+      "id": "REF_MODULE_SCREW_Y_2",
+      "label": "Y軸側の参考取付ねじ 3",
+      "kind": "screw",
+      "section": "mount",
+      "position_mm": [
+        -44.547727214752506,
+        -88,
+        44.54772721475249
+      ],
+      "dimensions_mm": [
+        3,
+        10,
+        5.5,
+        3
+      ],
+      "orientation": "Y",
+      "explode_mm": [
+        0,
+        -65,
+        0
+      ],
+      "mates": [
+        "REF_CASE_FRONT",
+        "REF_MODULE_POST_Y_2"
+      ],
+      "is_reference": true,
+      "source_geometry": null,
+      "origin": "independently-authored-primitive",
+      "included_in_brake_cad": false,
+      "tightening_torque_Nm": null,
+      "note": "筐体側の接続位置を示す簡略ねじ。既存C08の締付計算値をこの参考接合へ適用しません。"
+    },
+    {
+      "id": "REF_MODULE_POST_Y_3",
+      "label": "Y軸と筐体の参考支柱 4",
+      "kind": "tube",
+      "section": "mount",
+      "position_mm": [
+        44.547727214752484,
+        -76.5,
+        44.547727214752506
+      ],
+      "dimensions_mm": [
+        7,
+        3.3,
+        17
+      ],
+      "orientation": "Y",
+      "explode_mm": [
+        0,
+        -16,
+        0
+      ],
+      "mates": [
+        "BASE_Y",
+        "REF_CASE_FRONT"
+      ],
+      "is_reference": true,
+      "source_geometry": null,
+      "origin": "independently-authored-primitive",
+      "included_in_brake_cad": false,
+      "tightening_torque_Nm": null,
+      "note": "公開ブレーキの参考支持リングと、今回の参考筐体をつなぐ位置の例です。全機適合や反力保持の証明ではありません。"
+    },
+    {
+      "id": "REF_MODULE_SCREW_Y_3",
+      "label": "Y軸側の参考取付ねじ 4",
+      "kind": "screw",
+      "section": "mount",
+      "position_mm": [
+        44.547727214752484,
+        -88,
+        44.547727214752506
+      ],
+      "dimensions_mm": [
+        3,
+        10,
+        5.5,
+        3
+      ],
+      "orientation": "Y",
+      "explode_mm": [
+        0,
+        -65,
+        0
+      ],
+      "mates": [
+        "REF_CASE_FRONT",
+        "REF_MODULE_POST_Y_3"
+      ],
+      "is_reference": true,
+      "source_geometry": null,
+      "origin": "independently-authored-primitive",
+      "included_in_brake_cad": false,
+      "tightening_torque_Nm": null,
+      "note": "筐体側の接続位置を示す簡略ねじ。既存C08の締付計算値をこの参考接合へ適用しません。"
+    },
+    {
+      "id": "REF_PCB_CTRL",
+      "label": "制御基板の参考外形",
+      "kind": "pcb",
+      "section": "pcb",
+      "position_mm": [
+        0,
+        28,
+        74.2
+      ],
+      "dimensions_mm": [
+        52,
+        40,
+        1.6
+      ],
+      "orientation": "Z",
+      "explode_mm": [
+        0,
+        0,
+        25
+      ],
+      "mates": [
+        "REF_PCB_POST_CTRL_0",
+        "REF_PCB_POST_CTRL_1",
+        "REF_PCB_POST_CTRL_2",
+        "REF_PCB_POST_CTRL_3"
+      ],
+      "is_reference": true,
+      "source_geometry": null,
+      "origin": "independently-authored-primitive",
+      "included_in_brake_cad": false,
+      "tightening_torque_Nm": null,
+      "holes": [
+        [
+          -22.0,
+          -16.0,
+          1.65
+        ],
+        [
+          -22.0,
+          16.0,
+          1.65
+        ],
+        [
+          22.0,
+          -16.0,
+          1.65
+        ],
+        [
+          22.0,
+          16.0,
+          1.65
+        ]
+      ],
+      "hole_pitch_mm": [
+        44,
+        32
+      ],
+      "note": "製品の基板ではありません。外形・取付穴・絶縁支柱・コネクタ位置は未確定です。緑の板と穴は配置説明のための仮値です。"
+    },
+    {
+      "id": "REF_PCB_POST_CTRL_0",
+      "label": "制御基板の絶縁支柱 1",
+      "kind": "tube",
+      "section": "pcb",
+      "position_mm": [
+        -22.0,
+        12.0,
+        80
+      ],
+      "dimensions_mm": [
+        6,
+        3.3,
+        10
+      ],
+      "orientation": "Z",
+      "explode_mm": [
+        0,
+        0,
+        12
+      ],
+      "mates": [
+        "REF_PCB_CTRL",
+        "REF_CASE_TOP"
+      ],
+      "is_reference": true,
+      "source_geometry": null,
+      "origin": "independently-authored-primitive",
+      "included_in_brake_cad": false,
+      "tightening_torque_Nm": null,
+      "note": "長さ10 mmの仮スペーサー。絶縁性・強度・材質・クリアランスの指定ではありません。"
+    },
+    {
+      "id": "REF_PCB_SCREW_CTRL_0",
+      "label": "制御基板の参考ねじ 1",
+      "kind": "screw",
+      "section": "pcb",
+      "position_mm": [
+        -22.0,
+        12.0,
+        73.4
+      ],
+      "dimensions_mm": [
+        3,
+        18,
+        5.5,
+        3
+      ],
+      "orientation": "Z",
+      "explode_mm": [
+        0,
+        0,
+        -20
+      ],
+      "mates": [
+        "REF_PCB_CTRL",
+        "REF_PCB_POST_CTRL_0",
+        "REF_CASE_TOP",
+        "REF_PCB_NUT_CTRL_0"
+      ],
+      "is_reference": true,
+      "source_geometry": null,
+      "origin": "independently-authored-primitive",
+      "included_in_brake_cad": false,
+      "tightening_torque_Nm": null,
+      "note": "M3相当の表示用ねじ。仮の積層を見せるもので、実基板への締付値・推奨ねじではありません。"
+    },
+    {
+      "id": "REF_PCB_NUT_CTRL_0",
+      "label": "制御基板の参考ナット 1",
+      "kind": "nut",
+      "section": "pcb",
+      "position_mm": [
+        -22.0,
+        12.0,
+        89.2
+      ],
+      "dimensions_mm": [
+        5.5,
+        3.0,
+        2.4
+      ],
+      "orientation": "Z",
+      "explode_mm": [
+        0,
+        0,
+        78
+      ],
+      "mates": [
+        "REF_PCB_SCREW_CTRL_0",
+        "REF_CASE_TOP"
+      ],
+      "is_reference": true,
+      "source_geometry": null,
+      "origin": "independently-authored-primitive",
+      "included_in_brake_cad": false,
+      "tightening_torque_Nm": null,
+      "note": "筐体外側に示した仮の相手部材。実際の固定方式は未選定です。"
+    },
+    {
+      "id": "REF_PCB_POST_CTRL_1",
+      "label": "制御基板の絶縁支柱 2",
+      "kind": "tube",
+      "section": "pcb",
+      "position_mm": [
+        -22.0,
+        44.0,
+        80
+      ],
+      "dimensions_mm": [
+        6,
+        3.3,
+        10
+      ],
+      "orientation": "Z",
+      "explode_mm": [
+        0,
+        0,
+        12
+      ],
+      "mates": [
+        "REF_PCB_CTRL",
+        "REF_CASE_TOP"
+      ],
+      "is_reference": true,
+      "source_geometry": null,
+      "origin": "independently-authored-primitive",
+      "included_in_brake_cad": false,
+      "tightening_torque_Nm": null,
+      "note": "長さ10 mmの仮スペーサー。絶縁性・強度・材質・クリアランスの指定ではありません。"
+    },
+    {
+      "id": "REF_PCB_SCREW_CTRL_1",
+      "label": "制御基板の参考ねじ 2",
+      "kind": "screw",
+      "section": "pcb",
+      "position_mm": [
+        -22.0,
+        44.0,
+        73.4
+      ],
+      "dimensions_mm": [
+        3,
+        18,
+        5.5,
+        3
+      ],
+      "orientation": "Z",
+      "explode_mm": [
+        0,
+        0,
+        -20
+      ],
+      "mates": [
+        "REF_PCB_CTRL",
+        "REF_PCB_POST_CTRL_1",
+        "REF_CASE_TOP",
+        "REF_PCB_NUT_CTRL_1"
+      ],
+      "is_reference": true,
+      "source_geometry": null,
+      "origin": "independently-authored-primitive",
+      "included_in_brake_cad": false,
+      "tightening_torque_Nm": null,
+      "note": "M3相当の表示用ねじ。仮の積層を見せるもので、実基板への締付値・推奨ねじではありません。"
+    },
+    {
+      "id": "REF_PCB_NUT_CTRL_1",
+      "label": "制御基板の参考ナット 2",
+      "kind": "nut",
+      "section": "pcb",
+      "position_mm": [
+        -22.0,
+        44.0,
+        89.2
+      ],
+      "dimensions_mm": [
+        5.5,
+        3.0,
+        2.4
+      ],
+      "orientation": "Z",
+      "explode_mm": [
+        0,
+        0,
+        78
+      ],
+      "mates": [
+        "REF_PCB_SCREW_CTRL_1",
+        "REF_CASE_TOP"
+      ],
+      "is_reference": true,
+      "source_geometry": null,
+      "origin": "independently-authored-primitive",
+      "included_in_brake_cad": false,
+      "tightening_torque_Nm": null,
+      "note": "筐体外側に示した仮の相手部材。実際の固定方式は未選定です。"
+    },
+    {
+      "id": "REF_PCB_POST_CTRL_2",
+      "label": "制御基板の絶縁支柱 3",
+      "kind": "tube",
+      "section": "pcb",
+      "position_mm": [
+        22.0,
+        12.0,
+        80
+      ],
+      "dimensions_mm": [
+        6,
+        3.3,
+        10
+      ],
+      "orientation": "Z",
+      "explode_mm": [
+        0,
+        0,
+        12
+      ],
+      "mates": [
+        "REF_PCB_CTRL",
+        "REF_CASE_TOP"
+      ],
+      "is_reference": true,
+      "source_geometry": null,
+      "origin": "independently-authored-primitive",
+      "included_in_brake_cad": false,
+      "tightening_torque_Nm": null,
+      "note": "長さ10 mmの仮スペーサー。絶縁性・強度・材質・クリアランスの指定ではありません。"
+    },
+    {
+      "id": "REF_PCB_SCREW_CTRL_2",
+      "label": "制御基板の参考ねじ 3",
+      "kind": "screw",
+      "section": "pcb",
+      "position_mm": [
+        22.0,
+        12.0,
+        73.4
+      ],
+      "dimensions_mm": [
+        3,
+        18,
+        5.5,
+        3
+      ],
+      "orientation": "Z",
+      "explode_mm": [
+        0,
+        0,
+        -20
+      ],
+      "mates": [
+        "REF_PCB_CTRL",
+        "REF_PCB_POST_CTRL_2",
+        "REF_CASE_TOP",
+        "REF_PCB_NUT_CTRL_2"
+      ],
+      "is_reference": true,
+      "source_geometry": null,
+      "origin": "independently-authored-primitive",
+      "included_in_brake_cad": false,
+      "tightening_torque_Nm": null,
+      "note": "M3相当の表示用ねじ。仮の積層を見せるもので、実基板への締付値・推奨ねじではありません。"
+    },
+    {
+      "id": "REF_PCB_NUT_CTRL_2",
+      "label": "制御基板の参考ナット 3",
+      "kind": "nut",
+      "section": "pcb",
+      "position_mm": [
+        22.0,
+        12.0,
+        89.2
+      ],
+      "dimensions_mm": [
+        5.5,
+        3.0,
+        2.4
+      ],
+      "orientation": "Z",
+      "explode_mm": [
+        0,
+        0,
+        78
+      ],
+      "mates": [
+        "REF_PCB_SCREW_CTRL_2",
+        "REF_CASE_TOP"
+      ],
+      "is_reference": true,
+      "source_geometry": null,
+      "origin": "independently-authored-primitive",
+      "included_in_brake_cad": false,
+      "tightening_torque_Nm": null,
+      "note": "筐体外側に示した仮の相手部材。実際の固定方式は未選定です。"
+    },
+    {
+      "id": "REF_PCB_POST_CTRL_3",
+      "label": "制御基板の絶縁支柱 4",
+      "kind": "tube",
+      "section": "pcb",
+      "position_mm": [
+        22.0,
+        44.0,
+        80
+      ],
+      "dimensions_mm": [
+        6,
+        3.3,
+        10
+      ],
+      "orientation": "Z",
+      "explode_mm": [
+        0,
+        0,
+        12
+      ],
+      "mates": [
+        "REF_PCB_CTRL",
+        "REF_CASE_TOP"
+      ],
+      "is_reference": true,
+      "source_geometry": null,
+      "origin": "independently-authored-primitive",
+      "included_in_brake_cad": false,
+      "tightening_torque_Nm": null,
+      "note": "長さ10 mmの仮スペーサー。絶縁性・強度・材質・クリアランスの指定ではありません。"
+    },
+    {
+      "id": "REF_PCB_SCREW_CTRL_3",
+      "label": "制御基板の参考ねじ 4",
+      "kind": "screw",
+      "section": "pcb",
+      "position_mm": [
+        22.0,
+        44.0,
+        73.4
+      ],
+      "dimensions_mm": [
+        3,
+        18,
+        5.5,
+        3
+      ],
+      "orientation": "Z",
+      "explode_mm": [
+        0,
+        0,
+        -20
+      ],
+      "mates": [
+        "REF_PCB_CTRL",
+        "REF_PCB_POST_CTRL_3",
+        "REF_CASE_TOP",
+        "REF_PCB_NUT_CTRL_3"
+      ],
+      "is_reference": true,
+      "source_geometry": null,
+      "origin": "independently-authored-primitive",
+      "included_in_brake_cad": false,
+      "tightening_torque_Nm": null,
+      "note": "M3相当の表示用ねじ。仮の積層を見せるもので、実基板への締付値・推奨ねじではありません。"
+    },
+    {
+      "id": "REF_PCB_NUT_CTRL_3",
+      "label": "制御基板の参考ナット 4",
+      "kind": "nut",
+      "section": "pcb",
+      "position_mm": [
+        22.0,
+        44.0,
+        89.2
+      ],
+      "dimensions_mm": [
+        5.5,
+        3.0,
+        2.4
+      ],
+      "orientation": "Z",
+      "explode_mm": [
+        0,
+        0,
+        78
+      ],
+      "mates": [
+        "REF_PCB_SCREW_CTRL_3",
+        "REF_CASE_TOP"
+      ],
+      "is_reference": true,
+      "source_geometry": null,
+      "origin": "independently-authored-primitive",
+      "included_in_brake_cad": false,
+      "tightening_torque_Nm": null,
+      "note": "筐体外側に示した仮の相手部材。実際の固定方式は未選定です。"
+    },
+    {
+      "id": "REF_PCB_DRIVE",
+      "label": "駆動基板の参考外形",
+      "kind": "pcb",
+      "section": "pcb",
+      "position_mm": [
+        0,
+        -29,
+        74.2
+      ],
+      "dimensions_mm": [
+        70,
+        45,
+        1.6
+      ],
+      "orientation": "Z",
+      "explode_mm": [
+        0,
+        0,
+        25
+      ],
+      "mates": [
+        "REF_PCB_POST_DRIVE_0",
+        "REF_PCB_POST_DRIVE_1",
+        "REF_PCB_POST_DRIVE_2",
+        "REF_PCB_POST_DRIVE_3"
+      ],
+      "is_reference": true,
+      "source_geometry": null,
+      "origin": "independently-authored-primitive",
+      "included_in_brake_cad": false,
+      "tightening_torque_Nm": null,
+      "holes": [
+        [
+          -31.0,
+          -18.5,
+          1.65
+        ],
+        [
+          -31.0,
+          18.5,
+          1.65
+        ],
+        [
+          31.0,
+          -18.5,
+          1.65
+        ],
+        [
+          31.0,
+          18.5,
+          1.65
+        ]
+      ],
+      "hole_pitch_mm": [
+        62,
+        37
+      ],
+      "note": "製品の基板ではありません。外形・取付穴・絶縁支柱・コネクタ位置は未確定です。緑の板と穴は配置説明のための仮値です。"
+    },
+    {
+      "id": "REF_PCB_POST_DRIVE_0",
+      "label": "駆動基板の絶縁支柱 1",
+      "kind": "tube",
+      "section": "pcb",
+      "position_mm": [
+        -31.0,
+        -47.5,
+        80
+      ],
+      "dimensions_mm": [
+        6,
+        3.3,
+        10
+      ],
+      "orientation": "Z",
+      "explode_mm": [
+        0,
+        0,
+        12
+      ],
+      "mates": [
+        "REF_PCB_DRIVE",
+        "REF_CASE_TOP"
+      ],
+      "is_reference": true,
+      "source_geometry": null,
+      "origin": "independently-authored-primitive",
+      "included_in_brake_cad": false,
+      "tightening_torque_Nm": null,
+      "note": "長さ10 mmの仮スペーサー。絶縁性・強度・材質・クリアランスの指定ではありません。"
+    },
+    {
+      "id": "REF_PCB_SCREW_DRIVE_0",
+      "label": "駆動基板の参考ねじ 1",
+      "kind": "screw",
+      "section": "pcb",
+      "position_mm": [
+        -31.0,
+        -47.5,
+        73.4
+      ],
+      "dimensions_mm": [
+        3,
+        18,
+        5.5,
+        3
+      ],
+      "orientation": "Z",
+      "explode_mm": [
+        0,
+        0,
+        -20
+      ],
+      "mates": [
+        "REF_PCB_DRIVE",
+        "REF_PCB_POST_DRIVE_0",
+        "REF_CASE_TOP",
+        "REF_PCB_NUT_DRIVE_0"
+      ],
+      "is_reference": true,
+      "source_geometry": null,
+      "origin": "independently-authored-primitive",
+      "included_in_brake_cad": false,
+      "tightening_torque_Nm": null,
+      "note": "M3相当の表示用ねじ。仮の積層を見せるもので、実基板への締付値・推奨ねじではありません。"
+    },
+    {
+      "id": "REF_PCB_NUT_DRIVE_0",
+      "label": "駆動基板の参考ナット 1",
+      "kind": "nut",
+      "section": "pcb",
+      "position_mm": [
+        -31.0,
+        -47.5,
+        89.2
+      ],
+      "dimensions_mm": [
+        5.5,
+        3.0,
+        2.4
+      ],
+      "orientation": "Z",
+      "explode_mm": [
+        0,
+        0,
+        78
+      ],
+      "mates": [
+        "REF_PCB_SCREW_DRIVE_0",
+        "REF_CASE_TOP"
+      ],
+      "is_reference": true,
+      "source_geometry": null,
+      "origin": "independently-authored-primitive",
+      "included_in_brake_cad": false,
+      "tightening_torque_Nm": null,
+      "note": "筐体外側に示した仮の相手部材。実際の固定方式は未選定です。"
+    },
+    {
+      "id": "REF_PCB_POST_DRIVE_1",
+      "label": "駆動基板の絶縁支柱 2",
+      "kind": "tube",
+      "section": "pcb",
+      "position_mm": [
+        -31.0,
+        -10.5,
+        80
+      ],
+      "dimensions_mm": [
+        6,
+        3.3,
+        10
+      ],
+      "orientation": "Z",
+      "explode_mm": [
+        0,
+        0,
+        12
+      ],
+      "mates": [
+        "REF_PCB_DRIVE",
+        "REF_CASE_TOP"
+      ],
+      "is_reference": true,
+      "source_geometry": null,
+      "origin": "independently-authored-primitive",
+      "included_in_brake_cad": false,
+      "tightening_torque_Nm": null,
+      "note": "長さ10 mmの仮スペーサー。絶縁性・強度・材質・クリアランスの指定ではありません。"
+    },
+    {
+      "id": "REF_PCB_SCREW_DRIVE_1",
+      "label": "駆動基板の参考ねじ 2",
+      "kind": "screw",
+      "section": "pcb",
+      "position_mm": [
+        -31.0,
+        -10.5,
+        73.4
+      ],
+      "dimensions_mm": [
+        3,
+        18,
+        5.5,
+        3
+      ],
+      "orientation": "Z",
+      "explode_mm": [
+        0,
+        0,
+        -20
+      ],
+      "mates": [
+        "REF_PCB_DRIVE",
+        "REF_PCB_POST_DRIVE_1",
+        "REF_CASE_TOP",
+        "REF_PCB_NUT_DRIVE_1"
+      ],
+      "is_reference": true,
+      "source_geometry": null,
+      "origin": "independently-authored-primitive",
+      "included_in_brake_cad": false,
+      "tightening_torque_Nm": null,
+      "note": "M3相当の表示用ねじ。仮の積層を見せるもので、実基板への締付値・推奨ねじではありません。"
+    },
+    {
+      "id": "REF_PCB_NUT_DRIVE_1",
+      "label": "駆動基板の参考ナット 2",
+      "kind": "nut",
+      "section": "pcb",
+      "position_mm": [
+        -31.0,
+        -10.5,
+        89.2
+      ],
+      "dimensions_mm": [
+        5.5,
+        3.0,
+        2.4
+      ],
+      "orientation": "Z",
+      "explode_mm": [
+        0,
+        0,
+        78
+      ],
+      "mates": [
+        "REF_PCB_SCREW_DRIVE_1",
+        "REF_CASE_TOP"
+      ],
+      "is_reference": true,
+      "source_geometry": null,
+      "origin": "independently-authored-primitive",
+      "included_in_brake_cad": false,
+      "tightening_torque_Nm": null,
+      "note": "筐体外側に示した仮の相手部材。実際の固定方式は未選定です。"
+    },
+    {
+      "id": "REF_PCB_POST_DRIVE_2",
+      "label": "駆動基板の絶縁支柱 3",
+      "kind": "tube",
+      "section": "pcb",
+      "position_mm": [
+        31.0,
+        -47.5,
+        80
+      ],
+      "dimensions_mm": [
+        6,
+        3.3,
+        10
+      ],
+      "orientation": "Z",
+      "explode_mm": [
+        0,
+        0,
+        12
+      ],
+      "mates": [
+        "REF_PCB_DRIVE",
+        "REF_CASE_TOP"
+      ],
+      "is_reference": true,
+      "source_geometry": null,
+      "origin": "independently-authored-primitive",
+      "included_in_brake_cad": false,
+      "tightening_torque_Nm": null,
+      "note": "長さ10 mmの仮スペーサー。絶縁性・強度・材質・クリアランスの指定ではありません。"
+    },
+    {
+      "id": "REF_PCB_SCREW_DRIVE_2",
+      "label": "駆動基板の参考ねじ 3",
+      "kind": "screw",
+      "section": "pcb",
+      "position_mm": [
+        31.0,
+        -47.5,
+        73.4
+      ],
+      "dimensions_mm": [
+        3,
+        18,
+        5.5,
+        3
+      ],
+      "orientation": "Z",
+      "explode_mm": [
+        0,
+        0,
+        -20
+      ],
+      "mates": [
+        "REF_PCB_DRIVE",
+        "REF_PCB_POST_DRIVE_2",
+        "REF_CASE_TOP",
+        "REF_PCB_NUT_DRIVE_2"
+      ],
+      "is_reference": true,
+      "source_geometry": null,
+      "origin": "independently-authored-primitive",
+      "included_in_brake_cad": false,
+      "tightening_torque_Nm": null,
+      "note": "M3相当の表示用ねじ。仮の積層を見せるもので、実基板への締付値・推奨ねじではありません。"
+    },
+    {
+      "id": "REF_PCB_NUT_DRIVE_2",
+      "label": "駆動基板の参考ナット 3",
+      "kind": "nut",
+      "section": "pcb",
+      "position_mm": [
+        31.0,
+        -47.5,
+        89.2
+      ],
+      "dimensions_mm": [
+        5.5,
+        3.0,
+        2.4
+      ],
+      "orientation": "Z",
+      "explode_mm": [
+        0,
+        0,
+        78
+      ],
+      "mates": [
+        "REF_PCB_SCREW_DRIVE_2",
+        "REF_CASE_TOP"
+      ],
+      "is_reference": true,
+      "source_geometry": null,
+      "origin": "independently-authored-primitive",
+      "included_in_brake_cad": false,
+      "tightening_torque_Nm": null,
+      "note": "筐体外側に示した仮の相手部材。実際の固定方式は未選定です。"
+    },
+    {
+      "id": "REF_PCB_POST_DRIVE_3",
+      "label": "駆動基板の絶縁支柱 4",
+      "kind": "tube",
+      "section": "pcb",
+      "position_mm": [
+        31.0,
+        -10.5,
+        80
+      ],
+      "dimensions_mm": [
+        6,
+        3.3,
+        10
+      ],
+      "orientation": "Z",
+      "explode_mm": [
+        0,
+        0,
+        12
+      ],
+      "mates": [
+        "REF_PCB_DRIVE",
+        "REF_CASE_TOP"
+      ],
+      "is_reference": true,
+      "source_geometry": null,
+      "origin": "independently-authored-primitive",
+      "included_in_brake_cad": false,
+      "tightening_torque_Nm": null,
+      "note": "長さ10 mmの仮スペーサー。絶縁性・強度・材質・クリアランスの指定ではありません。"
+    },
+    {
+      "id": "REF_PCB_SCREW_DRIVE_3",
+      "label": "駆動基板の参考ねじ 4",
+      "kind": "screw",
+      "section": "pcb",
+      "position_mm": [
+        31.0,
+        -10.5,
+        73.4
+      ],
+      "dimensions_mm": [
+        3,
+        18,
+        5.5,
+        3
+      ],
+      "orientation": "Z",
+      "explode_mm": [
+        0,
+        0,
+        -20
+      ],
+      "mates": [
+        "REF_PCB_DRIVE",
+        "REF_PCB_POST_DRIVE_3",
+        "REF_CASE_TOP",
+        "REF_PCB_NUT_DRIVE_3"
+      ],
+      "is_reference": true,
+      "source_geometry": null,
+      "origin": "independently-authored-primitive",
+      "included_in_brake_cad": false,
+      "tightening_torque_Nm": null,
+      "note": "M3相当の表示用ねじ。仮の積層を見せるもので、実基板への締付値・推奨ねじではありません。"
+    },
+    {
+      "id": "REF_PCB_NUT_DRIVE_3",
+      "label": "駆動基板の参考ナット 4",
+      "kind": "nut",
+      "section": "pcb",
+      "position_mm": [
+        31.0,
+        -10.5,
+        89.2
+      ],
+      "dimensions_mm": [
+        5.5,
+        3.0,
+        2.4
+      ],
+      "orientation": "Z",
+      "explode_mm": [
+        0,
+        0,
+        78
+      ],
+      "mates": [
+        "REF_PCB_SCREW_DRIVE_3",
+        "REF_CASE_TOP"
+      ],
+      "is_reference": true,
+      "source_geometry": null,
+      "origin": "independently-authored-primitive",
+      "included_in_brake_cad": false,
+      "tightening_torque_Nm": null,
+      "note": "筐体外側に示した仮の相手部材。実際の固定方式は未選定です。"
+    },
+    {
+      "id": "REF_BATTERY",
+      "label": "電池の予約外形",
+      "kind": "box",
+      "section": "battery",
+      "position_mm": [
+        45,
+        40,
+        35
+      ],
+      "dimensions_mm": [
+        30,
+        48,
+        22
+      ],
+      "orientation": "Z",
+      "explode_mm": [
+        30,
+        0,
+        0
+      ],
+      "mates": [
+        "REF_BATTERY_TRAY",
+        "REF_BATTERY_BAND_0",
+        "REF_BATTERY_BAND_1"
+      ],
+      "is_reference": true,
+      "source_geometry": null,
+      "origin": "independently-authored-primitive",
+      "included_in_brake_cad": false,
+      "tightening_torque_Nm": null,
+      "note": "採用電池ではありません。電圧・容量・保護回路・発熱・端子方向は未確定。既知の1.757 Aと1.5 Aの不整合を解決する図ではありません。"
+    },
+    {
+      "id": "REF_BATTERY_TRAY",
+      "label": "電池保持部の参考板",
+      "kind": "box",
+      "section": "battery",
+      "position_mm": [
+        61,
+        40,
+        35
+      ],
+      "dimensions_mm": [
+        2,
+        52,
+        26
+      ],
+      "orientation": "Z",
+      "explode_mm": [
+        42,
+        0,
+        0
+      ],
+      "mates": [
+        "REF_BATTERY",
+        "REF_CASE_RIGHT"
+      ],
+      "is_reference": true,
+      "source_geometry": null,
+      "origin": "independently-authored-primitive",
+      "included_in_brake_cad": false,
+      "tightening_torque_Nm": null,
+      "note": "保持位置の参考形状です。筐体への実接合・保持強度・熱対策は未設計です。"
+    },
+    {
+      "id": "REF_BATTERY_BAND_0",
+      "label": "電池保持帯の参考形状 1",
+      "kind": "band",
+      "section": "battery",
+      "position_mm": [
+        45,
+        40,
+        27
+      ],
+      "dimensions_mm": [
+        34,
+        52,
+        2,
+        31,
+        49
+      ],
+      "orientation": "Z",
+      "explode_mm": [
+        32,
+        0,
+        -12
+      ],
+      "mates": [
+        "REF_BATTERY",
+        "REF_BATTERY_TRAY"
+      ],
+      "is_reference": true,
+      "source_geometry": null,
+      "origin": "independently-authored-primitive",
+      "included_in_brake_cad": false,
+      "tightening_torque_Nm": null,
+      "note": "帯の位置だけを説明する独立形状です。材質や締付、電池への圧力は指定していません。"
+    },
+    {
+      "id": "REF_BATTERY_BAND_1",
+      "label": "電池保持帯の参考形状 2",
+      "kind": "band",
+      "section": "battery",
+      "position_mm": [
+        45,
+        40,
+        43
+      ],
+      "dimensions_mm": [
+        34,
+        52,
+        2,
+        31,
+        49
+      ],
+      "orientation": "Z",
+      "explode_mm": [
+        32,
+        0,
+        12
+      ],
+      "mates": [
+        "REF_BATTERY",
+        "REF_BATTERY_TRAY"
+      ],
+      "is_reference": true,
+      "source_geometry": null,
+      "origin": "independently-authored-primitive",
+      "included_in_brake_cad": false,
+      "tightening_torque_Nm": null,
+      "note": "帯の位置だけを説明する独立形状です。材質や締付、電池への圧力は指定していません。"
+    }
+  ],
+  "steps": [
+    {
+      "id": "all",
+      "title": "全体を見る",
+      "description": "筐体・3軸ブレーキ・基板・電池の位置関係をまとめて確認します。全機の適合・重心・起立性能は未検証です。"
+    },
+    {
+      "id": "case",
+      "title": "筐体と支持部",
+      "description": "6枚の参考パネルと支柱を分けて見ます。原Picoの筐体ではなく、角の固定方法も未資格です。"
+    },
+    {
+      "id": "mount",
+      "title": "3軸ブレーキ",
+      "description": "各軸の参考支持リングから筐体への接続位置を示します。支柱の接合・反力保持・工具経路は実証していません。"
+    },
+    {
+      "id": "pcb",
+      "title": "基板の固定",
+      "description": "基板 → 絶縁支柱 → 筐体 → 相手ナットの関係を見ます。これは位置関係の説明で、実基板の組立手順ではありません。"
+    },
+    {
+      "id": "battery",
+      "title": "電池と余白",
+      "description": "電池の仮外形と保持位置を示します。通線・コネクタ・放熱・保護回路・実固定は未設計です。"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+.overview-page .page-header { flex-wrap: wrap; }
+.back-link { font-size: 13px; padding: 8px 0; white-space: nowrap; }
+.overview-steps { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 18px; }
+.overview-steps button { padding: 8px 18px; font-size: 12px; }
+.overview-steps button[aria-pressed="true"] { color: white; background: #254a5a; border-color: #254a5a; }
+.overview-page .viewport { height: clamp(460px, 44vw, 660px); }
+.overview-page .control-actions { row-gap: 12px; }
+.overview-page .control-actions .check { margin-right: 0; }
+.overview-stage-note { font-size: 12px; line-height: 1.9; margin: 0 0 18px; color: var(--muted); }
+.overview-page #overview-part-controls > label { font-size: 11px; color: var(--muted); }
+.overview-spec { background: white; border: 1px solid var(--line); padding: 15px; border-radius: 6px; margin-top: 16px; }
+.overview-spec .mono { font-size: 17px; margin: 5px 0 11px; }
+#overview-part-note { font-size: 12px; color: var(--muted); }
+.overview-caution { font-size: 11px; padding: 10px 12px; background: #fbf2df; color: #78470a; border-left: 3px solid #b28742; margin-top: 12px; }
+.overview-boundary { margin: 30px 0; padding: 24px; background: white; border: 1px solid var(--line); border-radius: 8px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px 35px; }
+.overview-boundary h2 { font-size: 19px; margin: 6px 0 12px; }
+.overview-boundary p { font-size: 12px; color: var(--muted); line-height: 1.9; }
+.overview-boundary p + p { margin-top: 10px; }
+.overview-boundary .state-flags, .overview-boundary .data-links { grid-column: 1/-1; }
+.ov-battery { background: #aa7a36; }
+.overview-page .mate-button { min-height: 44px; }
+.overview-label { position: absolute; transform: translate(-50%, -100%); min-height: 27px; padding: 3px 8px; border: 1px solid #819ba6; border-radius: 4px; background: #fffffff0; color: #234855; font-size: 11px; box-shadow: 0 1px 5px #1c364315; }
+.overview-label[aria-pressed="true"] { border-color: #9c691b; color: #75490d; }
+@media (max-width: 780px) {
+  .overview-page .viewport { height: 110vw; min-height: 360px; max-height: 520px; }
+  .overview-steps { display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px; }
+  .overview-steps button { min-height: 43px; padding: 5px 9px; }
+  .overview-steps button:first-child { grid-column: 1/-1; }
+  .overview-page .bench-meta { max-width: 175px; font-size: 9px; }
+  .overview-page .control-actions .check { flex-basis: auto; margin: 0 6px 0 0; }
+  .overview-boundary { grid-template-columns: 1fr; padding: 18px 16px; gap: 16px; }
+}

@@ -45,10 +45,10 @@
     },
     {
       "path": "downloads/public-brake-cad.zip",
-      "sha256": "60b90d2ad3bf9e44c26cee20a56d67fa0f7d0d98f21aacabe1b3e07f9a2681d1",
+      "sha256": "a86dd1d61a238b717b6c025a080e32dd6045beabd3124a16d4a91b698f5bb55b",
       "browser_download_verified": true,
-      "verification_scope": "targeted-download-refresh",
-      "previous_sha256": "e6d43c07191e914018fcdc216d74658065dcfa9426970a28d406bf3786edf523"
+      "verification_scope": "targeted-final-zip-refresh",
+      "previous_sha256": "978b6bc34f265d7d6bdc15ffe7af54859c19e883a434f57d9faab9cd168369a7"
     }
   ],
   "warnings": [],
@@ -56,24 +56,24 @@
   "external_requests": [],
   "browser": "157.0.8103.39",
   "performance": {
-    "navigation_duration_ms": 74.6000000089407,
-    "dom_content_loaded_ms": 14.700000002980232,
+    "navigation_duration_ms": 48.19999998807907,
+    "dom_content_loaded_ms": 12.299999997019768,
     "transfer_bytes": 8478528
   },
   "resource_requests": 33,
   "controlled_failure_cases_excluded_from_clean_console_assertion": true,
   "full_campaign_basis": {
-    "commit": "480a88822931ee53f4e3f42274f41f9d950959b8",
-    "report_sha256": "f8a97f38599b7f9f9f3693d132f5ddddb7b5bebc3eeb36c55e37d1c172fc73a3",
-    "rerun_for_static_entry_change": false
+    "report_sha256": "8cc1bd2beddcf0a8b7877b7b54cbdc01e70ab106c330fe17bfd159b077d1801b",
+    "scope": "Executed full brake browser campaign before the README-only ZIP link correction",
+    "rerun_for_doc_link_change": false
   },
   "targeted_download_refresh": {
-    "scope": "ZIP download only after README and static Pages marker changes; not a repeated full browser campaign",
+    "scope": "Final ZIP download only after documentation-only archive rebind; not a new full campaign",
     "browser": "157.0.8103.39",
-    "verified_at_utc": "2026-11-11T09:12:26.277Z",
+    "verified_at_utc": "2026-11-11T14:45:16.185Z",
     "path": "downloads/public-brake-cad.zip",
-    "sha256": "60b90d2ad3bf9e44c26cee20a56d67fa0f7d0d98f21aacabe1b3e07f9a2681d1",
-    "previous_sha256": "e6d43c07191e914018fcdc216d74658065dcfa9426970a28d406bf3786edf523",
+    "sha256": "a86dd1d61a238b717b6c025a080e32dd6045beabd3124a16d4a91b698f5bb55b",
+    "previous_sha256": "978b6bc34f265d7d6bdc15ffe7af54859c19e883a434f57d9faab9cd168369a7",
     "browser_download_verified": true,
     "console_errors": [],
     "warnings": [],
@@ -100,107 +100,9 @@
       },
       {
         "path": "downloads/public-brake-cad.zip",
-        "sha256": "e6d43c07191e914018fcdc216d74658065dcfa9426970a28d406bf3786edf523",
+        "sha256": "978b6bc34f265d7d6bdc15ffe7af54859c19e883a434f57d9faab9cd168369a7",
         "browser_download_verified": true
       }
-    ],
-    "unchanged_core_assets": [
-      {
-        "path": "downloads/brake-single.FCStd",
-        "sha256": "2bc12d2f0d1617789a57f9b00b3c5fa6d835092e4c1f49f1e0f846dda7ed9116"
-      },
-      {
-        "path": "downloads/brake-single.step",
-        "sha256": "5ee5f1b4a8e9808da39846ca58b3a7fa1cd704875d81b3fb53e0ea6247651f1f"
-      },
-      {
-        "path": "downloads/brake-reference-three.FCStd",
-        "sha256": "b0b74e02d4dd41610676bb4a3d006b5ad00128bcd70aa1cebc14883e70c86117"
-      },
-      {
-        "path": "downloads/brake-reference-three.step",
-        "sha256": "aac213e8e9a4ec1e1e3ba95e174da0faf42f2d53ca9ba0224beb5c8d049077b8"
-      },
-      {
-        "path": "data/meshes.json",
-        "sha256": "9e4f3075a8a36f0651a8301f3bd398db2946c2a16a5cd22e755190d99b9c5dd2"
-      },
-      {
-        "path": "data/assembly.json",
-        "sha256": "8fac1425bad538abeb5d72476914b830abf35994b332522016e9c7baeaae8505"
-      },
-      {
-        "path": "data/parts.csv",
-        "sha256": "0571af0d46752947c7e04ea0635e99f1f090d39c67deadb8bb9c7b2cb3c9fb2a"
-      },
-      {
-        "path": "data/joints.csv",
-        "sha256": "7e939d4104079c17ae86cc166b355f1491c70466b8923a8d4fe258209030f584"
-      },
-      {
-        "path": "data/provenance.json",
-        "sha256": "43598e100d349abbf5911e51bd9ff64d8a11abc96591db9583819e2b4d491f24"
-      },
-      {
-        "path": "validation/cad.json",
-        "sha256": "001c243b9c1c2bfe5d0a18dca65fe2db358b6f884695f1c4a44f79ddfdb3191c"
-      },
-      {
-        "path": "app.js",
-        "sha256": "493d380b922550e43439fafc0efa912d4f4688e7301c61e2a00ede6ad3153bd0"
-      },
-      {
-        "path": "bootstrap.js",
-        "sha256": "4eb1ccb74cb4d6819222e4ba874e0bc291a6bdae0ecdeb20bae653f2a7924705"
-      },
-      {
-        "path": "contract.js",
-        "sha256": "2bba164af85cb02d24722d1db875cac3a29021b50acfd5cd5a5aad924854652b"
-      },
-      {
-        "path": "styles.css",
-        "sha256": "2687558e8803e998a5a00d1334359eba0f5b3f7f05423620d7245e90d6a44d52"
-      },
-      {
-        "path": "index.html",
-        "sha256": "28324c75bbe297f88ffd4e265201e1c7425b2cef388e3b5d74a09765e42aed4f"
-      },
-      {
-        "path": "scripts/build_cad.py",
-        "sha256": "6e8f699986df52418a23ccae5b2c2031efcbeda00ab1cba5b4221e79b237e717"
-      },
-      {
-        "path": "scripts/catalog.py",
-        "sha256": "ba2fedbc1b8ac3779f786ee4d72b6dd2369e402e711a0dca4c52bb50c9543437"
-      },
-      {
-        "path": "scripts/geometry_contract.py",
-        "sha256": "91b89a29405005fc9cb1af08a6932d8e33d50aa65b5bbbc62d760cdebbe49c72"
-      },
-      {
-        "path": "vendor/three.module.js",
-        "sha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea"
-      },
-      {
-        "path": "vendor/three.core.js",
-        "sha256": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6"
-      },
-      {
-        "path": "vendor/OrbitControls.js",
-        "sha256": "3d79d07ecb686b4e5d93232eedab255331c1beef711e13164eaa1f68655a5f2b"
-      },
-      {
-        "path": "vendor/THREE-LICENSE.txt",
-        "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc"
-      },
-      {
-        "path": "vendor/manifest.json",
-        "sha256": "6495dd49aca9b4236b78d5fa0416da855d69333cd570ed0afd2cce7ac9256036"
-      }
-    ],
-    "changed_zip_members": [
-      "README.md",
-      "SHA256SUMS.json"
     ]
   }
 }
