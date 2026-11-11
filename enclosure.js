@@ -135,7 +135,7 @@ export async function startEnclosure(onError) {
   }
   function relatedIds() {
     const joint = joints.get(state.joint);
-    return joint ? [joint.fastener, ...jointStack(joint)].filter(id => id !== state.selected) : parts.get(state.selected).mates;
+    return joint ? [joint.fastener, ...jointStack(joint)].filter(id => id !== state.selected) : parts.get(state.selected)?.mates || [];
   }
   function updateVisuals() {
     const mates = new Set(relatedIds());
@@ -155,7 +155,7 @@ export async function startEnclosure(onError) {
       mesh.renderOrder = opacity === 1 ? 0 : 1;
     }
     scene.updateMatrixWorld(true);
-    canvas.dataset.selected = state.selected;
+    canvas.dataset.selected = state.selected || '';
     canvas.dataset.joint = state.joint || '';
     canvas.dataset.highlighted = JSON.stringify([...mates]);
     canvas.dataset.explode = String(state.explode);
@@ -178,13 +178,25 @@ export async function startEnclosure(onError) {
       const option = document.createElement('option');
       option.value = '';
       option.textContent = '該当する部品はありません';
+      option.disabled = true;
       select.append(option);
     }
-    select.value = matches.some(part => part.id === state.selected) ? state.selected : matches[0]?.id || '';
     text('#enclosure-selection-count', `${matches.length} / ${assembly.parts.length} CAD要素。部品数は購入数量ではありません。`);
+    return matches;
   }
   function detail() {
     const part = parts.get(state.selected), joint = joints.get(state.joint);
+    $('.joint-card').hidden = !part;
+    if (!part) {
+      text('#enclosure-part-id', '—');
+      text('#enclosure-part-title', '部品未選択');
+      text('#enclosure-part-kind', '検索条件に一致する部品がありません。条件を変更してください。');
+      for (const id of ['fastener-id', 'screw-size', 'length', 'engagement', 'receiver', 'axis']) text(`#enclosure-${id}`, '—');
+      text('#enclosure-chain-title', '接合相手は未選択');
+      $('#enclosure-mates').replaceChildren();
+      updateVisuals();
+      return;
+    }
     text('#enclosure-part-id', part.id);
     text('#enclosure-part-title', partName(part));
     text('#enclosure-part-kind', part.is_reference ? '参照形状 / 実部品への適合は未資格' :
@@ -214,30 +226,48 @@ export async function startEnclosure(onError) {
     }
     updateVisuals();
   }
-  function select(id) {
-    const part = parts.get(id);
-    if (!part) throw new Error('選択した筐体部品は存在しません。');
-    state.selected = id;
-    $('#enclosure-search').value = '';
-    fillParts();
+  function synchronizeSelection(matches) {
+    const part = parts.get(state.selected);
+    const dropdown = $('#enclosure-part');
+    if (part && !matches.some(row => row.id === part.id)) {
+      const option = document.createElement('option');
+      option.value = part.id;
+      option.textContent = `選択中（検索外）: ${part.id} / ${partName(part)}`;
+      dropdown.append(option);
+      text('#enclosure-selection-count', `${matches.length} / ${assembly.parts.length} CAD要素。検索外の選択部品を併記しています。`);
+    }
+    dropdown.value = state.selected || '';
+    dropdown.disabled = !part && matches.length === 0;
     const selectJoint = $('#enclosure-joint');
     selectJoint.replaceChildren();
-    for (const jointId of part.joint_ids) {
+    const jointIds = part?.joint_ids || [];
+    for (const jointId of jointIds) {
       const option = document.createElement('option');
       option.value = jointId;
       option.textContent = joints.get(jointId).fastener;
       selectJoint.append(option);
     }
-    state.joint = part.joint_ids[0] || null;
+    state.joint = jointIds.includes(state.joint) ? state.joint : jointIds[0] || null;
     if (!state.joint) {
       const option = document.createElement('option');
       option.value = '';
-      option.textContent = 'ねじ以外の接続・関係部品';
+      option.textContent = part ? 'ねじ以外の接続・関係部品' : '部品未選択';
       selectJoint.append(option);
     }
+    selectJoint.value = state.joint || '';
+    selectJoint.disabled = jointIds.length === 0;
     detail();
   }
-  $('#enclosure-search').addEventListener('input', fillParts);
+  function select(id) {
+    if (!parts.has(id)) throw new Error('選択した筐体部品は存在しません。');
+    state.selected = id;
+    synchronizeSelection(fillParts());
+  }
+  $('#enclosure-search').addEventListener('input', () => {
+    const matches = fillParts();
+    if (!matches.some(part => part.id === state.selected)) state.selected = matches[0]?.id || null;
+    synchronizeSelection(matches);
+  });
   $('#enclosure-part').addEventListener('change', event => { if (event.target.value) select(event.target.value); });
   $('#enclosure-joint').addEventListener('change', event => { state.joint = event.target.value || null; detail(); });
   $('#enclosure-explode').addEventListener('input', event => {
@@ -263,6 +293,7 @@ export async function startEnclosure(onError) {
     state.section = false;
     $('#enclosure-explode').value = '0';
     $('#enclosure-section').checked = false;
+    $('#enclosure-search').value = '';
     text('#enclosure-explode-value', '0%');
     setFocus('all');
   });
@@ -331,7 +362,7 @@ export async function startEnclosure(onError) {
       drawCalls: renderer.info.render.calls, triangles: renderer.info.render.triangles,
       renderedMeshCount: scene.children.filter(object => object.isMesh).length,
       materialHighlights: [...records].filter(([, record]) => record.mesh.material.color.getHex() === 0x277f89).map(([id]) => id),
-      selectedMaterialColor: records.get(state.selected).mesh.material.color.getHex(),
+      selectedMaterialColor: records.get(state.selected)?.mesh.material.color.getHex() ?? null,
       highlighted: relatedIds(), meshSha256: sha,
       screwPickPoint: {id: 'E_FRAME_SCREW_PPP_X', x: rect.left + (point.x + 1) * rect.width / 2, y: rect.top + (1 - point.y) * rect.height / 2},
       projectedBounds: [Math.min(...projected.map(p => p.x)), Math.min(...projected.map(p => p.y)),

@@ -3,9 +3,9 @@
   "scope": "526-part nominal enclosure; source motor CAD fit failed; actual hardware unverified/blocked",
   "checks": [
     "Desktop actually renders 526 world-coordinate CAD meshes, with 11 marked references and no automatic motion/audio",
+    "Single/first/multiple/empty search results keep dropdown, card, mesh and joint synchronized without clearing the query",
     "All 200 screws select their exact ordered physical stack and change the actual mesh highlight materials",
     "Board under-head length, reference-board assumptions and unresolved motor-reference status stay visible",
-    "Part search, empty search and all eight cover-retainer identities work",
     "0/50/100% explode stays within the viewport; clipping and reset preserve the unchanged CAD model",
     "Real 3D raycasting selects the visible frame/corner screw and its receiver",
     "Keyboard camera, reduced motion and accessible control names work in isolated Chrome",
@@ -83,7 +83,7 @@
     },
     {
       "path": "enclosure.js",
-      "sha256": "a03c6539e30339ecb1a8040c2aaa89cf812e51058990396cd0a74cb89c4245b9"
+      "sha256": "2e43e803ba39ba30b8f966ff9ced6aaef93c6dbd27f96b61a4bea1887f9a97aa"
     },
     {
       "path": "enclosure.css",

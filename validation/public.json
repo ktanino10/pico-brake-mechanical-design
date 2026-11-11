@@ -175,7 +175,7 @@
       "bytes_scanned": 10571
     },
     "enclosure.js": {
-      "bytes_scanned": 18192
+      "bytes_scanned": 19746
     },
     "enclosure.css": {
       "bytes_scanned": 1445
@@ -234,10 +234,10 @@
       "bytes_scanned": 3685
     },
     "tests/enclosure-browser.mjs": {
-      "bytes_scanned": 12949
+      "bytes_scanned": 16194
     },
     "validation/enclosure-browser.json": {
-      "bytes_scanned": 4503
+      "bytes_scanned": 4551
     },
     "scripts/reexport_public.py": {
       "bytes_scanned": 3280
@@ -485,8 +485,8 @@
     },
     {
       "path": "enclosure.js",
-      "bytes": 18192,
-      "sha256": "a03c6539e30339ecb1a8040c2aaa89cf812e51058990396cd0a74cb89c4245b9"
+      "bytes": 19746,
+      "sha256": "2e43e803ba39ba30b8f966ff9ced6aaef93c6dbd27f96b61a4bea1887f9a97aa"
     },
     {
       "path": "index.html",
@@ -640,8 +640,8 @@
     },
     {
       "path": "tests/enclosure-browser.mjs",
-      "bytes": 12949,
-      "sha256": "0dba87c97c6659c43846ce7f09c162529c0bb680ffbcab85490910f72c6e9bd7"
+      "bytes": 16194,
+      "sha256": "82e2edf63acd9bbca48fa124b54eafb7b3b814d853b8d940240fd3c30baaf32f"
     },
     {
       "path": "tests/enclosure.test.mjs",
@@ -680,8 +680,8 @@
     },
     {
       "path": "validation/enclosure-browser.json",
-      "bytes": 4503,
-      "sha256": "734c37e055c1ee6003fffde3832bfd2e5fc0780c3ca1ab459dcce4929ed584ef"
+      "bytes": 4551,
+      "sha256": "97f91370ca33c30f9bba0b81c608ece337b6ce8da5fc6c2e7a2803786d12f01a"
     },
     {
       "path": "validation/enclosure-cad.json",

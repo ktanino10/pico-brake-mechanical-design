@@ -56,6 +56,64 @@ try {
   report.initial_render = state;
   await page.screenshot({path: path.join(output, 'enclosure-desktop.png'), fullPage: true});
   check('Desktop actually renders 526 world-coordinate CAD meshes, with 11 marked references and no automatic motion/audio');
+  async function synchronizedSelection(id, query) {
+    const observed = await snapshot(page);
+    assert.equal(await page.locator('#enclosure-search').inputValue(), query);
+    assert.equal(await page.locator('#enclosure-part').inputValue(), id);
+    assert.equal(await page.locator('#enclosure-part-id').textContent(), id);
+    assert.equal(observed.selected, id);
+    const part = assembly.parts.find(row => row.id === id);
+    assert.ok(part.joint_ids.includes(observed.joint));
+    assert.equal(await page.locator('#enclosure-joint').inputValue(), observed.joint);
+    const joint = assembly.joints.find(row => row.id === observed.joint);
+    assert.equal(await page.locator('#enclosure-fastener-id').textContent(), joint.fastener);
+    assert.deepEqual([...observed.materialHighlights].sort(),
+      [...new Set([joint.fastener, ...jointStack(joint)].filter(value => value !== id))].sort());
+  }
+  await page.locator('#enclosure-search').fill('E_HOLDER_PCB');
+  assert.equal(await page.locator('#enclosure-part option').count(), 1);
+  const searchObservation = {
+    query: await page.locator('#enclosure-search').inputValue(),
+    dropdown: await page.locator('#enclosure-part').inputValue(),
+    card: await page.locator('#enclosure-part-id').textContent(),
+    state: await snapshot(page),
+  };
+  await writeFile(path.join(output, 'search-single-observation.json'), JSON.stringify(searchObservation, null, 2) + '\n');
+  await page.screenshot({path: path.join(output, 'enclosure-search-single.png'), fullPage: true});
+  await synchronizedSelection('E_HOLDER_PCB', 'E_HOLDER_PCB');
+  await page.locator('#enclosure-part').selectOption('E_HOLDER_PCB');
+  await synchronizedSelection('E_HOLDER_PCB', 'E_HOLDER_PCB');
+  await page.locator('#enclosure-search').fill('E_FRAME_MOTOR_');
+  assert.equal(await page.locator('#enclosure-part option').count(), 3);
+  await synchronizedSelection('E_FRAME_MOTOR_X', 'E_FRAME_MOTOR_');
+  await page.locator('#enclosure-search').fill('E_CAP_SCREW_');
+  assert.equal(await page.locator('#enclosure-part option').count(), 8);
+  await synchronizedSelection('E_CAP_SCREW_NNN', 'E_CAP_SCREW_');
+  await page.locator('#enclosure-part').selectOption('E_CAP_SCREW_PPP');
+  await synchronizedSelection('E_CAP_SCREW_PPP', 'E_CAP_SCREW_');
+  await page.locator('#enclosure-search').fill('E_CAP_SCREW_P');
+  assert.equal(await page.locator('#enclosure-part option').count(), 4);
+  await synchronizedSelection('E_CAP_SCREW_PPP', 'E_CAP_SCREW_P');
+  await page.locator('#enclosure-mates [data-mate="E_CORNER_CAP_PPP"]').click();
+  await synchronizedSelection('E_CORNER_CAP_PPP', 'E_CAP_SCREW_P');
+  assert.match(await page.locator('#enclosure-part option:checked').textContent(), /検索外/);
+  await page.locator('#enclosure-search').fill('NO_MATCH_IN_ROSTER');
+  assert.equal(await page.locator('#enclosure-part option').count(), 1);
+  assert.match(await page.locator('#enclosure-part').textContent(), /該当する部品はありません/);
+  assert.equal(await page.locator('#enclosure-part').inputValue(), '');
+  assert.equal(await page.locator('#enclosure-part-id').textContent(), '—');
+  assert.equal(await page.locator('#enclosure-part-title').textContent(), '部品未選択');
+  assert.equal(await page.locator('#enclosure-joint').isDisabled(), true);
+  state = await snapshot(page);
+  assert.equal(state.selected, null);
+  assert.equal(state.joint, null);
+  assert.deepEqual(state.highlighted, []);
+  assert.deepEqual(state.materialHighlights, []);
+  await page.locator('#enclosure-search').fill('E_HOLDER_PCB');
+  await synchronizedSelection('E_HOLDER_PCB', 'E_HOLDER_PCB');
+  await page.locator('#enclosure-reset').click();
+  await synchronizedSelection('E_FRAME_SCREW_PPP_X', '');
+  check('Single/first/multiple/empty search results keep dropdown, card, mesh and joint synchronized without clearing the query');
   for (const joint of assembly.joints) {
     await page.locator('#enclosure-part').selectOption(joint.fastener);
     assert.equal(await page.locator('#enclosure-fastener-id').textContent(), joint.fastener);
@@ -77,14 +135,6 @@ try {
   await page.locator('#enclosure-part').selectOption('E_REF_MOTOR_Z');
   assert.match(await page.locator('#enclosure-part-title').textContent(), /適合は未解決/);
   check('Board under-head length, reference-board assumptions and unresolved motor-reference status stay visible');
-  await page.locator('#enclosure-search').fill('NO_MATCH_IN_ROSTER');
-  assert.equal(await page.locator('#enclosure-part option').count(), 1);
-  assert.match(await page.locator('#enclosure-part').textContent(), /該当する部品はありません/);
-  await page.locator('#enclosure-search').fill('E_CAP_SCREW_');
-  assert.equal(await page.locator('#enclosure-part option').count(), 8);
-  await page.locator('#enclosure-part').selectOption('E_CAP_SCREW_PPP');
-  assert.equal((await snapshot(page)).selected, 'E_CAP_SCREW_PPP');
-  check('Part search, empty search and all eight cover-retainer identities work');
   await page.locator('#enclosure-reset').click();
   for (const percentage of [0, 50, 100]) {
     await page.locator('#enclosure-explode').focus();
