@@ -17,6 +17,18 @@ THREAD_MINOR = 1.25
 THREAD_MAJOR = 1.5
 THREAD_DEPTH = 5.5
 CORNER_SCREW_LENGTH = 10.0
+DIAGONAL_SEAT = 60.8
+CAP_SEAT = 66.0
+DIAGONAL = App.Vector(1, 1, 1)
+DIAGONAL.normalize()
+CAP_GRIP = (CAP_SEAT - DIAGONAL_SEAT) * math.sqrt(3)
+
+
+def above_diagonal(coordinate):
+    cutter = Part.makeBox(100, 100, 100, App.Vector(-50, -50, 0))
+    cutter.transformShape(App.Placement(App.Vector(coordinate, coordinate, coordinate),
+                                       App.Rotation(App.Vector(0, 0, 1), DIAGONAL)).toMatrix())
+    return cutter
 
 
 def axis_vector(axis, sign=1):
@@ -33,6 +45,7 @@ def point_on_axis(axis, coordinate, transverse):
 
 def corner_positive():
     shape = Part.makeBox(12, 12, 12, App.Vector(CORNER_INNER, CORNER_INNER, CORNER_INNER))
+    shape = shape.cut(above_diagonal(DIAGONAL_SEAT))
     for axis in range(3):
         pin = Part.makeCylinder(1.5, 6.7, point_on_axis(axis, 62.3, REGISTER), axis_vector(axis))
         shape = shape.fuse(pin)
@@ -40,7 +53,42 @@ def corner_positive():
         bore = Part.makeCylinder(THREAD_MINOR, THREAD_DEPTH + .0001,
                                  point_on_axis(axis, FRAME_INNER + .0001, CORNER_FIXING), axis_vector(axis, -1))
         shape = shape.cut(bore)
+    diagonal_bore = Part.makeCylinder(THREAD_MINOR, 5.5001,
+                                     App.Vector(DIAGONAL_SEAT, DIAGONAL_SEAT, DIAGONAL_SEAT)+DIAGONAL*.0001,
+                                     -DIAGONAL)
+    shape = shape.cut(diagonal_bore)
     return shape.removeSplitter()
+
+
+def corner_cap_positive():
+    outer = Part.makeBox(13, 13, 13, App.Vector(56, 56, 56))
+    inner = Part.makeBox(13, 13, 13, App.Vector(55, 55, 55))
+    shape = outer.cut(inner)
+    base = App.Vector(DIAGONAL_SEAT, DIAGONAL_SEAT, DIAGONAL_SEAT)
+    boss = Part.makeCone(2.6, 3.5, CAP_GRIP, base, DIAGONAL)
+    shape = shape.fuse(boss).cut(above_diagonal(CAP_SEAT))
+    shape = shape.cut(Part.makeCylinder(1.7, CAP_GRIP+.002, base-DIAGONAL*.001, DIAGONAL))
+    shape = shape.cut(Part.makeCone(3, 1.5, 1.7, App.Vector(CAP_SEAT, CAP_SEAT, CAP_SEAT), -DIAGONAL))
+    for axis in range(3):
+        shape = shape.cut(Part.makeCylinder(1.65, 8, point_on_axis(axis, 62, REGISTER), axis_vector(axis)))
+        shape = shape.cut(Part.makeCylinder(3.2, 8, point_on_axis(axis, 62, CORNER_FIXING), axis_vector(axis)))
+    return shape.removeSplitter()
+
+
+def cap_clearance_positive():
+    return Part.makeCone(2.8, 3.7, CAP_GRIP+.002,
+                         App.Vector(DIAGONAL_SEAT, DIAGONAL_SEAT, DIAGONAL_SEAT)-DIAGONAL*.001, DIAGONAL)
+
+
+def sign_transform(shape, signs):
+    matrix = App.Matrix()
+    permutation = (0, 1, 2) if math.prod(signs) > 0 else (1, 0, 2)
+    for i in range(3):
+        for j in range(3):
+            setattr(matrix, f"A{i+1}{j+1}", signs[i] if permutation[i] == j else 0)
+    result = shape.copy()
+    result.transformShape(matrix)
+    return result
 
 
 def cut_corner_interface(shape, axis):
@@ -126,18 +174,17 @@ def cage_frame(axis, sign):
             shape = shape.cut(Part.makeCylinder(1.65, 5.2002, r-inward*.0001, inward))
     shape = shape.removeSplitter()
     shape.transformShape(App.Placement(App.Vector(), case_rotation(axis)).toMatrix())
+    for sx in (-1, 1):
+        for sy in (-1, 1):
+            for sz in (-1, 1):
+                signs = (sx, sy, sz)
+                if signs["XYZ".index(axis)] == sign:
+                    shape = shape.cut(sign_transform(cap_clearance_positive(), signs))
     return shape
 
 
 def signed_corner(signs):
-    matrix = App.Matrix()
-    permutation = (0, 1, 2) if math.prod(signs) > 0 else (1, 0, 2)
-    for i in range(3):
-        for j in range(3):
-            setattr(matrix, f"A{i+1}{j+1}", signs[i] if permutation[i] == j else 0)
-    shape = corner_positive()
-    shape.transformShape(matrix)
-    return shape
+    return sign_transform(corner_positive(), signs)
 
 
 def frame_cage():
@@ -152,6 +199,24 @@ def frame_cage():
                 label = "".join("P" if sign > 0 else "N" for sign in signs)
                 corner_id = "E_CORNER_"+label
                 shapes[corner_id] = signed_corner(signs)
+                cap_id, cap_screw_id = "E_CORNER_CAP_"+label, "E_CAP_SCREW_"+label
+                shapes[cap_id] = sign_transform(corner_cap_positive(), signs)
+                cap_screw = Part.makeCylinder(THREAD_MAJOR, 14, App.Vector(CAP_SEAT, CAP_SEAT, CAP_SEAT), -DIAGONAL)
+                cap_screw = cap_screw.fuse(Part.makeCone(3, 1.5, 1.7, App.Vector(CAP_SEAT, CAP_SEAT, CAP_SEAT), -DIAGONAL))
+                shapes[cap_screw_id] = sign_transform(cap_screw.removeSplitter(), signs)
+                joints.append({
+                    "id": "EC_CAP_"+label, "fastener": cap_screw_id, "clamped_part": cap_id,
+                    "receiver": corner_id, "axis": [-s/math.sqrt(3) for s in signs],
+                    "seat_point_mm": [s*CAP_SEAT for s in signs],
+                    "seat_kind": "nominal flat-head cone D6 / height1.7 on actual outer corner cover",
+                    "nominal_thread": "M3x0.5; major/minor cylindrical representation",
+                    "thread_major_radius_mm": THREAD_MAJOR, "thread_minor_radius_mm": THREAD_MINOR,
+                    "length_including_head_mm": 14, "frame_grip_mm": CAP_GRIP,
+                    "engagement_mm": 14-CAP_GRIP, "tap_depth_mm": 5.5,
+                    "bottom_margin_mm": 5.5-(14-CAP_GRIP), "tightening_torque_Nm": None,
+                    "material_assumption": "Machined nominal metal cover/corner; outer contact safety unqualified",
+                    "physical_ready": False,
+                })
                 for index, axis in enumerate("XYZ"):
                     sign = signs[index]
                     frame_id = "E_FRAME_"+("BOARD_" if sign > 0 else "MOTOR_")+axis

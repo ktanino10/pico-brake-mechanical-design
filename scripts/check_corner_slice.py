@@ -29,6 +29,14 @@ def validate_joints(shapes, joints):
 
 
 def analytical_bounds(name):
+    if name.startswith("E_CORNER_CAP_"):
+        signs = [1 if letter == "P" else -1 for letter in name[-3:]]
+        return [min(s*56, s*69) for s in signs] + [max(s*56, s*69) for s in signs]
+    if name.startswith("E_CAP_SCREW_"):
+        signs = [1 if letter == "P" else -1 for letter in name[-3:]]
+        lo = 66 - 14/math.sqrt(3) - 1.5*math.sqrt(2/3)
+        hi = 66 + 3*math.sqrt(2/3)
+        return [min(s*lo, s*hi) for s in signs] + [max(s*lo, s*hi) for s in signs]
     if re.fullmatch(r"E_CORNER_[PN]{3}", name):
         signs = [1 if letter == "P" else -1 for letter in name[-3:]]
         return [min(s*CORNER_INNER, s*69) for s in signs] + [max(s*CORNER_INNER, s*69) for s in signs]
@@ -51,6 +59,40 @@ def analytical_bounds(name):
         low, high = [CORNER_FIXING-3]*3, [CORNER_FIXING+3]*3
         low[axis], high[axis] = 58.0, 68.0
     return low + high
+
+
+def verify_outer_surfaces(shapes):
+    outer_faces, edges = [], []
+    for name, shape in shapes.items():
+        if not name.startswith("E_CORNER_CAP_"):
+            continue
+        signs = [1 if letter == "P" else -1 for letter in name[-3:]]
+        for axis in range(3):
+            area = sum(face.Area for face in shape.Faces
+                       if abs(bounds(face)[axis]-signs[axis]*69) < 1e-6 and
+                          abs(bounds(face)[axis+3]-signs[axis]*69) < 1e-6)
+            if area < 60:
+                raise ValueError("An outer corner face is absent or reduced to a pin/edge")
+            outer_faces.append({"part": name, "axis": "XYZ"[axis], "coordinate_mm": signs[axis]*69, "area_mm2": area})
+    for owner, second, variable in ((0, 1, 2), (1, 2, 0), (2, 0, 1)):
+        for first_sign in (-1, 1):
+            for second_sign in (-1, 1):
+                low, sizes = [0.0]*3, [.2]*3
+                low[owner] = 67.8 if first_sign > 0 else -68
+                low[second] = 67.8 if second_sign > 0 else -68
+                low[variable], sizes[variable] = -57, 114
+                probe = Part.makeBox(*sizes, App.Vector(*low))
+                name = "E_FRAME_"+("BOARD_" if first_sign > 0 else "MOTOR_")+"XYZ"[owner]
+                volume = shapes[name].common(probe).Volume
+                if volume < probe.Volume * .999:
+                    raise ValueError("A required exterior frame-edge strip has missing material")
+                edges.append({"part": name, "fixed_axes": ["XYZ"[owner], "XYZ"[second]],
+                              "signs": [first_sign, second_sign], "covered_length_mm": 114, "probe_material_mm3": volume})
+    if len(outer_faces) != 24 or len(edges) != 12:
+        raise ValueError("Outer corner/edge coverage is incomplete")
+    return {"outer_corner_faces": outer_faces, "frame_edge_strips": edges,
+            "pin_or_screw_extents_are_not_used_as_coverage_evidence": True,
+            "contact_strength_or_impact_safety_qualified": False}
 
 
 def verify_collisions(shapes, joints):
@@ -111,12 +153,15 @@ def main():
     expected = {}
     for name, shape in shapes.items():
         assert_shape(shape, name)
+        if len(shape.Solids) != 1:
+            raise ValueError("An enclosure part must be one connected solid: " + name)
         box = analytical_bounds(name)
         if max(abs(a-b) for a,b in zip(bounds(shape),box)) > 1e-6:
             raise ValueError("Primitive shape departed from its independent dimension contract")
         expected[name] = {"bbox_mm": box, "center_of_mass_mm": shape_centroid(shape),
                           "volume_mm3": shape.Volume, "solid_count": len(shape.Solids), "is_reference": False}
     collision = verify_collisions(shapes, joints)
+    outer = verify_outer_surfaces(shapes) if args.scope == "cage" else None
     try:
         validate_joints(shapes, [dict(joints[0], receiver="MISSING_RECEIVER")])
     except ValueError:
@@ -164,6 +209,7 @@ def main():
         raise ValueError("Negative pose check modified saved output")
     report = {"status": "PASS", "scope": args.scope, "cad_slice_complete": True, "full_enclosure_complete": False,
               "parts": expected, "joints": joints, "geometry": collision, "readback": saved,
+              "outer_surface_coverage": outer,
               "negative_controls": {"missing_mate_rejected": missing_rejected, "wrong_pose_rejected": pose_rejected},
               "source_geometry_read": False, "whole_fit": False, "build_ready": False, "physical_ready": False}
     (args.output/"report.json").write_text(json.dumps(report,indent=2)+"\n")
