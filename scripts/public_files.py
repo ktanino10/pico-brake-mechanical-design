@@ -15,6 +15,7 @@ PUBLIC_FILES = (
     "vendor/three.module.js", "vendor/three.core.js", "vendor/OrbitControls.js",
     "vendor/THREE-LICENSE.txt", "vendor/manifest.json",
     "scripts/public_policy.py", "scripts/catalog.py", "scripts/build_cad.py", "scripts/geometry_contract.py",
+    "scripts/enclosure_geometry.py", "scripts/check_corner_slice.py",
     "scripts/reexport_public.py", "scripts/public_files.py", "scripts/serve_public.py",
     "scripts/public_scan.py", "scripts/package_public.py", "scripts/verify_public_zip.py", "scripts/vendor.mjs",
     "tests/contract.test.mjs", "tests/browser.mjs", "tests/test_public.py",
