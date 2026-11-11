@@ -1,7 +1,7 @@
 """The only files eligible for serving, packaging and local public freeze."""
 
 PUBLIC_FILES = (
-    ".gitignore", ".gitattributes", "README.md", "NOTICE.md", "index.html", "styles.css",
+    ".gitignore", ".gitattributes", ".nojekyll", "README.md", "NOTICE.md", "index.html", "styles.css",
     "app.js", "bootstrap.js", "contract.js", "package.json", "package-lock.json",
     "docs/PUBLIC_SCOPE.md", "docs/VALIDATION.md",
     "data/provenance.json", "data/assembly.json", "data/meshes.json",

@@ -2,7 +2,7 @@
   "schema": "public-brake-self-contained-v1",
   "status": "PASS",
   "source": "Curated public ZIP, unpacked outside the checkout",
-  "zip_sha256": "e6d43c07191e914018fcdc216d74658065dcfa9426970a28d406bf3786edf523",
+  "zip_sha256": "60b90d2ad3bf9e44c26cee20a56d67fa0f7d0d98f21aacabe1b3e07f9a2681d1",
   "parts": 149,
   "private_design_input_used": false,
   "native_input_sha256": "2bc12d2f0d1617789a57f9b00b3c5fa6d835092e4c1f49f1e0f846dda7ed9116",
@@ -22,5 +22,14 @@
   "reference_interface_checks": 31,
   "whole_fit": false,
   "build_ready": false,
-  "physical_ready": false
+  "physical_ready": false,
+  "verification_run": {
+    "scope": "Actual new ZIP extraction and public-only re-export after static Pages entry update",
+    "executed_for_this_zip": true,
+    "baseline_commit": "480a88822931ee53f4e3f42274f41f9d950959b8",
+    "previous_report_sha256": "60f562ac66c4452aa210e1ada7679d894b45ed6243e305e0fc8aeef9d1cd5998",
+    "previous_zip_sha256": "e6d43c07191e914018fcdc216d74658065dcfa9426970a28d406bf3786edf523",
+    "fresh_reexport_receipt_sha256": "2ee699f89f04f5b7dc1ff57054bd36a40924724dd140b9b807e95aa6f128715e",
+    "receipt_written_at_utc": "2026-11-11T09:10:22.047645+00:00"
+  }
 }

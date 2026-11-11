@@ -9,8 +9,13 @@
 
 ## 画面を開く
 
-[`index.html`](index.html) がビルド不要の静的入口です。GitHub Pagesではリポジトリのsubpathで動作します。
-この成果物を用意した段階では、pushやPagesの公開設定は行っていません。
+公開用の閲覧入口は **[ブレーキ組立検査台](https://ktanino10.github.io/pico-brake-mechanical-design/)** です。
+GitHub Pagesの有効化・デプロイが完了すると、このURLで閲覧できます。
+URLの記載自体は本番配信済みの確認ではありません。公開前やURLを利用できない場合は、下記のローカル表示を使ってください。
+
+[`index.html`](index.html) はビルド不要で、Pagesのリポジトリsubpathに対応しています。
+配信元を`main`ブランチの`/（root）`にする静的配信を想定し、
+リポジトリrootの空の`.nojekyll`でJekyllの変換を止めます。MarkdownやCAD・JSONなどのassetsはそのまま配信します。
 
 ローカルでリポジトリを取得した場合は、このフォルダーで次を実行します。
 

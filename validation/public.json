@@ -18,8 +18,11 @@
     ".gitattributes": {
       "bytes_scanned": 106
     },
+    ".nojekyll": {
+      "bytes_scanned": 0
+    },
     "README.md": {
-      "bytes_scanned": 7490
+      "bytes_scanned": 7994
     },
     "NOTICE.md": {
       "bytes_scanned": 1114
@@ -85,7 +88,7 @@
     },
     "downloads/public-brake-cad.zip": {
       "zip_members": 18,
-      "uncompressed_bytes": 13695628
+      "uncompressed_bytes": 13696132
     },
     "vendor/three.module.js": {
       "bytes_scanned": 662772
@@ -118,7 +121,7 @@
       "bytes_scanned": 3280
     },
     "scripts/public_files.py": {
-      "bytes_scanned": 1855
+      "bytes_scanned": 1868
     },
     "scripts/serve_public.py": {
       "bytes_scanned": 3169
@@ -148,10 +151,10 @@
       "bytes_scanned": 10890
     },
     "validation/browser.json": {
-      "bytes_scanned": 3272
+      "bytes_scanned": 8587
     },
     "validation/reexport.json": {
-      "bytes_scanned": 1062
+      "bytes_scanned": 1656
     }
   },
   "files": [
@@ -166,14 +169,19 @@
       "sha256": "050f8d46ef4f4628113747681975662868ccec143d88fcd572d243c710ccb0dd"
     },
     {
+      "path": ".nojekyll",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
       "path": "NOTICE.md",
       "bytes": 1114,
       "sha256": "b92d95a1788d5fa101dcc1923230b3ff06e6255389996547fba1d80bb96182d8"
     },
     {
       "path": "README.md",
-      "bytes": 7490,
-      "sha256": "80a834070ad11d9316eb4979b2f3111b38d151374b77f78c63e14a87de7abc19"
+      "bytes": 7994,
+      "sha256": "b68a4f2007ed123a527bddc922769cfb9b3ecd7fd34a85d648a31cb494f74a4f"
     },
     {
       "path": "app.js",
@@ -198,7 +206,7 @@
     {
       "path": "data/checksums.json",
       "bytes": 1388,
-      "sha256": "ae0c9a407454479e2690ff1cd52a27d5a0623614bb8b41290a17c49826f1c9f2"
+      "sha256": "6ac5c48127e45bb7409b4e2062152ee32e20dcd5b5f5dee7cca14408fc313d1a"
     },
     {
       "path": "data/joints.csv",
@@ -252,8 +260,8 @@
     },
     {
       "path": "downloads/public-brake-cad.zip",
-      "bytes": 3916814,
-      "sha256": "e6d43c07191e914018fcdc216d74658065dcfa9426970a28d406bf3786edf523"
+      "bytes": 3917035,
+      "sha256": "60b90d2ad3bf9e44c26cee20a56d67fa0f7d0d98f21aacabe1b3e07f9a2681d1"
     },
     {
       "path": "index.html",
@@ -292,8 +300,8 @@
     },
     {
       "path": "scripts/public_files.py",
-      "bytes": 1855,
-      "sha256": "94f405778265accf4f392d06ec61e0956edd63e694f6bd60d43dc04fde4fe593"
+      "bytes": 1868,
+      "sha256": "6483951dd1442a5ca040be7c197ea079bc4f960ce99b4d2fc1bdf407c78fe2ab"
     },
     {
       "path": "scripts/public_policy.py",
@@ -347,8 +355,8 @@
     },
     {
       "path": "validation/browser.json",
-      "bytes": 3272,
-      "sha256": "f8a97f38599b7f9f9f3693d132f5ddddb7b5bebc3eeb36c55e37d1c172fc73a3"
+      "bytes": 8587,
+      "sha256": "09160af5d00ff85959e2886c03edec8b34da63be687c567c7e7047a22df70ebe"
     },
     {
       "path": "validation/cad.json",
@@ -357,8 +365,8 @@
     },
     {
       "path": "validation/reexport.json",
-      "bytes": 1062,
-      "sha256": "60f562ac66c4452aa210e1ada7679d894b45ed6243e305e0fc8aeef9d1cd5998"
+      "bytes": 1656,
+      "sha256": "9c896af8d77267b65db49e18134165c36556d10a6fe3e95bf4aa986dbf5edd8b"
     },
     {
       "path": "vendor/OrbitControls.js",
