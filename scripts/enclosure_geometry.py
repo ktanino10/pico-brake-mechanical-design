@@ -60,7 +60,19 @@ def corner_positive():
     return shape.removeSplitter()
 
 
-def corner_cap_positive():
+def pin_access_slot(axis):
+    direction = axis_vector(axis)
+    start = point_on_axis(axis, 62, REGISTER)
+    end = point_on_axis(axis, 62, 54)
+    perpendicular = direction.cross(end-start)
+    perpendicular.normalize()
+    perpendicular *= 1.65
+    points = [start+perpendicular, end+perpendicular, end-perpendicular, start-perpendicular]
+    bridge = Part.Face(Part.makePolygon(points+[points[0]])).extrude(direction*8)
+    return bridge.fuse(Part.makeCylinder(1.65, 8, start, direction)).fuse(Part.makeCylinder(1.65, 8, end, direction))
+
+
+def corner_cap_positive(open_access=True):
     outer = Part.makeBox(13, 13, 13, App.Vector(56, 56, 56))
     inner = Part.makeBox(13, 13, 13, App.Vector(55, 55, 55))
     shape = outer.cut(inner)
@@ -70,7 +82,8 @@ def corner_cap_positive():
     shape = shape.cut(Part.makeCylinder(1.7, CAP_GRIP+.002, base-DIAGONAL*.001, DIAGONAL))
     shape = shape.cut(Part.makeCone(3, 1.5, 1.7, App.Vector(CAP_SEAT, CAP_SEAT, CAP_SEAT), -DIAGONAL))
     for axis in range(3):
-        shape = shape.cut(Part.makeCylinder(1.65, 8, point_on_axis(axis, 62, REGISTER), axis_vector(axis)))
+        pin_void = pin_access_slot(axis) if open_access else Part.makeCylinder(1.65, 8, point_on_axis(axis, 62, REGISTER), axis_vector(axis))
+        shape = shape.cut(pin_void)
         shape = shape.cut(Part.makeCylinder(3.2, 8, point_on_axis(axis, 62, CORNER_FIXING), axis_vector(axis)))
     return shape.removeSplitter()
 

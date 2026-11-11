@@ -13,7 +13,8 @@ import Part
 
 from build_cad import assert_shape, bounds, digest, normalized_native, normalized_step, readback, shape_centroid
 from enclosure_geometry import (CORNER_FIXING, CORNER_INNER, FRAME_INNER, FRAME_OUTER,
-                                THREAD_MAJOR, THREAD_MINOR, case_point, corner_slice, frame_cage)
+                                THREAD_MAJOR, THREAD_MINOR, case_point, corner_cap_positive, corner_positive,
+                                corner_slice, frame_cage)
 from geometry_contract import require_pose
 
 
@@ -25,6 +26,8 @@ def validate_joints(shapes, joints):
                 raise ValueError("Missing physical joint counterpart: " + joint[key])
         if joint["fastener"] in seen or joint["engagement_mm"] <= 0 or joint["bottom_margin_mm"] <= 0:
             raise ValueError("Invalid fastener/joint definition")
+        if not 0 < joint["thread_minor_radius_mm"] < joint["thread_major_radius_mm"]:
+            raise ValueError("Invalid declared thread radii")
         seen.add(joint["fastener"])
 
 
@@ -120,6 +123,15 @@ def verify_collisions(shapes, joints):
             raise ValueError("Intersection exceeds the declared local thread representation")
         positive.append({"a": first, "b": second, "volume_mm3": volume, "type": "bounded_major_minor_thread",
                          "outside_thread_mask_mm3": outside, "upper_volume_mm3": maximum})
+    thread_presence = []
+    for row in joints:
+        expected = math.pi*(row["thread_major_radius_mm"]**2-row["thread_minor_radius_mm"]**2)*row["engagement_mm"]
+        volume = abs(shapes[row["fastener"]].common(shapes[row["receiver"]]).Volume)
+        minimum = expected-max(1e-5, expected*1e-6)
+        if volume < minimum:
+            raise ValueError("Nominal thread representation missing: "+row["id"])
+        thread_presence.append({"joint": row["id"], "observed_mm3": volume,
+                                "nominal_annulus_mm3": expected, "minimum_required_mm3": minimum})
     contacts = []
     for row in joints:
         for first, second, role in [(row["clamped_part"], row["receiver"], "frame-to-corner seat"),
@@ -138,7 +150,31 @@ def verify_collisions(shapes, joints):
                 raise ValueError("A required physical bearing/seat contact is absent")
             contacts.append({"a": first, "b": second, "role": role, "distance_mm": distance,
                              "common_surface_area_mm2": contact_area})
-    return {"undeclared_positive_intersections": 0, "bounded_threads": positive, "intentional_contacts": contacts}
+    return {"undeclared_positive_intersections": 0, "bounded_threads": positive,
+            "declared_thread_presence": thread_presence, "intentional_contacts": contacts}
+
+
+def verify_cap_path(shapes):
+    fixed = ["E_CORNER_PPP"] + ["E_FRAME_BOARD_"+axis for axis in "XYZ"] + ["E_FRAME_SCREW_PPP_"+axis for axis in "XYZ"]
+    samples = []
+    for offset in (0, .1, .25, .5, .75, 1, 1.5, 2, 4, 8):
+        cap = shapes["E_CORNER_CAP_PPP"].copy()
+        cap.translate(App.Vector(offset, offset, offset))
+        volumes = {name: abs(cap.common(shapes[name]).Volume) for name in fixed}
+        distances = {name: cap.distToShape(shapes[name])[0] for name in fixed}
+        if max(volumes.values()) > 1e-6 or (offset > 0 and min(distances.values()) <= 1e-6):
+            raise ValueError("The nominal local cap installation path is obstructed")
+        samples.append({"translation_mm": [offset]*3, "max_positive_volume_mm3": max(volumes.values()),
+                        "minimum_distance_mm": min(distances.values())})
+    closed = corner_cap_positive(open_access=False)
+    closed.translate(App.Vector(.5, .5, .5))
+    red_volume = closed.common(corner_positive()).Volume
+    if red_volume <= 1e-6:
+        raise ValueError("The closed-hole installation negative fixture did not reproduce obstruction")
+    return {"direction": "Translate along the body diagonal, with unchanged orientation; remove cap retaining screw first.",
+            "opening": "Three open-ended capsule slots, not three closed orthogonal holes",
+            "samples": samples, "closed_hole_negative_at_half_mm_volume_mm3": red_volume,
+            "scope": "Local nominal rigid cap path only; not full assembly access or physical tolerances approval"}
 
 
 def main():
@@ -162,12 +198,28 @@ def main():
                           "volume_mm3": shape.Volume, "solid_count": len(shape.Solids), "is_reference": False}
     collision = verify_collisions(shapes, joints)
     outer = verify_outer_surfaces(shapes) if args.scope == "cage" else None
+    cap_path = verify_cap_path(shapes) if args.scope == "cage" else None
     try:
         validate_joints(shapes, [dict(joints[0], receiver="MISSING_RECEIVER")])
     except ValueError:
         missing_rejected = True
     else:
         raise ValueError("Missing-mate negative control passed")
+    test_joint = next(row for row in joints if not row["id"].startswith("EC_CAP_"))
+    direction = App.Vector(*test_joint["axis"])
+    start = App.Vector(*test_joint["seat_point_mm"]) + direction*(test_joint["frame_grip_mm"]-.01)
+    oversized = dict(shapes)
+    oversized[test_joint["receiver"]] = shapes[test_joint["receiver"]].cut(
+        Part.makeCylinder(test_joint["thread_major_radius_mm"]+.1, test_joint["tap_depth_mm"]+.02, start, direction))
+    oversize_volume = abs(oversized[test_joint["fastener"]].common(oversized[test_joint["receiver"]]).Volume)
+    try:
+        verify_collisions(oversized, joints)
+    except ValueError as error:
+        if "Nominal thread representation missing" not in str(error):
+            raise
+        oversize_rejected = True
+    else:
+        raise ValueError("An oversized receiver with no thread engagement passed")
     args.output.mkdir(parents=True)
     stem = "corner-slice" if args.scope == "corner" else "frame-cage"
     native, step = args.output/(stem+".FCStd"), args.output/(stem+".step")
@@ -210,8 +262,11 @@ def main():
     report = {"status": "PASS", "scope": args.scope, "cad_slice_complete": True, "full_enclosure_complete": False,
               "parts": expected, "joints": joints, "geometry": collision, "readback": saved,
               "outer_surface_coverage": outer,
+              "cap_local_installation": cap_path,
               "negative_controls": {"missing_mate_rejected": missing_rejected, "wrong_pose_rejected": pose_rejected},
               "source_geometry_read": False, "whole_fit": False, "build_ready": False, "physical_ready": False}
+    report["negative_controls"].update({"oversized_receiver_rejected": oversize_rejected,
+                                        "oversized_receiver_common_mm3": oversize_volume})
     (args.output/"report.json").write_text(json.dumps(report,indent=2)+"\n")
     print(json.dumps({"status":"PASS","parts":len(shapes),"joints":len(joints),
                       "bounded_threads":len(collision["bounded_threads"]),
