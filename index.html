@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="C08の新規ブレーキ部と独立した参考形状を、ねじと相手部材の関係から見る公開CAD検査台。製作・通電・回転の指示ではありません。">
+  <meta name="color-scheme" content="light">
+  <title>ブレーキ組立検査台 — C08 公開CAD</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="./styles.css">
+  <script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script>
+  <script src="./bootstrap.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#inspection">組立検査台へ移動</a>
+  <div class="safety-strip"><strong>実機用の検討案</strong><span>製作・通電・回転の指示ではありません。</span><span class="qualification">実機適合・製作・物理検証：未資格</span></div>
+  <header class="page-header">
+    <div><p class="eyebrow">C08 / PUBLIC COMPONENT STUDY</p><h1>ブレーキ組立検査台</h1><p class="intro">新規ブレーキ部と、独立した参考枠。元Pico全機のCADではありません。</p></div>
+    <a class="scope-link" href="#public-scope">公開範囲と未解決事項 <span aria-hidden="true">↓</span></a>
+  </header>
+  <main>
+    <section class="inspection" id="inspection" aria-label="3D組立検査台">
+      <div class="bench">
+        <div class="bench-heading">
+          <div class="mode-switch" role="group" aria-label="表示する構成">
+            <button type="button" data-mode="single" aria-pressed="true" disabled>単軸</button>
+            <button type="button" data-mode="three" aria-pressed="false" disabled>参考三軸</button>
+          </div>
+          <div class="bench-meta"><span id="mode-label">Z軸モジュール</span><span class="mono">モデル単位 mm</span></div>
+        </div>
+        <div class="viewport" id="viewport" aria-busy="true">
+          <div class="loading" id="loading" role="status">公開部品のデータを読み込んでいます…</div>
+          <div class="load-error" id="load-error" role="alert" hidden>
+            <h2>3Dを表示できません</h2>
+            <p id="error-message"></p>
+            <p>ダウンロードしたフォルダーをHTTPサーバーで開き、<code>data/</code> と <code>vendor/</code> が揃っていることを確認してください。WebGLを利用できるブラウザーが必要です。</p>
+            <button type="button" id="retry">再読み込み</button>
+          </div>
+          <div class="view-caption" id="view-caption" hidden><span class="caption-dot"></span><span id="view-state">組付け位置</span></div>
+          <p class="model-warning" id="model-warning" hidden>薄い参考形状はPicoの原CADではありません</p>
+        </div>
+        <div class="legend" aria-label="部品色の意味">
+          <span><i class="swatch steel"></i>鋼・磁極</span>
+          <span><i class="swatch copper"></i>巻線</span>
+          <span><i class="swatch blue"></i>可動・回転側</span>
+          <span><i class="swatch green"></i>固定支持</span>
+          <span><i class="swatch reference"></i>独立参照</span>
+        </div>
+        <fieldset class="bench-controls" id="bench-controls" disabled>
+          <legend class="sr-only">3Dの操作</legend>
+          <div class="explode-control"><label for="explode">分解表示</label><input id="explode" type="range" min="0" max="100" step="1" value="0"><output id="explode-value" for="explode">0%</output></div>
+          <div class="section-control"><label class="check"><input id="section" type="checkbox">半断面</label><input id="section-position" type="range" min="-60" max="60" step="1" value="0" aria-label="断面のX位置（mm）" disabled><output id="section-value" for="section-position">X 0 mm</output></div>
+          <div class="control-actions"><label class="check"><input id="highlight" type="checkbox" checked>選択部と相手を強調</label><button type="button" id="fit-view">全体を表示</button><button type="button" id="front-view">正面</button><button type="button" id="reset">リセット</button></div>
+        </fieldset>
+        <p class="interaction-help">ドラッグで回転 / ホイール・ピンチでズーム。3Dにフォーカスすると矢印キーで回転、<kbd>＋</kbd><kbd>−</kbd>でズーム、<kbd>Home</kbd>で視点を戻せます。</p>
+        <p class="display-note" id="display-note">分解を変えた時は全体が入る距離に調整します。実組立経路・衝突なし・力学・磁場を実証しません。断面は表示上の切断で、切り口の面は補いません。</p>
+      </div>
+      <aside class="inspector" aria-label="選択部品と接合の詳細">
+        <div class="inspector-heading"><h2>部品と接合</h2><span class="selection-marker" aria-hidden="true"></span></div>
+        <fieldset id="part-controls" disabled>
+          <legend class="sr-only">部品を選択</legend>
+          <div class="quick-picks" role="group" aria-label="注目する部品">
+            <button type="button" data-pick="WINDING">コイル保持</button>
+            <button type="button" data-pick="ARMATURE">可動円盤</button>
+            <button type="button" data-pick="RETAINER_BOLT_0">ねじ</button>
+            <button type="button" data-pick="REF_FRAME">参考枠</button>
+          </div>
+          <div class="select-row">
+            <label for="part-filter">区分<select id="part-filter"><option value="all">すべて</option><option value="fasteners">ねじ・締結部</option><option value="coil">コイル保持</option><option value="rotor">回転・可動側</option><option value="support">固定支持</option><option value="wiring">配線保持</option><option value="reference">独立参照形状</option></select></label>
+            <label for="axis-select">軸<select id="axis-select" disabled><option>Z</option><option>X</option><option>Y</option></select></label>
+          </div>
+          <label class="part-select-label" for="part-select">部品<select id="part-select" aria-label="選択する部品"><option>読込待ち</option></select></label>
+        </fieldset>
+        <div class="selection-summary" aria-live="polite" aria-atomic="true">
+          <div class="part-id" id="part-id">—</div>
+          <h3 id="part-title">3Dまたは一覧から選択</h3>
+          <p class="part-kind" id="part-kind">同じIDをCAD・部品表・接合表で確認できます。</p>
+        </div>
+        <div class="joint-card" id="joint-card" hidden>
+          <div class="joint-heading"><span class="mono" id="joint-id"></span><span id="joint-title"></span></div>
+          <p class="screw-size mono" id="screw-size"></p>
+          <p id="joint-role"></p>
+          <div class="torque-box">
+            <span class="torque-label" id="torque-label">C08金属案の条件付き計算</span>
+            <p class="torque-value mono" id="torque-value"></p>
+            <p class="reference-caution" id="reference-caution" hidden>参考部材を含む接合です。この公開組合せに適用する締付値ではありません。</p>
+          </div>
+          <dl class="joint-facts"><dt>相手材・座面</dt><dd id="joint-receiver"></dd><dt>計算の前提</dt><dd id="joint-conditions"></dd></dl>
+        </div>
+        <p class="part-description" id="part-description"></p>
+        <div class="mate-section"><h3 id="mates-heading">関係する部品</h3><p class="mate-help">同じ軸の相手を青緑の線で強調。名前でも選択できます。</p><div class="mate-list" id="mate-list"></div></div>
+        <p class="selection-count" id="selection-count" role="status"></p>
+      </aside>
+    </section>
+    <section class="download-panel" aria-labelledby="download-title">
+      <div><h2 id="download-title">この公開構成を手元で開く</h2><p id="download-mode">単軸・組付け位置。分解／断面はCADに保存しません。</p></div>
+      <div class="download-buttons">
+        <a id="download-native" href="./downloads/brake-single.FCStd" download>FreeCAD <span>.FCStd</span></a>
+        <a id="download-step" href="./downloads/brake-single.step" download>汎用CAD <span>.step</span></a>
+        <a id="download-zip" href="./downloads/public-brake-cad.zip" download>CAD・表セット <span>.zip</span></a>
+      </div>
+      <p class="download-status" id="download-status" role="status" hidden></p>
+      <p class="download-description">nativeは形状・配置を編集できる独立スナップショットです。全寸法が連動する完全なパラメトリック設計履歴ではありません。原private CADは不要です。</p>
+      <div class="data-links"><a href="./data/parts.csv" download>部品表 CSV</a><a href="./data/joints.csv" download>ねじ・接合表 CSV</a><a href="./data/provenance.json" download>部品ごとの公開根拠</a><a href="./data/checksums.json" download>SHA-256一覧</a><a href="./README.md">開き方・再出力</a></div>
+    </section>
+    <section class="scope-panel" id="public-scope" aria-labelledby="scope-title">
+      <div class="scope-copy"><p class="eyebrow">PUBLIC BOUNDARY</p><h2 id="scope-title">見える範囲と、<br>まだ成立していないこと。</h2><p>新規部品145点と独立参照4点で構成します。参考三軸はこのモジュールの剛体複製です。原全機の質量・慣性・干渉検査・起立性能は引き継ぎません。</p><a href="./docs/PUBLIC_SCOPE.md">公開範囲の詳細</a></div>
+      <div class="limits">
+        <dl>
+          <div><dt>原形状は非配布</dt><dd>元のwheel・frame・corner・motor・キューブとそのBoolean改変を除外。薄い参照部材は新しい単純形状で、元Picoの互換部品ではありません。</dd></div>
+          <div><dt>既知の未達を保持</dt><dd>796巻のC08条件では3軸最大約 <strong class="mono">1.757 A &gt; 1.5 A</strong>。内周偏圧の感度では <span class="mono">500.034 N &gt; 500 N</span>、高温・低電圧時の磁気要求も未達です。</dd></div>
+          <div><dt>現物は未資格</dt><dd>実モーターの軸・取付・許容荷重、最終材料のB-H、実最大吸引力、摩擦、熱、疲労、バランスは未資格。重い質量感度の起立試算も未達のままです。</dd></div>
+          <div><dt>締付値は指示ではない</dt><dd>金属案の条件付き計算です。印刷樹脂や別の相手材へ適用不可。モーター側の締付値は未決です。</dd></div>
+        </dl>
+        <p class="state-flags mono">whole_fit: false / build_ready: false / physical_ready: false</p>
+      </div>
+    </section>
+  </main>
+  <footer><span>C08公開部品 / 単位 mm / 自動回転・音声なし</span><a href="./NOTICE.md">配布範囲・権利と依存ライセンス</a><span>外部CDN・解析送信なし</span></footer>
+  <noscript><p class="noscript">3D操作にはJavaScriptが必要です。上のFreeCAD・STEP・CSVはそのままダウンロードできます。</p></noscript>
+</body>
+</html>

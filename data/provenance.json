@@ -1,0 +1,2776 @@
+{
+  "schema": "public-c08-v1",
+  "source_identity": {
+    "revision": "C08",
+    "commit": "4cdb9b99f4ac9d4b8e31c9000217f6886a557dd8",
+    "sha256": "586682c6e77fc6f597dd80c3d3fab6e1fd390f0adec86c05ac001dd3da9a0f21"
+  },
+  "original_geometry_redistribution": "UNKNOWN / NOT PERMITTED BY THIS PACKAGE",
+  "source_documents_are_not_payloads": true,
+  "module_count": 149,
+  "included": [
+    {
+      "source_part": "Z_YOKE",
+      "public_part": "YOKE",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-c08-primitives",
+      "evidence": "mechanism.py:147-232,277-326,350-550",
+      "basis": "Evaluated new component made by the authored primitive/curve operations. No original wheel, frame, corner or motor BREP is an operand for this part. Only this allowlisted Shape is copied to a new document.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_POLE_CAP_INNER",
+      "public_part": "POLE_CAP_INNER",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-c08-primitives",
+      "evidence": "mechanism.py:147-232,277-326,350-550",
+      "basis": "Evaluated new component made by the authored primitive/curve operations. No original wheel, frame, corner or motor BREP is an operand for this part. Only this allowlisted Shape is copied to a new document.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_POLE_CAP_OUTER",
+      "public_part": "POLE_CAP_OUTER",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-c08-primitives",
+      "evidence": "mechanism.py:147-232,277-326,350-550",
+      "basis": "Evaluated new component made by the authored primitive/curve operations. No original wheel, frame, corner or motor BREP is an operand for this part. Only this allowlisted Shape is copied to a new document.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_COIL_RETAINER",
+      "public_part": "COIL_RETAINER",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-c08-primitives",
+      "evidence": "mechanism.py:147-232,277-326,350-550",
+      "basis": "Evaluated new component made by the authored primitive/curve operations. No original wheel, frame, corner or motor BREP is an operand for this part. Only this allowlisted Shape is copied to a new document.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_LINING_0",
+      "public_part": "LINING_0",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-c08-primitives",
+      "evidence": "mechanism.py:147-232,277-326,350-550",
+      "basis": "Evaluated new component made by the authored primitive/curve operations. No original wheel, frame, corner or motor BREP is an operand for this part. Only this allowlisted Shape is copied to a new document.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_LINING_1",
+      "public_part": "LINING_1",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-c08-primitives",
+      "evidence": "mechanism.py:147-232,277-326,350-550",
+      "basis": "Evaluated new component made by the authored primitive/curve operations. No original wheel, frame, corner or motor BREP is an operand for this part. Only this allowlisted Shape is copied to a new document.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_LINING_2",
+      "public_part": "LINING_2",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-c08-primitives",
+      "evidence": "mechanism.py:147-232,277-326,350-550",
+      "basis": "Evaluated new component made by the authored primitive/curve operations. No original wheel, frame, corner or motor BREP is an operand for this part. Only this allowlisted Shape is copied to a new document.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_LINING_KEEPER_0",
+      "public_part": "LINING_KEEPER_0",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-c08-primitives",
+      "evidence": "mechanism.py:147-232,277-326,350-550",
+      "basis": "Evaluated new component made by the authored primitive/curve operations. No original wheel, frame, corner or motor BREP is an operand for this part. Only this allowlisted Shape is copied to a new document.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_LINING_KEEPER_1",
+      "public_part": "LINING_KEEPER_1",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-c08-primitives",
+      "evidence": "mechanism.py:147-232,277-326,350-550",
+      "basis": "Evaluated new component made by the authored primitive/curve operations. No original wheel, frame, corner or motor BREP is an operand for this part. Only this allowlisted Shape is copied to a new document.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_LINING_KEEPER_2",
+      "public_part": "LINING_KEEPER_2",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-c08-primitives",
+      "evidence": "mechanism.py:147-232,277-326,350-550",
+      "basis": "Evaluated new component made by the authored primitive/curve operations. No original wheel, frame, corner or motor BREP is an operand for this part. Only this allowlisted Shape is copied to a new document.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_RETAINER_BOLT_0",
+      "public_part": "RETAINER_BOLT_0",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-fastener-schematic",
+      "evidence": "mechanism.py:111-146 and its explicit screw() call sites",
+      "basis": "Independent cylinder/cone/hexagonal primitives, major-diameter thread representation. No third-party fastener library or manufacturer file. Custom shoulder and head forms are labelled as design forms.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_RETAINER_BOLT_1",
+      "public_part": "RETAINER_BOLT_1",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-fastener-schematic",
+      "evidence": "mechanism.py:111-146 and its explicit screw() call sites",
+      "basis": "Independent cylinder/cone/hexagonal primitives, major-diameter thread representation. No third-party fastener library or manufacturer file. Custom shoulder and head forms are labelled as design forms.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_RETAINER_BOLT_2",
+      "public_part": "RETAINER_BOLT_2",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-fastener-schematic",
+      "evidence": "mechanism.py:111-146 and its explicit screw() call sites",
+      "basis": "Independent cylinder/cone/hexagonal primitives, major-diameter thread representation. No third-party fastener library or manufacturer file. Custom shoulder and head forms are labelled as design forms.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_RETAINER_BOLT_3",
+      "public_part": "RETAINER_BOLT_3",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-fastener-schematic",
+      "evidence": "mechanism.py:111-146 and its explicit screw() call sites",
+      "basis": "Independent cylinder/cone/hexagonal primitives, major-diameter thread representation. No third-party fastener library or manufacturer file. Custom shoulder and head forms are labelled as design forms.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_RETAINER_BOLT_4",
+      "public_part": "RETAINER_BOLT_4",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-fastener-schematic",
+      "evidence": "mechanism.py:111-146 and its explicit screw() call sites",
+      "basis": "Independent cylinder/cone/hexagonal primitives, major-diameter thread representation. No third-party fastener library or manufacturer file. Custom shoulder and head forms are labelled as design forms.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_RETAINER_BOLT_5",
+      "public_part": "RETAINER_BOLT_5",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-fastener-schematic",
+      "evidence": "mechanism.py:111-146 and its explicit screw() call sites",
+      "basis": "Independent cylinder/cone/hexagonal primitives, major-diameter thread representation. No third-party fastener library or manufacturer file. Custom shoulder and head forms are labelled as design forms.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_BOBBIN",
+      "public_part": "BOBBIN",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-c08-primitives",
+      "evidence": "mechanism.py:147-232,277-326,350-550",
+      "basis": "Evaluated new component made by the authored primitive/curve operations. No original wheel, frame, corner or motor BREP is an operand for this part. Only this allowlisted Shape is copied to a new document.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_WINDING",
+      "public_part": "WINDING",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-c08-primitives",
+      "evidence": "mechanism.py:147-232,277-326,350-550",
+      "basis": "Evaluated new component made by the authored primitive/curve operations. No original wheel, frame, corner or motor BREP is an operand for this part. Only this allowlisted Shape is copied to a new document.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_BOBBIN_PAD_0",
+      "public_part": "BOBBIN_PAD_0",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-c08-primitives",
+      "evidence": "mechanism.py:147-232,277-326,350-550",
+      "basis": "Evaluated new component made by the authored primitive/curve operations. No original wheel, frame, corner or motor BREP is an operand for this part. Only this allowlisted Shape is copied to a new document.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_BOBBIN_PAD_1",
+      "public_part": "BOBBIN_PAD_1",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-c08-primitives",
+      "evidence": "mechanism.py:147-232,277-326,350-550",
+      "basis": "Evaluated new component made by the authored primitive/curve operations. No original wheel, frame, corner or motor BREP is an operand for this part. Only this allowlisted Shape is copied to a new document.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_BOBBIN_PAD_2",
+      "public_part": "BOBBIN_PAD_2",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-c08-primitives",
+      "evidence": "mechanism.py:147-232,277-326,350-550",
+      "basis": "Evaluated new component made by the authored primitive/curve operations. No original wheel, frame, corner or motor BREP is an operand for this part. Only this allowlisted Shape is copied to a new document.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_BOBBIN_REAR_INSULATOR",
+      "public_part": "BOBBIN_REAR_INSULATOR",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-c08-primitives",
+      "evidence": "mechanism.py:147-232,277-326,350-550",
+      "basis": "Evaluated new component made by the authored primitive/curve operations. No original wheel, frame, corner or motor BREP is an operand for this part. Only this allowlisted Shape is copied to a new document.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_LEAD_BUSHING_0",
+      "public_part": "LEAD_BUSHING_0",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-c08-primitives",
+      "evidence": "mechanism.py:147-232,277-326,350-550",
+      "basis": "Evaluated new component made by the authored primitive/curve operations. No original wheel, frame, corner or motor BREP is an operand for this part. Only this allowlisted Shape is copied to a new document.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_LEAD_BUSHING_1",
+      "public_part": "LEAD_BUSHING_1",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-c08-primitives",
+      "evidence": "mechanism.py:147-232,277-326,350-550",
+      "basis": "Evaluated new component made by the authored primitive/curve operations. No original wheel, frame, corner or motor BREP is an operand for this part. Only this allowlisted Shape is copied to a new document.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_CARRIER",
+      "public_part": "CARRIER",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-c08-primitives",
+      "evidence": "mechanism.py:221-281,350-394,491-525",
+      "basis": "Created with cylinders, annuli and boxes. No source BREP is an operand. Only three nominal PCD30 hole-center coordinates were read from source motor CAD; those coordinates do not establish actual motor compatibility.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_STATOR_LOCATING_PIN_0",
+      "public_part": "STATOR_LOCATING_PIN_0",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-c08-primitives",
+      "evidence": "mechanism.py:147-232,277-326,350-550",
+      "basis": "Evaluated new component made by the authored primitive/curve operations. No original wheel, frame, corner or motor BREP is an operand for this part. Only this allowlisted Shape is copied to a new document.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_STATOR_LOCATING_PIN_1",
+      "public_part": "STATOR_LOCATING_PIN_1",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-c08-primitives",
+      "evidence": "mechanism.py:147-232,277-326,350-550",
+      "basis": "Evaluated new component made by the authored primitive/curve operations. No original wheel, frame, corner or motor BREP is an operand for this part. Only this allowlisted Shape is copied to a new document.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_STATOR_BOLT_0",
+      "public_part": "STATOR_BOLT_0",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-fastener-schematic",
+      "evidence": "mechanism.py:111-146 and its explicit screw() call sites",
+      "basis": "Independent cylinder/cone/hexagonal primitives, major-diameter thread representation. No third-party fastener library or manufacturer file. Custom shoulder and head forms are labelled as design forms.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_STATOR_BOLT_1",
+      "public_part": "STATOR_BOLT_1",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-fastener-schematic",
+      "evidence": "mechanism.py:111-146 and its explicit screw() call sites",
+      "basis": "Independent cylinder/cone/hexagonal primitives, major-diameter thread representation. No third-party fastener library or manufacturer file. Custom shoulder and head forms are labelled as design forms.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_STATOR_BOLT_2",
+      "public_part": "STATOR_BOLT_2",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-fastener-schematic",
+      "evidence": "mechanism.py:111-146 and its explicit screw() call sites",
+      "basis": "Independent cylinder/cone/hexagonal primitives, major-diameter thread representation. No third-party fastener library or manufacturer file. Custom shoulder and head forms are labelled as design forms.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_STATOR_BOLT_3",
+      "public_part": "STATOR_BOLT_3",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-fastener-schematic",
+      "evidence": "mechanism.py:111-146 and its explicit screw() call sites",
+      "basis": "Independent cylinder/cone/hexagonal primitives, major-diameter thread representation. No third-party fastener library or manufacturer file. Custom shoulder and head forms are labelled as design forms.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_STATOR_WASHER_0",
+      "public_part": "STATOR_WASHER_0",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-fastener-schematic",
+      "evidence": "mechanism.py:111-146 and its explicit screw() call sites",
+      "basis": "Independent cylinder/cone/hexagonal primitives, major-diameter thread representation. No third-party fastener library or manufacturer file. Custom shoulder and head forms are labelled as design forms.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_STATOR_WASHER_1",
+      "public_part": "STATOR_WASHER_1",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-fastener-schematic",
+      "evidence": "mechanism.py:111-146 and its explicit screw() call sites",
+      "basis": "Independent cylinder/cone/hexagonal primitives, major-diameter thread representation. No third-party fastener library or manufacturer file. Custom shoulder and head forms are labelled as design forms.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_STATOR_WASHER_2",
+      "public_part": "STATOR_WASHER_2",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-fastener-schematic",
+      "evidence": "mechanism.py:111-146 and its explicit screw() call sites",
+      "basis": "Independent cylinder/cone/hexagonal primitives, major-diameter thread representation. No third-party fastener library or manufacturer file. Custom shoulder and head forms are labelled as design forms.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_STATOR_WASHER_3",
+      "public_part": "STATOR_WASHER_3",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-fastener-schematic",
+      "evidence": "mechanism.py:111-146 and its explicit screw() call sites",
+      "basis": "Independent cylinder/cone/hexagonal primitives, major-diameter thread representation. No third-party fastener library or manufacturer file. Custom shoulder and head forms are labelled as design forms.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_POST_0",
+      "public_part": "POST_0",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-c08-primitives",
+      "evidence": "mechanism.py:147-232,277-326,350-550",
+      "basis": "Evaluated new component made by the authored primitive/curve operations. No original wheel, frame, corner or motor BREP is an operand for this part. Only this allowlisted Shape is copied to a new document.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_POST_1",
+      "public_part": "POST_1",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-c08-primitives",
+      "evidence": "mechanism.py:147-232,277-326,350-550",
+      "basis": "Evaluated new component made by the authored primitive/curve operations. No original wheel, frame, corner or motor BREP is an operand for this part. Only this allowlisted Shape is copied to a new document.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_POST_2",
+      "public_part": "POST_2",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-c08-primitives",
+      "evidence": "mechanism.py:147-232,277-326,350-550",
+      "basis": "Evaluated new component made by the authored primitive/curve operations. No original wheel, frame, corner or motor BREP is an operand for this part. Only this allowlisted Shape is copied to a new document.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_POST_3",
+      "public_part": "POST_3",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-c08-primitives",
+      "evidence": "mechanism.py:147-232,277-326,350-550",
+      "basis": "Evaluated new component made by the authored primitive/curve operations. No original wheel, frame, corner or motor BREP is an operand for this part. Only this allowlisted Shape is copied to a new document.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_FRAME_BOLT_0",
+      "public_part": "FRAME_BOLT_0",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-fastener-schematic",
+      "evidence": "mechanism.py:111-146 and its explicit screw() call sites",
+      "basis": "Independent cylinder/cone/hexagonal primitives, major-diameter thread representation. No third-party fastener library or manufacturer file. Custom shoulder and head forms are labelled as design forms.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_FRAME_BOLT_1",
+      "public_part": "FRAME_BOLT_1",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-fastener-schematic",
+      "evidence": "mechanism.py:111-146 and its explicit screw() call sites",
+      "basis": "Independent cylinder/cone/hexagonal primitives, major-diameter thread representation. No third-party fastener library or manufacturer file. Custom shoulder and head forms are labelled as design forms.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_FRAME_BOLT_2",
+      "public_part": "FRAME_BOLT_2",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-fastener-schematic",
+      "evidence": "mechanism.py:111-146 and its explicit screw() call sites",
+      "basis": "Independent cylinder/cone/hexagonal primitives, major-diameter thread representation. No third-party fastener library or manufacturer file. Custom shoulder and head forms are labelled as design forms.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_FRAME_BOLT_3",
+      "public_part": "FRAME_BOLT_3",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-fastener-schematic",
+      "evidence": "mechanism.py:111-146 and its explicit screw() call sites",
+      "basis": "Independent cylinder/cone/hexagonal primitives, major-diameter thread representation. No third-party fastener library or manufacturer file. Custom shoulder and head forms are labelled as design forms.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_FRAME_NUT_0",
+      "public_part": "FRAME_NUT_0",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-fastener-schematic",
+      "evidence": "mechanism.py:111-146 and its explicit screw() call sites",
+      "basis": "Independent cylinder/cone/hexagonal primitives, major-diameter thread representation. No third-party fastener library or manufacturer file. Custom shoulder and head forms are labelled as design forms.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_FRAME_NUT_1",
+      "public_part": "FRAME_NUT_1",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-fastener-schematic",
+      "evidence": "mechanism.py:111-146 and its explicit screw() call sites",
+      "basis": "Independent cylinder/cone/hexagonal primitives, major-diameter thread representation. No third-party fastener library or manufacturer file. Custom shoulder and head forms are labelled as design forms.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_FRAME_NUT_2",
+      "public_part": "FRAME_NUT_2",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-fastener-schematic",
+      "evidence": "mechanism.py:111-146 and its explicit screw() call sites",
+      "basis": "Independent cylinder/cone/hexagonal primitives, major-diameter thread representation. No third-party fastener library or manufacturer file. Custom shoulder and head forms are labelled as design forms.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_FRAME_NUT_3",
+      "public_part": "FRAME_NUT_3",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-fastener-schematic",
+      "evidence": "mechanism.py:111-146 and its explicit screw() call sites",
+      "basis": "Independent cylinder/cone/hexagonal primitives, major-diameter thread representation. No third-party fastener library or manufacturer file. Custom shoulder and head forms are labelled as design forms.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_BEARING_CAP",
+      "public_part": "BEARING_CAP",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-standard-schematic",
+      "evidence": "mechanism.py:312-326,401-405",
+      "basis": "Independently constructed annuli, torus grooves, spheres or slotted ring from nominal dimensions. No manufacturer CAD, catalog drawing or detailed commercial geometry is imported. Not a bearing/ring stress model.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_BEARING_OUTER",
+      "public_part": "BEARING_OUTER",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-standard-schematic",
+      "evidence": "mechanism.py:312-326,401-405",
+      "basis": "Independently constructed annuli, torus grooves, spheres or slotted ring from nominal dimensions. No manufacturer CAD, catalog drawing or detailed commercial geometry is imported. Not a bearing/ring stress model.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_BEARING_INNER",
+      "public_part": "BEARING_INNER",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-standard-schematic",
+      "evidence": "mechanism.py:312-326,401-405",
+      "basis": "Independently constructed annuli, torus grooves, spheres or slotted ring from nominal dimensions. No manufacturer CAD, catalog drawing or detailed commercial geometry is imported. Not a bearing/ring stress model.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_HUB_INNER_RACE_REAR_SHIM",
+      "public_part": "HUB_INNER_RACE_REAR_SHIM",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-c08-primitives",
+      "evidence": "mechanism.py:147-232,277-326,350-550",
+      "basis": "Evaluated new component made by the authored primitive/curve operations. No original wheel, frame, corner or motor BREP is an operand for this part. Only this allowlisted Shape is copied to a new document.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_BEARING_BALL_0",
+      "public_part": "BEARING_BALL_0",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-standard-schematic",
+      "evidence": "mechanism.py:312-326,401-405",
+      "basis": "Independently constructed annuli, torus grooves, spheres or slotted ring from nominal dimensions. No manufacturer CAD, catalog drawing or detailed commercial geometry is imported. Not a bearing/ring stress model.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_BEARING_BALL_1",
+      "public_part": "BEARING_BALL_1",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-standard-schematic",
+      "evidence": "mechanism.py:312-326,401-405",
+      "basis": "Independently constructed annuli, torus grooves, spheres or slotted ring from nominal dimensions. No manufacturer CAD, catalog drawing or detailed commercial geometry is imported. Not a bearing/ring stress model.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_BEARING_BALL_2",
+      "public_part": "BEARING_BALL_2",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-standard-schematic",
+      "evidence": "mechanism.py:312-326,401-405",
+      "basis": "Independently constructed annuli, torus grooves, spheres or slotted ring from nominal dimensions. No manufacturer CAD, catalog drawing or detailed commercial geometry is imported. Not a bearing/ring stress model.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_BEARING_BALL_3",
+      "public_part": "BEARING_BALL_3",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-standard-schematic",
+      "evidence": "mechanism.py:312-326,401-405",
+      "basis": "Independently constructed annuli, torus grooves, spheres or slotted ring from nominal dimensions. No manufacturer CAD, catalog drawing or detailed commercial geometry is imported. Not a bearing/ring stress model.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_BEARING_BALL_4",
+      "public_part": "BEARING_BALL_4",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-standard-schematic",
+      "evidence": "mechanism.py:312-326,401-405",
+      "basis": "Independently constructed annuli, torus grooves, spheres or slotted ring from nominal dimensions. No manufacturer CAD, catalog drawing or detailed commercial geometry is imported. Not a bearing/ring stress model.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_BEARING_BALL_5",
+      "public_part": "BEARING_BALL_5",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-standard-schematic",
+      "evidence": "mechanism.py:312-326,401-405",
+      "basis": "Independently constructed annuli, torus grooves, spheres or slotted ring from nominal dimensions. No manufacturer CAD, catalog drawing or detailed commercial geometry is imported. Not a bearing/ring stress model.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_BEARING_BALL_6",
+      "public_part": "BEARING_BALL_6",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-standard-schematic",
+      "evidence": "mechanism.py:312-326,401-405",
+      "basis": "Independently constructed annuli, torus grooves, spheres or slotted ring from nominal dimensions. No manufacturer CAD, catalog drawing or detailed commercial geometry is imported. Not a bearing/ring stress model.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_BEARING_BALL_7",
+      "public_part": "BEARING_BALL_7",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-standard-schematic",
+      "evidence": "mechanism.py:312-326,401-405",
+      "basis": "Independently constructed annuli, torus grooves, spheres or slotted ring from nominal dimensions. No manufacturer CAD, catalog drawing or detailed commercial geometry is imported. Not a bearing/ring stress model.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_BEARING_BALL_8",
+      "public_part": "BEARING_BALL_8",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-standard-schematic",
+      "evidence": "mechanism.py:312-326,401-405",
+      "basis": "Independently constructed annuli, torus grooves, spheres or slotted ring from nominal dimensions. No manufacturer CAD, catalog drawing or detailed commercial geometry is imported. Not a bearing/ring stress model.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_BEARING_BALL_9",
+      "public_part": "BEARING_BALL_9",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-standard-schematic",
+      "evidence": "mechanism.py:312-326,401-405",
+      "basis": "Independently constructed annuli, torus grooves, spheres or slotted ring from nominal dimensions. No manufacturer CAD, catalog drawing or detailed commercial geometry is imported. Not a bearing/ring stress model.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_CAP_BOLT_0",
+      "public_part": "CAP_BOLT_0",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-fastener-schematic",
+      "evidence": "mechanism.py:111-146 and its explicit screw() call sites",
+      "basis": "Independent cylinder/cone/hexagonal primitives, major-diameter thread representation. No third-party fastener library or manufacturer file. Custom shoulder and head forms are labelled as design forms.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_CAP_BOLT_1",
+      "public_part": "CAP_BOLT_1",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-fastener-schematic",
+      "evidence": "mechanism.py:111-146 and its explicit screw() call sites",
+      "basis": "Independent cylinder/cone/hexagonal primitives, major-diameter thread representation. No third-party fastener library or manufacturer file. Custom shoulder and head forms are labelled as design forms.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_CAP_BOLT_2",
+      "public_part": "CAP_BOLT_2",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-fastener-schematic",
+      "evidence": "mechanism.py:111-146 and its explicit screw() call sites",
+      "basis": "Independent cylinder/cone/hexagonal primitives, major-diameter thread representation. No third-party fastener library or manufacturer file. Custom shoulder and head forms are labelled as design forms.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_RIM_BOLT_0",
+      "public_part": "RIM_BOLT_0",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-fastener-schematic",
+      "evidence": "mechanism.py:111-146 and its explicit screw() call sites",
+      "basis": "Independent cylinder/cone/hexagonal primitives, major-diameter thread representation. No third-party fastener library or manufacturer file. Custom shoulder and head forms are labelled as design forms.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_RIM_BOLT_1",
+      "public_part": "RIM_BOLT_1",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-fastener-schematic",
+      "evidence": "mechanism.py:111-146 and its explicit screw() call sites",
+      "basis": "Independent cylinder/cone/hexagonal primitives, major-diameter thread representation. No third-party fastener library or manufacturer file. Custom shoulder and head forms are labelled as design forms.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_RIM_BOLT_2",
+      "public_part": "RIM_BOLT_2",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-fastener-schematic",
+      "evidence": "mechanism.py:111-146 and its explicit screw() call sites",
+      "basis": "Independent cylinder/cone/hexagonal primitives, major-diameter thread representation. No third-party fastener library or manufacturer file. Custom shoulder and head forms are labelled as design forms.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_RIM_BOLT_3",
+      "public_part": "RIM_BOLT_3",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-fastener-schematic",
+      "evidence": "mechanism.py:111-146 and its explicit screw() call sites",
+      "basis": "Independent cylinder/cone/hexagonal primitives, major-diameter thread representation. No third-party fastener library or manufacturer file. Custom shoulder and head forms are labelled as design forms.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_RIM_BOLT_4",
+      "public_part": "RIM_BOLT_4",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-fastener-schematic",
+      "evidence": "mechanism.py:111-146 and its explicit screw() call sites",
+      "basis": "Independent cylinder/cone/hexagonal primitives, major-diameter thread representation. No third-party fastener library or manufacturer file. Custom shoulder and head forms are labelled as design forms.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_RIM_BOLT_5",
+      "public_part": "RIM_BOLT_5",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-fastener-schematic",
+      "evidence": "mechanism.py:111-146 and its explicit screw() call sites",
+      "basis": "Independent cylinder/cone/hexagonal primitives, major-diameter thread representation. No third-party fastener library or manufacturer file. Custom shoulder and head forms are labelled as design forms.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_RIM_BOLT_6",
+      "public_part": "RIM_BOLT_6",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-fastener-schematic",
+      "evidence": "mechanism.py:111-146 and its explicit screw() call sites",
+      "basis": "Independent cylinder/cone/hexagonal primitives, major-diameter thread representation. No third-party fastener library or manufacturer file. Custom shoulder and head forms are labelled as design forms.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_RIM_BOLT_7",
+      "public_part": "RIM_BOLT_7",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-fastener-schematic",
+      "evidence": "mechanism.py:111-146 and its explicit screw() call sites",
+      "basis": "Independent cylinder/cone/hexagonal primitives, major-diameter thread representation. No third-party fastener library or manufacturer file. Custom shoulder and head forms are labelled as design forms.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_RIM_NUT_0",
+      "public_part": "RIM_NUT_0",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-fastener-schematic",
+      "evidence": "mechanism.py:111-146 and its explicit screw() call sites",
+      "basis": "Independent cylinder/cone/hexagonal primitives, major-diameter thread representation. No third-party fastener library or manufacturer file. Custom shoulder and head forms are labelled as design forms.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_RIM_NUT_1",
+      "public_part": "RIM_NUT_1",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-fastener-schematic",
+      "evidence": "mechanism.py:111-146 and its explicit screw() call sites",
+      "basis": "Independent cylinder/cone/hexagonal primitives, major-diameter thread representation. No third-party fastener library or manufacturer file. Custom shoulder and head forms are labelled as design forms.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_RIM_NUT_2",
+      "public_part": "RIM_NUT_2",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-fastener-schematic",
+      "evidence": "mechanism.py:111-146 and its explicit screw() call sites",
+      "basis": "Independent cylinder/cone/hexagonal primitives, major-diameter thread representation. No third-party fastener library or manufacturer file. Custom shoulder and head forms are labelled as design forms.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_RIM_NUT_3",
+      "public_part": "RIM_NUT_3",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-fastener-schematic",
+      "evidence": "mechanism.py:111-146 and its explicit screw() call sites",
+      "basis": "Independent cylinder/cone/hexagonal primitives, major-diameter thread representation. No third-party fastener library or manufacturer file. Custom shoulder and head forms are labelled as design forms.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_RIM_NUT_4",
+      "public_part": "RIM_NUT_4",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-fastener-schematic",
+      "evidence": "mechanism.py:111-146 and its explicit screw() call sites",
+      "basis": "Independent cylinder/cone/hexagonal primitives, major-diameter thread representation. No third-party fastener library or manufacturer file. Custom shoulder and head forms are labelled as design forms.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_RIM_NUT_5",
+      "public_part": "RIM_NUT_5",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-fastener-schematic",
+      "evidence": "mechanism.py:111-146 and its explicit screw() call sites",
+      "basis": "Independent cylinder/cone/hexagonal primitives, major-diameter thread representation. No third-party fastener library or manufacturer file. Custom shoulder and head forms are labelled as design forms.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_RIM_NUT_6",
+      "public_part": "RIM_NUT_6",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-fastener-schematic",
+      "evidence": "mechanism.py:111-146 and its explicit screw() call sites",
+      "basis": "Independent cylinder/cone/hexagonal primitives, major-diameter thread representation. No third-party fastener library or manufacturer file. Custom shoulder and head forms are labelled as design forms.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_RIM_NUT_7",
+      "public_part": "RIM_NUT_7",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-fastener-schematic",
+      "evidence": "mechanism.py:111-146 and its explicit screw() call sites",
+      "basis": "Independent cylinder/cone/hexagonal primitives, major-diameter thread representation. No third-party fastener library or manufacturer file. Custom shoulder and head forms are labelled as design forms.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_HUB",
+      "public_part": "HUB",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-c08-primitives",
+      "evidence": "mechanism.py:221-281,350-394,491-525",
+      "basis": "Created with cylinders, annuli and boxes. No source BREP is an operand. Only three nominal PCD30 hole-center coordinates were read from source motor CAD; those coordinates do not establish actual motor compatibility.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_HUB_FACE",
+      "public_part": "HUB_FACE",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-c08-primitives",
+      "evidence": "mechanism.py:147-232,277-326,350-550",
+      "basis": "Evaluated new component made by the authored primitive/curve operations. No original wheel, frame, corner or motor BREP is an operand for this part. Only this allowlisted Shape is copied to a new document.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_HUB_CONNECT_BOLT_0",
+      "public_part": "HUB_CONNECT_BOLT_0",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-fastener-schematic",
+      "evidence": "mechanism.py:111-146 and its explicit screw() call sites",
+      "basis": "Independent cylinder/cone/hexagonal primitives, major-diameter thread representation. No third-party fastener library or manufacturer file. Custom shoulder and head forms are labelled as design forms.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_HUB_CONNECT_BOLT_1",
+      "public_part": "HUB_CONNECT_BOLT_1",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-fastener-schematic",
+      "evidence": "mechanism.py:111-146 and its explicit screw() call sites",
+      "basis": "Independent cylinder/cone/hexagonal primitives, major-diameter thread representation. No third-party fastener library or manufacturer file. Custom shoulder and head forms are labelled as design forms.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_HUB_CONNECT_BOLT_2",
+      "public_part": "HUB_CONNECT_BOLT_2",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-fastener-schematic",
+      "evidence": "mechanism.py:111-146 and its explicit screw() call sites",
+      "basis": "Independent cylinder/cone/hexagonal primitives, major-diameter thread representation. No third-party fastener library or manufacturer file. Custom shoulder and head forms are labelled as design forms.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_HUB_CONNECT_PIN_0",
+      "public_part": "HUB_CONNECT_PIN_0",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-c08-primitives",
+      "evidence": "mechanism.py:147-232,277-326,350-550",
+      "basis": "Evaluated new component made by the authored primitive/curve operations. No original wheel, frame, corner or motor BREP is an operand for this part. Only this allowlisted Shape is copied to a new document.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_HUB_CONNECT_PIN_1",
+      "public_part": "HUB_CONNECT_PIN_1",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-c08-primitives",
+      "evidence": "mechanism.py:147-232,277-326,350-550",
+      "basis": "Evaluated new component made by the authored primitive/curve operations. No original wheel, frame, corner or motor BREP is an operand for this part. Only this allowlisted Shape is copied to a new document.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_HUB_CONNECT_PIN_2",
+      "public_part": "HUB_CONNECT_PIN_2",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-c08-primitives",
+      "evidence": "mechanism.py:147-232,277-326,350-550",
+      "basis": "Evaluated new component made by the authored primitive/curve operations. No original wheel, frame, corner or motor BREP is an operand for this part. Only this allowlisted Shape is copied to a new document.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_HUB_RETAINING_RING",
+      "public_part": "HUB_RETAINING_RING",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-standard-schematic",
+      "evidence": "mechanism.py:312-326,401-405",
+      "basis": "Independently constructed annuli, torus grooves, spheres or slotted ring from nominal dimensions. No manufacturer CAD, catalog drawing or detailed commercial geometry is imported. Not a bearing/ring stress model.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_HUB_DOWEL_0",
+      "public_part": "HUB_DOWEL_0",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-c08-primitives",
+      "evidence": "mechanism.py:147-232,277-326,350-550",
+      "basis": "Evaluated new component made by the authored primitive/curve operations. No original wheel, frame, corner or motor BREP is an operand for this part. Only this allowlisted Shape is copied to a new document.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_HUB_DOWEL_1",
+      "public_part": "HUB_DOWEL_1",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-c08-primitives",
+      "evidence": "mechanism.py:147-232,277-326,350-550",
+      "basis": "Evaluated new component made by the authored primitive/curve operations. No original wheel, frame, corner or motor BREP is an operand for this part. Only this allowlisted Shape is copied to a new document.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_POSITIVE_CROSSPIN",
+      "public_part": "POSITIVE_CROSSPIN",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-c08-primitives",
+      "evidence": "mechanism.py:147-232,277-326,350-550",
+      "basis": "Evaluated new component made by the authored primitive/curve operations. No original wheel, frame, corner or motor BREP is an operand for this part. Only this allowlisted Shape is copied to a new document.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_WHEEL_BOLT_0",
+      "public_part": "WHEEL_BOLT_0",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-fastener-schematic",
+      "evidence": "mechanism.py:111-146 and its explicit screw() call sites",
+      "basis": "Independent cylinder/cone/hexagonal primitives, major-diameter thread representation. No third-party fastener library or manufacturer file. Custom shoulder and head forms are labelled as design forms.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_WHEEL_BOLT_1",
+      "public_part": "WHEEL_BOLT_1",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-fastener-schematic",
+      "evidence": "mechanism.py:111-146 and its explicit screw() call sites",
+      "basis": "Independent cylinder/cone/hexagonal primitives, major-diameter thread representation. No third-party fastener library or manufacturer file. Custom shoulder and head forms are labelled as design forms.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_WHEEL_BOLT_2",
+      "public_part": "WHEEL_BOLT_2",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-fastener-schematic",
+      "evidence": "mechanism.py:111-146 and its explicit screw() call sites",
+      "basis": "Independent cylinder/cone/hexagonal primitives, major-diameter thread representation. No third-party fastener library or manufacturer file. Custom shoulder and head forms are labelled as design forms.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_WHEEL_BOLT_3",
+      "public_part": "WHEEL_BOLT_3",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-fastener-schematic",
+      "evidence": "mechanism.py:111-146 and its explicit screw() call sites",
+      "basis": "Independent cylinder/cone/hexagonal primitives, major-diameter thread representation. No third-party fastener library or manufacturer file. Custom shoulder and head forms are labelled as design forms.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_WHEEL_NUT_0",
+      "public_part": "WHEEL_NUT_0",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-fastener-schematic",
+      "evidence": "mechanism.py:111-146 and its explicit screw() call sites",
+      "basis": "Independent cylinder/cone/hexagonal primitives, major-diameter thread representation. No third-party fastener library or manufacturer file. Custom shoulder and head forms are labelled as design forms.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_WHEEL_NUT_1",
+      "public_part": "WHEEL_NUT_1",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-fastener-schematic",
+      "evidence": "mechanism.py:111-146 and its explicit screw() call sites",
+      "basis": "Independent cylinder/cone/hexagonal primitives, major-diameter thread representation. No third-party fastener library or manufacturer file. Custom shoulder and head forms are labelled as design forms.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_WHEEL_NUT_2",
+      "public_part": "WHEEL_NUT_2",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-fastener-schematic",
+      "evidence": "mechanism.py:111-146 and its explicit screw() call sites",
+      "basis": "Independent cylinder/cone/hexagonal primitives, major-diameter thread representation. No third-party fastener library or manufacturer file. Custom shoulder and head forms are labelled as design forms.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_WHEEL_NUT_3",
+      "public_part": "WHEEL_NUT_3",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-fastener-schematic",
+      "evidence": "mechanism.py:111-146 and its explicit screw() call sites",
+      "basis": "Independent cylinder/cone/hexagonal primitives, major-diameter thread representation. No third-party fastener library or manufacturer file. Custom shoulder and head forms are labelled as design forms.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_ARMATURE",
+      "public_part": "ARMATURE",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-c08-primitives",
+      "evidence": "mechanism.py:147-232,277-326,350-550",
+      "basis": "Evaluated new component made by the authored primitive/curve operations. No original wheel, frame, corner or motor BREP is an operand for this part. Only this allowlisted Shape is copied to a new document.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_SPRING_0",
+      "public_part": "SPRING_0",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-c08-primitives",
+      "evidence": "mechanism.py:147-232,277-326,350-550",
+      "basis": "Evaluated new component made by the authored primitive/curve operations. No original wheel, frame, corner or motor BREP is an operand for this part. Only this allowlisted Shape is copied to a new document.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_SPRING_1",
+      "public_part": "SPRING_1",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-c08-primitives",
+      "evidence": "mechanism.py:147-232,277-326,350-550",
+      "basis": "Evaluated new component made by the authored primitive/curve operations. No original wheel, frame, corner or motor BREP is an operand for this part. Only this allowlisted Shape is copied to a new document.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_SPRING_2",
+      "public_part": "SPRING_2",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-c08-primitives",
+      "evidence": "mechanism.py:147-232,277-326,350-550",
+      "basis": "Evaluated new component made by the authored primitive/curve operations. No original wheel, frame, corner or motor BREP is an operand for this part. Only this allowlisted Shape is copied to a new document.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_SPRING_CLAMP_ROOT_0",
+      "public_part": "SPRING_CLAMP_ROOT_0",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-c08-primitives",
+      "evidence": "mechanism.py:147-232,277-326,350-550",
+      "basis": "Evaluated new component made by the authored primitive/curve operations. No original wheel, frame, corner or motor BREP is an operand for this part. Only this allowlisted Shape is copied to a new document.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_SPRING_CLAMP_ROOT_1",
+      "public_part": "SPRING_CLAMP_ROOT_1",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-c08-primitives",
+      "evidence": "mechanism.py:147-232,277-326,350-550",
+      "basis": "Evaluated new component made by the authored primitive/curve operations. No original wheel, frame, corner or motor BREP is an operand for this part. Only this allowlisted Shape is copied to a new document.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_SPRING_CLAMP_ROOT_2",
+      "public_part": "SPRING_CLAMP_ROOT_2",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-c08-primitives",
+      "evidence": "mechanism.py:147-232,277-326,350-550",
+      "basis": "Evaluated new component made by the authored primitive/curve operations. No original wheel, frame, corner or motor BREP is an operand for this part. Only this allowlisted Shape is copied to a new document.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_SPRING_CLAMP_TIP_0",
+      "public_part": "SPRING_CLAMP_TIP_0",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-c08-primitives",
+      "evidence": "mechanism.py:147-232,277-326,350-550",
+      "basis": "Evaluated new component made by the authored primitive/curve operations. No original wheel, frame, corner or motor BREP is an operand for this part. Only this allowlisted Shape is copied to a new document.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_SPRING_CLAMP_TIP_1",
+      "public_part": "SPRING_CLAMP_TIP_1",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-c08-primitives",
+      "evidence": "mechanism.py:147-232,277-326,350-550",
+      "basis": "Evaluated new component made by the authored primitive/curve operations. No original wheel, frame, corner or motor BREP is an operand for this part. Only this allowlisted Shape is copied to a new document.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_SPRING_CLAMP_TIP_2",
+      "public_part": "SPRING_CLAMP_TIP_2",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-c08-primitives",
+      "evidence": "mechanism.py:147-232,277-326,350-550",
+      "basis": "Evaluated new component made by the authored primitive/curve operations. No original wheel, frame, corner or motor BREP is an operand for this part. Only this allowlisted Shape is copied to a new document.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_SPRING_ROOT_BOLT_0",
+      "public_part": "SPRING_ROOT_BOLT_0",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-fastener-schematic",
+      "evidence": "mechanism.py:111-146 and its explicit screw() call sites",
+      "basis": "Independent cylinder/cone/hexagonal primitives, major-diameter thread representation. No third-party fastener library or manufacturer file. Custom shoulder and head forms are labelled as design forms.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_SPRING_ROOT_BOLT_1",
+      "public_part": "SPRING_ROOT_BOLT_1",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-fastener-schematic",
+      "evidence": "mechanism.py:111-146 and its explicit screw() call sites",
+      "basis": "Independent cylinder/cone/hexagonal primitives, major-diameter thread representation. No third-party fastener library or manufacturer file. Custom shoulder and head forms are labelled as design forms.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_SPRING_ROOT_BOLT_2",
+      "public_part": "SPRING_ROOT_BOLT_2",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-fastener-schematic",
+      "evidence": "mechanism.py:111-146 and its explicit screw() call sites",
+      "basis": "Independent cylinder/cone/hexagonal primitives, major-diameter thread representation. No third-party fastener library or manufacturer file. Custom shoulder and head forms are labelled as design forms.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_SPRING_ROOT_BOLT_3",
+      "public_part": "SPRING_ROOT_BOLT_3",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-fastener-schematic",
+      "evidence": "mechanism.py:111-146 and its explicit screw() call sites",
+      "basis": "Independent cylinder/cone/hexagonal primitives, major-diameter thread representation. No third-party fastener library or manufacturer file. Custom shoulder and head forms are labelled as design forms.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_SPRING_ROOT_BOLT_4",
+      "public_part": "SPRING_ROOT_BOLT_4",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-fastener-schematic",
+      "evidence": "mechanism.py:111-146 and its explicit screw() call sites",
+      "basis": "Independent cylinder/cone/hexagonal primitives, major-diameter thread representation. No third-party fastener library or manufacturer file. Custom shoulder and head forms are labelled as design forms.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_SPRING_ROOT_BOLT_5",
+      "public_part": "SPRING_ROOT_BOLT_5",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-fastener-schematic",
+      "evidence": "mechanism.py:111-146 and its explicit screw() call sites",
+      "basis": "Independent cylinder/cone/hexagonal primitives, major-diameter thread representation. No third-party fastener library or manufacturer file. Custom shoulder and head forms are labelled as design forms.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_SPRING_TIP_BOLT_0",
+      "public_part": "SPRING_TIP_BOLT_0",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-fastener-schematic",
+      "evidence": "mechanism.py:111-146 and its explicit screw() call sites",
+      "basis": "Independent cylinder/cone/hexagonal primitives, major-diameter thread representation. No third-party fastener library or manufacturer file. Custom shoulder and head forms are labelled as design forms.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_SPRING_TIP_BOLT_1",
+      "public_part": "SPRING_TIP_BOLT_1",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-fastener-schematic",
+      "evidence": "mechanism.py:111-146 and its explicit screw() call sites",
+      "basis": "Independent cylinder/cone/hexagonal primitives, major-diameter thread representation. No third-party fastener library or manufacturer file. Custom shoulder and head forms are labelled as design forms.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_SPRING_TIP_BOLT_2",
+      "public_part": "SPRING_TIP_BOLT_2",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-fastener-schematic",
+      "evidence": "mechanism.py:111-146 and its explicit screw() call sites",
+      "basis": "Independent cylinder/cone/hexagonal primitives, major-diameter thread representation. No third-party fastener library or manufacturer file. Custom shoulder and head forms are labelled as design forms.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_SPRING_TIP_BOLT_3",
+      "public_part": "SPRING_TIP_BOLT_3",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-fastener-schematic",
+      "evidence": "mechanism.py:111-146 and its explicit screw() call sites",
+      "basis": "Independent cylinder/cone/hexagonal primitives, major-diameter thread representation. No third-party fastener library or manufacturer file. Custom shoulder and head forms are labelled as design forms.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_SPRING_TIP_BOLT_4",
+      "public_part": "SPRING_TIP_BOLT_4",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-fastener-schematic",
+      "evidence": "mechanism.py:111-146 and its explicit screw() call sites",
+      "basis": "Independent cylinder/cone/hexagonal primitives, major-diameter thread representation. No third-party fastener library or manufacturer file. Custom shoulder and head forms are labelled as design forms.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_SPRING_TIP_BOLT_5",
+      "public_part": "SPRING_TIP_BOLT_5",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-fastener-schematic",
+      "evidence": "mechanism.py:111-146 and its explicit screw() call sites",
+      "basis": "Independent cylinder/cone/hexagonal primitives, major-diameter thread representation. No third-party fastener library or manufacturer file. Custom shoulder and head forms are labelled as design forms.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_SPRING_ROOT_NUT_PLATE_0",
+      "public_part": "SPRING_ROOT_NUT_PLATE_0",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-c08-primitives",
+      "evidence": "mechanism.py:147-232,277-326,350-550",
+      "basis": "Evaluated new component made by the authored primitive/curve operations. No original wheel, frame, corner or motor BREP is an operand for this part. Only this allowlisted Shape is copied to a new document.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_SPRING_ROOT_NUT_PLATE_1",
+      "public_part": "SPRING_ROOT_NUT_PLATE_1",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-c08-primitives",
+      "evidence": "mechanism.py:147-232,277-326,350-550",
+      "basis": "Evaluated new component made by the authored primitive/curve operations. No original wheel, frame, corner or motor BREP is an operand for this part. Only this allowlisted Shape is copied to a new document.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_SPRING_ROOT_NUT_PLATE_2",
+      "public_part": "SPRING_ROOT_NUT_PLATE_2",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-c08-primitives",
+      "evidence": "mechanism.py:147-232,277-326,350-550",
+      "basis": "Evaluated new component made by the authored primitive/curve operations. No original wheel, frame, corner or motor BREP is an operand for this part. Only this allowlisted Shape is copied to a new document.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_SPRING_TIP_NUT_PLATE_0",
+      "public_part": "SPRING_TIP_NUT_PLATE_0",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-c08-primitives",
+      "evidence": "mechanism.py:147-232,277-326,350-550",
+      "basis": "Evaluated new component made by the authored primitive/curve operations. No original wheel, frame, corner or motor BREP is an operand for this part. Only this allowlisted Shape is copied to a new document.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_SPRING_TIP_NUT_PLATE_1",
+      "public_part": "SPRING_TIP_NUT_PLATE_1",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-c08-primitives",
+      "evidence": "mechanism.py:147-232,277-326,350-550",
+      "basis": "Evaluated new component made by the authored primitive/curve operations. No original wheel, frame, corner or motor BREP is an operand for this part. Only this allowlisted Shape is copied to a new document.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_SPRING_TIP_NUT_PLATE_2",
+      "public_part": "SPRING_TIP_NUT_PLATE_2",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-c08-primitives",
+      "evidence": "mechanism.py:147-232,277-326,350-550",
+      "basis": "Evaluated new component made by the authored primitive/curve operations. No original wheel, frame, corner or motor BREP is an operand for this part. Only this allowlisted Shape is copied to a new document.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_RELEASE_STOP_0",
+      "public_part": "RELEASE_STOP_0",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-c08-primitives",
+      "evidence": "mechanism.py:147-232,277-326,350-550",
+      "basis": "Evaluated new component made by the authored primitive/curve operations. No original wheel, frame, corner or motor BREP is an operand for this part. Only this allowlisted Shape is copied to a new document.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_RELEASE_STOP_1",
+      "public_part": "RELEASE_STOP_1",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-c08-primitives",
+      "evidence": "mechanism.py:147-232,277-326,350-550",
+      "basis": "Evaluated new component made by the authored primitive/curve operations. No original wheel, frame, corner or motor BREP is an operand for this part. Only this allowlisted Shape is copied to a new document.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_RELEASE_STOP_2",
+      "public_part": "RELEASE_STOP_2",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-c08-primitives",
+      "evidence": "mechanism.py:147-232,277-326,350-550",
+      "basis": "Evaluated new component made by the authored primitive/curve operations. No original wheel, frame, corner or motor BREP is an operand for this part. Only this allowlisted Shape is copied to a new document.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_MOTOR_INTERFACE_BOLT_0",
+      "public_part": "MOTOR_INTERFACE_BOLT_0",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-fastener-schematic",
+      "evidence": "mechanism.py:111-146 and its explicit screw() call sites",
+      "basis": "Independent cylinder/cone/hexagonal primitives, major-diameter thread representation. No third-party fastener library or manufacturer file. Custom shoulder and head forms are labelled as design forms.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_MOTOR_INTERFACE_BOLT_1",
+      "public_part": "MOTOR_INTERFACE_BOLT_1",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-fastener-schematic",
+      "evidence": "mechanism.py:111-146 and its explicit screw() call sites",
+      "basis": "Independent cylinder/cone/hexagonal primitives, major-diameter thread representation. No third-party fastener library or manufacturer file. Custom shoulder and head forms are labelled as design forms.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_MOTOR_INTERFACE_BOLT_2",
+      "public_part": "MOTOR_INTERFACE_BOLT_2",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-fastener-schematic",
+      "evidence": "mechanism.py:111-146 and its explicit screw() call sites",
+      "basis": "Independent cylinder/cone/hexagonal primitives, major-diameter thread representation. No third-party fastener library or manufacturer file. Custom shoulder and head forms are labelled as design forms.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_STRAIN_CLAMP",
+      "public_part": "STRAIN_CLAMP",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-c08-primitives",
+      "evidence": "mechanism.py:147-232,277-326,350-550",
+      "basis": "Evaluated new component made by the authored primitive/curve operations. No original wheel, frame, corner or motor BREP is an operand for this part. Only this allowlisted Shape is copied to a new document.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_STRAIN_INSULATOR_0",
+      "public_part": "STRAIN_INSULATOR_0",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-c08-primitives",
+      "evidence": "mechanism.py:147-232,277-326,350-550",
+      "basis": "Evaluated new component made by the authored primitive/curve operations. No original wheel, frame, corner or motor BREP is an operand for this part. Only this allowlisted Shape is copied to a new document.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_STRAIN_INSULATOR_1",
+      "public_part": "STRAIN_INSULATOR_1",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-c08-primitives",
+      "evidence": "mechanism.py:147-232,277-326,350-550",
+      "basis": "Evaluated new component made by the authored primitive/curve operations. No original wheel, frame, corner or motor BREP is an operand for this part. Only this allowlisted Shape is copied to a new document.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_STRAIN_INSULATOR_LID_0",
+      "public_part": "STRAIN_INSULATOR_LID_0",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-c08-primitives",
+      "evidence": "mechanism.py:147-232,277-326,350-550",
+      "basis": "Evaluated new component made by the authored primitive/curve operations. No original wheel, frame, corner or motor BREP is an operand for this part. Only this allowlisted Shape is copied to a new document.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_STRAIN_INSULATOR_LID_1",
+      "public_part": "STRAIN_INSULATOR_LID_1",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-c08-primitives",
+      "evidence": "mechanism.py:147-232,277-326,350-550",
+      "basis": "Evaluated new component made by the authored primitive/curve operations. No original wheel, frame, corner or motor BREP is an operand for this part. Only this allowlisted Shape is copied to a new document.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_LEAD_CRIMP_COLLAR_0",
+      "public_part": "LEAD_CRIMP_COLLAR_0",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-c08-primitives",
+      "evidence": "mechanism.py:147-232,277-326,350-550",
+      "basis": "Evaluated new component made by the authored primitive/curve operations. No original wheel, frame, corner or motor BREP is an operand for this part. Only this allowlisted Shape is copied to a new document.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_LEAD_CRIMP_COLLAR_1",
+      "public_part": "LEAD_CRIMP_COLLAR_1",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-c08-primitives",
+      "evidence": "mechanism.py:147-232,277-326,350-550",
+      "basis": "Evaluated new component made by the authored primitive/curve operations. No original wheel, frame, corner or motor BREP is an operand for this part. Only this allowlisted Shape is copied to a new document.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_INSULATED_LEAD_0",
+      "public_part": "INSULATED_LEAD_0",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-c08-primitives",
+      "evidence": "mechanism.py:147-232,277-326,350-550",
+      "basis": "Evaluated new component made by the authored primitive/curve operations. No original wheel, frame, corner or motor BREP is an operand for this part. Only this allowlisted Shape is copied to a new document.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_INSULATED_LEAD_1",
+      "public_part": "INSULATED_LEAD_1",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-c08-primitives",
+      "evidence": "mechanism.py:147-232,277-326,350-550",
+      "basis": "Evaluated new component made by the authored primitive/curve operations. No original wheel, frame, corner or motor BREP is an operand for this part. Only this allowlisted Shape is copied to a new document.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_STRAIN_BOLT_0",
+      "public_part": "STRAIN_BOLT_0",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-fastener-schematic",
+      "evidence": "mechanism.py:111-146 and its explicit screw() call sites",
+      "basis": "Independent cylinder/cone/hexagonal primitives, major-diameter thread representation. No third-party fastener library or manufacturer file. Custom shoulder and head forms are labelled as design forms.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_STRAIN_BOLT_1",
+      "public_part": "STRAIN_BOLT_1",
+      "method": "copy-evaluated-authored-shape-to-new-document",
+      "kind": "authored-fastener-schematic",
+      "evidence": "mechanism.py:111-146 and its explicit screw() call sites",
+      "basis": "Independent cylinder/cone/hexagonal primitives, major-diameter thread representation. No third-party fastener library or manufacturer file. Custom shoulder and head forms are labelled as design forms.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_WHEEL",
+      "public_part": "REF_WHEEL",
+      "method": "generate-independent-reference-primitive",
+      "kind": "independent-reference",
+      "basis": "New plain annulus OD116 / bore28.4 / thickness3.2, with only authored C08 connection holes and access windows; no original spokes, rim or BREP.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_LOAD_FRAME",
+      "public_part": "REF_FRAME",
+      "method": "generate-independent-reference-primitive",
+      "kind": "independent-reference",
+      "basis": "New annulus OD138 / ID120 / thickness5.2 with four PCD126 holes; not the source frame, a corner or a Pico cube.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": null,
+      "public_part": "REF_MOTOR_ENVELOPE",
+      "method": "generate-independent-reference-primitive",
+      "kind": "independent-reference",
+      "basis": "New arbitrary OD28 by22 cylinder for orientation only. No source motor surface, mounting thread, performance or compatibility claim.",
+      "external_links_copied": false
+    },
+    {
+      "source_part": "Z_NOMINAL_MOTOR_SHAFT",
+      "public_part": "REF_SHAFT",
+      "method": "generate-independent-reference-primitive",
+      "kind": "independent-reference",
+      "basis": "New nominal OD6 cylinder with a diameter2 cross-bore. Required interface illustration, not an actual motor shaft.",
+      "external_links_copied": false
+    }
+  ],
+  "excluded": [
+    {
+      "source_part": "Axis_X",
+      "reason": "Not on the explicit public shape allowlist; excluded by default."
+    },
+    {
+      "source_part": "Axis_Y",
+      "reason": "Not on the explicit public shape allowlist; excluded by default."
+    },
+    {
+      "source_part": "Axis_Z",
+      "reason": "Not on the explicit public shape allowlist; excluded by default."
+    },
+    {
+      "source_part": "BUDGET_ADDON_ALLOWANCE",
+      "reason": "Uninstalled free-shape/electronics reservation reference omitted; not part of the public assembly."
+    },
+    {
+      "source_part": "BUDGET_BATTERY_ALLOWANCE",
+      "reason": "Uninstalled free-shape/electronics reservation reference omitted; not part of the public assembly."
+    },
+    {
+      "source_part": "BUDGET_IMU_ALLOWANCE",
+      "reason": "Uninstalled free-shape/electronics reservation reference omitted; not part of the public assembly."
+    },
+    {
+      "source_part": "BUDGET_PCB_ALLOWANCE",
+      "reason": "Uninstalled free-shape/electronics reservation reference omitted; not part of the public assembly."
+    },
+    {
+      "source_part": "ElectronicSpaceBudgets",
+      "reason": "Not on the explicit public shape allowlist; excluded by default."
+    },
+    {
+      "source_part": "FreeShapeReferences",
+      "reason": "Not on the explicit public shape allowlist; excluded by default."
+    },
+    {
+      "source_part": "RetainedSource",
+      "reason": "Not on the explicit public shape allowlist; excluded by default."
+    },
+    {
+      "source_part": "SRC_Part__Feature002",
+      "reason": "Retained or modified original assembly leaf (including metal corner variants); redistribution permission unknown."
+    },
+    {
+      "source_part": "SRC_Part__Feature003",
+      "reason": "Retained or modified original assembly leaf (including metal corner variants); redistribution permission unknown."
+    },
+    {
+      "source_part": "SRC_Part__Feature006",
+      "reason": "Retained or modified original assembly leaf (including metal corner variants); redistribution permission unknown."
+    },
+    {
+      "source_part": "SRC_Part__Feature007",
+      "reason": "Retained or modified original assembly leaf (including metal corner variants); redistribution permission unknown."
+    },
+    {
+      "source_part": "SRC_Part__Feature010",
+      "reason": "Retained or modified original assembly leaf (including metal corner variants); redistribution permission unknown."
+    },
+    {
+      "source_part": "SRC_Part__Feature011",
+      "reason": "Retained or modified original assembly leaf (including metal corner variants); redistribution permission unknown."
+    },
+    {
+      "source_part": "SRC_Part__Feature012",
+      "reason": "Retained or modified original assembly leaf (including metal corner variants); redistribution permission unknown."
+    },
+    {
+      "source_part": "SRC_Part__Feature013",
+      "reason": "Retained or modified original assembly leaf (including metal corner variants); redistribution permission unknown."
+    },
+    {
+      "source_part": "SRC_Part__Feature014",
+      "reason": "Retained or modified original assembly leaf (including metal corner variants); redistribution permission unknown."
+    },
+    {
+      "source_part": "SRC_Part__Feature015",
+      "reason": "Retained or modified original assembly leaf (including metal corner variants); redistribution permission unknown."
+    },
+    {
+      "source_part": "SRC_Part__Feature016",
+      "reason": "Retained or modified original assembly leaf (including metal corner variants); redistribution permission unknown."
+    },
+    {
+      "source_part": "SRC_Part__Feature017",
+      "reason": "Retained or modified original assembly leaf (including metal corner variants); redistribution permission unknown."
+    },
+    {
+      "source_part": "SRC_Part__Feature018",
+      "reason": "Retained or modified original assembly leaf (including metal corner variants); redistribution permission unknown."
+    },
+    {
+      "source_part": "SRC_Part__Feature019",
+      "reason": "Retained or modified original assembly leaf (including metal corner variants); redistribution permission unknown."
+    },
+    {
+      "source_part": "SRC_Part__Feature078",
+      "reason": "Retained or modified original assembly leaf (including metal corner variants); redistribution permission unknown."
+    },
+    {
+      "source_part": "SRC_Part__Feature079",
+      "reason": "Retained or modified original assembly leaf (including metal corner variants); redistribution permission unknown."
+    },
+    {
+      "source_part": "SRC_Part__Feature080",
+      "reason": "Retained or modified original assembly leaf (including metal corner variants); redistribution permission unknown."
+    },
+    {
+      "source_part": "SRC_Part__Feature081",
+      "reason": "Retained or modified original assembly leaf (including metal corner variants); redistribution permission unknown."
+    },
+    {
+      "source_part": "SRC_Part__Feature082",
+      "reason": "Retained or modified original assembly leaf (including metal corner variants); redistribution permission unknown."
+    },
+    {
+      "source_part": "X_ARMATURE",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_BEARING_BALL_0",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_BEARING_BALL_1",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_BEARING_BALL_2",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_BEARING_BALL_3",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_BEARING_BALL_4",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_BEARING_BALL_5",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_BEARING_BALL_6",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_BEARING_BALL_7",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_BEARING_BALL_8",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_BEARING_BALL_9",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_BEARING_CAP",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_BEARING_INNER",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_BEARING_OUTER",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_BOBBIN",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_BOBBIN_PAD_0",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_BOBBIN_PAD_1",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_BOBBIN_PAD_2",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_BOBBIN_PAD_FREE_0",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_BOBBIN_PAD_FREE_1",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_BOBBIN_PAD_FREE_2",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_BOBBIN_REAR_INSULATOR",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_CAP_BOLT_0",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_CAP_BOLT_1",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_CAP_BOLT_2",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_CARRIER",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_COIL_RETAINER",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_CORNER_BOLT_0",
+      "reason": "The associated original corner is excluded. Its disconnected fastener is not part of this public fixture."
+    },
+    {
+      "source_part": "X_CORNER_BOLT_1",
+      "reason": "The associated original corner is excluded. Its disconnected fastener is not part of this public fixture."
+    },
+    {
+      "source_part": "X_CORNER_BOLT_2",
+      "reason": "The associated original corner is excluded. Its disconnected fastener is not part of this public fixture."
+    },
+    {
+      "source_part": "X_CORNER_BOLT_3",
+      "reason": "The associated original corner is excluded. Its disconnected fastener is not part of this public fixture."
+    },
+    {
+      "source_part": "X_FRAME_BOLT_0",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_FRAME_BOLT_1",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_FRAME_BOLT_2",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_FRAME_BOLT_3",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_FRAME_NUT_0",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_FRAME_NUT_1",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_FRAME_NUT_2",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_FRAME_NUT_3",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_HUB",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_HUB_CONNECT_BOLT_0",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_HUB_CONNECT_BOLT_1",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_HUB_CONNECT_BOLT_2",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_HUB_CONNECT_PIN_0",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_HUB_CONNECT_PIN_1",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_HUB_CONNECT_PIN_2",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_HUB_DOWEL_0",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_HUB_DOWEL_1",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_HUB_FACE",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_HUB_INNER_RACE_REAR_SHIM",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_HUB_RETAINING_RING",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_INSULATED_LEAD_0",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_INSULATED_LEAD_1",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_LEAD_BUSHING_0",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_LEAD_BUSHING_1",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_LEAD_CRIMP_COLLAR_0",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_LEAD_CRIMP_COLLAR_1",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_LINING_0",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_LINING_1",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_LINING_2",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_LINING_KEEPER_0",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_LINING_KEEPER_1",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_LINING_KEEPER_2",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_LOAD_FRAME",
+      "reason": "Original frame plus Boolean bosses/holes; a metal variant is not independent authorship. Replaced with independent REF_FRAME."
+    },
+    {
+      "source_part": "X_MOTOR_INTERFACE_BOLT_0",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_MOTOR_INTERFACE_BOLT_1",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_MOTOR_INTERFACE_BOLT_2",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_NOMINAL_MOTOR_SHAFT",
+      "reason": "Nominal interface illustration not imported; a new REF_SHAFT is constructed without source shape access."
+    },
+    {
+      "source_part": "X_POLE_CAP_INNER",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_POLE_CAP_OUTER",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_POSITIVE_CROSSPIN",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_POST_0",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_POST_1",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_POST_2",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_POST_3",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_RELEASE_STOP_0",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_RELEASE_STOP_1",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_RELEASE_STOP_2",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_RETAINER_BOLT_0",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_RETAINER_BOLT_1",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_RETAINER_BOLT_2",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_RETAINER_BOLT_3",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_RETAINER_BOLT_4",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_RETAINER_BOLT_5",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_RIM_BOLT_0",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_RIM_BOLT_1",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_RIM_BOLT_2",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_RIM_BOLT_3",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_RIM_BOLT_4",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_RIM_BOLT_5",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_RIM_BOLT_6",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_RIM_BOLT_7",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_RIM_NUT_0",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_RIM_NUT_1",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_RIM_NUT_2",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_RIM_NUT_3",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_RIM_NUT_4",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_RIM_NUT_5",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_RIM_NUT_6",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_RIM_NUT_7",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_SPRING_0",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_SPRING_1",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_SPRING_2",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_SPRING_CLAMP_ROOT_0",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_SPRING_CLAMP_ROOT_1",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_SPRING_CLAMP_ROOT_2",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_SPRING_CLAMP_TIP_0",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_SPRING_CLAMP_TIP_1",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_SPRING_CLAMP_TIP_2",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_SPRING_ROOT_BOLT_0",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_SPRING_ROOT_BOLT_1",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_SPRING_ROOT_BOLT_2",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_SPRING_ROOT_BOLT_3",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_SPRING_ROOT_BOLT_4",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_SPRING_ROOT_BOLT_5",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_SPRING_ROOT_NUT_PLATE_0",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_SPRING_ROOT_NUT_PLATE_1",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_SPRING_ROOT_NUT_PLATE_2",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_SPRING_TIP_BOLT_0",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_SPRING_TIP_BOLT_1",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_SPRING_TIP_BOLT_2",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_SPRING_TIP_BOLT_3",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_SPRING_TIP_BOLT_4",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_SPRING_TIP_BOLT_5",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_SPRING_TIP_NUT_PLATE_0",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_SPRING_TIP_NUT_PLATE_1",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_SPRING_TIP_NUT_PLATE_2",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_STATOR_BOLT_0",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_STATOR_BOLT_1",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_STATOR_BOLT_2",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_STATOR_BOLT_3",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_STATOR_LOCATING_PIN_0",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_STATOR_LOCATING_PIN_1",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_STATOR_WASHER_0",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_STATOR_WASHER_1",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_STATOR_WASHER_2",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_STATOR_WASHER_3",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_STRAIN_BOLT_0",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_STRAIN_BOLT_1",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_STRAIN_CLAMP",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_STRAIN_INSULATOR_0",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_STRAIN_INSULATOR_1",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_STRAIN_INSULATOR_LID_0",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_STRAIN_INSULATOR_LID_1",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_WHEEL",
+      "reason": "Original wheel plus Boolean modifications; redistribution permission unknown. Replaced with independent REF_WHEEL."
+    },
+    {
+      "source_part": "X_WHEEL_BOLT_0",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_WHEEL_BOLT_1",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_WHEEL_BOLT_2",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_WHEEL_BOLT_3",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_WHEEL_NUT_0",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_WHEEL_NUT_1",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_WHEEL_NUT_2",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_WHEEL_NUT_3",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_WINDING",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_WindingInner",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_WindingOuter",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "X_YOKE",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_ARMATURE",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_BEARING_BALL_0",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_BEARING_BALL_1",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_BEARING_BALL_2",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_BEARING_BALL_3",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_BEARING_BALL_4",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_BEARING_BALL_5",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_BEARING_BALL_6",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_BEARING_BALL_7",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_BEARING_BALL_8",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_BEARING_BALL_9",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_BEARING_CAP",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_BEARING_INNER",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_BEARING_OUTER",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_BOBBIN",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_BOBBIN_PAD_0",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_BOBBIN_PAD_1",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_BOBBIN_PAD_2",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_BOBBIN_PAD_FREE_0",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_BOBBIN_PAD_FREE_1",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_BOBBIN_PAD_FREE_2",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_BOBBIN_REAR_INSULATOR",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_CAP_BOLT_0",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_CAP_BOLT_1",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_CAP_BOLT_2",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_CARRIER",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_COIL_RETAINER",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_CORNER_BOLT_0",
+      "reason": "The associated original corner is excluded. Its disconnected fastener is not part of this public fixture."
+    },
+    {
+      "source_part": "Y_CORNER_BOLT_1",
+      "reason": "The associated original corner is excluded. Its disconnected fastener is not part of this public fixture."
+    },
+    {
+      "source_part": "Y_CORNER_BOLT_2",
+      "reason": "The associated original corner is excluded. Its disconnected fastener is not part of this public fixture."
+    },
+    {
+      "source_part": "Y_CORNER_BOLT_3",
+      "reason": "The associated original corner is excluded. Its disconnected fastener is not part of this public fixture."
+    },
+    {
+      "source_part": "Y_FRAME_BOLT_0",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_FRAME_BOLT_1",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_FRAME_BOLT_2",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_FRAME_BOLT_3",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_FRAME_NUT_0",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_FRAME_NUT_1",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_FRAME_NUT_2",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_FRAME_NUT_3",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_HUB",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_HUB_CONNECT_BOLT_0",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_HUB_CONNECT_BOLT_1",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_HUB_CONNECT_BOLT_2",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_HUB_CONNECT_PIN_0",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_HUB_CONNECT_PIN_1",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_HUB_CONNECT_PIN_2",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_HUB_DOWEL_0",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_HUB_DOWEL_1",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_HUB_FACE",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_HUB_INNER_RACE_REAR_SHIM",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_HUB_RETAINING_RING",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_INSULATED_LEAD_0",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_INSULATED_LEAD_1",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_LEAD_BUSHING_0",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_LEAD_BUSHING_1",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_LEAD_CRIMP_COLLAR_0",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_LEAD_CRIMP_COLLAR_1",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_LINING_0",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_LINING_1",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_LINING_2",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_LINING_KEEPER_0",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_LINING_KEEPER_1",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_LINING_KEEPER_2",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_LOAD_FRAME",
+      "reason": "Original frame plus Boolean bosses/holes; a metal variant is not independent authorship. Replaced with independent REF_FRAME."
+    },
+    {
+      "source_part": "Y_MOTOR_INTERFACE_BOLT_0",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_MOTOR_INTERFACE_BOLT_1",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_MOTOR_INTERFACE_BOLT_2",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_NOMINAL_MOTOR_SHAFT",
+      "reason": "Nominal interface illustration not imported; a new REF_SHAFT is constructed without source shape access."
+    },
+    {
+      "source_part": "Y_POLE_CAP_INNER",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_POLE_CAP_OUTER",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_POSITIVE_CROSSPIN",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_POST_0",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_POST_1",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_POST_2",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_POST_3",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_RELEASE_STOP_0",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_RELEASE_STOP_1",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_RELEASE_STOP_2",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_RETAINER_BOLT_0",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_RETAINER_BOLT_1",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_RETAINER_BOLT_2",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_RETAINER_BOLT_3",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_RETAINER_BOLT_4",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_RETAINER_BOLT_5",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_RIM_BOLT_0",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_RIM_BOLT_1",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_RIM_BOLT_2",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_RIM_BOLT_3",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_RIM_BOLT_4",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_RIM_BOLT_5",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_RIM_BOLT_6",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_RIM_BOLT_7",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_RIM_NUT_0",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_RIM_NUT_1",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_RIM_NUT_2",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_RIM_NUT_3",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_RIM_NUT_4",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_RIM_NUT_5",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_RIM_NUT_6",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_RIM_NUT_7",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_SPRING_0",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_SPRING_1",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_SPRING_2",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_SPRING_CLAMP_ROOT_0",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_SPRING_CLAMP_ROOT_1",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_SPRING_CLAMP_ROOT_2",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_SPRING_CLAMP_TIP_0",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_SPRING_CLAMP_TIP_1",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_SPRING_CLAMP_TIP_2",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_SPRING_ROOT_BOLT_0",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_SPRING_ROOT_BOLT_1",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_SPRING_ROOT_BOLT_2",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_SPRING_ROOT_BOLT_3",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_SPRING_ROOT_BOLT_4",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_SPRING_ROOT_BOLT_5",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_SPRING_ROOT_NUT_PLATE_0",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_SPRING_ROOT_NUT_PLATE_1",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_SPRING_ROOT_NUT_PLATE_2",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_SPRING_TIP_BOLT_0",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_SPRING_TIP_BOLT_1",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_SPRING_TIP_BOLT_2",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_SPRING_TIP_BOLT_3",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_SPRING_TIP_BOLT_4",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_SPRING_TIP_BOLT_5",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_SPRING_TIP_NUT_PLATE_0",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_SPRING_TIP_NUT_PLATE_1",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_SPRING_TIP_NUT_PLATE_2",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_STATOR_BOLT_0",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_STATOR_BOLT_1",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_STATOR_BOLT_2",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_STATOR_BOLT_3",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_STATOR_LOCATING_PIN_0",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_STATOR_LOCATING_PIN_1",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_STATOR_WASHER_0",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_STATOR_WASHER_1",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_STATOR_WASHER_2",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_STATOR_WASHER_3",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_STRAIN_BOLT_0",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_STRAIN_BOLT_1",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_STRAIN_CLAMP",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_STRAIN_INSULATOR_0",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_STRAIN_INSULATOR_1",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_STRAIN_INSULATOR_LID_0",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_STRAIN_INSULATOR_LID_1",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_WHEEL",
+      "reason": "Original wheel plus Boolean modifications; redistribution permission unknown. Replaced with independent REF_WHEEL."
+    },
+    {
+      "source_part": "Y_WHEEL_BOLT_0",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_WHEEL_BOLT_1",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_WHEEL_BOLT_2",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_WHEEL_BOLT_3",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_WHEEL_NUT_0",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_WHEEL_NUT_1",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_WHEEL_NUT_2",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_WHEEL_NUT_3",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_WINDING",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_WindingInner",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_WindingOuter",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Y_YOKE",
+      "reason": "Not extracted. Reference three-axis mode uses rigid copies of the reviewed public Z module, not a reconstruction of the original whole machine."
+    },
+    {
+      "source_part": "Z_BOBBIN_PAD_FREE_0",
+      "reason": "Uninstalled free-shape/electronics reservation reference omitted; not part of the public assembly."
+    },
+    {
+      "source_part": "Z_BOBBIN_PAD_FREE_1",
+      "reason": "Uninstalled free-shape/electronics reservation reference omitted; not part of the public assembly."
+    },
+    {
+      "source_part": "Z_BOBBIN_PAD_FREE_2",
+      "reason": "Uninstalled free-shape/electronics reservation reference omitted; not part of the public assembly."
+    },
+    {
+      "source_part": "Z_CORNER_BOLT_0",
+      "reason": "The associated original corner is excluded. Its disconnected fastener is not part of this public fixture."
+    },
+    {
+      "source_part": "Z_CORNER_BOLT_1",
+      "reason": "The associated original corner is excluded. Its disconnected fastener is not part of this public fixture."
+    },
+    {
+      "source_part": "Z_CORNER_BOLT_2",
+      "reason": "The associated original corner is excluded. Its disconnected fastener is not part of this public fixture."
+    },
+    {
+      "source_part": "Z_CORNER_BOLT_3",
+      "reason": "The associated original corner is excluded. Its disconnected fastener is not part of this public fixture."
+    },
+    {
+      "source_part": "Z_LOAD_FRAME",
+      "reason": "Original frame plus Boolean bosses/holes; a metal variant is not independent authorship. Replaced with independent REF_FRAME."
+    },
+    {
+      "source_part": "Z_NOMINAL_MOTOR_SHAFT",
+      "reason": "Nominal interface illustration not imported; a new REF_SHAFT is constructed without source shape access."
+    },
+    {
+      "source_part": "Z_WHEEL",
+      "reason": "Original wheel plus Boolean modifications; redistribution permission unknown. Replaced with independent REF_WHEEL."
+    },
+    {
+      "source_part": "Z_WindingInner",
+      "reason": "Construction operand only; publish only the evaluated WINDING solid without links or design dependencies."
+    },
+    {
+      "source_part": "Z_WindingOuter",
+      "reason": "Construction operand only; publish only the evaluated WINDING solid without links or design dependencies."
+    }
+  ],
+  "three_axis_rule": "Rigid repetitions of the public Z module; reference layout only; not original C08 whole-machine fit evidence.",
+  "whole_fit": false,
+  "build_ready": false,
+  "physical_ready": false
+}

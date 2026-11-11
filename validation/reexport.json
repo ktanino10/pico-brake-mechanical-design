@@ -1,0 +1,26 @@
+{
+  "schema": "public-brake-self-contained-v1",
+  "status": "PASS",
+  "source": "Curated public ZIP, unpacked outside the checkout",
+  "zip_sha256": "e6d43c07191e914018fcdc216d74658065dcfa9426970a28d406bf3786edf523",
+  "parts": 149,
+  "private_design_input_used": false,
+  "native_input_sha256": "2bc12d2f0d1617789a57f9b00b3c5fa6d835092e4c1f49f1e0f846dda7ed9116",
+  "reexported_step_valid": true,
+  "step_named_parts_match": true,
+  "mesh_parts": 149,
+  "mesh_compared_to_original_published_moments": true,
+  "max_reexport_mesh_bounds_error_mm": 0.0,
+  "max_reexport_mesh_centroid_error_mm": 1.3349384474435603e-13,
+  "direct_existing_mesh_json_comparison": {
+    "parts": 149,
+    "max_bounds_error_mm": 0.0,
+    "max_centroid_error_mm": 1.3349384474435603e-13,
+    "original_sha256": "9e4f3075a8a36f0651a8301f3bd398db2946c2a16a5cd22e755190d99b9c5dd2",
+    "regenerated_sha256": "cdc7066050520f6a6f4594426d99cfe87ccd793bd0915de105fdaf970e6587a7"
+  },
+  "reference_interface_checks": 31,
+  "whole_fit": false,
+  "build_ready": false,
+  "physical_ready": false
+}

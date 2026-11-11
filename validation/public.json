@@ -1,0 +1,391 @@
+{
+  "schema": "public-brake-content-audit-v1",
+  "status": "PASS",
+  "scope": "Allowlisted bytes, archives and metadata. No claim of whole-machine or physical approval.",
+  "original_native_negative_control": "REJECTED",
+  "negative_controls": {
+    "WHEEL": "REJECTED",
+    "LOAD_FRAME": "REJECTED",
+    "SRC_Part__Feature12": "REJECTED",
+    "CORNER_BOLT_0": "REJECTED",
+    "YOKE_99": "REJECTED",
+    "full-protected-native": "REJECTED"
+  },
+  "checks": {
+    ".gitignore": {
+      "bytes_scanned": 74
+    },
+    ".gitattributes": {
+      "bytes_scanned": 106
+    },
+    "README.md": {
+      "bytes_scanned": 7490
+    },
+    "NOTICE.md": {
+      "bytes_scanned": 1114
+    },
+    "index.html": {
+      "bytes_scanned": 11269
+    },
+    "styles.css": {
+      "bytes_scanned": 14336
+    },
+    "app.js": {
+      "bytes_scanned": 23582
+    },
+    "bootstrap.js": {
+      "bytes_scanned": 1111
+    },
+    "contract.js": {
+      "bytes_scanned": 5690
+    },
+    "package.json": {
+      "bytes_scanned": 363
+    },
+    "package-lock.json": {
+      "bytes_scanned": 2097
+    },
+    "docs/PUBLIC_SCOPE.md": {
+      "bytes_scanned": 4326
+    },
+    "docs/VALIDATION.md": {
+      "bytes_scanned": 5116
+    },
+    "data/provenance.json": {
+      "bytes_scanned": 153070
+    },
+    "data/assembly.json": {
+      "bytes_scanned": 189864
+    },
+    "data/meshes.json": {
+      "bytes_scanned": 6077917
+    },
+    "data/parts.csv": {
+      "bytes_scanned": 23414
+    },
+    "data/joints.csv": {
+      "bytes_scanned": 27345
+    },
+    "data/checksums.json": {
+      "bytes_scanned": 1388
+    },
+    "downloads/brake-single.FCStd": {
+      "native_shapes": 149,
+      "native_external_links": 0
+    },
+    "downloads/brake-single.step": {
+      "bytes_scanned": 2756916
+    },
+    "downloads/brake-reference-three.FCStd": {
+      "native_shapes": 447,
+      "native_external_links": 0
+    },
+    "downloads/brake-reference-three.step": {
+      "bytes_scanned": 8498029
+    },
+    "downloads/public-brake-cad.zip": {
+      "zip_members": 18,
+      "uncompressed_bytes": 13695628
+    },
+    "vendor/three.module.js": {
+      "bytes_scanned": 662772
+    },
+    "vendor/three.core.js": {
+      "bytes_scanned": 1458113
+    },
+    "vendor/OrbitControls.js": {
+      "bytes_scanned": 40755
+    },
+    "vendor/THREE-LICENSE.txt": {
+      "bytes_scanned": 1081
+    },
+    "vendor/manifest.json": {
+      "bytes_scanned": 704
+    },
+    "scripts/public_policy.py": {
+      "bytes_scanned": 8874
+    },
+    "scripts/catalog.py": {
+      "bytes_scanned": 15957
+    },
+    "scripts/build_cad.py": {
+      "bytes_scanned": 24864
+    },
+    "scripts/geometry_contract.py": {
+      "bytes_scanned": 2153
+    },
+    "scripts/reexport_public.py": {
+      "bytes_scanned": 3280
+    },
+    "scripts/public_files.py": {
+      "bytes_scanned": 1855
+    },
+    "scripts/serve_public.py": {
+      "bytes_scanned": 3169
+    },
+    "scripts/public_scan.py": {
+      "bytes_scanned": 8450
+    },
+    "scripts/package_public.py": {
+      "bytes_scanned": 8328
+    },
+    "scripts/verify_public_zip.py": {
+      "bytes_scanned": 5434
+    },
+    "scripts/vendor.mjs": {
+      "bytes_scanned": 1297
+    },
+    "tests/contract.test.mjs": {
+      "bytes_scanned": 4698
+    },
+    "tests/browser.mjs": {
+      "bytes_scanned": 18766
+    },
+    "tests/test_public.py": {
+      "bytes_scanned": 6839
+    },
+    "validation/cad.json": {
+      "bytes_scanned": 10890
+    },
+    "validation/browser.json": {
+      "bytes_scanned": 3272
+    },
+    "validation/reexport.json": {
+      "bytes_scanned": 1062
+    }
+  },
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 106,
+      "sha256": "fc770d3af6512d6891e893ba18348e2a793b556ce70a537f4d8c219309ad90b2"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 74,
+      "sha256": "050f8d46ef4f4628113747681975662868ccec143d88fcd572d243c710ccb0dd"
+    },
+    {
+      "path": "NOTICE.md",
+      "bytes": 1114,
+      "sha256": "b92d95a1788d5fa101dcc1923230b3ff06e6255389996547fba1d80bb96182d8"
+    },
+    {
+      "path": "README.md",
+      "bytes": 7490,
+      "sha256": "80a834070ad11d9316eb4979b2f3111b38d151374b77f78c63e14a87de7abc19"
+    },
+    {
+      "path": "app.js",
+      "bytes": 23582,
+      "sha256": "493d380b922550e43439fafc0efa912d4f4688e7301c61e2a00ede6ad3153bd0"
+    },
+    {
+      "path": "bootstrap.js",
+      "bytes": 1111,
+      "sha256": "4eb1ccb74cb4d6819222e4ba874e0bc291a6bdae0ecdeb20bae653f2a7924705"
+    },
+    {
+      "path": "contract.js",
+      "bytes": 5690,
+      "sha256": "2bba164af85cb02d24722d1db875cac3a29021b50acfd5cd5a5aad924854652b"
+    },
+    {
+      "path": "data/assembly.json",
+      "bytes": 189864,
+      "sha256": "8fac1425bad538abeb5d72476914b830abf35994b332522016e9c7baeaae8505"
+    },
+    {
+      "path": "data/checksums.json",
+      "bytes": 1388,
+      "sha256": "ae0c9a407454479e2690ff1cd52a27d5a0623614bb8b41290a17c49826f1c9f2"
+    },
+    {
+      "path": "data/joints.csv",
+      "bytes": 27345,
+      "sha256": "7e939d4104079c17ae86cc166b355f1491c70466b8923a8d4fe258209030f584"
+    },
+    {
+      "path": "data/meshes.json",
+      "bytes": 6077917,
+      "sha256": "9e4f3075a8a36f0651a8301f3bd398db2946c2a16a5cd22e755190d99b9c5dd2"
+    },
+    {
+      "path": "data/parts.csv",
+      "bytes": 23414,
+      "sha256": "0571af0d46752947c7e04ea0635e99f1f090d39c67deadb8bb9c7b2cb3c9fb2a"
+    },
+    {
+      "path": "data/provenance.json",
+      "bytes": 153070,
+      "sha256": "43598e100d349abbf5911e51bd9ff64d8a11abc96591db9583819e2b4d491f24"
+    },
+    {
+      "path": "docs/PUBLIC_SCOPE.md",
+      "bytes": 4326,
+      "sha256": "295c49ce06f97e64e7dadf42b0a596b66e14e85e66a560440fb132dcace39ee4"
+    },
+    {
+      "path": "docs/VALIDATION.md",
+      "bytes": 5116,
+      "sha256": "033bfd0686a2c451479f4abdfdabc20aa686c6605b543fd45139401704e8cf3b"
+    },
+    {
+      "path": "downloads/brake-reference-three.FCStd",
+      "bytes": 1474009,
+      "sha256": "b0b74e02d4dd41610676bb4a3d006b5ad00128bcd70aa1cebc14883e70c86117"
+    },
+    {
+      "path": "downloads/brake-reference-three.step",
+      "bytes": 8498029,
+      "sha256": "aac213e8e9a4ec1e1e3ba95e174da0faf42f2d53ca9ba0224beb5c8d049077b8"
+    },
+    {
+      "path": "downloads/brake-single.FCStd",
+      "bytes": 491330,
+      "sha256": "2bc12d2f0d1617789a57f9b00b3c5fa6d835092e4c1f49f1e0f846dda7ed9116"
+    },
+    {
+      "path": "downloads/brake-single.step",
+      "bytes": 2756916,
+      "sha256": "5ee5f1b4a8e9808da39846ca58b3a7fa1cd704875d81b3fb53e0ea6247651f1f"
+    },
+    {
+      "path": "downloads/public-brake-cad.zip",
+      "bytes": 3916814,
+      "sha256": "e6d43c07191e914018fcdc216d74658065dcfa9426970a28d406bf3786edf523"
+    },
+    {
+      "path": "index.html",
+      "bytes": 11269,
+      "sha256": "28324c75bbe297f88ffd4e265201e1c7425b2cef388e3b5d74a09765e42aed4f"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 2097,
+      "sha256": "d3f7f3874c6ed2663c93e30199a33f6b218f10d2f7e5b7369da453e4747d12ca"
+    },
+    {
+      "path": "package.json",
+      "bytes": 363,
+      "sha256": "7d99121741f002c69175b536c6792dd357de3d77ab582aa10e9f2f703f01a809"
+    },
+    {
+      "path": "scripts/build_cad.py",
+      "bytes": 24864,
+      "sha256": "6e8f699986df52418a23ccae5b2c2031efcbeda00ab1cba5b4221e79b237e717"
+    },
+    {
+      "path": "scripts/catalog.py",
+      "bytes": 15957,
+      "sha256": "ba2fedbc1b8ac3779f786ee4d72b6dd2369e402e711a0dca4c52bb50c9543437"
+    },
+    {
+      "path": "scripts/geometry_contract.py",
+      "bytes": 2153,
+      "sha256": "91b89a29405005fc9cb1af08a6932d8e33d50aa65b5bbbc62d760cdebbe49c72"
+    },
+    {
+      "path": "scripts/package_public.py",
+      "bytes": 8328,
+      "sha256": "17c4e42c6d39fc799521f92ba1c05907b693fff6ef294c96d9a3cc3c41e3a839"
+    },
+    {
+      "path": "scripts/public_files.py",
+      "bytes": 1855,
+      "sha256": "94f405778265accf4f392d06ec61e0956edd63e694f6bd60d43dc04fde4fe593"
+    },
+    {
+      "path": "scripts/public_policy.py",
+      "bytes": 8874,
+      "sha256": "a72de966d6782849ceb5f4ca894953cff05e4673efd16b55aeced35bebe9631f"
+    },
+    {
+      "path": "scripts/public_scan.py",
+      "bytes": 8450,
+      "sha256": "524437209d2725c90b4ae7c152d27b22b3e256fcd9ed51a3e5b54a233d93deb5"
+    },
+    {
+      "path": "scripts/reexport_public.py",
+      "bytes": 3280,
+      "sha256": "6c96963d7cb592966cb558183c599a441880eb587576582cde1b0cc1be553ed9"
+    },
+    {
+      "path": "scripts/serve_public.py",
+      "bytes": 3169,
+      "sha256": "c5e4892a52389bb61dbae4e6d93a07ee0770521398f657fec2774a538e1ed3eb"
+    },
+    {
+      "path": "scripts/vendor.mjs",
+      "bytes": 1297,
+      "sha256": "22ba54e78cfab9015ad7cac40f342d4c2dc3bac405e517a3fbd30a2f02b7a11b"
+    },
+    {
+      "path": "scripts/verify_public_zip.py",
+      "bytes": 5434,
+      "sha256": "f9285d0d9be4ed2cdbd98c6a1fe995a222fbf3538836f35d4552b5bce7acb36d"
+    },
+    {
+      "path": "styles.css",
+      "bytes": 14336,
+      "sha256": "2687558e8803e998a5a00d1334359eba0f5b3f7f05423620d7245e90d6a44d52"
+    },
+    {
+      "path": "tests/browser.mjs",
+      "bytes": 18766,
+      "sha256": "3032af67e733bd4005a0b5092bdbc10efdfa98fd4e933ac217c67283023f979a"
+    },
+    {
+      "path": "tests/contract.test.mjs",
+      "bytes": 4698,
+      "sha256": "892ea53d2b1b3f362152ab884f8cf0320f57824709c753a131b5be950fe5707d"
+    },
+    {
+      "path": "tests/test_public.py",
+      "bytes": 6839,
+      "sha256": "f3f5f552de77e5c00615060d272b0f7e6ffda1a07f8f0a9652cce4e617e908b1"
+    },
+    {
+      "path": "validation/browser.json",
+      "bytes": 3272,
+      "sha256": "f8a97f38599b7f9f9f3693d132f5ddddb7b5bebc3eeb36c55e37d1c172fc73a3"
+    },
+    {
+      "path": "validation/cad.json",
+      "bytes": 10890,
+      "sha256": "001c243b9c1c2bfe5d0a18dca65fe2db358b6f884695f1c4a44f79ddfdb3191c"
+    },
+    {
+      "path": "validation/reexport.json",
+      "bytes": 1062,
+      "sha256": "60f562ac66c4452aa210e1ada7679d894b45ed6243e305e0fc8aeef9d1cd5998"
+    },
+    {
+      "path": "vendor/OrbitControls.js",
+      "bytes": 40755,
+      "sha256": "3d79d07ecb686b4e5d93232eedab255331c1beef711e13164eaa1f68655a5f2b"
+    },
+    {
+      "path": "vendor/THREE-LICENSE.txt",
+      "bytes": 1081,
+      "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc"
+    },
+    {
+      "path": "vendor/manifest.json",
+      "bytes": 704,
+      "sha256": "6495dd49aca9b4236b78d5fa0416da855d69333cd570ed0afd2cce7ac9256036"
+    },
+    {
+      "path": "vendor/three.core.js",
+      "bytes": 1458113,
+      "sha256": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6"
+    },
+    {
+      "path": "vendor/three.module.js",
+      "bytes": 662772,
+      "sha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea"
+    }
+  ],
+  "self_excluded_from_hash_list": "validation/public.json",
+  "remaining_files": []
+}

@@ -1,0 +1,366 @@
+{
+  "schema": "public-brake-cad-validation-v1",
+  "status": "PASS",
+  "source_sha256": "586682c6e77fc6f597dd80c3d3fab6e1fd390f0adec86c05ac001dd3da9a0f21",
+  "source_unchanged": true,
+  "source_document_copied": false,
+  "freecad_version": "1.1.3",
+  "units": "mm",
+  "native_editability": "Independent Part::Feature shapes and placements; not a full parametric design history.",
+  "documents": {
+    "single": {
+      "parts": 149,
+      "solids": 149,
+      "valid_solids": true,
+      "reference_parts": 4,
+      "native_independent_features": true,
+      "step_named_parts_match": true,
+      "expected_pose_basis": "Pre-document canonical Z exact geometric bbox/centroid plus independently coded X=(z,-y,x), Y=(x,z,-y), Z=(x,y,z)",
+      "bounds_method": "optimalBoundingBox(useTriangulation=False,useShapeTolerance=False)",
+      "max_native_world_bounds_error_mm": 2.842170943040401e-14,
+      "max_native_world_centroid_error_mm": 2.1900397950137233e-14,
+      "max_step_volume_error_mm3": 1.076631094518234,
+      "max_step_relative_volume_error": 3.7471735794274306e-05,
+      "max_step_bounds_error_mm": 9.999999983634211e-08,
+      "max_step_centroid_error_mm": 0.00016336614906390097,
+      "step_tolerances": {
+        "relative_integrated_volume": 0.0001,
+        "bounds_mm": 0.001,
+        "centroid_mm": 0.01
+      },
+      "boolean_checks_for_integration_differences": [
+        {
+          "part": "Z_YOKE",
+          "native_minus_step_mm3": 0.0,
+          "step_minus_native_mm3": 0.0
+        },
+        {
+          "part": "Z_BOBBIN",
+          "native_minus_step_mm3": 0.0,
+          "step_minus_native_mm3": 0.0
+        },
+        {
+          "part": "Z_HUB",
+          "native_minus_step_mm3": 0.0,
+          "step_minus_native_mm3": 0.0
+        },
+        {
+          "part": "Z_REF_SHAFT",
+          "native_minus_step_mm3": 0.0,
+          "step_minus_native_mm3": 0.0
+        }
+      ],
+      "files": [
+        {
+          "path": "downloads/brake-single.FCStd",
+          "sha256": "2bc12d2f0d1617789a57f9b00b3c5fa6d835092e4c1f49f1e0f846dda7ed9116",
+          "bytes": 491330
+        },
+        {
+          "path": "downloads/brake-single.step",
+          "sha256": "5ee5f1b4a8e9808da39846ca58b3a7fa1cd704875d81b3fb53e0ea6247651f1f",
+          "bytes": 2756916
+        }
+      ]
+    },
+    "reference-three": {
+      "parts": 447,
+      "solids": 447,
+      "valid_solids": true,
+      "reference_parts": 12,
+      "native_independent_features": true,
+      "step_named_parts_match": true,
+      "expected_pose_basis": "Pre-document canonical Z exact geometric bbox/centroid plus independently coded X=(z,-y,x), Y=(x,z,-y), Z=(x,y,z)",
+      "bounds_method": "optimalBoundingBox(useTriangulation=False,useShapeTolerance=False)",
+      "max_native_world_bounds_error_mm": 3.803641429600546e-14,
+      "max_native_world_centroid_error_mm": 8.64061387337983e-14,
+      "max_step_volume_error_mm3": 1.07663109452551,
+      "max_step_relative_volume_error": 3.747173579452754e-05,
+      "max_step_bounds_error_mm": 9.999999983634211e-08,
+      "max_step_centroid_error_mm": 0.0001633661490858911,
+      "step_tolerances": {
+        "relative_integrated_volume": 0.0001,
+        "bounds_mm": 0.001,
+        "centroid_mm": 0.01
+      },
+      "boolean_checks_for_integration_differences": [
+        {
+          "part": "Z_YOKE",
+          "native_minus_step_mm3": 0.0,
+          "step_minus_native_mm3": 0.0
+        },
+        {
+          "part": "Z_BOBBIN",
+          "native_minus_step_mm3": 0.0,
+          "step_minus_native_mm3": 0.0
+        },
+        {
+          "part": "Z_HUB",
+          "native_minus_step_mm3": 0.0,
+          "step_minus_native_mm3": 0.0
+        },
+        {
+          "part": "Z_REF_SHAFT",
+          "native_minus_step_mm3": 0.0,
+          "step_minus_native_mm3": 0.0
+        },
+        {
+          "part": "X_YOKE",
+          "native_minus_step_mm3": 0.0,
+          "step_minus_native_mm3": 0.0
+        },
+        {
+          "part": "X_BOBBIN",
+          "native_minus_step_mm3": 0.0,
+          "step_minus_native_mm3": 0.0
+        },
+        {
+          "part": "X_HUB",
+          "native_minus_step_mm3": 0.0,
+          "step_minus_native_mm3": 0.0
+        },
+        {
+          "part": "X_REF_SHAFT",
+          "native_minus_step_mm3": 0.0,
+          "step_minus_native_mm3": 0.0
+        },
+        {
+          "part": "Y_YOKE",
+          "native_minus_step_mm3": 0.0,
+          "step_minus_native_mm3": 0.0
+        },
+        {
+          "part": "Y_BOBBIN",
+          "native_minus_step_mm3": 0.0,
+          "step_minus_native_mm3": 0.0
+        },
+        {
+          "part": "Y_HUB",
+          "native_minus_step_mm3": 0.0,
+          "step_minus_native_mm3": 0.0
+        },
+        {
+          "part": "Y_REF_SHAFT",
+          "native_minus_step_mm3": 0.0,
+          "step_minus_native_mm3": 0.0
+        }
+      ],
+      "files": [
+        {
+          "path": "downloads/brake-reference-three.FCStd",
+          "sha256": "b0b74e02d4dd41610676bb4a3d006b5ad00128bcd70aa1cebc14883e70c86117",
+          "bytes": 1474009
+        },
+        {
+          "path": "downloads/brake-reference-three.step",
+          "sha256": "aac213e8e9a4ec1e1e3ba95e174da0faf42f2d53ca9ba0224beb5c8d049077b8",
+          "bytes": 8498029
+        }
+      ]
+    }
+  },
+  "mesh": {
+    "parts": 149,
+    "triangles": 223398,
+    "max_relative_volume_error": 0.004481709099344113,
+    "max_bounds_error_mm": 0.022415000000002294,
+    "max_centroid_error_mm": 0.012556156666798044,
+    "volume_tolerance": 0.02,
+    "bounds_tolerance_mm": 0.12,
+    "centroid_tolerance_mm": 0.02,
+    "compared_to_published_mesh_moments": false,
+    "max_reexport_mesh_bounds_error_mm": 0.0,
+    "max_reexport_mesh_centroid_error_mm": 0.0
+  },
+  "reference_interfaces": {
+    "scope": "Nominal public-reference hole, counterbore and window correspondence only; no physical fit, torque or tool-path approval.",
+    "checks": [
+      {
+        "part": "FRAME_BOLT_0",
+        "reference": "REF_FRAME",
+        "axis_center_error_mm": 0.0,
+        "undeclared_common_mm3": 0.0
+      },
+      {
+        "part": "FRAME_BOLT_1",
+        "reference": "REF_FRAME",
+        "axis_center_error_mm": 7.105427357601002e-15,
+        "undeclared_common_mm3": 0.0
+      },
+      {
+        "part": "FRAME_BOLT_2",
+        "reference": "REF_FRAME",
+        "axis_center_error_mm": 7.105427357601002e-15,
+        "undeclared_common_mm3": 0.0
+      },
+      {
+        "part": "FRAME_BOLT_3",
+        "reference": "REF_FRAME",
+        "axis_center_error_mm": 0.0,
+        "undeclared_common_mm3": 0.0
+      },
+      {
+        "part": "WHEEL_BOLT_0",
+        "reference": "REF_WHEEL",
+        "axis_center_error_mm": 1.7763568394002505e-15,
+        "undeclared_common_mm3": 0.0
+      },
+      {
+        "part": "WHEEL_BOLT_1",
+        "reference": "REF_WHEEL",
+        "axis_center_error_mm": 0.0,
+        "undeclared_common_mm3": 0.0
+      },
+      {
+        "part": "WHEEL_BOLT_2",
+        "reference": "REF_WHEEL",
+        "axis_center_error_mm": 1.7763568394002505e-15,
+        "undeclared_common_mm3": 0.0
+      },
+      {
+        "part": "WHEEL_BOLT_3",
+        "reference": "REF_WHEEL",
+        "axis_center_error_mm": 0.0,
+        "undeclared_common_mm3": 0.0
+      },
+      {
+        "part": "RIM_BOLT_0",
+        "reference": "REF_WHEEL",
+        "axis_center_error_mm": 0.0,
+        "undeclared_common_mm3": 0.0
+      },
+      {
+        "part": "RIM_BOLT_1",
+        "reference": "REF_WHEEL",
+        "axis_center_error_mm": 0.0,
+        "undeclared_common_mm3": 0.0
+      },
+      {
+        "part": "RIM_BOLT_2",
+        "reference": "REF_WHEEL",
+        "axis_center_error_mm": 1.0066314112432536e-16,
+        "undeclared_common_mm3": 0.0
+      },
+      {
+        "part": "RIM_BOLT_3",
+        "reference": "REF_WHEEL",
+        "axis_center_error_mm": 0.0,
+        "undeclared_common_mm3": 0.0
+      },
+      {
+        "part": "RIM_BOLT_4",
+        "reference": "REF_WHEEL",
+        "axis_center_error_mm": 2.0718322676380597e-17,
+        "undeclared_common_mm3": 0.0
+      },
+      {
+        "part": "RIM_BOLT_5",
+        "reference": "REF_WHEEL",
+        "axis_center_error_mm": 7.105427357601002e-15,
+        "undeclared_common_mm3": 0.0
+      },
+      {
+        "part": "RIM_BOLT_6",
+        "reference": "REF_WHEEL",
+        "axis_center_error_mm": 1.2523228111022415e-15,
+        "undeclared_common_mm3": 0.0
+      },
+      {
+        "part": "RIM_BOLT_7",
+        "reference": "REF_WHEEL",
+        "axis_center_error_mm": 0.0,
+        "undeclared_common_mm3": 0.0
+      },
+      {
+        "part": "SPRING_ROOT_BOLT_0",
+        "reference": "REF_WHEEL",
+        "undeclared_common_mm3": 0.0
+      },
+      {
+        "part": "SPRING_ROOT_BOLT_1",
+        "reference": "REF_WHEEL",
+        "undeclared_common_mm3": 0.0
+      },
+      {
+        "part": "SPRING_ROOT_BOLT_2",
+        "reference": "REF_WHEEL",
+        "undeclared_common_mm3": 0.0
+      },
+      {
+        "part": "SPRING_ROOT_BOLT_3",
+        "reference": "REF_WHEEL",
+        "undeclared_common_mm3": 0.0
+      },
+      {
+        "part": "SPRING_ROOT_BOLT_4",
+        "reference": "REF_WHEEL",
+        "undeclared_common_mm3": 0.0
+      },
+      {
+        "part": "SPRING_ROOT_BOLT_5",
+        "reference": "REF_WHEEL",
+        "undeclared_common_mm3": 0.0
+      },
+      {
+        "part": "SPRING_TIP_NUT_PLATE_0",
+        "reference": "REF_WHEEL",
+        "undeclared_common_mm3": 0.0
+      },
+      {
+        "part": "SPRING_TIP_NUT_PLATE_1",
+        "reference": "REF_WHEEL",
+        "undeclared_common_mm3": 0.0
+      },
+      {
+        "part": "SPRING_TIP_NUT_PLATE_2",
+        "reference": "REF_WHEEL",
+        "undeclared_common_mm3": 0.0
+      },
+      {
+        "part": "HUB_FACE",
+        "reference": "REF_WHEEL",
+        "undeclared_common_mm3": 0.0
+      },
+      {
+        "part": "HUB",
+        "reference": "REF_WHEEL",
+        "undeclared_common_mm3": 0.0
+      },
+      {
+        "part": "POST_0",
+        "reference": "REF_FRAME",
+        "undeclared_common_mm3": 0.0
+      },
+      {
+        "part": "POST_1",
+        "reference": "REF_FRAME",
+        "undeclared_common_mm3": 0.0
+      },
+      {
+        "part": "POST_2",
+        "reference": "REF_FRAME",
+        "undeclared_common_mm3": 0.0
+      },
+      {
+        "part": "POST_3",
+        "reference": "REF_FRAME",
+        "undeclared_common_mm3": 0.0
+      }
+    ],
+    "motor_interface_qualified": false,
+    "whole_fit": false,
+    "build_ready": false,
+    "physical_ready": false
+  },
+  "pose_negative_control": {
+    "part": "Z_SPRING_1",
+    "extra_rotation_deg": 3,
+    "result": "REJECTED",
+    "tested_in_memory_only": true,
+    "native_unchanged": true
+  },
+  "whole_fit": false,
+  "build_ready": false,
+  "physical_ready": false,
+  "scope": "Digital public-package consistency only, not whole-machine or physical validation."
+}

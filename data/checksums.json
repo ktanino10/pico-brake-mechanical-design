@@ -1,0 +1,43 @@
+{
+  "schema": "public-brake-downloads-v1",
+  "algorithm": "SHA-256",
+  "files": [
+    {
+      "path": "downloads/brake-single.FCStd",
+      "bytes": 491330,
+      "sha256": "2bc12d2f0d1617789a57f9b00b3c5fa6d835092e4c1f49f1e0f846dda7ed9116"
+    },
+    {
+      "path": "downloads/brake-single.step",
+      "bytes": 2756916,
+      "sha256": "5ee5f1b4a8e9808da39846ca58b3a7fa1cd704875d81b3fb53e0ea6247651f1f"
+    },
+    {
+      "path": "downloads/brake-reference-three.FCStd",
+      "bytes": 1474009,
+      "sha256": "b0b74e02d4dd41610676bb4a3d006b5ad00128bcd70aa1cebc14883e70c86117"
+    },
+    {
+      "path": "downloads/brake-reference-three.step",
+      "bytes": 8498029,
+      "sha256": "aac213e8e9a4ec1e1e3ba95e174da0faf42f2d53ca9ba0224beb5c8d049077b8"
+    },
+    {
+      "path": "downloads/public-brake-cad.zip",
+      "bytes": 3916814,
+      "sha256": "e6d43c07191e914018fcdc216d74658065dcfa9426970a28d406bf3786edf523"
+    },
+    {
+      "path": "data/assembly.json",
+      "bytes": 189864,
+      "sha256": "8fac1425bad538abeb5d72476914b830abf35994b332522016e9c7baeaae8505"
+    },
+    {
+      "path": "data/meshes.json",
+      "bytes": 6077917,
+      "sha256": "9e4f3075a8a36f0651a8301f3bd398db2946c2a16a5cd22e755190d99b9c5dd2"
+    }
+  ],
+  "downloads_ready": true,
+  "reason": "公開データの整合確認済み。実機・製作・物理検証の資格ではありません。"
+}

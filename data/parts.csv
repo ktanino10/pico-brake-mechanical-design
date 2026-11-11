@@ -1,0 +1,150 @@
+part_id,部品,区分,参照部材,材質候補,単軸個数,参考三軸個数,体積mm3,provenance
+YOKE,ヨーク,固定磁極・コイル保持,false,低炭素磁性鋼（最終状態のB-H・強度は未資格）,1,3,28731.818041,authored-c08-primitives
+POLE_CAP_INNER,内側の分割磁極蓋,固定磁極・コイル保持,false,低炭素磁性鋼（最終状態のB-H・強度は未資格）,1,3,1060.683455,authored-c08-primitives
+POLE_CAP_OUTER,外側の分割磁極蓋,固定磁極・コイル保持,false,低炭素磁性鋼（最終状態のB-H・強度は未資格）,1,3,1759.671230,authored-c08-primitives
+COIL_RETAINER,コイル押え板,固定磁極・コイル保持,false,316Lの設計候補,1,3,3517.117772,authored-c08-primitives
+LINING_0,摩擦材セグメント 1,固定磁極・コイル保持,false,摩擦材は未選定・未資格,1,3,740.693577,authored-c08-primitives
+LINING_1,摩擦材セグメント 2,固定磁極・コイル保持,false,摩擦材は未選定・未資格,1,3,740.693577,authored-c08-primitives
+LINING_2,摩擦材セグメント 3,固定磁極・コイル保持,false,摩擦材は未選定・未資格,1,3,740.693577,authored-c08-primitives
+LINING_KEEPER_0,摩擦材の個別押え 1,固定磁極・コイル保持,false,316Lの設計候補,1,3,60.486562,authored-c08-primitives
+LINING_KEEPER_1,摩擦材の個別押え 2,固定磁極・コイル保持,false,316Lの設計候補,1,3,60.486562,authored-c08-primitives
+LINING_KEEPER_2,摩擦材の個別押え 3,固定磁極・コイル保持,false,316Lの設計候補,1,3,60.486562,authored-c08-primitives
+RETAINER_BOLT_0,磁極蓋・押えの皿ねじ 1,ねじ・締結部,false,鋼。ねじの強度区分は接合欄の設計条件,1,3,49.087385,authored-fastener-schematic
+RETAINER_BOLT_1,磁極蓋・押えの皿ねじ 2,ねじ・締結部,false,鋼。ねじの強度区分は接合欄の設計条件,1,3,49.087385,authored-fastener-schematic
+RETAINER_BOLT_2,磁極蓋・押えの皿ねじ 3,ねじ・締結部,false,鋼。ねじの強度区分は接合欄の設計条件,1,3,49.087385,authored-fastener-schematic
+RETAINER_BOLT_3,磁極蓋・押えの皿ねじ 4,ねじ・締結部,false,鋼。ねじの強度区分は接合欄の設計条件,1,3,49.087385,authored-fastener-schematic
+RETAINER_BOLT_4,磁極蓋・押えの皿ねじ 5,ねじ・締結部,false,鋼。ねじの強度区分は接合欄の設計条件,1,3,49.087385,authored-fastener-schematic
+RETAINER_BOLT_5,磁極蓋・押えの皿ねじ 6,ねじ・締結部,false,鋼。ねじの強度区分は接合欄の設計条件,1,3,49.087385,authored-fastener-schematic
+BOBBIN,PEEKボビン,固定磁極・コイル保持,false,切削・無充填PEEK（印刷樹脂ではない）,1,3,5123.919719,authored-c08-primitives
+WINDING,巻線包絡,固定磁極・コイル保持,false,銅巻線の包絡（個々の線は省略）,1,3,17502.943647,authored-c08-primitives
+BOBBIN_PAD_0,ボビン予圧ばね 1,固定磁極・コイル保持,false,12R11ばね材の設計候補（疲労未資格）,1,3,12.682334,authored-c08-primitives
+BOBBIN_PAD_1,ボビン予圧ばね 2,固定磁極・コイル保持,false,12R11ばね材の設計候補（疲労未資格）,1,3,12.682334,authored-c08-primitives
+BOBBIN_PAD_2,ボビン予圧ばね 3,固定磁極・コイル保持,false,12R11ばね材の設計候補（疲労未資格）,1,3,12.682334,authored-c08-primitives
+BOBBIN_REAR_INSULATOR,ボビン後端絶縁板,固定磁極・コイル保持,false,切削・無充填PEEK（印刷樹脂ではない）,1,3,773.585775,authored-c08-primitives
+LEAD_BUSHING_0,リード絶縁ブッシュ 1,絶縁・配線保持,false,切削・無充填PEEK（印刷樹脂ではない）,1,3,19.695430,authored-c08-primitives
+LEAD_BUSHING_1,リード絶縁ブッシュ 2,絶縁・配線保持,false,切削・無充填PEEK（印刷樹脂ではない）,1,3,19.695430,authored-c08-primitives
+CARRIER,固定キャリア,固定支持部,false,EN AW6061-T6、材証が必要,1,3,25389.635806,authored-c08-primitives
+STATOR_LOCATING_PIN_0,ステータ定位ピン 1,固定支持部,false,42CrMo4+QT、耐力600 MPa以上の材証が必要,1,3,20.852321,authored-c08-primitives
+STATOR_LOCATING_PIN_1,ステータ定位ピン 2,固定支持部,false,42CrMo4+QT、耐力600 MPa以上の材証が必要,1,3,20.072735,authored-c08-primitives
+STATOR_BOLT_0,ステータ固定ねじ 1,ねじ・締結部,false,鋼。ねじの強度区分は接合欄の設計条件,1,3,156.097885,authored-fastener-schematic
+STATOR_BOLT_1,ステータ固定ねじ 2,ねじ・締結部,false,鋼。ねじの強度区分は接合欄の設計条件,1,3,156.097885,authored-fastener-schematic
+STATOR_BOLT_2,ステータ固定ねじ 3,ねじ・締結部,false,鋼。ねじの強度区分は接合欄の設計条件,1,3,156.097885,authored-fastener-schematic
+STATOR_BOLT_3,ステータ固定ねじ 4,ねじ・締結部,false,鋼。ねじの強度区分は接合欄の設計条件,1,3,156.097885,authored-fastener-schematic
+STATOR_WASHER_0,ステータ座金 1,固定支持部,false,鋼。ねじの強度区分は接合欄の設計条件,1,3,14.702654,authored-fastener-schematic
+STATOR_WASHER_1,ステータ座金 2,固定支持部,false,鋼。ねじの強度区分は接合欄の設計条件,1,3,14.702654,authored-fastener-schematic
+STATOR_WASHER_2,ステータ座金 3,固定支持部,false,鋼。ねじの強度区分は接合欄の設計条件,1,3,14.702654,authored-fastener-schematic
+STATOR_WASHER_3,ステータ座金 4,固定支持部,false,鋼。ねじの強度区分は接合欄の設計条件,1,3,14.702654,authored-fastener-schematic
+POST_0,段付き支柱 1,固定支持部,false,鋼。ねじの強度区分は接合欄の設計条件,1,3,108.057436,authored-c08-primitives
+POST_1,段付き支柱 2,固定支持部,false,鋼。ねじの強度区分は接合欄の設計条件,1,3,108.057436,authored-c08-primitives
+POST_2,段付き支柱 3,固定支持部,false,鋼。ねじの強度区分は接合欄の設計条件,1,3,108.057436,authored-c08-primitives
+POST_3,段付き支柱 4,固定支持部,false,鋼。ねじの強度区分は接合欄の設計条件,1,3,108.057436,authored-c08-primitives
+FRAME_BOLT_0,支持部の通しねじ 1,ねじ・締結部,false,鋼。ねじの強度区分は接合欄の設計条件,1,3,157.393792,authored-fastener-schematic
+FRAME_BOLT_1,支持部の通しねじ 2,ねじ・締結部,false,鋼。ねじの強度区分は接合欄の設計条件,1,3,157.393792,authored-fastener-schematic
+FRAME_BOLT_2,支持部の通しねじ 3,ねじ・締結部,false,鋼。ねじの強度区分は接合欄の設計条件,1,3,157.393792,authored-fastener-schematic
+FRAME_BOLT_3,支持部の通しねじ 4,ねじ・締結部,false,鋼。ねじの強度区分は接合欄の設計条件,1,3,157.393792,authored-fastener-schematic
+FRAME_NUT_0,支持部のナット 1,固定支持部,false,鋼。ねじの強度区分は接合欄の設計条件,1,3,51.092472,authored-fastener-schematic
+FRAME_NUT_1,支持部のナット 2,固定支持部,false,鋼。ねじの強度区分は接合欄の設計条件,1,3,51.092472,authored-fastener-schematic
+FRAME_NUT_2,支持部のナット 3,固定支持部,false,鋼。ねじの強度区分は接合欄の設計条件,1,3,51.092472,authored-fastener-schematic
+FRAME_NUT_3,支持部のナット 4,固定支持部,false,鋼。ねじの強度区分は接合欄の設計条件,1,3,51.092472,authored-fastener-schematic
+BEARING_CAP,軸受外輪前蓋,固定支持部,false,EN AW6061-T6、材証が必要,1,3,447.177967,authored-standard-schematic
+BEARING_OUTER,軸受外輪・簡略,固定支持部,false,軸受鋼の寸法模式図,1,3,375.877081,authored-standard-schematic
+BEARING_INNER,軸受内輪・簡略,回転側・可動側,false,軸受鋼の寸法模式図,1,3,263.152086,authored-standard-schematic
+HUB_INNER_RACE_REAR_SHIM,内輪後側の選定シム,回転側・可動側,false,鋼。ねじの強度区分は接合欄の設計条件,1,3,3.377016,authored-c08-primitives
+BEARING_BALL_0,軸受球・簡略 1,回転側・可動側,false,軸受鋼の寸法模式図,1,3,7.067679,authored-standard-schematic
+BEARING_BALL_1,軸受球・簡略 2,回転側・可動側,false,軸受鋼の寸法模式図,1,3,7.067679,authored-standard-schematic
+BEARING_BALL_2,軸受球・簡略 3,回転側・可動側,false,軸受鋼の寸法模式図,1,3,7.067679,authored-standard-schematic
+BEARING_BALL_3,軸受球・簡略 4,回転側・可動側,false,軸受鋼の寸法模式図,1,3,7.067679,authored-standard-schematic
+BEARING_BALL_4,軸受球・簡略 5,回転側・可動側,false,軸受鋼の寸法模式図,1,3,7.067679,authored-standard-schematic
+BEARING_BALL_5,軸受球・簡略 6,回転側・可動側,false,軸受鋼の寸法模式図,1,3,7.067679,authored-standard-schematic
+BEARING_BALL_6,軸受球・簡略 7,回転側・可動側,false,軸受鋼の寸法模式図,1,3,7.067679,authored-standard-schematic
+BEARING_BALL_7,軸受球・簡略 8,回転側・可動側,false,軸受鋼の寸法模式図,1,3,7.067679,authored-standard-schematic
+BEARING_BALL_8,軸受球・簡略 9,回転側・可動側,false,軸受鋼の寸法模式図,1,3,7.067679,authored-standard-schematic
+BEARING_BALL_9,軸受球・簡略 10,回転側・可動側,false,軸受鋼の寸法模式図,1,3,7.067679,authored-standard-schematic
+CAP_BOLT_0,軸受前蓋の皿ねじ 1,ねじ・締結部,false,鋼。ねじの強度区分は接合欄の設計条件,1,3,23.876104,authored-fastener-schematic
+CAP_BOLT_1,軸受前蓋の皿ねじ 2,ねじ・締結部,false,鋼。ねじの強度区分は接合欄の設計条件,1,3,23.876104,authored-fastener-schematic
+CAP_BOLT_2,軸受前蓋の皿ねじ 3,ねじ・締結部,false,鋼。ねじの強度区分は接合欄の設計条件,1,3,23.876104,authored-fastener-schematic
+RIM_BOLT_0,円盤外周の皿ねじ 1,ねじ・締結部,false,鋼。ねじの強度区分は接合欄の設計条件,1,3,139.067835,authored-fastener-schematic
+RIM_BOLT_1,円盤外周の皿ねじ 2,ねじ・締結部,false,鋼。ねじの強度区分は接合欄の設計条件,1,3,139.067835,authored-fastener-schematic
+RIM_BOLT_2,円盤外周の皿ねじ 3,ねじ・締結部,false,鋼。ねじの強度区分は接合欄の設計条件,1,3,139.067835,authored-fastener-schematic
+RIM_BOLT_3,円盤外周の皿ねじ 4,ねじ・締結部,false,鋼。ねじの強度区分は接合欄の設計条件,1,3,139.067835,authored-fastener-schematic
+RIM_BOLT_4,円盤外周の皿ねじ 5,ねじ・締結部,false,鋼。ねじの強度区分は接合欄の設計条件,1,3,139.067835,authored-fastener-schematic
+RIM_BOLT_5,円盤外周の皿ねじ 6,ねじ・締結部,false,鋼。ねじの強度区分は接合欄の設計条件,1,3,139.067835,authored-fastener-schematic
+RIM_BOLT_6,円盤外周の皿ねじ 7,ねじ・締結部,false,鋼。ねじの強度区分は接合欄の設計条件,1,3,139.067835,authored-fastener-schematic
+RIM_BOLT_7,円盤外周の皿ねじ 8,ねじ・締結部,false,鋼。ねじの強度区分は接合欄の設計条件,1,3,139.067835,authored-fastener-schematic
+RIM_NUT_0,円盤外周のナット 1,回転側・可動側,false,鋼。ねじの強度区分は接合欄の設計条件,1,3,108.423228,authored-fastener-schematic
+RIM_NUT_1,円盤外周のナット 2,回転側・可動側,false,鋼。ねじの強度区分は接合欄の設計条件,1,3,108.423228,authored-fastener-schematic
+RIM_NUT_2,円盤外周のナット 3,回転側・可動側,false,鋼。ねじの強度区分は接合欄の設計条件,1,3,108.423228,authored-fastener-schematic
+RIM_NUT_3,円盤外周のナット 4,回転側・可動側,false,鋼。ねじの強度区分は接合欄の設計条件,1,3,108.423228,authored-fastener-schematic
+RIM_NUT_4,円盤外周のナット 5,回転側・可動側,false,鋼。ねじの強度区分は接合欄の設計条件,1,3,108.423228,authored-fastener-schematic
+RIM_NUT_5,円盤外周のナット 6,回転側・可動側,false,鋼。ねじの強度区分は接合欄の設計条件,1,3,108.423228,authored-fastener-schematic
+RIM_NUT_6,円盤外周のナット 7,回転側・可動側,false,鋼。ねじの強度区分は接合欄の設計条件,1,3,108.423228,authored-fastener-schematic
+RIM_NUT_7,円盤外周のナット 8,回転側・可動側,false,鋼。ねじの強度区分は接合欄の設計条件,1,3,108.423228,authored-fastener-schematic
+HUB,ハブ軸側,回転側・可動側,false,42CrMo4+QT、耐力600 MPa以上の材証が必要,1,3,1951.074180,authored-c08-primitives
+HUB_FACE,ハブ表板,回転側・可動側,false,42CrMo4+QT、耐力600 MPa以上の材証が必要,1,3,3149.670229,authored-c08-primitives
+HUB_CONNECT_BOLT_0,分割ハブの皿ねじ 1,ねじ・締結部,false,鋼。ねじの強度区分は接合欄の設計条件,1,3,17.592919,authored-fastener-schematic
+HUB_CONNECT_BOLT_1,分割ハブの皿ねじ 2,ねじ・締結部,false,鋼。ねじの強度区分は接合欄の設計条件,1,3,17.592919,authored-fastener-schematic
+HUB_CONNECT_BOLT_2,分割ハブの皿ねじ 3,ねじ・締結部,false,鋼。ねじの強度区分は接合欄の設計条件,1,3,17.592919,authored-fastener-schematic
+HUB_CONNECT_PIN_0,ハブの閉じ込めピン 1,回転側・可動側,false,42CrMo4+QT、耐力600 MPa以上の材証が必要,1,3,19.438605,authored-c08-primitives
+HUB_CONNECT_PIN_1,ハブの閉じ込めピン 2,回転側・可動側,false,42CrMo4+QT、耐力600 MPa以上の材証が必要,1,3,19.438605,authored-c08-primitives
+HUB_CONNECT_PIN_2,ハブの閉じ込めピン 3,回転側・可動側,false,42CrMo4+QT、耐力600 MPa以上の材証が必要,1,3,19.438605,authored-c08-primitives
+HUB_RETAINING_RING,軸止め輪・簡略,回転側・可動側,false,DSH-10寸法候補の模式図,1,3,140.538351,authored-standard-schematic
+HUB_DOWEL_0,円盤定位ピン 1,回転側・可動側,false,42CrMo4+QT、耐力600 MPa以上の材証が必要,1,3,19.438605,authored-c08-primitives
+HUB_DOWEL_1,円盤定位ピン 2,回転側・可動側,false,42CrMo4+QT、耐力600 MPa以上の材証が必要,1,3,18.711871,authored-c08-primitives
+POSITIVE_CROSSPIN,入力横ピン,回転側・可動側,false,42CrMo4+QT、耐力600 MPa以上の材証が必要,1,3,86.079639,authored-c08-primitives
+WHEEL_BOLT_0,円盤・ハブの皿ねじ 1,ねじ・締結部,false,鋼。ねじの強度区分は接合欄の設計条件,1,3,72.570790,authored-fastener-schematic
+WHEEL_BOLT_1,円盤・ハブの皿ねじ 2,ねじ・締結部,false,鋼。ねじの強度区分は接合欄の設計条件,1,3,72.570790,authored-fastener-schematic
+WHEEL_BOLT_2,円盤・ハブの皿ねじ 3,ねじ・締結部,false,鋼。ねじの強度区分は接合欄の設計条件,1,3,72.570790,authored-fastener-schematic
+WHEEL_BOLT_3,円盤・ハブの皿ねじ 4,ねじ・締結部,false,鋼。ねじの強度区分は接合欄の設計条件,1,3,72.570790,authored-fastener-schematic
+WHEEL_NUT_0,円盤・ハブのナット 1,回転側・可動側,false,鋼。ねじの強度区分は接合欄の設計条件,1,3,51.092472,authored-fastener-schematic
+WHEEL_NUT_1,円盤・ハブのナット 2,回転側・可動側,false,鋼。ねじの強度区分は接合欄の設計条件,1,3,51.092472,authored-fastener-schematic
+WHEEL_NUT_2,円盤・ハブのナット 3,回転側・可動側,false,鋼。ねじの強度区分は接合欄の設計条件,1,3,51.092472,authored-fastener-schematic
+WHEEL_NUT_3,円盤・ハブのナット 4,回転側・可動側,false,鋼。ねじの強度区分は接合欄の設計条件,1,3,51.092472,authored-fastener-schematic
+ARMATURE,可動円盤,軸方向に動く円盤,false,低炭素磁性鋼（最終状態のB-H・強度は未資格）,1,3,9592.775844,authored-c08-primitives
+SPRING_0,接線板ばね 1,回転側・可動側,false,12R11ばね材の設計候補（疲労未資格）,1,3,95.501043,authored-c08-primitives
+SPRING_1,接線板ばね 2,回転側・可動側,false,12R11ばね材の設計候補（疲労未資格）,1,3,95.501043,authored-c08-primitives
+SPRING_2,接線板ばね 3,回転側・可動側,false,12R11ばね材の設計候補（疲労未資格）,1,3,95.501043,authored-c08-primitives
+SPRING_CLAMP_ROOT_0,板ばね根元の押え 1,回転側・可動側,false,316Lの設計候補,1,3,16.829115,authored-c08-primitives
+SPRING_CLAMP_ROOT_1,板ばね根元の押え 2,回転側・可動側,false,316Lの設計候補,1,3,16.829115,authored-c08-primitives
+SPRING_CLAMP_ROOT_2,板ばね根元の押え 3,回転側・可動側,false,316Lの設計候補,1,3,16.829115,authored-c08-primitives
+SPRING_CLAMP_TIP_0,板ばね先端の押え 1,回転側・可動側,false,316Lの設計候補,1,3,25.243673,authored-c08-primitives
+SPRING_CLAMP_TIP_1,板ばね先端の押え 2,回転側・可動側,false,316Lの設計候補,1,3,25.243673,authored-c08-primitives
+SPRING_CLAMP_TIP_2,板ばね先端の押え 3,回転側・可動側,false,316Lの設計候補,1,3,25.243673,authored-c08-primitives
+SPRING_ROOT_BOLT_0,板ばね根元の肩付きねじ 1,ねじ・締結部,false,鋼。ねじの強度区分は接合欄の設計条件,1,3,24.593895,authored-fastener-schematic
+SPRING_ROOT_BOLT_1,板ばね根元の肩付きねじ 2,ねじ・締結部,false,鋼。ねじの強度区分は接合欄の設計条件,1,3,24.593895,authored-fastener-schematic
+SPRING_ROOT_BOLT_2,板ばね根元の肩付きねじ 3,ねじ・締結部,false,鋼。ねじの強度区分は接合欄の設計条件,1,3,24.593895,authored-fastener-schematic
+SPRING_ROOT_BOLT_3,板ばね根元の肩付きねじ 4,ねじ・締結部,false,鋼。ねじの強度区分は接合欄の設計条件,1,3,24.593895,authored-fastener-schematic
+SPRING_ROOT_BOLT_4,板ばね根元の肩付きねじ 5,ねじ・締結部,false,鋼。ねじの強度区分は接合欄の設計条件,1,3,24.593895,authored-fastener-schematic
+SPRING_ROOT_BOLT_5,板ばね根元の肩付きねじ 6,ねじ・締結部,false,鋼。ねじの強度区分は接合欄の設計条件,1,3,24.593895,authored-fastener-schematic
+SPRING_TIP_BOLT_0,板ばね先端の肩付きねじ 1,ねじ・締結部,false,鋼。ねじの強度区分は接合欄の設計条件,1,3,24.504171,authored-fastener-schematic
+SPRING_TIP_BOLT_1,板ばね先端の肩付きねじ 2,ねじ・締結部,false,鋼。ねじの強度区分は接合欄の設計条件,1,3,24.504171,authored-fastener-schematic
+SPRING_TIP_BOLT_2,板ばね先端の肩付きねじ 3,ねじ・締結部,false,鋼。ねじの強度区分は接合欄の設計条件,1,3,24.504171,authored-fastener-schematic
+SPRING_TIP_BOLT_3,板ばね先端の肩付きねじ 4,ねじ・締結部,false,鋼。ねじの強度区分は接合欄の設計条件,1,3,24.504171,authored-fastener-schematic
+SPRING_TIP_BOLT_4,板ばね先端の肩付きねじ 5,ねじ・締結部,false,鋼。ねじの強度区分は接合欄の設計条件,1,3,24.504171,authored-fastener-schematic
+SPRING_TIP_BOLT_5,板ばね先端の肩付きねじ 6,ねじ・締結部,false,鋼。ねじの強度区分は接合欄の設計条件,1,3,24.504171,authored-fastener-schematic
+SPRING_ROOT_NUT_PLATE_0,板ばね根元の二穴ねじ板 1,回転側・可動側,false,42CrMo4+QT、耐力600 MPa以上の材証が必要,1,3,60.046074,authored-c08-primitives
+SPRING_ROOT_NUT_PLATE_1,板ばね根元の二穴ねじ板 2,回転側・可動側,false,42CrMo4+QT、耐力600 MPa以上の材証が必要,1,3,60.046074,authored-c08-primitives
+SPRING_ROOT_NUT_PLATE_2,板ばね根元の二穴ねじ板 3,回転側・可動側,false,42CrMo4+QT、耐力600 MPa以上の材証が必要,1,3,60.046074,authored-c08-primitives
+SPRING_TIP_NUT_PLATE_0,板ばね先端の二穴ねじ板 1,回転側・可動側,false,42CrMo4+QT、耐力600 MPa以上の材証が必要,1,3,61.246018,authored-c08-primitives
+SPRING_TIP_NUT_PLATE_1,板ばね先端の二穴ねじ板 2,回転側・可動側,false,42CrMo4+QT、耐力600 MPa以上の材証が必要,1,3,61.246018,authored-c08-primitives
+SPRING_TIP_NUT_PLATE_2,板ばね先端の二穴ねじ板 3,回転側・可動側,false,42CrMo4+QT、耐力600 MPa以上の材証が必要,1,3,61.246018,authored-c08-primitives
+RELEASE_STOP_0,解除ストッパ 1,ねじ・締結部,false,316Lの設計候補,1,3,23.876104,authored-c08-primitives
+RELEASE_STOP_1,解除ストッパ 2,ねじ・締結部,false,316Lの設計候補,1,3,23.876104,authored-c08-primitives
+RELEASE_STOP_2,解除ストッパ 3,ねじ・締結部,false,316Lの設計候補,1,3,23.876104,authored-c08-primitives
+MOTOR_INTERFACE_BOLT_0,モーター側の名目ねじ 1,ねじ・締結部,false,鋼。ねじの強度区分は接合欄の設計条件,1,3,65.502207,authored-fastener-schematic
+MOTOR_INTERFACE_BOLT_1,モーター側の名目ねじ 2,ねじ・締結部,false,鋼。ねじの強度区分は接合欄の設計条件,1,3,65.502207,authored-fastener-schematic
+MOTOR_INTERFACE_BOLT_2,モーター側の名目ねじ 3,ねじ・締結部,false,鋼。ねじの強度区分は接合欄の設計条件,1,3,65.502207,authored-fastener-schematic
+STRAIN_CLAMP,配線クランプ,絶縁・配線保持,false,EN AW6061-T6、材証が必要,1,3,216.595135,authored-c08-primitives
+STRAIN_INSULATOR_0,配線絶縁スリーブ 1,絶縁・配線保持,false,切削・無充填PEEK（印刷樹脂ではない）,1,3,13.189977,authored-c08-primitives
+STRAIN_INSULATOR_1,配線絶縁スリーブ 2,絶縁・配線保持,false,切削・無充填PEEK（印刷樹脂ではない）,1,3,13.189977,authored-c08-primitives
+STRAIN_INSULATOR_LID_0,配線絶縁ふた 1,絶縁・配線保持,false,切削・無充填PEEK（印刷樹脂ではない）,1,3,1.418429,authored-c08-primitives
+STRAIN_INSULATOR_LID_1,配線絶縁ふた 2,絶縁・配線保持,false,切削・無充填PEEK（印刷樹脂ではない）,1,3,1.418429,authored-c08-primitives
+LEAD_CRIMP_COLLAR_0,肩付き圧着カラー 1,絶縁・配線保持,false,C110銅の設計候補,1,3,7.437917,authored-c08-primitives
+LEAD_CRIMP_COLLAR_1,肩付き圧着カラー 2,絶縁・配線保持,false,C110銅の設計候補,1,3,7.437917,authored-c08-primitives
+INSULATED_LEAD_0,絶縁リード 1,絶縁・配線保持,false,絶縁銅線の模式図,1,3,21.338272,authored-c08-primitives
+INSULATED_LEAD_1,絶縁リード 2,絶縁・配線保持,false,絶縁銅線の模式図,1,3,21.338272,authored-c08-primitives
+STRAIN_BOLT_0,配線クランプねじ 1,ねじ・締結部,false,鋼。ねじの強度区分は接合欄の設計条件,1,3,38.390262,authored-fastener-schematic
+STRAIN_BOLT_1,配線クランプねじ 2,ねじ・締結部,false,鋼。ねじの強度区分は接合欄の設計条件,1,3,38.390262,authored-fastener-schematic
+REF_WHEEL,参考円盤,説明用の独立参照形状,true,説明用の仮想部材。材質・製造条件を指定しない,1,3,27811.077302,independent-reference
+REF_FRAME,参考支持リング,説明用の独立参照形状,true,説明用の仮想部材。材質・製造条件を指定しない,1,3,18710.255181,independent-reference
+REF_MOTOR_ENVELOPE,参考モーター包絡,説明用の独立参照形状,true,説明用の仮想部材。材質・製造条件を指定しない,1,3,13546.547522,independent-reference
+REF_SHAFT,参考入力軸,説明用の独立参照形状,true,説明用の仮想部材。材質・製造条件を指定しない,1,3,334.845318,independent-reference
