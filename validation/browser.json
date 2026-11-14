@@ -54,8 +54,8 @@
   "external_requests": [],
   "browser": "157.0.8103.51",
   "performance": {
-    "navigation_duration_ms": 96.19999998807907,
-    "dom_content_loaded_ms": 18.299999952316284,
+    "navigation_duration_ms": 282.5999999642372,
+    "dom_content_loaded_ms": 282,
     "transfer_bytes": 8478582
   },
   "resource_requests": 33,

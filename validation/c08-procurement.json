@@ -1,0 +1,59 @@
+{
+  "schema": "c08-procurement-validation-v1",
+  "status": "PASS",
+  "scope": "Reproducible inventory and exact public-ID coverage, not a manufacturing, electrical or physical test.",
+  "row_count": 100,
+  "covered_source_ids": 149,
+  "c08_group_count": 54,
+  "bearing": {
+    "source_shapes": 12,
+    "one_axis_purchase_quantity": 1
+  },
+  "duplicate_ids": [],
+  "missing_ids": [],
+  "whole_system_cost_complete": false,
+  "physical_ready": false,
+  "M3_conversion_complete": false,
+  "inputs": [
+    {
+      "path": "data/assembly.json",
+      "sha256": "8fac1425bad538abeb5d72476914b830abf35994b332522016e9c7baeaae8505"
+    },
+    {
+      "path": "data/parts.csv",
+      "sha256": "0571af0d46752947c7e04ea0635e99f1f090d39c67deadb8bb9c7b2cb3c9fb2a"
+    },
+    {
+      "path": "data/joints.csv",
+      "sha256": "7e939d4104079c17ae86cc166b355f1491c70466b8923a8d4fe258209030f584"
+    },
+    {
+      "path": "data/provenance.json",
+      "sha256": "43598e100d349abbf5911e51bd9ff64d8a11abc96591db9583819e2b4d491f24"
+    },
+    {
+      "path": "data/c08-procurement-electrical.json",
+      "sha256": "85ef8d5db552d64695ff6fca0126f02faae0a34b29de05679c7c9dd31486f4ba"
+    },
+    {
+      "path": "scripts/build_c08_procurement.py",
+      "sha256": "5baf21b0a8c31f2228158e68c5c3a96d43e8638e3aaaf4cf2946760f1ca1bff4"
+    },
+    {
+      "path": "docs/C08_PROCUREMENT.md",
+      "sha256": "bee45ee12cde2a8529e767a281398cb12f4ce0a66295bd3748a4195ea4221f0c"
+    },
+    {
+      "path": "data/c08-procurement.csv",
+      "sha256": "b14214f497f11df49d1e886b0a2c921f256ff6da9f9f4c53992f14c67aa3873a"
+    },
+    {
+      "path": "data/c08-procurement-coverage.json",
+      "sha256": "f8dbe4cab18930bd0bfeec76da0f9a16d460d4c7aa6da3e5f30b95e4f2622841"
+    },
+    {
+      "path": "tests/test_c08_procurement.py",
+      "sha256": "b79ed2de83f1fd0b0bb20966879815d7388ece49ade168565b6eb564b3c8b6e3"
+    }
+  ]
+}

@@ -3,6 +3,7 @@
   "status": "PASS",
   "scope": "Isolated real browser and actual rendered transforms; no physical qualification",
   "checks": [
+    "Procurement guide and complete inventory are linked and served with exact repository bytes",
     "Initial real geometry is paused with stable rendering under reduced-motion",
     "1366x768 shows the main model and playback/seek/explosion controls together",
     "Actual pointer drag, wheel and keyboard modify the camera, not the part rotation",
@@ -18,7 +19,7 @@
   "inputs": [
     {
       "path": "motion.html",
-      "sha256": "332d5dca761c740053833db124321f5cabe6b8a93f29f2be75a8b82045f29fe8"
+      "sha256": "35dbddd5494ace23059f1d681e0ae30d337ef25fbafc6a289bc3084276cd8660"
     },
     {
       "path": "motion.css",

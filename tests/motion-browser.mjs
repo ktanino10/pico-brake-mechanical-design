@@ -44,6 +44,13 @@ try {
   const context = await browser.newContext({viewport: {width: 1366, height: 768}, reducedMotion: 'reduce'});
   const page = await context.newPage(); observe(page);
   await page.goto(url); await ready(page); await wait(page);
+  assert.equal(await page.locator('a[href="./docs/C08_PROCUREMENT.md"]').count(), 1);
+  for (const name of ['docs/C08_PROCUREMENT.md', 'data/c08-procurement.csv', 'data/c08-procurement-coverage.json']) {
+    const response = await page.request.get(new URL(name, base).href);
+    assert.equal(response.status(), 200, `${name} unavailable from the public preview`);
+    assert.equal(hash(await response.body()), hash(await readFile(path.join(root, name))), `${name} stale`);
+  }
+  record('Procurement guide and complete inventory are linked and served with exact repository bytes');
   let s = await snapshot(page);
   assert.equal(s.state.playing, false); assert.equal(s.autoRotate, false);
   assert.ok(s.drawCalls > 0 && s.triangles > 100000);

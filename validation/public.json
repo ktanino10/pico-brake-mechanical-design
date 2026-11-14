@@ -27,7 +27,7 @@
       "bytes_scanned": 1114
     },
     "index.html": {
-      "bytes_scanned": 11662
+      "bytes_scanned": 11735
     },
     "styles.css": {
       "bytes_scanned": 14336
@@ -48,7 +48,7 @@
       "bytes_scanned": 2097
     },
     "motion.html": {
-      "bytes_scanned": 7906
+      "bytes_scanned": 7976
     },
     "motion.css": {
       "bytes_scanned": 5639
@@ -73,6 +73,27 @@
     },
     "scripts/build_motion_sections.py": {
       "bytes_scanned": 1740
+    },
+    "docs/C08_PROCUREMENT.md": {
+      "bytes_scanned": 19138
+    },
+    "data/c08-procurement.csv": {
+      "bytes_scanned": 102170
+    },
+    "data/c08-procurement-coverage.json": {
+      "bytes_scanned": 236806
+    },
+    "data/c08-procurement-electrical.json": {
+      "bytes_scanned": 22452
+    },
+    "scripts/build_c08_procurement.py": {
+      "bytes_scanned": 45596
+    },
+    "tests/test_c08_procurement.py": {
+      "bytes_scanned": 6407
+    },
+    "validation/c08-procurement.json": {
+      "bytes_scanned": 1888
     },
     "media/c08-motion.mp4": {
       "bytes_scanned": 4056264
@@ -113,10 +134,10 @@
       "bytes_scanned": 3780
     },
     "tests/motion-browser.mjs": {
-      "bytes_scanned": 15629
+      "bytes_scanned": 16210
     },
     "validation/motion-browser.json": {
-      "bytes_scanned": 2780
+      "bytes_scanned": 2878
     },
     "overview.html": {
       "bytes_scanned": 7865
@@ -449,7 +470,7 @@
       "bytes_scanned": 3280
     },
     "scripts/public_files.py": {
-      "bytes_scanned": 6615
+      "bytes_scanned": 6864
     },
     "scripts/serve_public.py": {
       "bytes_scanned": 3294
@@ -479,7 +500,7 @@
       "bytes_scanned": 10890
     },
     "validation/browser.json": {
-      "bytes_scanned": 3273
+      "bytes_scanned": 3258
     },
     "validation/reexport.json": {
       "bytes_scanned": 4096
@@ -543,6 +564,21 @@
       "path": "data/assembly.json",
       "bytes": 189864,
       "sha256": "8fac1425bad538abeb5d72476914b830abf35994b332522016e9c7baeaae8505"
+    },
+    {
+      "path": "data/c08-procurement-coverage.json",
+      "bytes": 236806,
+      "sha256": "f8dbe4cab18930bd0bfeec76da0f9a16d460d4c7aa6da3e5f30b95e4f2622841"
+    },
+    {
+      "path": "data/c08-procurement-electrical.json",
+      "bytes": 22452,
+      "sha256": "85ef8d5db552d64695ff6fca0126f02faae0a34b29de05679c7c9dd31486f4ba"
+    },
+    {
+      "path": "data/c08-procurement.csv",
+      "bytes": 102170,
+      "sha256": "b14214f497f11df49d1e886b0a2c921f256ff6da9f9f4c53992f14c67aa3873a"
     },
     {
       "path": "data/checksums.json",
@@ -623,6 +659,11 @@
       "path": "data/provenance.json",
       "bytes": 153070,
       "sha256": "43598e100d349abbf5911e51bd9ff64d8a11abc96591db9583819e2b4d491f24"
+    },
+    {
+      "path": "docs/C08_PROCUREMENT.md",
+      "bytes": 19138,
+      "sha256": "bee45ee12cde2a8529e767a281398cb12f4ce0a66295bd3748a4195ea4221f0c"
     },
     {
       "path": "docs/ENCLOSURE.md",
@@ -746,8 +787,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 11662,
-      "sha256": "50acf9f2e83006b1e657cc8aa37a8765e5763629a96766be0cee30082c744f2e"
+      "bytes": 11735,
+      "sha256": "85665ef8d76ba00829a8a64eb166289c4115b0cb222195a7b04d85c428b8a8f9"
     },
     {
       "path": "media/c08-motion.mp4",
@@ -826,8 +867,8 @@
     },
     {
       "path": "motion.html",
-      "bytes": 7906,
-      "sha256": "332d5dca761c740053833db124321f5cabe6b8a93f29f2be75a8b82045f29fe8"
+      "bytes": 7976,
+      "sha256": "35dbddd5494ace23059f1d681e0ae30d337ef25fbafc6a289bc3084276cd8660"
     },
     {
       "path": "motion.js",
@@ -1040,6 +1081,11 @@
       "sha256": "374091949be90876a07a5b14d1f8e4c4dc29bc16f058a8bdbfd1346caf1eefbc"
     },
     {
+      "path": "scripts/build_c08_procurement.py",
+      "bytes": 45596,
+      "sha256": "5baf21b0a8c31f2228158e68c5c3a96d43e8638e3aaaf4cf2946760f1ca1bff4"
+    },
+    {
       "path": "scripts/build_cad.py",
       "bytes": 24864,
       "sha256": "6e8f699986df52418a23ccae5b2c2031efcbeda00ab1cba5b4221e79b237e717"
@@ -1116,8 +1162,8 @@
     },
     {
       "path": "scripts/public_files.py",
-      "bytes": 6615,
-      "sha256": "7335104cff9ff4119a64185695173a7783e52d75c29583637c3171c18a20b396"
+      "bytes": 6864,
+      "sha256": "da1fc3dc619aeb91d9a29fbc17250fae6e53bed9277a8475842c0b8417dcb76e"
     },
     {
       "path": "scripts/public_policy.py",
@@ -1176,8 +1222,8 @@
     },
     {
       "path": "tests/motion-browser.mjs",
-      "bytes": 15629,
-      "sha256": "3c65482aadb868af451ccece9c343ecbb7ffec19a937cf7f2a86bb899c97c7d7"
+      "bytes": 16210,
+      "sha256": "b0182ded7318909e2b1ec23ba15b88c042786bd0bcca212511564436eb8b3321"
     },
     {
       "path": "tests/motion.test.mjs",
@@ -1193,6 +1239,11 @@
       "path": "tests/overview.test.mjs",
       "bytes": 3813,
       "sha256": "cbdaf42b2a1fd57057444ae18acca71c16d10301c042786f368ffd29f9e55a6f"
+    },
+    {
+      "path": "tests/test_c08_procurement.py",
+      "bytes": 6407,
+      "sha256": "b79ed2de83f1fd0b0bb20966879815d7388ece49ade168565b6eb564b3c8b6e3"
     },
     {
       "path": "tests/test_enclosure.py",
@@ -1211,8 +1262,13 @@
     },
     {
       "path": "validation/browser.json",
-      "bytes": 3273,
-      "sha256": "f3b7b30cee5309898fc8b1f10367fd66a957bf20bf74299acc218c7bf1da41b4"
+      "bytes": 3258,
+      "sha256": "16a0e0a1d70177b1b49af7729a1a1bbfc63bac7cf65721b0b1396eb18db46a81"
+    },
+    {
+      "path": "validation/c08-procurement.json",
+      "bytes": 1888,
+      "sha256": "94085061e1aa5d5fb67c178492b04c876f2dadc6f67b8c0da6bacf67e12429b2"
     },
     {
       "path": "validation/cad.json",
@@ -1222,7 +1278,7 @@
     {
       "path": "validation/enclosure-browser.json",
       "bytes": 4551,
-      "sha256": "300e6e466f7f74a401727a5dfabac87a1fff0f509d0fb69d71b6bf0b7cd65bc8"
+      "sha256": "c18a62163b0ae18c3f895cb2c7e66101d5360596ffcb1a42ce3057e1f00b3557"
     },
     {
       "path": "validation/enclosure-cad.json",
@@ -1231,13 +1287,13 @@
     },
     {
       "path": "validation/motion-browser.json",
-      "bytes": 2780,
-      "sha256": "17c47a5d0c998e0eec521f24464ddb073892c3aa3265b02e4abb3b965b15c7cd"
+      "bytes": 2878,
+      "sha256": "423b79db6273746bb1fa945268f27ef08a80b3760545be49727a61fefc9ea7a8"
     },
     {
       "path": "validation/overview.json",
       "bytes": 2582,
-      "sha256": "c9ce20d89b9720bd9e074fd2f44397d1ddb1aacaf46b075e9982b58f2a3d9bb7"
+      "sha256": "5ba59ac31e622e142fc9ff956cbfaf196ccb0de5bf5eeb905a9f6ffc7f7ad4a1"
     },
     {
       "path": "validation/reexport.json",
