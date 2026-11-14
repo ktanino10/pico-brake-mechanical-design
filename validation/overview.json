@@ -13,7 +13,7 @@
     "Mobile has no horizontal overflow and supports stage, explode, fit and reset",
     "Missing layout shows a clear error and retry recovers after restoration"
   ],
-  "browser": "157.0.8103.39",
+  "browser": "157.0.8103.51",
   "console_errors": [],
   "console_warnings": [],
   "network_failures": [],
@@ -41,7 +41,7 @@
     },
     {
       "path": "index.html",
-      "sha256": "e6f5e4a238a2f60780513549a3db1a7296eacf965a60d0c318c83a95fd5ce4dc"
+      "sha256": "50acf9f2e83006b1e657cc8aa37a8765e5763629a96766be0cee30082c744f2e"
     },
     {
       "path": "styles.css",

@@ -14,7 +14,7 @@
     "Mobile has no horizontal overflow and supports selection, full explosion, fit and reset",
     "An intentionally missing model produces an explicit error and successful retry, not a blank canvas"
   ],
-  "browser": "157.0.8103.39",
+  "browser": "157.0.8103.51",
   "initial_render": {
     "selected": "E_FRAME_SCREW_PPP_X",
     "joint": "EC_PPP_X",
@@ -99,7 +99,7 @@
     },
     {
       "path": "index.html",
-      "sha256": "e6f5e4a238a2f60780513549a3db1a7296eacf965a60d0c318c83a95fd5ce4dc"
+      "sha256": "50acf9f2e83006b1e657cc8aa37a8765e5763629a96766be0cee30082c744f2e"
     },
     {
       "path": "styles.css",

@@ -1,2 +1,5 @@
 # Preserve byte-identical upstream JavaScript, including its original whitespace.
 vendor/*.js -whitespace
+# Preserve generated historical payloads whose exact bytes are in the R1 manifest.
+prototype/mechanical/prototype-mechanical.step -whitespace
+prototype/mechanical/joints.csv whitespace=cr-at-eol

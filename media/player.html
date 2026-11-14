@@ -1,0 +1,31 @@
+<!doctype html><html lang="ja"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>3軸姿勢制御用 C08ブレーキ｜回る・引く・止まる</title>
+<style>body{margin:0;background:#101c2b;color:#eef5fd;font:17px/1.7 system-ui,sans-serif}
+main{max-width:1280px;padding:24px;margin:auto}h1{font-size:26px;margin:0 0 10px}
+video{width:100%;display:block;border-radius:10px;background:#101c2b}p{margin:10px 0;color:#bed1e5}
+button{background:#244663;color:#eff6ff;border:1px solid #89b7d6;border-radius:7px;padding:10px 18px;font:inherit;cursor:pointer}
+nav{display:flex;gap:12px;flex-wrap:wrap;margin:15px 0}.notice{color:#e5cd96}details{margin-top:18px}summary{cursor:pointer}</style>
+<main><h1>3軸姿勢制御用 C08ブレーキ：回る → 引く → 止まる</h1>
+<video id="motion" controls autoplay muted playsinline preload="auto" poster="c08-poster.png" aria-label="C08ブレーキを三つの大きな場面で示す無音CG">
+<source src="c08-motion.mp4" type="video/mp4">動画対応ブラウザーで開いてください。</video>
+<nav aria-label="場面を選ぶ"><button type="button" data-time="3">1 回る</button><button type="button" data-time="14">2 引く・断面</button><button type="button" data-time="22">3 接触して止まる</button></nav>
+<p id="playback" role="status">無音で再生します。</p>
+<p>青は回る側、灰は固定側、橙は電磁石。白い回転マークと、接触前後の大きな断面に注目してください。</p>
+<p class="notice">説明用CG・時間と速度は演出・実機未検証。</p>
+<p>模式断面は「すき間・動き」を説明用に拡大した別の図です。実C08の名目すき間は0.20mm。
+立体主モデルでは元の寸法を維持し、ハブは軸方向に動かさず、可動円盤だけを動かしています。</p>
+<details><summary>原機構と、映像では証明していないこと</summary>
+<p>磁力は軸方向へ円盤を引き、停止を生む摩擦は回転の接線方向です。接触前は制動矢印を出さず、停止後は消しています。
+外力がない停止状態で、一定の保持トルクが発生し続けるとは表していません。</p>
+<p>元の公開C08にはM2/M2.5/M3/M4があり、全M3化していません。独立参考ホイール・モーター・138mm筐体は現物適合の証明ではありません。
+起立・姿勢保持の成功や、磁気・ばね・摩擦を解いた実機検証ではありません。解除後の非再始動も説明上の動作で、制御FWは未実装です。</p>
+<p>旧卓上R1は用途違いの履歴です。直前の22秒C08版も別名で保存し、この40秒版で説明を改訂しました。
+新しいBOM、配線、実機CADは作成・変更していません。</p></details>
+<script>const v=document.getElementById('motion');const status=document.getElementById('playback');
+v.defaultMuted=true;v.muted=true;v.volume=0;
+function start(){return v.play().then(()=>{status.textContent='無音で再生中。停止・シーク・場面選択を使えます。';})
+.catch(()=>{status.textContent='自動再生が制限されています。再生ボタンで無音再生できます。';});}
+for(const b of document.querySelectorAll('[data-time]'))b.addEventListener('click',()=>{v.currentTime=Number(b.dataset.time);start();});
+v.addEventListener('error',()=>{status.textContent='動画を読み込めません。相対ファイル版はZIPを展開して開いてください。';});
+start();</script></main></html>

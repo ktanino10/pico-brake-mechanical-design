@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="3軸姿勢制御用C08ブレーキの回転・軸方向吸着・接触・停止・解除を、大きな3Dと断面で操作して理解する。実機未検証。">
+  <title>C08ブレーキ — 動きと接触を調べる</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="./motion.css">
+  <script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script>
+  <script src="./motion-bootstrap.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#motion-controls">動作の操作へ</a>
+  <header>
+    <p class="eyebrow">3軸姿勢制御用 / C08</p>
+    <h1>回る・引く・止まるを、自分で調べる</h1>
+    <p>青は回る側、灰は固定側、橙は電磁石。<strong>接触は大きな断面で見比べられます。</strong></p>
+    <nav aria-label="関連するページ"><a href="./index.html">元の組立検査台</a><a href="./enclosure.html">138mmの名目筐体</a><a href="./docs/MOTION.md">使い方・出所・再生成</a></nav>
+  </header>
+  <main>
+    <section aria-label="動きと接触の3D">
+      <div class="workbench">
+      <div class="canvas-column">
+        <div class="viewer" id="viewport" aria-busy="true">
+          <p id="loading" role="status">元C08の部品・形状を読み込んでいます…</p>
+          <div id="load-error" role="alert" hidden><h2>3Dを表示できません</h2><p id="error-message"></p><button type="button" id="retry">再読み込み</button></div>
+          <div id="view-label" class="view-label" hidden>実CADの形状</div>
+          <div id="scene-labels" aria-hidden="true"></div>
+          <div id="contact-label" class="contact-label" hidden>接触</div>
+          <div class="scene-note" id="scene-note" hidden></div>
+        </div>
+        <div class="legend" aria-label="役割と色">
+          <span><i class="blue"></i>回る側：ホイール・ハブ・可動円盤</span>
+          <span><i class="gray"></i>固定摩擦面・支持</span>
+          <span><i class="orange"></i>電磁石（固定）</span>
+        </div>
+        <p class="status" id="stage" role="status" aria-live="polite">準備中</p>
+        <p id="stage-explanation">読み込み後、最初は停止しています。</p>
+      </div>
+      <div class="control-column">
+      <fieldset id="view-controls" disabled>
+        <legend>表示を選ぶ</legend>
+        <div class="buttons" role="group" aria-label="表示の種類">
+          <button type="button" data-view="model" aria-pressed="true">1軸の立体</button>
+          <button type="button" data-view="schematic" aria-pressed="false">大きな模式断面</button>
+          <button type="button" data-view="section" aria-pressed="false">実CADの断面</button>
+          <button type="button" data-view="three" aria-pressed="false">XYZ参考配置</button>
+        </div>
+      </fieldset>
+      <fieldset id="motion-controls" class="motion-toolbar" disabled>
+        <legend>部品の動作（視点回転とは別）</legend>
+        <div class="buttons">
+          <button type="button" id="play" class="primary">動作を再生</button>
+          <button type="button" id="reset-motion">動作をリセット</button>
+          <span id="power-state">駆動OFF / 電磁石OFF</span>
+        </div>
+        <label class="range" for="progress"><span>動作の進行</span><input id="progress" type="range" min="0" max="40" step="0.01" value="4"><output for="progress" id="progress-value">4.0 / 40秒</output></label>
+        <div class="buttons jumps" role="group" aria-label="場面を直接選ぶ">
+          <button type="button" data-time="8" data-target-view="model">回転を見る</button>
+          <button type="button" data-time="16" data-target-view="schematic">接触前：すき間</button>
+          <button type="button" data-time="22" data-target-view="schematic">接触した瞬間</button>
+          <button type="button" data-time="30.8" data-target-view="schematic">停止：接触維持</button>
+          <button type="button" data-time="36" data-target-view="schematic">解除後</button>
+        </div>
+        <p id="state-notice" role="status"></p>
+      </fieldset>
+      <fieldset id="inspection-controls" disabled>
+        <legend>構造と視点を調べる</legend>
+        <div class="inspection-row">
+          <label class="range" for="explode"><span>分解表示</span><input id="explode" type="range" min="0" max="100" step="1" value="0"><output for="explode" id="explode-value">0%</output></label>
+          <button type="button" id="assemble">組み戻す（停止）</button>
+          <label><input type="checkbox" id="cutaway" checked>内部が見える表示</label>
+        </div>
+        <div class="buttons">
+          <button type="button" id="home">視点を戻す</button>
+          <button type="button" id="fit">表示全体を収める</button>
+          <label for="focus-part">注目する部品 <select id="focus-part"><option value="ARMATURE">薄い可動円盤</option><option value="LINING_0">固定摩擦面</option><option value="WINDING">リング状電磁石</option><option value="HUB">ハブ</option><option value="REF_WHEEL">参考ホイール</option></select></label>
+        </div>
+        <p id="part-description"></p>
+      </fieldset>
+      </div>
+      </div>
+      <p class="help">視点回転：3Dをドラッグ。ズーム：ホイール・ピンチ。3Dにフォーカスすると矢印キーで視点回転、＋/−でズーム、Homeで視点を戻します。</p>
+      <p class="warning">説明用の時間・速度です。実機未検証。模式断面だけはすき間・動きを拡大しています。実CADの名目すき間は0.20mmです。</p>
+    </section>
+    <details class="video-panel"><summary>40秒の説明CGを見る（無音）</summary>
+      <video id="explanation-video" controls muted playsinline preload="metadata" poster="./media/c08-poster.png"><source src="./media/c08-motion.mp4" type="video/mp4"></video>
+      <p id="video-error" role="status"></p>
+      <p><a href="./media/c08-motion.mp4" download>MP4を保存</a> / <a href="./media/contact-comparison.png">接触前後の比較画像</a></p>
+    </details>
+    <details class="limits"><summary>出所・未解決事項・用途違いの旧案</summary>
+      <p>元の公開C08自作形状と独立参考形状を使っています。ハブは軸方向に動かず、薄い可動円盤と板ばね先端だけが動きます。磁力は軸方向、摩擦は回転の接線方向です。</p>
+      <p>分解表示は作動状態ではありません。分解すると再生を停止し、組み戻しても自動再生しません。停止後の動摩擦矢印は消し、解除後は再始動しない説明です。</p>
+      <p>参考ホイール・モーター・XYZ配置は現物適合や起立・姿勢保持成功の証明ではありません。C08はM2/M2.5/M3/M4を含み、全M3化は未実施。既知のmotor干渉・電流/磁気/面圧の未達も未解決です。</p>
+      <p>旧卓上R1の別体ソレノイド案は3軸用途の採用案ではありません。<a href="./PROTOTYPE.md">用途訂正と旧R1の履歴</a>を分けて保存しています。</p>
+      <p><a href="./docs/PUBLIC_SCOPE.md">公開範囲</a> / <a href="./NOTICE.md">権利・依存ライセンス</a> / <a href="./docs/MOTION.md">再生成と検証</a></p>
+    </details>
+  </main>
+  <footer>初期は停止・無音 / 外部CDN・解析送信なし / 物理的な安全資格を付与しません</footer>
+  <noscript><p>操作にはJavaScriptが必要です。MP4と説明資料はリンクから開けます。</p></noscript>
+</body>
+</html>

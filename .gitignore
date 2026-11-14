@@ -5,3 +5,12 @@ __pycache__/
 *.FCStd1
 *.FCBak
 test-results/
+media/source/c08-scene-data.json
+media/source/c08-source-groups.json
+media/source/clarity-timeline.json
+media/source/clarity-label-points.json
+media/source/clarity-frames/
+media/source/clarity-previews/
+media/source/clarity-keyframes/
+media/source/*.blend1
+media/source/*.blend2

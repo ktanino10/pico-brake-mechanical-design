@@ -5,10 +5,11 @@
   "type": "module",
   "scripts": {
     "vendor": "node scripts/vendor.mjs",
-    "test": "node --test tests/contract.test.mjs tests/overview.test.mjs tests/enclosure.test.mjs",
+    "test": "node --test tests/contract.test.mjs tests/overview.test.mjs tests/enclosure.test.mjs tests/motion.test.mjs",
     "test:browser": "node tests/browser.mjs",
     "test:overview": "node tests/overview-browser.mjs",
-    "test:enclosure": "node tests/enclosure-browser.mjs"
+    "test:enclosure": "node tests/enclosure-browser.mjs",
+    "test:motion": "node tests/motion-browser.mjs"
   },
   "dependencies": {
     "three": "0.186.1"

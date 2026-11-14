@@ -1,0 +1,69 @@
+{
+  "schema": "c08-motion-browser-v1",
+  "status": "PASS",
+  "scope": "Isolated real browser and actual rendered transforms; no physical qualification",
+  "checks": [
+    "Initial real geometry is paused with stable rendering under reduced-motion",
+    "1366x768 shows the main model and playback/seek/explosion controls together",
+    "Actual pointer drag, wheel and keyboard modify the camera, not the part rotation",
+    "Actual marked parts rotate in playback; winding stays still; pause freezes matrices and camera",
+    "Large schematic and source-derived section show gap/contact/release; root and hub fixed; torque arrow only while braking",
+    "Explosion pauses/reset motion; reassembly does not restart; jumps/sections resolve exploded-state conflicts; XYZ works",
+    "No loop/restart; reduced-motion change pauses; accessibility names present; CG is initially paused and muted volume0",
+    "390x844 and320x568 touch layouts keep the model visible; actual touch orbit and pinch zoom work",
+    "Missing slice and mismatched source meshes fail explicitly instead of showing a success-shaped blank scene"
+  ],
+  "errors": [],
+  "externalRequests": [],
+  "inputs": [
+    {
+      "path": "motion.html",
+      "sha256": "332d5dca761c740053833db124321f5cabe6b8a93f29f2be75a8b82045f29fe8"
+    },
+    {
+      "path": "motion.css",
+      "sha256": "7e0c9b67c4ef5144be52b736472ad21dab4454dac3b7bfacb621a29bba27ca85"
+    },
+    {
+      "path": "motion.js",
+      "sha256": "d65773dd72f7af55d2400ffcddd715d1dcc528b4c278a18ae9faf949433a68b3"
+    },
+    {
+      "path": "motion-scene.js",
+      "sha256": "40ee839ec5618ed98dbf4097ae9cfca7b47fc14b7444b1ac8a26cabdbed8fbac"
+    },
+    {
+      "path": "motion-contract.js",
+      "sha256": "0a1803838999ed22d378ce5b59924e5b4bdb940ae214080480ce896908c9c3cc"
+    },
+    {
+      "path": "motion-bootstrap.js",
+      "sha256": "2ee77fe48cdf0d5e9d32eaa178494f96c9e62c147147b53ff3e61cb8a7144530"
+    },
+    {
+      "path": "data/motion-section.json",
+      "sha256": "241984aa9f5547f65ad15b4eb081dcdc527c9527feeeb399543428d619895643"
+    },
+    {
+      "path": "data/assembly.json",
+      "sha256": "8fac1425bad538abeb5d72476914b830abf35994b332522016e9c7baeaae8505"
+    },
+    {
+      "path": "data/meshes.json",
+      "sha256": "9e4f3075a8a36f0651a8301f3bd398db2946c2a16a5cd22e755190d99b9c5dd2"
+    },
+    {
+      "path": "media/c08-motion.mp4",
+      "sha256": "1882d96c2566e0c267c2c332378344a450aa697dbb2524c09b2448e71762eb91"
+    },
+    {
+      "path": "media/c08-poster.png",
+      "sha256": "ef16942ff2ec784e3d1ad8a9f6240c7dfb8ccbbaa5a8506fd5a6fddf1e61fba6"
+    },
+    {
+      "path": "vendor/manifest.json",
+      "sha256": "6495dd49aca9b4236b78d5fa0416da855d69333cd570ed0afd2cce7ac9256036"
+    }
+  ],
+  "browser": "157.0.8103.51"
+}

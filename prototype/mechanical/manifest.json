@@ -1,0 +1,2591 @@
+{
+  "schema": "prototype-mechanical-r1",
+  "status": "PASS",
+  "parameters": {
+    "revision": "R1",
+    "shaft_diameter_mm": 6.0,
+    "shaft_length_mm": 100.0,
+    "axis_height_mm": 72.0,
+    "bearing_centers_x_mm": [
+      24.0,
+      88.0
+    ],
+    "bearing_size_mm": [
+      6.0,
+      19.0,
+      6.0
+    ],
+    "printed_bearing_bore_mm": 19.05,
+    "rotor_center_x_mm": 50.0,
+    "rotor_od_mm": 60.0,
+    "rotor_id_mm": 12.1,
+    "rotor_thickness_mm": 1.0,
+    "rotor_pcd_mm": 19.0,
+    "rotor_hole_mm": 3.2,
+    "rotor_holes": 6,
+    "pad_size_mm": [
+      1.0,
+      10.0,
+      8.0
+    ],
+    "pad_radius_mm": 24.0,
+    "pad_center_gap_mm": 0.15,
+    "lever_pivot_xy_mm": [
+      50.0,
+      44.0
+    ],
+    "lever_output_arm_mm": 20.0,
+    "lever_input_arm_mm": 40.0,
+    "solenoid_open_stroke_mm": 1.5,
+    "solenoid_min_stroke_mm": 0.3,
+    "max_lever_angle_deg": 0.8,
+    "return_spring": {
+      "model": "SAMINI 12-0423",
+      "od_mm": 4.0,
+      "wire_mm": 0.3,
+      "free_mm": 20.0,
+      "rate_N_mm": 0.13,
+      "installed_open_mm": 16.5,
+      "moment_arm_mm": 20.0
+    },
+    "coupling": {
+      "model": "NBK MSTS-25C-6-6",
+      "od_mm": 25.0,
+      "length_mm": 31.0,
+      "engagement_each_mm": 8.5
+    },
+    "reported_motor_shaft_mm": {
+      "A": 6.0,
+      "B": 15.0,
+      "C": 4.0,
+      "D": 5.0
+    },
+    "motor_envelope_only": {
+      "diameter_mm": 55.0,
+      "length_mm": 65.0
+    },
+    "motor_saddle_body_range_mm": [
+      40.0,
+      65.0
+    ],
+    "sensor": {
+      "model": "Cytron MAKER-REFLECT",
+      "board_mm": [
+        18.1,
+        8.4,
+        4.2
+      ],
+      "header_projection_mm": 5.6,
+      "gap_mm": 2.0,
+      "gap_adjustment_mm": [
+        1.0,
+        5.0
+      ],
+      "cycles_per_rev": 12,
+      "track_radius_mm": [
+        13.5,
+        18.5
+      ],
+      "sample_rate_Hz": 2000
+    },
+    "design_targets": {
+      "initial_rpm": 150,
+      "ceiling_rpm": 300,
+      "stop_s": 1.0,
+      "max_energized_s": 1.0,
+      "minimum_interval_s": 30,
+      "first_batch_stops": 5,
+      "assembly_energy_budget_J": 0.1,
+      "pad_PLA_limit_C": 40,
+      "solenoid_case_limit_C": 45,
+      "rotor_axial_TIR_mm": 0.1,
+      "rotor_radial_TIR_mm": 0.15,
+      "shaft_endplay_mm": [
+        0.1,
+        0.2
+      ],
+      "alignment_offset_mm": 0.03,
+      "alignment_angle_deg": 0.3,
+      "minimum_solenoid_force_N": 1.5,
+      "minimum_pad_normal_each_N": 1.5,
+      "assumed_dynamic_mu": 0.2
+    }
+  },
+  "nominal_geometry_ready": true,
+  "physical_ready": false,
+  "scope": "Original geometry and nominal fit only; no manufacturer's CAD copied",
+  "checks": {
+    "positive_valid_solids": 82,
+    "assembled_aabb_candidate_pairs_checked": 137,
+    "reference_overlap_exemption": "Only hidden plunger inside illustrative solenoid body",
+    "open_pad_center_gap_mm": 0.15,
+    "coupling_engagement_each_mm": 8.5,
+    "motor_shoulder_clearance_mm": 6.5,
+    "shaft_support_span_mm": 64,
+    "rotor_screw_engagement_mm": 4.5,
+    "rotor_screw_tip_clearance_to_back_of_hub_mm": 0.5,
+    "kinematic_samples": [
+      {
+        "angle_deg": 0.0,
+        "stroke_mm": 1.5,
+        "clevis_xy": [
+          38.0,
+          84.0
+        ],
+        "link_angle_deg": 0.0,
+        "world_link_angle_deg": 0.0,
+        "link_pivot_xy": [
+          28.0,
+          84.0
+        ]
+      },
+      {
+        "angle_deg": 0.02,
+        "stroke_mm": 1.4720811527949103,
+        "clevis_xy": [
+          38.01395694285357,
+          83.99581851845689
+        ],
+        "link_angle_deg": -0.08794417685005944,
+        "world_link_angle_deg": -0.06794417685005943,
+        "link_pivot_xy": [
+          28.013963974049037,
+          84.00767701161348
+        ]
+      },
+      {
+        "angle_deg": 0.04,
+        "stroke_mm": 1.444175096550838,
+        "clevis_xy": [
+          38.02790254840858,
+          83.99165164564555
+        ],
+        "link_angle_deg": -0.17577681643772483,
+        "world_link_angle_deg": -0.13577681643772482,
+        "link_pivot_xy": [
+          28.027930627029875,
+          84.0153491484129
+        ]
+      },
+      {
+        "angle_deg": 0.06,
+        "stroke_mm": 1.4162817554072458,
+        "clevis_xy": [
+          38.04183688403277,
+          83.98749936875488
+        ],
+        "link_angle_deg": -0.26349808118177465,
+        "world_link_angle_deg": -0.20349808118177465,
+        "link_pivot_xy": [
+          28.041899957240716,
+          84.02301640946337
+        ]
+      },
+      {
+        "angle_deg": 0.08,
+        "stroke_mm": 1.3884010537400489,
+        "clevis_xy": [
+          38.05576001686648,
+          83.98336167507533
+        ],
+        "link_angle_deg": -0.35110813199113267,
+        "world_link_angle_deg": -0.27110813199113265,
+        "link_pivot_xy": [
+          28.055871962979438,
+          84.03067879383072
+        ]
+      },
+      {
+        "angle_deg": 0.1,
+        "stroke_mm": 1.360532916159693,
+        "clevis_xy": [
+          38.06967201382446,
+          83.97923855199826
+        ],
+        "link_angle_deg": -0.43860712827301995,
+        "world_link_angle_deg": -0.33860712827302,
+        "link_pivot_xy": [
+          28.069846642543602,
+          84.03833630058126
+        ]
+      },
+      {
+        "angle_deg": 0.12,
+        "stroke_mm": 1.332677267509343,
+        "clevis_xy": [
+          38.08357294159765,
+          83.97512998701578
+        ],
+        "link_angle_deg": -0.5259952279414373,
+        "world_link_angle_deg": -0.4059952279414373,
+        "link_pivot_xy": [
+          28.083823994230432,
+          84.045988928782
+        ]
+      },
+      {
+        "angle_deg": 0.14,
+        "stroke_mm": 1.3048340328630363,
+        "clevis_xy": [
+          38.09746286665486,
+          83.97103596772018
+        ],
+        "link_angle_deg": -0.6132725874246726,
+        "world_link_angle_deg": -0.4732725874246726,
+        "link_pivot_xy": [
+          28.097804016336827,
+          84.05363667750044
+        ]
+      },
+      {
+        "angle_deg": 0.16,
+        "stroke_mm": 1.2770031375238347,
+        "clevis_xy": [
+          38.111341855244575,
+          83.96695648180365
+        ],
+        "link_angle_deg": -0.7004393616737931,
+        "world_link_angle_deg": -0.540439361673793,
+        "link_pivot_xy": [
+          28.111786707159364,
+          84.06127954580475
+        ]
+      },
+      {
+        "angle_deg": 0.18,
+        "stroke_mm": 1.249184507022056,
+        "clevis_xy": [
+          38.12520997339663,
+          83.96289151705778
+        ],
+        "link_angle_deg": -0.7874957041705704,
+        "world_link_angle_deg": -0.6074957041705704,
+        "link_pivot_xy": [
+          28.125772064994305,
+          84.06891753276368
+        ]
+      },
+      {
+        "angle_deg": 0.2,
+        "stroke_mm": 1.2213780671134913,
+        "clevis_xy": [
+          38.13906728692392,
+          83.95884106137328
+        ],
+        "link_angle_deg": -0.8744417669349288,
+        "world_link_angle_deg": -0.6744417669349287,
+        "link_pivot_xy": [
+          28.13976008813756,
+          84.07655063744653
+        ]
+      },
+      {
+        "angle_deg": 0.22,
+        "stroke_mm": 1.1935837437775625,
+        "clevis_xy": [
+          38.15291386142408,
+          83.95480510273954
+        ],
+        "link_angle_deg": -0.9612777005331264,
+        "world_link_angle_deg": -0.7412777005331265,
+        "link_pivot_xy": [
+          28.153750774884745,
+          84.08417885892327
+        ]
+      },
+      {
+        "angle_deg": 0.24,
+        "stroke_mm": 1.1658014632156455,
+        "clevis_xy": [
+          38.1667497622812,
+          83.95078362924427
+        ],
+        "link_angle_deg": -1.0480036540852204,
+        "world_link_angle_deg": -0.8080036540852205,
+        "link_pivot_xy": [
+          28.16774412353113,
+          84.0918021962644
+        ]
+      },
+      {
+        "angle_deg": 0.26,
+        "stroke_mm": 1.138031151849276,
+        "clevis_xy": [
+          38.1805750546674,
+          83.94677662907314
+        ],
+        "link_angle_deg": -1.1346197752727787,
+        "world_link_angle_deg": -0.8746197752727787,
+        "link_pivot_xy": [
+          28.181740132371665,
+          84.09942064854103
+        ]
+      },
+      {
+        "angle_deg": 0.28,
+        "stroke_mm": 1.1102727363184393,
+        "clevis_xy": [
+          38.19438980354457,
+          83.94278409050935
+        ],
+        "link_angle_deg": -1.2211262103466058,
+        "world_link_angle_deg": -0.9411262103466058,
+        "link_pivot_xy": [
+          28.195738799700983,
+          84.10703421482489
+        ]
+      },
+      {
+        "angle_deg": 0.3,
+        "stroke_mm": 1.082526143479818,
+        "clevis_xy": [
+          38.20819407366595,
+          83.93880600193334
+        ],
+        "link_angle_deg": -1.3075231041339084,
+        "world_link_angle_deg": -1.0075231041339083,
+        "link_pivot_xy": [
+          28.209740123813397,
+          84.11464289418831
+        ]
+      },
+      {
+        "angle_deg": 0.32,
+        "stroke_mm": 1.0547913004051477,
+        "clevis_xy": [
+          38.221987929577736,
+          83.93484235182237
+        ],
+        "link_angle_deg": -1.3938106000459607,
+        "world_link_angle_deg": -1.0738106000459606,
+        "link_pivot_xy": [
+          28.223744103002872,
+          84.12224668570416
+        ]
+      },
+      {
+        "angle_deg": 0.34,
+        "stroke_mm": 1.027068134379471,
+        "clevis_xy": [
+          38.23577143562072,
+          83.93089312875018
+        ],
+        "link_angle_deg": -1.479988840085374,
+        "world_link_angle_deg": -1.139988840085374,
+        "link_pivot_xy": [
+          28.23775073556308,
+          84.12984558844595
+        ]
+      },
+      {
+        "angle_deg": 0.36,
+        "stroke_mm": 0.9993565728995311,
+        "clevis_xy": [
+          38.249544655931835,
+          83.92695832138666
+        ],
+        "link_angle_deg": -1.5660579648533837,
+        "world_link_angle_deg": -1.2060579648533838,
+        "link_pivot_xy": [
+          28.25176001978734,
+          84.13743960148778
+        ]
+      },
+      {
+        "angle_deg": 0.38,
+        "stroke_mm": 0.9716565436719868,
+        "clevis_xy": [
+          38.26330765444581,
+          83.9230379184974
+        ],
+        "link_angle_deg": -1.6520181135571412,
+        "world_link_angle_deg": -1.2720181135571411,
+        "link_pivot_xy": [
+          28.265771953968677,
+          84.14502872390435
+        ]
+      },
+      {
+        "angle_deg": 0.4,
+        "stroke_mm": 0.9439679746119367,
+        "clevis_xy": [
+          38.27706049489663,
+          83.9191319089435
+        ],
+        "link_angle_deg": -1.7378694240167074,
+        "world_link_angle_deg": -1.3378694240167075,
+        "link_pivot_xy": [
+          28.279786536399776,
+          84.15261295477094
+        ]
+      },
+      {
+        "angle_deg": 0.42,
+        "stroke_mm": 0.916290793841128,
+        "clevis_xy": [
+          38.29080324081916,
+          83.91524028168101
+        ],
+        "link_angle_deg": -1.8236120326723737,
+        "world_link_angle_deg": -1.4036120326723738,
+        "link_pivot_xy": [
+          28.293803765373003,
+          84.16019229316345
+        ]
+      },
+      {
+        "angle_deg": 0.44,
+        "stroke_mm": 0.8886249296864488,
+        "clevis_xy": [
+          38.30453595555065,
+          83.91136302576082
+        ],
+        "link_angle_deg": -1.9092460745912778,
+        "world_link_angle_deg": -1.4692460745912779,
+        "link_pivot_xy": [
+          28.307823639180395,
+          84.16776673815833
+        ]
+      },
+      {
+        "angle_deg": 0.46,
+        "stroke_mm": 0.8609703106782369,
+        "clevis_xy": [
+          38.31825870223229,
+          83.90750013032815
+        ],
+        "link_angle_deg": -1.994771683474923,
+        "world_link_angle_deg": -1.534771683474923,
+        "link_pivot_xy": [
+          28.32184615611368,
+          84.17533628883268
+        ]
+      },
+      {
+        "angle_deg": 0.48,
+        "stroke_mm": 0.8333268655487558,
+        "clevis_xy": [
+          38.331971543810674,
+          83.90365158462224
+        ],
+        "link_angle_deg": -2.0801889916655814,
+        "world_link_angle_deg": -1.6001889916655814,
+        "link_pivot_xy": [
+          28.335871314464253,
+          84.18290094426418
+        ]
+      },
+      {
+        "angle_deg": 0.5,
+        "stroke_mm": 0.8056945232305637,
+        "clevis_xy": [
+          38.345674543039344,
+          83.8998173779761
+        ],
+        "link_angle_deg": -2.165498130153197,
+        "world_link_angle_deg": -1.665498130153197,
+        "link_pivot_xy": [
+          28.34989911252319,
+          84.19046070353107
+        ]
+      },
+      {
+        "angle_deg": 0.52,
+        "stroke_mm": 0.778073212854963,
+        "clevis_xy": [
+          38.35936776248025,
+          83.8959974998161
+        ],
+        "link_angle_deg": -2.2506992285824805,
+        "world_link_angle_deg": -1.7306992285824805,
+        "link_pivot_xy": [
+          28.36392954858125,
+          84.19801556571224
+        ]
+      },
+      {
+        "angle_deg": 0.54,
+        "stroke_mm": 0.7504628637504478,
+        "clevis_xy": [
+          38.37305126450522,
+          83.89219193966164
+        ],
+        "link_angle_deg": -2.335792415259441,
+        "world_link_angle_deg": -1.795792415259441,
+        "link_pivot_xy": [
+          28.377962620928862,
+          84.20556552988717
+        ]
+      },
+      {
+        "angle_deg": 0.56,
+        "stroke_mm": 0.7228634054411547,
+        "clevis_xy": [
+          38.38672511129748,
+          83.88840068712484
+        ],
+        "link_angle_deg": -2.420777817157624,
+        "world_link_angle_deg": -1.860777817157624,
+        "link_pivot_xy": [
+          28.391998327856147,
+          84.21311059513587
+        ]
+      },
+      {
+        "angle_deg": 0.58,
+        "stroke_mm": 0.6952747676453495,
+        "clevis_xy": [
+          38.400389364853,
+          83.88462373191028
+        ],
+        "link_angle_deg": -2.5056555599252586,
+        "world_link_angle_deg": -1.9256555599252585,
+        "link_pivot_xy": [
+          28.40603666765289,
+          84.22065076053903
+        ]
+      },
+      {
+        "angle_deg": 0.6,
+        "stroke_mm": 0.6676968802738834,
+        "clevis_xy": [
+          38.414044086982,
+          83.88086106381459
+        ],
+        "link_angle_deg": -2.5904257678914484,
+        "world_link_angle_deg": -1.9904257678914483,
+        "link_pivot_xy": [
+          28.420077638608564,
+          84.22818602517789
+        ]
+      },
+      {
+        "angle_deg": 0.62,
+        "stroke_mm": 0.6401296734286817,
+        "clevis_xy": [
+          38.427689339310405,
+          83.87711267272616
+        ],
+        "link_angle_deg": -2.675088564072961,
+        "world_link_angle_deg": -2.055088564072961,
+        "link_pivot_xy": [
+          28.43412123901232,
+          84.23571638813432
+        ]
+      },
+      {
+        "angle_deg": 0.64,
+        "stroke_mm": 0.6125730774013043,
+        "clevis_xy": [
+          38.44132518328117,
+          83.87337854862481
+        ],
+        "link_angle_deg": -2.759644070180303,
+        "world_link_angle_deg": -2.119644070180303,
+        "link_pivot_xy": [
+          28.448167467152984,
+          84.24324184849075
+        ]
+      },
+      {
+        "angle_deg": 0.66,
+        "stroke_mm": 0.5850270226713832,
+        "clevis_xy": [
+          38.45495168015576,
+          83.86965868158163
+        ],
+        "link_angle_deg": -2.844092406623895,
+        "world_link_angle_deg": -2.1840924066238947,
+        "link_pivot_xy": [
+          28.462216321319072,
+          84.25076240533024
+        ]
+      },
+      {
+        "angle_deg": 0.68,
+        "stroke_mm": 0.5574914399052489,
+        "clevis_xy": [
+          38.46856889101549,
+          83.86595306175839
+        ],
+        "link_angle_deg": -2.928433692520937,
+        "world_link_angle_deg": -2.248433692520937,
+        "link_pivot_xy": [
+          28.476267799798766,
+          84.2582780577364
+        ]
+      },
+      {
+        "angle_deg": 0.7000000000000001,
+        "stroke_mm": 0.5299662599543726,
+        "clevis_xy": [
+          38.48217687676293,
+          83.86226167940747
+        ],
+        "link_angle_deg": -3.0126680457014645,
+        "world_link_angle_deg": -2.3126680457014643,
+        "link_pivot_xy": [
+          28.49032190087994,
+          84.26578880479352
+        ]
+      },
+      {
+        "angle_deg": 0.72,
+        "stroke_mm": 0.5024514138539597,
+        "clevis_xy": [
+          38.49577569812329,
+          83.8585845248715
+        ],
+        "link_angle_deg": -3.0967955827138733,
+        "world_link_angle_deg": -2.376795582713873,
+        "link_pivot_xy": [
+          28.50437862285015,
+          84.27329464558639
+        ]
+      },
+      {
+        "angle_deg": 0.74,
+        "stroke_mm": 0.47494683282158334,
+        "clevis_xy": [
+          38.50936541564572,
+          83.85492158858304
+        ],
+        "link_angle_deg": -3.1808164188321015,
+        "world_link_angle_deg": -2.4408164188321013,
+        "link_pivot_xy": [
+          28.518437963996618,
+          84.28079557920049
+        ]
+      },
+      {
+        "angle_deg": 0.76,
+        "stroke_mm": 0.447452448255623,
+        "clevis_xy": [
+          38.5229460897047,
+          83.85127286106422
+        ],
+        "link_angle_deg": -3.264730668060864,
+        "world_link_angle_deg": -2.504730668060864,
+        "link_pivot_xy": [
+          28.532499922606263,
+          84.28829160472183
+        ]
+      },
+      {
+        "angle_deg": 0.78,
+        "stroke_mm": 0.4199681917340037,
+        "clevis_xy": [
+          38.53651778050138,
+          83.84763833292659
+        ],
+        "link_angle_deg": -3.348538443141917,
+        "world_link_angle_deg": -2.568538443141917,
+        "link_pivot_xy": [
+          28.54656449696567,
+          84.29578272123705
+        ]
+      },
+      {
+        "angle_deg": 0.8,
+        "stroke_mm": 0.3924939950126429,
+        "clevis_xy": [
+          38.550080548064855,
+          83.84401799487074
+        ],
+        "link_angle_deg": -3.432239855560003,
+        "world_link_angle_deg": -2.6322398555600026,
+        "link_pivot_xy": [
+          28.56063168536112,
+          84.30326892783336
+        ]
+      }
+    ],
+    "motion_sample_interval_deg": 0.02,
+    "asymmetric_jaw_samples_deg": [
+      [
+        0,
+        0.4
+      ],
+      [
+        0,
+        0.8
+      ],
+      [
+        0.4,
+        0
+      ],
+      [
+        0.4,
+        0.8
+      ],
+      [
+        0.8,
+        0
+      ],
+      [
+        0.8,
+        0.4
+      ]
+    ],
+    "continuous_sweep_or_material_deformation_proof": false,
+    "rotor_guard_clearance_min_mm": 20.0,
+    "optical_track_clear_of_screw_heads_mm": 1.0,
+    "optical_track_clear_of_pad_radial_min_mm": 0.5,
+    "sensor_adjustment_mm": [
+      1,
+      5
+    ],
+    "minimum_sensor_jam_nut_space_mm": 5.300000000000001,
+    "physical_approval": false,
+    "step_readback_shapes": 82
+  },
+  "physics": {
+    "assumptions": "SUS304 density7930kg/m3, cp500J/kgK; mu0.2 is a test assumption, not a rubber rating",
+    "rotor_mass_kg": 0.021127013853151428,
+    "rotor_inertia_kg_m2": 1.0037982683928671e-05,
+    "rotor_energy_J": {
+      "150": 0.0012383864759420147,
+      "300": 0.004953545903768059
+    },
+    "attached_inertia_budget_kg_m2": 4e-05,
+    "motor_rotor_inertia_kg_m2": null,
+    "motor_inertia_bound_method": "Use total motor mass M and maximum radial envelope R: I_motor<=M*R^2; no internal disassembly",
+    "rpm_ceiling_method": "min(300,60/(2*pi)*sqrt(2*0.1/(4e-5+M*R^2)))",
+    "illustrative_bound_not_measurement": {
+      "total_motor_mass_kg": 0.3,
+      "max_radial_envelope_m": 0.05,
+      "energy_at_150rpm_J": 0.09746234346075743
+    },
+    "total_energy_budget_J": 0.1,
+    "total_inertia_budget_at_300rpm_kg_m2": 0.00020264236728467558,
+    "motor_inertia_allowance_at_300rpm_kg_m2": 0.00016264236728467558,
+    "torque_nominal_Nm": 0.014400000000000003,
+    "torque_conservative_radius_Nm": 0.011400000000000002,
+    "energy_budget_stop_time_s_at_300rpm": 0.5584383968136678,
+    "rotor_mean_temperature_rise_if_0_1J_all_in_rotor_C": 0.009466553171695244,
+    "pad_pressure_at_1_5N_MPa": 0.01875,
+    "pad_temperature_screen_C": "NR pad mass>=0.08g, cp assumed1500J/kgK:0.1J/one pad <=0.84C average; flash heating unknown",
+    "solenoid_cold_current_A": 0.25,
+    "solenoid_cold_power_W": 3.0
+  },
+  "parts": [
+    {
+      "id": "BASE",
+      "process": "cut-drill",
+      "description": "Birch plywood 290 x 180 x 12; coordinates in base-drill.svg",
+      "group": "fixed",
+      "bbox_mm": [
+        -150.0,
+        -60.0,
+        0.0,
+        140.0,
+        120.0,
+        12.0
+      ],
+      "center_of_mass_mm": [
+        -5.215421787149781,
+        30.096580786065218,
+        6.010581077895731
+      ],
+      "volume_mm3": 622791.441014381
+    },
+    {
+      "id": "SHAFT",
+      "process": "order-machine",
+      "description": "SUS303 ground diameter6 g6 x100 +/-0.1; ends C0.2",
+      "group": "rotating",
+      "bbox_mm": [
+        0.0,
+        -3.0,
+        69.0,
+        100.0,
+        3.0,
+        75.0
+      ],
+      "center_of_mass_mm": [
+        49.99999999999999,
+        -1.3452983004682858e-16,
+        72.0
+      ],
+      "volume_mm3": 2827.4333882308138
+    },
+    {
+      "id": "BEARING_BLOCK_1",
+      "process": "PLA",
+      "description": "626ZZ support, print upright with bore support; finish slip fit",
+      "group": "fixed",
+      "bbox_mm": [
+        10.0,
+        -25.0,
+        12.0,
+        38.0,
+        25.0,
+        86.0
+      ],
+      "center_of_mass_mm": [
+        24.000000000000014,
+        -4.76449181572e-16,
+        37.48198034833443
+      ],
+      "volume_mm3": 25531.561616030696,
+      "stl": "stl/bearing_block_1.stl",
+      "stl_volume_error_fraction": 7.63821772158293e-05
+    },
+    {
+      "id": "BEARING_1",
+      "process": "buy",
+      "description": "626ZZ 6 x19 x6; simplified envelope, not a bearing manufacturing model",
+      "group": "fixed",
+      "bbox_mm": [
+        21.0,
+        -9.5,
+        62.5,
+        27.0,
+        9.5,
+        81.5
+      ],
+      "center_of_mass_mm": [
+        24.0,
+        -6.115930434734278e-16,
+        72.00000000000001
+      ],
+      "volume_mm3": 1531.5264186250242
+    },
+    {
+      "id": "BEARING_CAP_1_L",
+      "process": "PLA",
+      "description": "Outer-race retention lip only; 0.1mm axial clearance to bearing",
+      "group": "fixed",
+      "bbox_mm": [
+        16.0,
+        -16.0,
+        56.0,
+        20.9,
+        16.0,
+        88.0
+      ],
+      "center_of_mass_mm": [
+        17.57671528168907,
+        3.300984355099266e-16,
+        71.99999999999994
+      ],
+      "volume_mm3": 2594.9295205983053,
+      "stl": "stl/bearing_cap_1_l.stl",
+      "stl_volume_error_fraction": 0.00010970965473320728
+    },
+    {
+      "id": "BEARING_CAP_1_R",
+      "process": "PLA",
+      "description": "Outer-race retention lip only; 0.1mm axial clearance to bearing",
+      "group": "fixed",
+      "bbox_mm": [
+        27.1,
+        -16.0,
+        56.0,
+        32.0,
+        16.0,
+        88.0
+      ],
+      "center_of_mass_mm": [
+        30.423284718310917,
+        9.801186543826634e-16,
+        72.0
+      ],
+      "volume_mm3": 2594.929520598305,
+      "stl": "stl/bearing_cap_1_r.stl",
+      "stl_volume_error_fraction": 0.0001097461886042664
+    },
+    {
+      "id": "BEARING_BLOCK_2",
+      "process": "PLA",
+      "description": "626ZZ support, print upright with bore support; finish slip fit",
+      "group": "fixed",
+      "bbox_mm": [
+        74.0,
+        -25.0,
+        12.0,
+        102.0,
+        25.0,
+        86.0
+      ],
+      "center_of_mass_mm": [
+        88.0,
+        -4.052044441406728e-16,
+        37.481980348334424
+      ],
+      "volume_mm3": 25531.561616030704,
+      "stl": "stl/bearing_block_2.stl",
+      "stl_volume_error_fraction": 7.63821772158293e-05
+    },
+    {
+      "id": "BEARING_2",
+      "process": "buy",
+      "description": "626ZZ 6 x19 x6; simplified envelope, not a bearing manufacturing model",
+      "group": "fixed",
+      "bbox_mm": [
+        85.0,
+        -9.5,
+        62.5,
+        91.0,
+        9.5,
+        81.5
+      ],
+      "center_of_mass_mm": [
+        88.0,
+        -6.115930434734278e-16,
+        72.00000000000001
+      ],
+      "volume_mm3": 1531.5264186250242
+    },
+    {
+      "id": "BEARING_CAP_2_L",
+      "process": "PLA",
+      "description": "Outer-race retention lip only; 0.1mm axial clearance to bearing",
+      "group": "fixed",
+      "bbox_mm": [
+        80.0,
+        -16.0,
+        56.0,
+        84.9,
+        16.0,
+        88.0
+      ],
+      "center_of_mass_mm": [
+        81.57671528168902,
+        6.378786396730011e-16,
+        71.99999999999999
+      ],
+      "volume_mm3": 2594.929520598305,
+      "stl": "stl/bearing_cap_2_l.stl",
+      "stl_volume_error_fraction": 0.00010970965473320728
+    },
+    {
+      "id": "BEARING_CAP_2_R",
+      "process": "PLA",
+      "description": "Outer-race retention lip only; 0.1mm axial clearance to bearing",
+      "group": "fixed",
+      "bbox_mm": [
+        91.1,
+        -16.0,
+        56.0,
+        96.0,
+        16.0,
+        88.0
+      ],
+      "center_of_mass_mm": [
+        94.42328471831091,
+        8.992566679987608e-16,
+        71.99999999999999
+      ],
+      "volume_mm3": 2594.929520598305,
+      "stl": "stl/bearing_cap_2_r.stl",
+      "stl_volume_error_fraction": 0.0001097461886037406
+    },
+    {
+      "id": "SHAFT_COLLAR_L",
+      "process": "buy",
+      "description": "IWATA SC0605S, M3 setscrew; envelope only",
+      "group": "rotating",
+      "bbox_mm": [
+        15.6,
+        -6.0,
+        66.0,
+        20.6,
+        6.0,
+        78.0
+      ],
+      "center_of_mass_mm": [
+        18.1,
+        4.058384914452302e-17,
+        72.00000000000001
+      ],
+      "volume_mm3": 424.11500823462205
+    },
+    {
+      "id": "SHAFT_COLLAR_R",
+      "process": "buy",
+      "description": "IWATA SC0605S, M3 setscrew; envelope only",
+      "group": "rotating",
+      "bbox_mm": [
+        91.4,
+        -6.0,
+        66.0,
+        96.4,
+        6.0,
+        78.0
+      ],
+      "center_of_mass_mm": [
+        93.89999999999999,
+        -5.460749537426372e-17,
+        71.99999999999999
+      ],
+      "volume_mm3": 424.11500823462205
+    },
+    {
+      "id": "THRUST_SHIM_L",
+      "process": "order-machine",
+      "description": "SUS304 shim ID6.1 OD8.5 t0.3; inner-ring contact only",
+      "group": "rotating",
+      "bbox_mm": [
+        20.7,
+        -4.25,
+        67.75,
+        21.0,
+        4.25,
+        76.25
+      ],
+      "center_of_mass_mm": [
+        20.85,
+        -6.610204531729182e-16,
+        72.0
+      ],
+      "volume_mm3": 8.256105493633989
+    },
+    {
+      "id": "THRUST_SHIM_R",
+      "process": "order-machine",
+      "description": "SUS304 shim ID6.1 OD8.5 t0.3; inner-ring contact only",
+      "group": "rotating",
+      "bbox_mm": [
+        91.0,
+        -4.25,
+        67.75,
+        91.3,
+        4.25,
+        76.25
+      ],
+      "center_of_mass_mm": [
+        91.15000000000002,
+        -6.950152244867776e-16,
+        72.00000000000001
+      ],
+      "volume_mm3": 8.256105493633955
+    },
+    {
+      "id": "ROTOR_SCREW_1",
+      "process": "buy",
+      "description": "M3x6 with t0.5 washer: 4.5mm engagement in5mm flange",
+      "group": "rotating",
+      "bbox_mm": [
+        45.0,
+        6.75,
+        69.25,
+        54.0,
+        12.25,
+        74.75
+      ],
+      "center_of_mass_mm": [
+        50.82124352331607,
+        9.5,
+        72.00000000000001
+      ],
+      "volume_mm3": 113.68638415178063
+    },
+    {
+      "id": "ROTOR_WASHER_1",
+      "process": "buy",
+      "description": "M3 flat washer OD6 t0.5",
+      "group": "rotating",
+      "bbox_mm": [
+        50.5,
+        6.5,
+        69.0,
+        51.0,
+        12.5,
+        75.0
+      ],
+      "center_of_mass_mm": [
+        50.75,
+        9.499999999999998,
+        71.99999999999997
+      ],
+      "volume_mm3": 10.115928344559144
+    },
+    {
+      "id": "ROTOR_SCREW_2",
+      "process": "buy",
+      "description": "M3x6 with t0.5 washer: 4.5mm engagement in5mm flange",
+      "group": "rotating",
+      "bbox_mm": [
+        45.0,
+        2.000000000000001,
+        77.47724133595217,
+        54.0,
+        7.500000000000001,
+        82.97724133595217
+      ],
+      "center_of_mass_mm": [
+        50.82124352331606,
+        4.750000000000001,
+        80.22724133595219
+      ],
+      "volume_mm3": 113.68638415178063
+    },
+    {
+      "id": "ROTOR_WASHER_2",
+      "process": "buy",
+      "description": "M3 flat washer OD6 t0.5",
+      "group": "rotating",
+      "bbox_mm": [
+        50.5,
+        1.7500000000000009,
+        77.22724133595217,
+        51.0,
+        7.750000000000001,
+        83.22724133595217
+      ],
+      "center_of_mass_mm": [
+        50.749999999999986,
+        4.750000000000001,
+        80.22724133595216
+      ],
+      "volume_mm3": 10.115928344559146
+    },
+    {
+      "id": "ROTOR_SCREW_3",
+      "process": "buy",
+      "description": "M3x6 with t0.5 washer: 4.5mm engagement in5mm flange",
+      "group": "rotating",
+      "bbox_mm": [
+        45.0,
+        -7.499999999999998,
+        77.47724133595217,
+        54.0,
+        -1.9999999999999982,
+        82.97724133595217
+      ],
+      "center_of_mass_mm": [
+        50.82124352331606,
+        -4.749999999999999,
+        80.22724133595219
+      ],
+      "volume_mm3": 113.68638415178063
+    },
+    {
+      "id": "ROTOR_WASHER_3",
+      "process": "buy",
+      "description": "M3 flat washer OD6 t0.5",
+      "group": "rotating",
+      "bbox_mm": [
+        50.5,
+        -7.749999999999998,
+        77.22724133595217,
+        51.0,
+        -1.7499999999999982,
+        83.22724133595217
+      ],
+      "center_of_mass_mm": [
+        50.749999999999986,
+        -4.749999999999998,
+        80.22724133595216
+      ],
+      "volume_mm3": 10.115928344559146
+    },
+    {
+      "id": "ROTOR_SCREW_4",
+      "process": "buy",
+      "description": "M3x6 with t0.5 washer: 4.5mm engagement in5mm flange",
+      "group": "rotating",
+      "bbox_mm": [
+        45.0,
+        -12.25,
+        69.25,
+        54.0,
+        -6.75,
+        74.75
+      ],
+      "center_of_mass_mm": [
+        50.82124352331607,
+        -9.5,
+        72.00000000000001
+      ],
+      "volume_mm3": 113.68638415178063
+    },
+    {
+      "id": "ROTOR_WASHER_4",
+      "process": "buy",
+      "description": "M3 flat washer OD6 t0.5",
+      "group": "rotating",
+      "bbox_mm": [
+        50.5,
+        -12.5,
+        69.0,
+        51.0,
+        -6.5,
+        75.0
+      ],
+      "center_of_mass_mm": [
+        50.75,
+        -9.499999999999998,
+        71.99999999999997
+      ],
+      "volume_mm3": 10.115928344559144
+    },
+    {
+      "id": "ROTOR_SCREW_5",
+      "process": "buy",
+      "description": "M3x6 with t0.5 washer: 4.5mm engagement in5mm flange",
+      "group": "rotating",
+      "bbox_mm": [
+        45.0,
+        -7.500000000000004,
+        61.022758664047835,
+        54.0,
+        -2.0000000000000044,
+        66.52275866404784
+      ],
+      "center_of_mass_mm": [
+        50.82124352331606,
+        -4.750000000000005,
+        63.772758664047835
+      ],
+      "volume_mm3": 113.68638415178066
+    },
+    {
+      "id": "ROTOR_WASHER_5",
+      "process": "buy",
+      "description": "M3 flat washer OD6 t0.5",
+      "group": "rotating",
+      "bbox_mm": [
+        50.5,
+        -7.750000000000004,
+        60.772758664047835,
+        51.0,
+        -1.7500000000000044,
+        66.77275866404784
+      ],
+      "center_of_mass_mm": [
+        50.75000000000001,
+        -4.750000000000004,
+        63.77275866404782
+      ],
+      "volume_mm3": 10.115928344559132
+    },
+    {
+      "id": "ROTOR_SCREW_6",
+      "process": "buy",
+      "description": "M3x6 with t0.5 washer: 4.5mm engagement in5mm flange",
+      "group": "rotating",
+      "bbox_mm": [
+        45.0,
+        2.000000000000001,
+        61.022758664047835,
+        54.0,
+        7.500000000000001,
+        66.52275866404784
+      ],
+      "center_of_mass_mm": [
+        50.82124352331606,
+        4.750000000000001,
+        63.772758664047835
+      ],
+      "volume_mm3": 113.68638415178066
+    },
+    {
+      "id": "ROTOR_WASHER_6",
+      "process": "buy",
+      "description": "M3 flat washer OD6 t0.5",
+      "group": "rotating",
+      "bbox_mm": [
+        50.5,
+        1.7500000000000009,
+        60.772758664047835,
+        51.0,
+        7.750000000000001,
+        66.77275866404784
+      ],
+      "center_of_mass_mm": [
+        50.75000000000001,
+        4.750000000000001,
+        63.77275866404782
+      ],
+      "volume_mm3": 10.115928344559132
+    },
+    {
+      "id": "HUB",
+      "process": "buy",
+      "description": "Pololu1999 on independent shaft; 6xM3 face holes; setscrew holes not detailed",
+      "group": "rotating",
+      "bbox_mm": [
+        44.5,
+        -12.7,
+        59.3,
+        53.7,
+        12.7,
+        84.7
+      ],
+      "center_of_mass_mm": [
+        47.64611382919431,
+        3.187301568323086e-17,
+        72.00000000000003
+      ],
+      "volume_mm3": 2536.364828875718
+    },
+    {
+      "id": "ROTOR",
+      "process": "cut-drill",
+      "description": "SUS304 OD60 t1 ID12.10; 6x3.2 holes PCD19, deburr and inspect",
+      "group": "rotating",
+      "bbox_mm": [
+        49.5,
+        -30.0,
+        42.0,
+        50.5,
+        30.0,
+        102.0
+      ],
+      "center_of_mass_mm": [
+        49.99999999999999,
+        -9.854616244007715e-16,
+        72.00000000000006
+      ],
+      "volume_mm3": 2664.1883799686543
+    },
+    {
+      "id": "COUPLING",
+      "process": "buy",
+      "description": "MSTS-25C-6-6 envelope; rotating screw envelope reserved diameter32",
+      "group": "rotating",
+      "bbox_mm": [
+        -22.5,
+        -12.5,
+        59.5,
+        8.5,
+        12.5,
+        84.5
+      ],
+      "center_of_mass_mm": [
+        -6.999999999999999,
+        -3.1433771383814684e-16,
+        72.0
+      ],
+      "volume_mm3": 14340.585065474013
+    },
+    {
+      "id": "MOTOR_SHAFT_REFERENCE",
+      "process": "reference",
+      "description": "Reported shaft envelope only; D-flat axial start unknown",
+      "group": "reference",
+      "bbox_mm": [
+        -29.0,
+        -3.0,
+        69.0,
+        -14.0,
+        3.0,
+        75.0
+      ],
+      "center_of_mass_mm": [
+        -21.500000000000004,
+        -1.0508836020862078e-16,
+        72.00000000000001
+      ],
+      "volume_mm3": 424.115008234622
+    },
+    {
+      "id": "MOTOR_REFERENCE",
+      "process": "reference",
+      "description": "Illustrative 55x65 motor envelope, NOT measured case dimensions",
+      "group": "reference",
+      "bbox_mm": [
+        -94.0,
+        -27.5,
+        44.5,
+        -29.0,
+        27.5,
+        99.5
+      ],
+      "center_of_mass_mm": [
+        -61.50000000000001,
+        -5.905528739835673e-16,
+        72.00000000000001
+      ],
+      "volume_mm3": 154428.91387802325
+    },
+    {
+      "id": "MOTOR_CARRIAGE",
+      "process": "PLA",
+      "description": "Four M3x50 jack studs, vertical setup4-24mm; saddle positions adjustable",
+      "group": "fixed",
+      "bbox_mm": [
+        -129.0,
+        -45.0,
+        23.694913472366785,
+        -29.0,
+        45.0,
+        29.694913472366785
+      ],
+      "center_of_mass_mm": [
+        -79.12344998596777,
+        6.101723301551428e-16,
+        26.694913472366792
+      ],
+      "volume_mm3": 50678.830114136945,
+      "stl": "stl/motor_carriage.stl",
+      "stl_volume_error_fraction": 3.5797950082011455e-06
+    },
+    {
+      "id": "MOTOR_V_SADDLE_1",
+      "process": "PLA",
+      "description": "90deg V with1mm NR lining; two 12mm straps, position only on stationary metal case",
+      "group": "fixed",
+      "bbox_mm": [
+        -45.0,
+        -35.0,
+        29.694913472366785,
+        -35.0,
+        35.0,
+        58.694913472366785
+      ],
+      "center_of_mass_mm": [
+        -39.99999999999999,
+        3.699332664965235e-16,
+        37.6926468886019
+      ],
+      "volume_mm3": 6453.660182454482,
+      "stl": "stl/motor_v_saddle_1.stl",
+      "stl_volume_error_fraction": 5.948173420135027e-06
+    },
+    {
+      "id": "MOTOR_V_SADDLE_2",
+      "process": "PLA",
+      "description": "90deg V with1mm NR lining; two 12mm straps, position only on stationary metal case",
+      "group": "fixed",
+      "bbox_mm": [
+        -55.0,
+        -35.0,
+        29.694913472366785,
+        -45.0,
+        35.0,
+        58.694913472366785
+      ],
+      "center_of_mass_mm": [
+        -50.0,
+        -7.222506631598793e-16,
+        37.69264688860191
+      ],
+      "volume_mm3": 6453.660182454481,
+      "stl": "stl/motor_v_saddle_2.stl",
+      "stl_volume_error_fraction": 5.948173420135027e-06
+    },
+    {
+      "id": "CALIPER_PEDESTAL",
+      "process": "PLA",
+      "description": "Fixed vertical pivot support, axis at(50,44); 4xM3 base fixing",
+      "group": "fixed",
+      "bbox_mm": [
+        20.0,
+        31.0,
+        12.0,
+        80.0,
+        70.0,
+        82.0
+      ],
+      "center_of_mass_mm": [
+        49.71091389992269,
+        50.10176009047107,
+        33.56378710531554
+      ],
+      "volume_mm3": 38453.6777909626,
+      "stl": "stl/caliper_pedestal.stl",
+      "stl_volume_error_fraction": 1.9004418610049022e-05
+    },
+    {
+      "id": "PIVOT_BRIDGE",
+      "process": "PLA",
+      "description": "Gap18.2 with two9mm brass bushes and0.2mm center washer",
+      "group": "fixed",
+      "bbox_mm": [
+        25.0,
+        38.0,
+        81.1,
+        75.0,
+        50.0,
+        87.1
+      ],
+      "center_of_mass_mm": [
+        49.99999999999998,
+        43.99999999999997,
+        84.1
+      ],
+      "volume_mm3": 3455.235410522583,
+      "stl": "stl/pivot_bridge.stl",
+      "stl_volume_error_fraction": 2.499963513444794e-05
+    },
+    {
+      "id": "PIVOT_SPACER_1",
+      "process": "order-machine",
+      "description": "Aluminium spacer OD7 ID3.2 L18.2",
+      "group": "fixed",
+      "bbox_mm": [
+        26.5,
+        40.5,
+        62.9,
+        33.5,
+        47.5,
+        81.1
+      ],
+      "center_of_mass_mm": [
+        30.0,
+        44.0,
+        71.99999999999999
+      ],
+      "volume_mm3": 554.0449972017884
+    },
+    {
+      "id": "PIVOT_SPACER_2",
+      "process": "order-machine",
+      "description": "Aluminium spacer OD7 ID3.2 L18.2",
+      "group": "fixed",
+      "bbox_mm": [
+        66.5,
+        40.5,
+        62.9,
+        73.5,
+        47.5,
+        81.1
+      ],
+      "center_of_mass_mm": [
+        70.0,
+        44.0,
+        72.0
+      ],
+      "volume_mm3": 554.044997201789
+    },
+    {
+      "id": "PIVOT_BUSH_L",
+      "process": "order-machine",
+      "description": "Brass OD5 ID3.2 L9; M3 bolt clamps tube, PLA rotates on smooth OD",
+      "group": "fixed",
+      "bbox_mm": [
+        47.5,
+        41.5,
+        62.9,
+        52.5,
+        46.5,
+        71.9
+      ],
+      "center_of_mass_mm": [
+        50.0,
+        44.0,
+        67.39999999999999
+      ],
+      "volume_mm3": 104.33229202571705
+    },
+    {
+      "id": "PIVOT_BUSH_R",
+      "process": "order-machine",
+      "description": "Brass OD5 ID3.2 L9; M3 bolt clamps tube, PLA rotates on smooth OD",
+      "group": "fixed",
+      "bbox_mm": [
+        47.5,
+        41.5,
+        72.1,
+        52.5,
+        46.5,
+        81.1
+      ],
+      "center_of_mass_mm": [
+        50.00000000000001,
+        44.0,
+        76.6
+      ],
+      "volume_mm3": 104.33229202571702
+    },
+    {
+      "id": "PIVOT_CENTER_WASHER",
+      "process": "cut-drill",
+      "description": "PTFE ID5.1 OD8 t0.2",
+      "group": "fixed",
+      "bbox_mm": [
+        46.0,
+        40.0,
+        71.9,
+        54.0,
+        48.0,
+        72.10000000000001
+      ],
+      "center_of_mass_mm": [
+        50.00000000000001,
+        44.000000000000014,
+        72.00000000000001
+      ],
+      "volume_mm3": 5.96745524549384
+    },
+    {
+      "id": "LEVER_L",
+      "process": "PLA",
+      "description": "Horizontal jaw,40:20 moment arms;8mm plate plus captured pad shoe",
+      "group": "jaw_L",
+      "bbox_mm": [
+        39.35,
+        18.0,
+        42.0,
+        80.0,
+        108.0,
+        102.0
+      ],
+      "center_of_mass_mm": [
+        59.304134703476166,
+        61.41190364828299,
+        68.43870908315282
+      ],
+      "volume_mm3": 9686.403944733152,
+      "stl": "stl/lever_l.stl",
+      "stl_volume_error_fraction": 1.1179787777275378e-05
+    },
+    {
+      "id": "PAD_BACK_L",
+      "process": "cut-drill",
+      "description": "A5052 t1 x10 x58; holes3.2 at3mm from ends, clear of rotor",
+      "group": "jaw_L",
+      "bbox_mm": [
+        46.35,
+        19.0,
+        43.0,
+        47.35,
+        29.0,
+        101.0
+      ],
+      "center_of_mass_mm": [
+        46.85000000000001,
+        24.0,
+        71.99999999999999
+      ],
+      "volume_mm3": 563.9150456136202
+    },
+    {
+      "id": "PAD_L",
+      "process": "cut",
+      "description": "Hikari KGR-1100 NR;10x8x1 experimental friction insert",
+      "group": "jaw_L",
+      "bbox_mm": [
+        48.35,
+        19.0,
+        68.0,
+        49.35,
+        29.0,
+        76.0
+      ],
+      "center_of_mass_mm": [
+        48.85,
+        24.000000000000004,
+        72.0
+      ],
+      "volume_mm3": 79.99999999999999
+    },
+    {
+      "id": "PAD_SPACER_L",
+      "process": "cut",
+      "description": "G10/FR4 t1 heat-spreading stand-off, adhesive layer included in final gap setup",
+      "group": "jaw_L",
+      "bbox_mm": [
+        47.35,
+        19.0,
+        67.0,
+        48.35,
+        29.0,
+        77.0
+      ],
+      "center_of_mass_mm": [
+        47.850000000000016,
+        24.000000000000007,
+        72.00000000000001
+      ],
+      "volume_mm3": 99.99999999999997
+    },
+    {
+      "id": "LEVER_R",
+      "process": "PLA",
+      "description": "Horizontal jaw,40:20 moment arms;8mm plate plus captured pad shoe",
+      "group": "jaw_R",
+      "bbox_mm": [
+        20.0,
+        18.0,
+        42.0,
+        60.65,
+        90.0,
+        102.0
+      ],
+      "center_of_mass_mm": [
+        44.48877575012651,
+        50.374940209323896,
+        75.2210997217176
+      ],
+      "volume_mm3": 7458.241992172381,
+      "stl": "stl/lever_r.stl",
+      "stl_volume_error_fraction": 2.0036064307070475e-05
+    },
+    {
+      "id": "PAD_BACK_R",
+      "process": "cut-drill",
+      "description": "A5052 t1 x10 x58; holes3.2 at3mm from ends, clear of rotor",
+      "group": "jaw_R",
+      "bbox_mm": [
+        52.65,
+        19.0,
+        43.0,
+        53.65,
+        29.0,
+        101.0
+      ],
+      "center_of_mass_mm": [
+        53.15,
+        24.0,
+        71.99999999999999
+      ],
+      "volume_mm3": 563.9150456136202
+    },
+    {
+      "id": "PAD_R",
+      "process": "cut",
+      "description": "Hikari KGR-1100 NR;10x8x1 experimental friction insert",
+      "group": "jaw_R",
+      "bbox_mm": [
+        50.65,
+        19.0,
+        68.0,
+        51.65,
+        29.0,
+        76.0
+      ],
+      "center_of_mass_mm": [
+        51.150000000000006,
+        24.000000000000004,
+        72.0
+      ],
+      "volume_mm3": 79.99999999999999
+    },
+    {
+      "id": "PAD_SPACER_R",
+      "process": "cut",
+      "description": "G10/FR4 t1 heat-spreading stand-off, adhesive layer included in final gap setup",
+      "group": "jaw_R",
+      "bbox_mm": [
+        51.65,
+        19.0,
+        67.0,
+        52.65,
+        29.0,
+        77.0
+      ],
+      "center_of_mass_mm": [
+        52.15000000000001,
+        24.000000000000007,
+        72.00000000000001
+      ],
+      "volume_mm3": 99.99999999999997
+    },
+    {
+      "id": "SOLENOID_CRADLE",
+      "process": "PLA",
+      "description": "22x30.4x18 body clamp on jawL; slot-adjust to1.5mm open stroke",
+      "group": "jaw_L",
+      "bbox_mm": [
+        43.0,
+        66.99999999999987,
+        71.3,
+        80.0,
+        108.0,
+        95.3
+      ],
+      "center_of_mass_mm": [
+        61.47960197031649,
+        85.6746753337837,
+        80.14064253883052
+      ],
+      "volume_mm3": 14857.794483302743,
+      "stl": "stl/solenoid_cradle.stl",
+      "stl_volume_error_fraction": 4.552076061644179e-05
+    },
+    {
+      "id": "SOLENOID_CAP",
+      "process": "PLA",
+      "description": "Ventilated low-force body restraint;4xM3x30 through nuts",
+      "group": "jaw_L",
+      "bbox_mm": [
+        43.0,
+        67.0,
+        95.3,
+        80.0,
+        101.0,
+        99.3
+      ],
+      "center_of_mass_mm": [
+        61.51312168342209,
+        83.99999999999996,
+        97.29999999999993
+      ],
+      "volume_mm3": 4903.320364908965,
+      "stl": "stl/solenoid_cap.stl",
+      "stl_volume_error_fraction": 1.5660962624752577e-05
+    },
+    {
+      "id": "SOLENOID_THERMAL_PAD",
+      "process": "cut",
+      "description": "G10/FR4 t1 stand-off, check PLA under clamp remains<40C",
+      "group": "jaw_L",
+      "bbox_mm": [
+        45.0,
+        73.0,
+        76.3,
+        75.4,
+        95.0,
+        77.3
+      ],
+      "center_of_mass_mm": [
+        60.199999999999996,
+        84.0,
+        76.79999999999998
+      ],
+      "volume_mm3": 668.8000000000002
+    },
+    {
+      "id": "SOLENOID_REFERENCE",
+      "process": "reference",
+      "description": "CA0830 body envelope;48ohm12V continuous catalog rating",
+      "group": "jaw_L",
+      "bbox_mm": [
+        45.0,
+        73.0,
+        77.3,
+        75.4,
+        95.0,
+        95.3
+      ],
+      "center_of_mass_mm": [
+        60.20000000000001,
+        84.00000000000001,
+        86.3
+      ],
+      "volume_mm3": 12038.400000000001
+    },
+    {
+      "id": "PLUNGER_REFERENCE",
+      "process": "reference",
+      "description": "Independent clevis envelope: slot2.1, hole3; hidden end inside body is illustrative",
+      "group": "link",
+      "bbox_mm": [
+        33.4999999,
+        79.9999999,
+        82.2999998999716,
+        46.5000001,
+        88.0000001,
+        90.30000009999999
+      ],
+      "center_of_mass_mm": [
+        40.86817486283941,
+        83.99999907089959,
+        86.29999957148182
+      ],
+      "volume_mm3": 488.22192054137315
+    },
+    {
+      "id": "SOLENOID_LINK",
+      "process": "cut-drill",
+      "description": "A5052 t1.5,15.5x6;10mm hole centers;2.8mm clevis pins",
+      "group": "link",
+      "bbox_mm": [
+        25.0,
+        81.0,
+        85.55,
+        40.5,
+        87.0,
+        87.05
+      ],
+      "center_of_mass_mm": [
+        32.708608651285424,
+        84.00000000000001,
+        86.30000000000001
+      ],
+      "volume_mm3": 119.68440433748236
+    },
+    {
+      "id": "LINK_SPACER",
+      "process": "order-machine",
+      "description": "Brass OD6 ID2.9 L4.85, aligns right jaw link with solenoid axisZ86.3",
+      "group": "jaw_R",
+      "bbox_mm": [
+        25.0,
+        81.0,
+        80.7,
+        31.0,
+        87.0,
+        85.55
+      ],
+      "center_of_mass_mm": [
+        28.0,
+        83.99999999999999,
+        83.12500000000001
+      ],
+      "volume_mm3": 105.09530634145764
+    },
+    {
+      "id": "LINK_PIN_1",
+      "process": "order-machine",
+      "description": "Smooth dia2.8 x18;head5x1;crosshole0.8 at1mm from tip;0.6wire keeper",
+      "group": "link",
+      "bbox_mm": [
+        25.5,
+        81.5,
+        71.0,
+        30.5,
+        86.5,
+        90.0000001
+      ],
+      "center_of_mass_mm": [
+        27.999999982461897,
+        83.9999999119413,
+        79.46855146474157
+      ],
+      "volume_mm3": 129.07742236589306
+    },
+    {
+      "id": "LINK_PIN_2",
+      "process": "order-machine",
+      "description": "Smooth dia2.8 x12;head5x1;crosshole0.8 at1mm from tip;0.6wire keeper",
+      "group": "link",
+      "bbox_mm": [
+        35.5,
+        81.5,
+        81.0,
+        40.5,
+        86.5,
+        94.0000001
+      ],
+      "center_of_mass_mm": [
+        37.99999997685112,
+        83.99999987666348,
+        86.53914624600097
+      ],
+      "volume_mm3": 92.13229260292718
+    },
+    {
+      "id": "RETURN_SPRING_ENVELOPE",
+      "process": "reference",
+      "description": "12-0423: free20,installed16.5,k0.13; coil envelope only",
+      "group": "link",
+      "bbox_mm": [
+        41.75,
+        62.0,
+        70.0,
+        58.25,
+        66.0,
+        74.0
+      ],
+      "center_of_mass_mm": [
+        50.00000000000001,
+        64.0,
+        71.99999999999999
+      ],
+      "volume_mm3": 57.53826945049693
+    },
+    {
+      "id": "SPRING_GUIDE",
+      "process": "order-machine",
+      "description": "Smooth2.5x25; captured loose in3.1 holes, not threaded bearing surface",
+      "group": "link",
+      "bbox_mm": [
+        37.5,
+        62.75,
+        70.75,
+        62.5,
+        65.25,
+        73.25
+      ],
+      "center_of_mass_mm": [
+        50.00000000000001,
+        64.0,
+        72.00000000000001
+      ],
+      "volume_mm3": 122.7184630308513
+    },
+    {
+      "id": "SENSOR_STAND",
+      "process": "PLA",
+      "description": "Axial gap1-5mm by slots; translate pocket to align optical spot",
+      "group": "fixed",
+      "bbox_mm": [
+        55.0,
+        -48.0,
+        12.0,
+        83.0,
+        -26.0,
+        88.0
+      ],
+      "center_of_mass_mm": [
+        70.72872765599682,
+        -37.296672219611345,
+        36.572281118708396
+      ],
+      "volume_mm3": 8494.22302937973,
+      "stl": "stl/sensor_stand.stl",
+      "stl_volume_error_fraction": 1.6981837343967945e-05
+    },
+    {
+      "id": "SENSOR_POCKET",
+      "process": "PLA",
+      "description": "MAKER-REFLECT board retained by nonconductive strap; do not force M3 through board",
+      "group": "fixed",
+      "bbox_mm": [
+        52.5,
+        -41.0,
+        60.0,
+        59.7,
+        -6.0,
+        84.0
+      ],
+      "center_of_mass_mm": [
+        57.85788663178044,
+        -23.290000522127013,
+        71.99999999999997
+      ],
+      "volume_mm3": 2731.305136840862,
+      "stl": "stl/sensor_pocket.stl",
+      "stl_volume_error_fraction": 1.053801515421397e-05
+    },
+    {
+      "id": "SENSOR_REFERENCE",
+      "process": "reference",
+      "description": "Board length radial, header outward; optical spot radius16 by calibration, face gap2",
+      "group": "fixed",
+      "bbox_mm": [
+        52.5,
+        -31.6,
+        67.8,
+        56.7,
+        -13.5,
+        76.2
+      ],
+      "center_of_mass_mm": [
+        54.599999999999994,
+        -22.549999999999997,
+        71.99999999999999
+      ],
+      "volume_mm3": 638.5680000000009
+    },
+    {
+      "id": "SENSOR_ADJUST_BOLT_1",
+      "process": "buy",
+      "description": "M3x30, head toward rotor but radius37 outside disc; jam nuts set1-5mm gap",
+      "group": "fixed",
+      "bbox_mm": [
+        53.2,
+        -39.75,
+        62.25,
+        86.2,
+        -34.25,
+        67.75
+      ],
+      "center_of_mass_mm": [
+        67.04927234927234,
+        -37.0,
+        65.0
+      ],
+      "volume_mm3": 283.3323874456295
+    },
+    {
+      "id": "SENSOR_ADJUST_BOLT_2",
+      "process": "buy",
+      "description": "M3x30, head toward rotor but radius37 outside disc; jam nuts set1-5mm gap",
+      "group": "fixed",
+      "bbox_mm": [
+        53.2,
+        -39.75,
+        76.25,
+        86.2,
+        -34.25,
+        81.75
+      ],
+      "center_of_mass_mm": [
+        67.04927234927236,
+        -37.0,
+        79.00000000000001
+      ],
+      "volume_mm3": 283.3323874456295
+    },
+    {
+      "id": "GUARD_TOP",
+      "process": "cut-drill",
+      "description": "Polycarbonate3mm; template and12 aluminium angles; not rated containment",
+      "group": "fixed",
+      "bbox_mm": [
+        -143.0,
+        -53.0,
+        124.0,
+        128.0,
+        113.0,
+        127.0
+      ],
+      "center_of_mass_mm": [
+        -7.500000000000001,
+        29.999999999999996,
+        125.50000000000001
+      ],
+      "volume_mm3": 134849.04956677352
+    },
+    {
+      "id": "GUARD_LEFT",
+      "process": "cut-drill",
+      "description": "Polycarbonate3mm; template and12 aluminium angles; not rated containment",
+      "group": "fixed",
+      "bbox_mm": [
+        -143.0,
+        -50.0,
+        12.0,
+        -140.0,
+        110.0,
+        124.0
+      ],
+      "center_of_mass_mm": [
+        -141.50000000000003,
+        30.34146851477443,
+        68.435610672905
+      ],
+      "volume_mm3": 52993.38856067104
+    },
+    {
+      "id": "GUARD_RIGHT",
+      "process": "cut-drill",
+      "description": "Polycarbonate3mm; template and12 aluminium angles; not rated containment",
+      "group": "fixed",
+      "bbox_mm": [
+        125.0,
+        -50.0,
+        12.0,
+        128.0,
+        110.0,
+        124.0
+      ],
+      "center_of_mass_mm": [
+        126.49999999999993,
+        29.99999999999999,
+        68.00304918088179
+      ],
+      "volume_mm3": 53596.574350160285
+    },
+    {
+      "id": "GUARD_FRONT",
+      "process": "cut-drill",
+      "description": "Polycarbonate3mm; template and12 aluminium angles; not rated containment",
+      "group": "fixed",
+      "bbox_mm": [
+        -143.0,
+        -53.0,
+        12.0,
+        128.0,
+        -50.0,
+        124.0
+      ],
+      "center_of_mass_mm": [
+        -7.5000000000000036,
+        -51.500000000000014,
+        68.00179585617086
+      ],
+      "volume_mm3": 91001.52478338675
+    },
+    {
+      "id": "GUARD_BACK",
+      "process": "cut-drill",
+      "description": "Polycarbonate3mm; template and12 aluminium angles; not rated containment",
+      "group": "fixed",
+      "bbox_mm": [
+        -143.0,
+        110.0,
+        12.0,
+        128.0,
+        113.0,
+        124.0
+      ],
+      "center_of_mass_mm": [
+        -7.5000000000000036,
+        111.5,
+        68.00179585617086
+      ],
+      "volume_mm3": 91001.52478338675
+    },
+    {
+      "id": "GUARD_ANGLE_LF_BASE",
+      "process": "cut-drill",
+      "description": "Aluminium angle20x20x2,cut width20; two3.4 holes at leg10,width10",
+      "group": "fixed",
+      "bbox_mm": [
+        -140.0,
+        -50.0,
+        12.0,
+        -120.0,
+        -30.0,
+        32.0
+      ],
+      "center_of_mass_mm": [
+        -134.257360599158,
+        -39.99999999999999,
+        17.742639400842002
+      ],
+      "volume_mm3": 1483.683188924502
+    },
+    {
+      "id": "GUARD_ANGLE_LF_TOP",
+      "process": "cut-drill",
+      "description": "Aluminium angle20x20x2,cut width20; two3.4 holes at leg10,width10",
+      "group": "fixed",
+      "bbox_mm": [
+        -140.0,
+        -50.0,
+        104.0,
+        -120.0,
+        -30.0,
+        124.0
+      ],
+      "center_of_mass_mm": [
+        -134.25736059915795,
+        -39.99999999999999,
+        118.25736059915798
+      ],
+      "volume_mm3": 1483.6831889245018
+    },
+    {
+      "id": "GUARD_ANGLE_LF_MID",
+      "process": "cut-drill",
+      "description": "Same20x20x2 angle,20long; corner junction",
+      "group": "fixed",
+      "bbox_mm": [
+        -140.0,
+        -50.0,
+        55.0,
+        -120.0,
+        -30.0,
+        75.0
+      ],
+      "center_of_mass_mm": [
+        -134.25736059915795,
+        -44.25736059915797,
+        65.0
+      ],
+      "volume_mm3": 1483.6831889245022
+    },
+    {
+      "id": "GUARD_ANGLE_LB_BASE",
+      "process": "cut-drill",
+      "description": "Aluminium angle20x20x2,cut width20; two3.4 holes at leg10,width10",
+      "group": "fixed",
+      "bbox_mm": [
+        -140.0,
+        90.0,
+        12.0,
+        -120.0,
+        110.0,
+        32.0
+      ],
+      "center_of_mass_mm": [
+        -134.257360599158,
+        99.99999999999997,
+        17.742639400842002
+      ],
+      "volume_mm3": 1483.683188924502
+    },
+    {
+      "id": "GUARD_ANGLE_LB_TOP",
+      "process": "cut-drill",
+      "description": "Aluminium angle20x20x2,cut width20; two3.4 holes at leg10,width10",
+      "group": "fixed",
+      "bbox_mm": [
+        -140.0,
+        90.0,
+        104.0,
+        -120.0,
+        110.0,
+        124.0
+      ],
+      "center_of_mass_mm": [
+        -134.25736059915795,
+        99.99999999999997,
+        118.25736059915798
+      ],
+      "volume_mm3": 1483.6831889245018
+    },
+    {
+      "id": "GUARD_ANGLE_LB_MID",
+      "process": "cut-drill",
+      "description": "Same20x20x2 angle,20long; corner junction",
+      "group": "fixed",
+      "bbox_mm": [
+        -140.0,
+        90.0,
+        55.0,
+        -120.0,
+        110.0,
+        75.0
+      ],
+      "center_of_mass_mm": [
+        -134.257360599158,
+        104.25736059915799,
+        64.99999999999999
+      ],
+      "volume_mm3": 1483.6831889245022
+    },
+    {
+      "id": "GUARD_ANGLE_RF_BASE",
+      "process": "cut-drill",
+      "description": "Aluminium angle20x20x2,cut width20; two3.4 holes at leg10,width10",
+      "group": "fixed",
+      "bbox_mm": [
+        105.0,
+        -50.0,
+        12.0,
+        125.0,
+        -30.0,
+        32.0
+      ],
+      "center_of_mass_mm": [
+        119.257360599158,
+        -39.99999999999999,
+        17.742639400842005
+      ],
+      "volume_mm3": 1483.683188924502
+    },
+    {
+      "id": "GUARD_ANGLE_RF_TOP",
+      "process": "cut-drill",
+      "description": "Aluminium angle20x20x2,cut width20; two3.4 holes at leg10,width10",
+      "group": "fixed",
+      "bbox_mm": [
+        105.0,
+        -50.0,
+        104.0,
+        125.0,
+        -30.0,
+        124.0
+      ],
+      "center_of_mass_mm": [
+        119.25736059915798,
+        -40.0,
+        118.25736059915798
+      ],
+      "volume_mm3": 1483.6831889245018
+    },
+    {
+      "id": "GUARD_ANGLE_RF_MID",
+      "process": "cut-drill",
+      "description": "Same20x20x2 angle,20long; corner junction",
+      "group": "fixed",
+      "bbox_mm": [
+        105.0,
+        -50.0,
+        55.0,
+        125.0,
+        -30.0,
+        75.0
+      ],
+      "center_of_mass_mm": [
+        119.25736059915798,
+        -44.25736059915798,
+        64.99999999999996
+      ],
+      "volume_mm3": 1483.6831889245022
+    },
+    {
+      "id": "GUARD_ANGLE_RB_BASE",
+      "process": "cut-drill",
+      "description": "Aluminium angle20x20x2,cut width20; two3.4 holes at leg10,width10",
+      "group": "fixed",
+      "bbox_mm": [
+        105.0,
+        90.0,
+        12.0,
+        125.0,
+        110.0,
+        32.0
+      ],
+      "center_of_mass_mm": [
+        119.25736059915798,
+        99.99999999999997,
+        17.742639400842005
+      ],
+      "volume_mm3": 1483.683188924502
+    },
+    {
+      "id": "GUARD_ANGLE_RB_TOP",
+      "process": "cut-drill",
+      "description": "Aluminium angle20x20x2,cut width20; two3.4 holes at leg10,width10",
+      "group": "fixed",
+      "bbox_mm": [
+        105.0,
+        90.0,
+        104.0,
+        125.0,
+        110.0,
+        124.0
+      ],
+      "center_of_mass_mm": [
+        119.25736059915798,
+        99.99999999999999,
+        118.25736059915798
+      ],
+      "volume_mm3": 1483.6831889245018
+    },
+    {
+      "id": "GUARD_ANGLE_RB_MID",
+      "process": "cut-drill",
+      "description": "Same20x20x2 angle,20long; corner junction",
+      "group": "fixed",
+      "bbox_mm": [
+        105.0,
+        90.0,
+        55.0,
+        125.0,
+        110.0,
+        75.0
+      ],
+      "center_of_mass_mm": [
+        119.25736059915796,
+        104.25736059915798,
+        65.0
+      ],
+      "volume_mm3": 1483.6831889245018
+    }
+  ],
+  "fastener_totals": {
+    "M3x6": 6,
+    "M3x25": 10,
+    "M3x20": 18,
+    "M3x50": 4,
+    "M3x16": 4,
+    "M3x35": 3,
+    "M3x30": 6,
+    "M3x10": 24
+  },
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "a9beb08ab5b6bea9d4b080c7a8805bb9d362b29445d23adae9ea5cbe06deb187"
+    },
+    {
+      "path": "assembly-view.svg",
+      "sha256": "07275903bb15b0f584f8c800a438474eab5969aca0164bbdccecdc716d5b8cdb"
+    },
+    {
+      "path": "base-drill.svg",
+      "sha256": "3c69b8bc0cdc52943f9f08199e28cd1bbad892bb2f3b25c149b00dfe37ecc927"
+    },
+    {
+      "path": "guard-drawing.svg",
+      "sha256": "0b4768f9c7f48b1b411cc29b7bcc2e43f398c54154bc4caf5fe7781a65b19a29"
+    },
+    {
+      "path": "guard-end-cut.dxf",
+      "sha256": "62a6f517047fa8495731fe565b3a893b1d42386a65332407d2db69aa22add1e3"
+    },
+    {
+      "path": "guard-side-cut.dxf",
+      "sha256": "35edd18a695e9b4c50b00882992ea6ac9f42fc3aac338230eee83ffc743530bf"
+    },
+    {
+      "path": "guard-top-cut.dxf",
+      "sha256": "5894fc88ca84f3a691363b9d62fb229556c2db2bca32d063669de874e1b69c95"
+    },
+    {
+      "path": "joints.csv",
+      "sha256": "5b6903fbc8de6f9d1a1df19559356ff669b4ad9769569895d6fde856d0d846a6"
+    },
+    {
+      "path": "layout.svg",
+      "sha256": "c4efcbe8dc3d805cb183ae86d59f65dd2f9081d409f23584354f93f64371876c"
+    },
+    {
+      "path": "link-cut.dxf",
+      "sha256": "ea5962889f9d552aef45ff787e3241f085c7a59f9a6ed373667787ca64a83c7d"
+    },
+    {
+      "path": "machine-parts.svg",
+      "sha256": "4b32d113e98cb54bedb6669d692fc2cc02eaf9179d5cf6beec95097d5ae40a2f"
+    },
+    {
+      "path": "pad-back-cut.dxf",
+      "sha256": "dce0699c8304fb0c5756a8c04fbc43410c4dc3e2ba438e81b3ba2ee955fb971d"
+    },
+    {
+      "path": "prototype-mechanical.step",
+      "sha256": "082b465472da3075d6e8cf9635503768284a1b44908ef9ea48f37b0412016116"
+    },
+    {
+      "path": "rotor-cut.dxf",
+      "sha256": "568e6ee8cfd644bf2e106abc623fba823be161c440baf53c75746d0a1c0d1b4f"
+    },
+    {
+      "path": "rotor-drawing.svg",
+      "sha256": "63c1c74cecc033e5569c68937ea472f40468197470c67e543b5fa26856faf96d"
+    },
+    {
+      "path": "sensor-track.svg",
+      "sha256": "8f7c44d5e6d9f05e578f12180d1a96b0fd7a40e251f24ac2b28f8d28c1eb2904"
+    },
+    {
+      "path": "stl/bearing_block_1.stl",
+      "sha256": "d4b0a43a833d372e454ffbbc295f902003cea52ad7a20568825de3c2baf36109"
+    },
+    {
+      "path": "stl/bearing_block_2.stl",
+      "sha256": "d4b0a43a833d372e454ffbbc295f902003cea52ad7a20568825de3c2baf36109"
+    },
+    {
+      "path": "stl/bearing_cap_1_l.stl",
+      "sha256": "39ad86f4d49fabe78531285d02d6840f5d33cd472b23339905fdaf56ee3c8a4b"
+    },
+    {
+      "path": "stl/bearing_cap_1_r.stl",
+      "sha256": "67921a55bc286261cdddf0bf990361241d8a53063d2866455e9cbe3c58ec3b51"
+    },
+    {
+      "path": "stl/bearing_cap_2_l.stl",
+      "sha256": "2739cb6a623e3109327586724458a5d7d33f102ec10106e58c16f1426612d3ad"
+    },
+    {
+      "path": "stl/bearing_cap_2_r.stl",
+      "sha256": "9a7fdd2d4ef83468eb8a3c6fb86414b3fa8edf89af129ac81ac95f6774b94a33"
+    },
+    {
+      "path": "stl/caliper_pedestal.stl",
+      "sha256": "233b0aaff4da273807ad6704ba5a6543e58a67836007c5f4ceaf4e29f9aead2e"
+    },
+    {
+      "path": "stl/lever_l.stl",
+      "sha256": "fc2175981054f3eec0a41b0d1e2097764b630c2d9076fdfeff0b1d7274b1ae53"
+    },
+    {
+      "path": "stl/lever_r.stl",
+      "sha256": "32f96c66f138c4199817af56f10555d6bd5f34277fc8cedc948ac14d490ea46c"
+    },
+    {
+      "path": "stl/motor_carriage.stl",
+      "sha256": "ca343f06399d744bf7952cd800ced269f29df260785ef7bf7569f2da5b68dfbc"
+    },
+    {
+      "path": "stl/motor_v_saddle_1.stl",
+      "sha256": "deb9f339290a153e8a860311e965dbc3a5ee83402e87fc230777d33f3e80a27e"
+    },
+    {
+      "path": "stl/motor_v_saddle_2.stl",
+      "sha256": "f706017d7e44e23fc2738d524c39c8d50cc1f896f286f854a90d7802a09a8e14"
+    },
+    {
+      "path": "stl/pivot_bridge.stl",
+      "sha256": "e57181f94c05165c3808cc12e57ffe721175fee18217c97d8bf870c5417a1275"
+    },
+    {
+      "path": "stl/sensor_pocket.stl",
+      "sha256": "e8fe0cb91c068d65434ecfad6766c8ee3a7cb789a38881f5a5ad2a259e306797"
+    },
+    {
+      "path": "stl/sensor_stand.stl",
+      "sha256": "de3d83a785af8b54557ddc2e319eefdd52b9a0f35f00936865a4a72a29504b25"
+    },
+    {
+      "path": "stl/solenoid_cap.stl",
+      "sha256": "a92bec28a9a43c54f749824630b830d7c030939efb460d81ff6f7f0e01bd4cae"
+    },
+    {
+      "path": "stl/solenoid_cradle.stl",
+      "sha256": "374091949be90876a07a5b14d1f8e4c4dc29bc16f058a8bdbfd1346caf1eefbc"
+    }
+  ]
+}

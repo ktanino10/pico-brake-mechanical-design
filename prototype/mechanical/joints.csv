@@ -1,0 +1,17 @@
+joint,screw,quantity,grip_mm,thread_engagement_mm,note
+Rotor to hub,M3x6,6,1.5,4.5,M3 flat washer t0.5 x6; Pololu face flange5
+Bearing caps,M3x25,8,16,2.4,2 washers and1 nut each;5.6mm nominal projection
+Bearing feet to base,M3x20,4,14,2.4,Underside nut pocket4 deep;2 washers;projection2.6
+Caliper foot to base,M3x20,4,14,2.4,Underside nut pocket4 deep;2 washers;projection2.6
+Motor jacks,M3x50,4,12,0,4 nuts and3 washers per stud; setting4-24 above base
+Motor V saddles,M3x16,4,10,2.4,2 washers and1 nut each
+Pivot bridge/bush axis,M3x35,3,30.2,2.4,2 washers and1 nut each; never clamp PLA moving faces
+Solenoid body clamp,M3x30,4,25,2.4,Nut pocket3 deep in cradle;1 washer;projection2.1
+Cradle to lever,M3x20,2,13,2.4,2 washers andnut each; holes outside solenoid body
+Pad backing clamps,M3x10,4,4,2.4,2 washers; screw heads outside rotor diameter
+Open stops,M3x25,2,5,2.4,2 jam nuts per stop; tip setting by feeler
+Close stops,M3x20,2,6,2.4,2 jam nuts per stop; limit to0.8deg
+Sensor foot to base,M3x20,2,14,2.4,Underside nut pocket4 deep;2 washers
+Sensor pocket adjustment,M3x30,2,19.3,2.4,2 M3 thin1.8 jam nuts in8.3mm gap;2 washers;1 full nut
+Guard angles/panels,M3x10,20,5,2.4,2 wide washers OD9 t0.8 each; panel3 + angle2
+Guard angles/base,M3x20,4,14,2.4,2 wide washers each; base12 + angle2

@@ -2,21 +2,20 @@
   "schema": "public-brake-content-audit-v1",
   "status": "PASS",
   "scope": "Allowlisted bytes, archives and metadata. No claim of whole-machine or physical approval.",
-  "original_native_negative_control": "REJECTED",
+  "original_native_negative_control": "not-supplied",
   "negative_controls": {
     "WHEEL": "REJECTED",
     "LOAD_FRAME": "REJECTED",
     "SRC_Part__Feature12": "REJECTED",
     "CORNER_BOLT_0": "REJECTED",
-    "YOKE_99": "REJECTED",
-    "full-protected-native": "REJECTED"
+    "YOKE_99": "REJECTED"
   },
   "checks": {
     ".gitignore": {
-      "bytes_scanned": 74
+      "bytes_scanned": 353
     },
     ".gitattributes": {
-      "bytes_scanned": 106
+      "bytes_scanned": 301
     },
     ".nojekyll": {
       "bytes_scanned": 0
@@ -28,7 +27,7 @@
       "bytes_scanned": 1114
     },
     "index.html": {
-      "bytes_scanned": 11513
+      "bytes_scanned": 11662
     },
     "styles.css": {
       "bytes_scanned": 14336
@@ -43,10 +42,81 @@
       "bytes_scanned": 5690
     },
     "package.json": {
-      "bytes_scanned": 526
+      "bytes_scanned": 600
     },
     "package-lock.json": {
       "bytes_scanned": 2097
+    },
+    "motion.html": {
+      "bytes_scanned": 7906
+    },
+    "motion.css": {
+      "bytes_scanned": 5639
+    },
+    "motion.js": {
+      "bytes_scanned": 8952
+    },
+    "motion-scene.js": {
+      "bytes_scanned": 16988
+    },
+    "motion-contract.js": {
+      "bytes_scanned": 6214
+    },
+    "motion-bootstrap.js": {
+      "bytes_scanned": 1356
+    },
+    "docs/MOTION.md": {
+      "bytes_scanned": 5861
+    },
+    "data/motion-section.json": {
+      "bytes_scanned": 2955
+    },
+    "scripts/build_motion_sections.py": {
+      "bytes_scanned": 1740
+    },
+    "media/c08-motion.mp4": {
+      "bytes_scanned": 4056264
+    },
+    "media/c08-poster.png": {
+      "png_crc_checked": true,
+      "png_text_chunks": 0
+    },
+    "media/contact-comparison.png": {
+      "png_crc_checked": true,
+      "png_text_chunks": 0
+    },
+    "media/player.html": {
+      "bytes_scanned": 3581
+    },
+    "media/source/README.md": {
+      "bytes_scanned": 2666
+    },
+    "media/source/c08-clear-animation.blend": {
+      "bytes_scanned": 19828449
+    },
+    "media/source/clarity_timeline.py": {
+      "bytes_scanned": 3641
+    },
+    "media/source/export_c08.py": {
+      "bytes_scanned": 7497
+    },
+    "media/source/render_c08.py": {
+      "bytes_scanned": 10840
+    },
+    "media/source/render_c08_clear.py": {
+      "bytes_scanned": 14316
+    },
+    "media/source/compose_c08_clear.py": {
+      "bytes_scanned": 13884
+    },
+    "tests/motion.test.mjs": {
+      "bytes_scanned": 3780
+    },
+    "tests/motion-browser.mjs": {
+      "bytes_scanned": 15629
+    },
+    "validation/motion-browser.json": {
+      "bytes_scanned": 2780
     },
     "overview.html": {
       "bytes_scanned": 7865
@@ -83,6 +153,142 @@
     },
     "docs/VALIDATION.md": {
       "bytes_scanned": 6188
+    },
+    "PROTOTYPE.md": {
+      "bytes_scanned": 2364
+    },
+    "docs/PROTOTYPE.md": {
+      "bytes_scanned": 6226
+    },
+    "docs/PROTOTYPE_EVIDENCE.md": {
+      "bytes_scanned": 22171
+    },
+    "docs/PROTOTYPE_BLOCKS.md": {
+      "bytes_scanned": 1885
+    },
+    "docs/PROTOTYPE_WORKSHEET.md": {
+      "bytes_scanned": 6755
+    },
+    "data/prototype-bom.csv": {
+      "bytes_scanned": 26188
+    },
+    "docs/PROTOTYPE_MECHANICAL.md": {
+      "bytes_scanned": 17638
+    },
+    "docs/PROTOTYPE_SIGNAL.md": {
+      "bytes_scanned": 10684
+    },
+    "scripts/build_prototype_mechanics.py": {
+      "bytes_scanned": 50298
+    },
+    "tests/test_prototype.py": {
+      "bytes_scanned": 8331
+    },
+    "prototype/mechanical/README.md": {
+      "bytes_scanned": 1771
+    },
+    "prototype/mechanical/manifest.json": {
+      "bytes_scanned": 63455
+    },
+    "prototype/mechanical/prototype-mechanical.step": {
+      "bytes_scanned": 1163139
+    },
+    "prototype/mechanical/prototype-mechanical.zip": {
+      "zip_members": 34,
+      "uncompressed_bytes": 14450752
+    },
+    "prototype/mechanical/joints.csv": {
+      "bytes_scanned": 1318
+    },
+    "prototype/mechanical/layout.svg": {
+      "bytes_scanned": 176716
+    },
+    "prototype/mechanical/assembly-view.svg": {
+      "bytes_scanned": 10829667
+    },
+    "prototype/mechanical/rotor-drawing.svg": {
+      "bytes_scanned": 1566
+    },
+    "prototype/mechanical/rotor-cut.dxf": {
+      "bytes_scanned": 518
+    },
+    "prototype/mechanical/base-drill.svg": {
+      "bytes_scanned": 2269
+    },
+    "prototype/mechanical/machine-parts.svg": {
+      "bytes_scanned": 2316
+    },
+    "prototype/mechanical/pad-back-cut.dxf": {
+      "bytes_scanned": 229
+    },
+    "prototype/mechanical/link-cut.dxf": {
+      "bytes_scanned": 233
+    },
+    "prototype/mechanical/sensor-track.svg": {
+      "bytes_scanned": 5325
+    },
+    "prototype/mechanical/guard-drawing.svg": {
+      "bytes_scanned": 1250
+    },
+    "prototype/mechanical/guard-top-cut.dxf": {
+      "bytes_scanned": 318
+    },
+    "prototype/mechanical/guard-end-cut.dxf": {
+      "bytes_scanned": 397
+    },
+    "prototype/mechanical/guard-side-cut.dxf": {
+      "bytes_scanned": 237
+    },
+    "prototype/mechanical/stl/bearing_block_1.stl": {
+      "bytes_scanned": 149884
+    },
+    "prototype/mechanical/stl/bearing_block_2.stl": {
+      "bytes_scanned": 149884
+    },
+    "prototype/mechanical/stl/bearing_cap_1_l.stl": {
+      "bytes_scanned": 148684
+    },
+    "prototype/mechanical/stl/bearing_cap_1_r.stl": {
+      "bytes_scanned": 148684
+    },
+    "prototype/mechanical/stl/bearing_cap_2_l.stl": {
+      "bytes_scanned": 148684
+    },
+    "prototype/mechanical/stl/bearing_cap_2_r.stl": {
+      "bytes_scanned": 148684
+    },
+    "prototype/mechanical/stl/motor_carriage.stl": {
+      "bytes_scanned": 129084
+    },
+    "prototype/mechanical/stl/motor_v_saddle_1.stl": {
+      "bytes_scanned": 44884
+    },
+    "prototype/mechanical/stl/motor_v_saddle_2.stl": {
+      "bytes_scanned": 44884
+    },
+    "prototype/mechanical/stl/caliper_pedestal.stl": {
+      "bytes_scanned": 294484
+    },
+    "prototype/mechanical/stl/pivot_bridge.stl": {
+      "bytes_scanned": 64284
+    },
+    "prototype/mechanical/stl/lever_l.stl": {
+      "bytes_scanned": 162184
+    },
+    "prototype/mechanical/stl/lever_r.stl": {
+      "bytes_scanned": 140984
+    },
+    "prototype/mechanical/stl/solenoid_cradle.stl": {
+      "bytes_scanned": 208284
+    },
+    "prototype/mechanical/stl/solenoid_cap.stl": {
+      "bytes_scanned": 85484
+    },
+    "prototype/mechanical/stl/sensor_stand.stl": {
+      "bytes_scanned": 86284
+    },
+    "prototype/mechanical/stl/sensor_pocket.stl": {
+      "bytes_scanned": 44684
     },
     "data/provenance.json": {
       "bytes_scanned": 153070
@@ -243,7 +449,7 @@
       "bytes_scanned": 3280
     },
     "scripts/public_files.py": {
-      "bytes_scanned": 4084
+      "bytes_scanned": 6615
     },
     "scripts/serve_public.py": {
       "bytes_scanned": 3294
@@ -273,7 +479,7 @@
       "bytes_scanned": 10890
     },
     "validation/browser.json": {
-      "bytes_scanned": 3259
+      "bytes_scanned": 3273
     },
     "validation/reexport.json": {
       "bytes_scanned": 4096
@@ -290,13 +496,13 @@
   "files": [
     {
       "path": ".gitattributes",
-      "bytes": 106,
-      "sha256": "fc770d3af6512d6891e893ba18348e2a793b556ce70a537f4d8c219309ad90b2"
+      "bytes": 301,
+      "sha256": "25500eade0321ebabaa489fc58cc0e926e13e9db5ce5b8d9116df33ce4d112bb"
     },
     {
       "path": ".gitignore",
-      "bytes": 74,
-      "sha256": "050f8d46ef4f4628113747681975662868ccec143d88fcd572d243c710ccb0dd"
+      "bytes": 353,
+      "sha256": "e041d7b54deafabd328447a23e19ed1a34889e0288147e69e674d1285b8bd238"
     },
     {
       "path": ".nojekyll",
@@ -307,6 +513,11 @@
       "path": "NOTICE.md",
       "bytes": 1114,
       "sha256": "b92d95a1788d5fa101dcc1923230b3ff06e6255389996547fba1d80bb96182d8"
+    },
+    {
+      "path": "PROTOTYPE.md",
+      "bytes": 2364,
+      "sha256": "78567472df296b5aaedcd13d4874434dde6d272ebf194724c44323e3588a2c83"
     },
     {
       "path": "README.md",
@@ -389,6 +600,11 @@
       "sha256": "9e4f3075a8a36f0651a8301f3bd398db2946c2a16a5cd22e755190d99b9c5dd2"
     },
     {
+      "path": "data/motion-section.json",
+      "bytes": 2955,
+      "sha256": "241984aa9f5547f65ad15b4eb081dcdc527c9527feeeb399543428d619895643"
+    },
+    {
       "path": "data/overview-layout.json",
       "bytes": 62468,
       "sha256": "82d3d2f48ebd1fe3e615d8638f1225260a54988d3b1f6a3955bfb7efbb702f3a"
@@ -397,6 +613,11 @@
       "path": "data/parts.csv",
       "bytes": 23414,
       "sha256": "0571af0d46752947c7e04ea0635e99f1f090d39c67deadb8bb9c7b2cb3c9fb2a"
+    },
+    {
+      "path": "data/prototype-bom.csv",
+      "bytes": 26188,
+      "sha256": "9def668704756088f90eb12b46a62a2038dbca73c2a82dad3fd64e13b489e7c8"
     },
     {
       "path": "data/provenance.json",
@@ -409,9 +630,44 @@
       "sha256": "1480cf01b6add5086574e3ddcd83bba9693f3e0362602de6ada2745b52b36390"
     },
     {
+      "path": "docs/MOTION.md",
+      "bytes": 5861,
+      "sha256": "3befbe0d7a8a18fcfa0509a1f03dd8a694de679c6dff73ef787222ec432ab94c"
+    },
+    {
       "path": "docs/OVERVIEW.md",
       "bytes": 2253,
       "sha256": "317069d70ef616e21ebab1d71d9c1a3e9229c0ebf5c807e4d1c82d155c0d3b9e"
+    },
+    {
+      "path": "docs/PROTOTYPE.md",
+      "bytes": 6226,
+      "sha256": "5dcc9d17a0ed7b5990d8d0bda1bb02a84de93a86cb11f0a635b62ae106488e12"
+    },
+    {
+      "path": "docs/PROTOTYPE_BLOCKS.md",
+      "bytes": 1885,
+      "sha256": "15ea99fb941b41608e73de54be8409221927f2f38016f66e4d1de21db6e4ee7c"
+    },
+    {
+      "path": "docs/PROTOTYPE_EVIDENCE.md",
+      "bytes": 22171,
+      "sha256": "bb0c8e04cf79b994967e9da7da2f2139ba76765672b4ca8a161b2a94a8546aae"
+    },
+    {
+      "path": "docs/PROTOTYPE_MECHANICAL.md",
+      "bytes": 17638,
+      "sha256": "bec08ceb499d9836eebf8155ddc4dc507e5727ef7ee4d18d2f4fb182545ba072"
+    },
+    {
+      "path": "docs/PROTOTYPE_SIGNAL.md",
+      "bytes": 10684,
+      "sha256": "51479c231387989395ae865b1f994126e15b5871dd15eed60b3fa7bdd559f4cb"
+    },
+    {
+      "path": "docs/PROTOTYPE_WORKSHEET.md",
+      "bytes": 6755,
+      "sha256": "a58b07ef3285ba2757a60e121bb7e6640df88d49cc277bb3d565bbfde9735ec7"
     },
     {
       "path": "docs/PUBLIC_SCOPE.md",
@@ -490,8 +746,93 @@
     },
     {
       "path": "index.html",
-      "bytes": 11513,
-      "sha256": "e6f5e4a238a2f60780513549a3db1a7296eacf965a60d0c318c83a95fd5ce4dc"
+      "bytes": 11662,
+      "sha256": "50acf9f2e83006b1e657cc8aa37a8765e5763629a96766be0cee30082c744f2e"
+    },
+    {
+      "path": "media/c08-motion.mp4",
+      "bytes": 4056264,
+      "sha256": "1882d96c2566e0c267c2c332378344a450aa697dbb2524c09b2448e71762eb91"
+    },
+    {
+      "path": "media/c08-poster.png",
+      "bytes": 406337,
+      "sha256": "ef16942ff2ec784e3d1ad8a9f6240c7dfb8ccbbaa5a8506fd5a6fddf1e61fba6"
+    },
+    {
+      "path": "media/contact-comparison.png",
+      "bytes": 220919,
+      "sha256": "a65f290aaf69adebba5fe544733d2bbd9a30ed21a9eb4c9a8efe756c9731e340"
+    },
+    {
+      "path": "media/player.html",
+      "bytes": 3581,
+      "sha256": "ce2b03abb1762af19abef2821070796630ea094d43ef901adec14f7f139117e3"
+    },
+    {
+      "path": "media/source/README.md",
+      "bytes": 2666,
+      "sha256": "22bbb68e4e9a85ae421f80f78677f8303a0a48ece85be80d2c36cd1a01cc5405"
+    },
+    {
+      "path": "media/source/c08-clear-animation.blend",
+      "bytes": 19828449,
+      "sha256": "6b568a8b7f5a75be26ea28fea48847f7ea7cce2373204c74dd47f815b373a303"
+    },
+    {
+      "path": "media/source/clarity_timeline.py",
+      "bytes": 3641,
+      "sha256": "f0b3a1f03a867a4d796c117783216732d0915b883eca53ad998c4538a11bf588"
+    },
+    {
+      "path": "media/source/compose_c08_clear.py",
+      "bytes": 13884,
+      "sha256": "45c11b73eef99eb56322565adcb7306628f58756ecc760b17c59cdb62b775cef"
+    },
+    {
+      "path": "media/source/export_c08.py",
+      "bytes": 7497,
+      "sha256": "35355589b74f1356dfb1bd9071c0eae1ee3ebc091f7b3efa0eef236b5ed41776"
+    },
+    {
+      "path": "media/source/render_c08.py",
+      "bytes": 10840,
+      "sha256": "8a4f49e39bff2d528707a45547ebbca26dbc29d84f1f4d6bf700395159933eaf"
+    },
+    {
+      "path": "media/source/render_c08_clear.py",
+      "bytes": 14316,
+      "sha256": "16eb22645b8f1bccdfe6ff515d3e245a03f80fdb25af4a445cb972777164b59c"
+    },
+    {
+      "path": "motion-bootstrap.js",
+      "bytes": 1356,
+      "sha256": "2ee77fe48cdf0d5e9d32eaa178494f96c9e62c147147b53ff3e61cb8a7144530"
+    },
+    {
+      "path": "motion-contract.js",
+      "bytes": 6214,
+      "sha256": "0a1803838999ed22d378ce5b59924e5b4bdb940ae214080480ce896908c9c3cc"
+    },
+    {
+      "path": "motion-scene.js",
+      "bytes": 16988,
+      "sha256": "40ee839ec5618ed98dbf4097ae9cfca7b47fc14b7444b1ac8a26cabdbed8fbac"
+    },
+    {
+      "path": "motion.css",
+      "bytes": 5639,
+      "sha256": "7e0c9b67c4ef5144be52b736472ad21dab4454dac3b7bfacb621a29bba27ca85"
+    },
+    {
+      "path": "motion.html",
+      "bytes": 7906,
+      "sha256": "332d5dca761c740053833db124321f5cabe6b8a93f29f2be75a8b82045f29fe8"
+    },
+    {
+      "path": "motion.js",
+      "bytes": 8952,
+      "sha256": "d65773dd72f7af55d2400ffcddd715d1dcc528b4c278a18ae9faf949433a68b3"
     },
     {
       "path": "overview-bootstrap.js",
@@ -520,8 +861,183 @@
     },
     {
       "path": "package.json",
-      "bytes": 526,
-      "sha256": "f3303a38fc49f3b5bc8d65cff359d175e95046b3b55041a6574dc7da55b2f0ac"
+      "bytes": 600,
+      "sha256": "91fde29a3f281361b76f5c906e4147bb2401ce433540e57f92080b181ac8dfde"
+    },
+    {
+      "path": "prototype/mechanical/README.md",
+      "bytes": 1771,
+      "sha256": "a9beb08ab5b6bea9d4b080c7a8805bb9d362b29445d23adae9ea5cbe06deb187"
+    },
+    {
+      "path": "prototype/mechanical/assembly-view.svg",
+      "bytes": 10829667,
+      "sha256": "07275903bb15b0f584f8c800a438474eab5969aca0164bbdccecdc716d5b8cdb"
+    },
+    {
+      "path": "prototype/mechanical/base-drill.svg",
+      "bytes": 2269,
+      "sha256": "3c69b8bc0cdc52943f9f08199e28cd1bbad892bb2f3b25c149b00dfe37ecc927"
+    },
+    {
+      "path": "prototype/mechanical/guard-drawing.svg",
+      "bytes": 1250,
+      "sha256": "0b4768f9c7f48b1b411cc29b7bcc2e43f398c54154bc4caf5fe7781a65b19a29"
+    },
+    {
+      "path": "prototype/mechanical/guard-end-cut.dxf",
+      "bytes": 397,
+      "sha256": "62a6f517047fa8495731fe565b3a893b1d42386a65332407d2db69aa22add1e3"
+    },
+    {
+      "path": "prototype/mechanical/guard-side-cut.dxf",
+      "bytes": 237,
+      "sha256": "35edd18a695e9b4c50b00882992ea6ac9f42fc3aac338230eee83ffc743530bf"
+    },
+    {
+      "path": "prototype/mechanical/guard-top-cut.dxf",
+      "bytes": 318,
+      "sha256": "5894fc88ca84f3a691363b9d62fb229556c2db2bca32d063669de874e1b69c95"
+    },
+    {
+      "path": "prototype/mechanical/joints.csv",
+      "bytes": 1318,
+      "sha256": "5b6903fbc8de6f9d1a1df19559356ff669b4ad9769569895d6fde856d0d846a6"
+    },
+    {
+      "path": "prototype/mechanical/layout.svg",
+      "bytes": 176716,
+      "sha256": "c4efcbe8dc3d805cb183ae86d59f65dd2f9081d409f23584354f93f64371876c"
+    },
+    {
+      "path": "prototype/mechanical/link-cut.dxf",
+      "bytes": 233,
+      "sha256": "ea5962889f9d552aef45ff787e3241f085c7a59f9a6ed373667787ca64a83c7d"
+    },
+    {
+      "path": "prototype/mechanical/machine-parts.svg",
+      "bytes": 2316,
+      "sha256": "4b32d113e98cb54bedb6669d692fc2cc02eaf9179d5cf6beec95097d5ae40a2f"
+    },
+    {
+      "path": "prototype/mechanical/manifest.json",
+      "bytes": 63455,
+      "sha256": "62f957c6c5217753621c47e698ab507d151d443398341f75c5aa093cc9b4acc4"
+    },
+    {
+      "path": "prototype/mechanical/pad-back-cut.dxf",
+      "bytes": 229,
+      "sha256": "dce0699c8304fb0c5756a8c04fbc43410c4dc3e2ba438e81b3ba2ee955fb971d"
+    },
+    {
+      "path": "prototype/mechanical/prototype-mechanical.step",
+      "bytes": 1163139,
+      "sha256": "082b465472da3075d6e8cf9635503768284a1b44908ef9ea48f37b0412016116"
+    },
+    {
+      "path": "prototype/mechanical/prototype-mechanical.zip",
+      "bytes": 2232637,
+      "sha256": "2daf51702c8c5a61c016a6086249cac08736976fb88046d3c4c7dfc3406165b1"
+    },
+    {
+      "path": "prototype/mechanical/rotor-cut.dxf",
+      "bytes": 518,
+      "sha256": "568e6ee8cfd644bf2e106abc623fba823be161c440baf53c75746d0a1c0d1b4f"
+    },
+    {
+      "path": "prototype/mechanical/rotor-drawing.svg",
+      "bytes": 1566,
+      "sha256": "63c1c74cecc033e5569c68937ea472f40468197470c67e543b5fa26856faf96d"
+    },
+    {
+      "path": "prototype/mechanical/sensor-track.svg",
+      "bytes": 5325,
+      "sha256": "8f7c44d5e6d9f05e578f12180d1a96b0fd7a40e251f24ac2b28f8d28c1eb2904"
+    },
+    {
+      "path": "prototype/mechanical/stl/bearing_block_1.stl",
+      "bytes": 149884,
+      "sha256": "d4b0a43a833d372e454ffbbc295f902003cea52ad7a20568825de3c2baf36109"
+    },
+    {
+      "path": "prototype/mechanical/stl/bearing_block_2.stl",
+      "bytes": 149884,
+      "sha256": "d4b0a43a833d372e454ffbbc295f902003cea52ad7a20568825de3c2baf36109"
+    },
+    {
+      "path": "prototype/mechanical/stl/bearing_cap_1_l.stl",
+      "bytes": 148684,
+      "sha256": "39ad86f4d49fabe78531285d02d6840f5d33cd472b23339905fdaf56ee3c8a4b"
+    },
+    {
+      "path": "prototype/mechanical/stl/bearing_cap_1_r.stl",
+      "bytes": 148684,
+      "sha256": "67921a55bc286261cdddf0bf990361241d8a53063d2866455e9cbe3c58ec3b51"
+    },
+    {
+      "path": "prototype/mechanical/stl/bearing_cap_2_l.stl",
+      "bytes": 148684,
+      "sha256": "2739cb6a623e3109327586724458a5d7d33f102ec10106e58c16f1426612d3ad"
+    },
+    {
+      "path": "prototype/mechanical/stl/bearing_cap_2_r.stl",
+      "bytes": 148684,
+      "sha256": "9a7fdd2d4ef83468eb8a3c6fb86414b3fa8edf89af129ac81ac95f6774b94a33"
+    },
+    {
+      "path": "prototype/mechanical/stl/caliper_pedestal.stl",
+      "bytes": 294484,
+      "sha256": "233b0aaff4da273807ad6704ba5a6543e58a67836007c5f4ceaf4e29f9aead2e"
+    },
+    {
+      "path": "prototype/mechanical/stl/lever_l.stl",
+      "bytes": 162184,
+      "sha256": "fc2175981054f3eec0a41b0d1e2097764b630c2d9076fdfeff0b1d7274b1ae53"
+    },
+    {
+      "path": "prototype/mechanical/stl/lever_r.stl",
+      "bytes": 140984,
+      "sha256": "32f96c66f138c4199817af56f10555d6bd5f34277fc8cedc948ac14d490ea46c"
+    },
+    {
+      "path": "prototype/mechanical/stl/motor_carriage.stl",
+      "bytes": 129084,
+      "sha256": "ca343f06399d744bf7952cd800ced269f29df260785ef7bf7569f2da5b68dfbc"
+    },
+    {
+      "path": "prototype/mechanical/stl/motor_v_saddle_1.stl",
+      "bytes": 44884,
+      "sha256": "deb9f339290a153e8a860311e965dbc3a5ee83402e87fc230777d33f3e80a27e"
+    },
+    {
+      "path": "prototype/mechanical/stl/motor_v_saddle_2.stl",
+      "bytes": 44884,
+      "sha256": "f706017d7e44e23fc2738d524c39c8d50cc1f896f286f854a90d7802a09a8e14"
+    },
+    {
+      "path": "prototype/mechanical/stl/pivot_bridge.stl",
+      "bytes": 64284,
+      "sha256": "e57181f94c05165c3808cc12e57ffe721175fee18217c97d8bf870c5417a1275"
+    },
+    {
+      "path": "prototype/mechanical/stl/sensor_pocket.stl",
+      "bytes": 44684,
+      "sha256": "e8fe0cb91c068d65434ecfad6766c8ee3a7cb789a38881f5a5ad2a259e306797"
+    },
+    {
+      "path": "prototype/mechanical/stl/sensor_stand.stl",
+      "bytes": 86284,
+      "sha256": "de3d83a785af8b54557ddc2e319eefdd52b9a0f35f00936865a4a72a29504b25"
+    },
+    {
+      "path": "prototype/mechanical/stl/solenoid_cap.stl",
+      "bytes": 85484,
+      "sha256": "a92bec28a9a43c54f749824630b830d7c030939efb460d81ff6f7f0e01bd4cae"
+    },
+    {
+      "path": "prototype/mechanical/stl/solenoid_cradle.stl",
+      "bytes": 208284,
+      "sha256": "374091949be90876a07a5b14d1f8e4c4dc29bc16f058a8bdbfd1346caf1eefbc"
     },
     {
       "path": "scripts/build_cad.py",
@@ -534,9 +1050,19 @@
       "sha256": "02128037a80071e9749d1b9889e6417be0f5166c8ebf61ee25cbfd040ed2c123"
     },
     {
+      "path": "scripts/build_motion_sections.py",
+      "bytes": 1740,
+      "sha256": "5cfacc3531cf46e562c6bfbee51751152582e5ce8ff5673e676c6a27441d75e1"
+    },
+    {
       "path": "scripts/build_overview_layout.py",
       "bytes": 10384,
       "sha256": "ac265f07e23afc61173c9b9bd8e4e37684a0cc84859e2fb7949054f8b5981052"
+    },
+    {
+      "path": "scripts/build_prototype_mechanics.py",
+      "bytes": 50298,
+      "sha256": "35d452eba78eb4d7b3b3cc2cda5b471ad855a41a7f512f7ab915ca63220a624e"
     },
     {
       "path": "scripts/catalog.py",
@@ -590,8 +1116,8 @@
     },
     {
       "path": "scripts/public_files.py",
-      "bytes": 4084,
-      "sha256": "5c40eab4e584cdd6a6c165e018c8b2b22a31a476f35102e8e729b5d003be8916"
+      "bytes": 6615,
+      "sha256": "7335104cff9ff4119a64185695173a7783e52d75c29583637c3171c18a20b396"
     },
     {
       "path": "scripts/public_policy.py",
@@ -649,6 +1175,16 @@
       "sha256": "98d3fb69e448cd62295ab4b621ed2051fe9aa21df1b9d2739249e156216f6321"
     },
     {
+      "path": "tests/motion-browser.mjs",
+      "bytes": 15629,
+      "sha256": "3c65482aadb868af451ccece9c343ecbb7ffec19a937cf7f2a86bb899c97c7d7"
+    },
+    {
+      "path": "tests/motion.test.mjs",
+      "bytes": 3780,
+      "sha256": "7ff8a9047c4d552d2a4616f03c90fab7aa3e1e4129ce3263fc1b8dade9b90ab2"
+    },
+    {
       "path": "tests/overview-browser.mjs",
       "bytes": 10409,
       "sha256": "1889c8eba11c3633db7d02bf9f1a30032588e9f40db06a3c6182f7e831574582"
@@ -664,14 +1200,19 @@
       "sha256": "0ffa984781a2298ba8320af7c361a4162b44c0620bcdb66d039f3d6dd87d2c15"
     },
     {
+      "path": "tests/test_prototype.py",
+      "bytes": 8331,
+      "sha256": "e95b0615c983fe3833be258cfefada9167e764bf904db4f6942953caa2615dbd"
+    },
+    {
       "path": "tests/test_public.py",
       "bytes": 6839,
       "sha256": "f3f5f552de77e5c00615060d272b0f7e6ffda1a07f8f0a9652cce4e617e908b1"
     },
     {
       "path": "validation/browser.json",
-      "bytes": 3259,
-      "sha256": "7d1ed9b71fcfefa5c43b5b7b0bd0714863103495a218c0f4d5baaf0f247d585b"
+      "bytes": 3273,
+      "sha256": "f3b7b30cee5309898fc8b1f10367fd66a957bf20bf74299acc218c7bf1da41b4"
     },
     {
       "path": "validation/cad.json",
@@ -681,7 +1222,7 @@
     {
       "path": "validation/enclosure-browser.json",
       "bytes": 4551,
-      "sha256": "97f91370ca33c30f9bba0b81c608ece337b6ce8da5fc6c2e7a2803786d12f01a"
+      "sha256": "300e6e466f7f74a401727a5dfabac87a1fff0f509d0fb69d71b6bf0b7cd65bc8"
     },
     {
       "path": "validation/enclosure-cad.json",
@@ -689,9 +1230,14 @@
       "sha256": "595eb46bda4a59984c48d05399e8a9b8679ac8208a37792f2116c5ca5b4db9de"
     },
     {
+      "path": "validation/motion-browser.json",
+      "bytes": 2780,
+      "sha256": "17c47a5d0c998e0eec521f24464ddb073892c3aa3265b02e4abb3b965b15c7cd"
+    },
+    {
       "path": "validation/overview.json",
       "bytes": 2582,
-      "sha256": "0b54029afbd70d0b12cb681dd5e318d7f6fba17f0a07c0c23087b8431d59e32e"
+      "sha256": "c9ce20d89b9720bd9e074fd2f44397d1ddb1aacaf46b075e9982b58f2a3d9bb7"
     },
     {
       "path": "validation/reexport.json",

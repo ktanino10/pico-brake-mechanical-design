@@ -52,10 +52,10 @@
   "warnings": [],
   "console_errors": [],
   "external_requests": [],
-  "browser": "157.0.8103.39",
+  "browser": "157.0.8103.51",
   "performance": {
-    "navigation_duration_ms": 376.70000000298023,
-    "dom_content_loaded_ms": 376,
+    "navigation_duration_ms": 96.19999998807907,
+    "dom_content_loaded_ms": 18.299999952316284,
     "transfer_bytes": 8478582
   },
   "resource_requests": 33,
